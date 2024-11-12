@@ -403,15 +403,15 @@ package
       
       public static function updateAllRasterData() : void
       {
-         var _loc2_:BFOUNDATION = null;
+         var building:BFOUNDATION = null;
          if(!BYMConfig.instance.RENDERER_ON)
          {
             return;
          }
-         var _loc1_:Vector.<Object> = InstanceManager.getInstancesByClass(BFOUNDATION);
-         for each(_loc2_ in _loc1_)
+         var allBuildings:Vector.<Object> = InstanceManager.getInstancesByClass(BFOUNDATION);
+         for each(building in allBuildings)
          {
-            _loc2_.updateRasterData();
+            building.updateRasterData();
          }
       }
       

@@ -5340,80 +5340,80 @@ package
          return 0;
       }
       
-      public static function Fund(param1:int, param2:Number, param3:Boolean = false, param4:BFOUNDATION = null, param5:Boolean = false, param6:Boolean = true) : Number
+      public static function Fund(resType:int, amount:Number, param3:Boolean = false, building:BFOUNDATION = null, param5:Boolean = false, param6:Boolean = true) : Number
       {
-         var _loc7_:Object = null;
-         var _loc8_:Object = null;
-         var _loc9_:Object = null;
-         var _loc10_:String = null;
-         var _loc11_:* = null;
+         var resObj:Object = null;
+         var resDeltaObj:Object = null;
+         var hpDeltaResObj:Object = null;
+         var resKey:String = null;
+         var resMaxKey:* = null;
          var _loc12_:Number = NaN;
-         param2 = Math.floor(param2);
+         amount = Math.floor(amount);
          if(param5 && isInfernoMainYardOrOutpost)
          {
             param5 = false;
          }
-         if(param1 < 5)
+         if(resType < 5)
          {
-            _loc7_ = param5 ? _iresources : _resources;
-            _loc8_ = param5 ? _ideltaResources : _deltaResources;
-            _loc9_ = param5 ? {} : _hpDeltaResources;
-            _loc10_ = "r" + param1;
-            _loc11_ = "r" + param1 + "max";
+            resObj = param5 ? _iresources : _resources;
+            resDeltaObj = param5 ? _ideltaResources : _deltaResources;
+            hpDeltaResObj = param5 ? {} : _hpDeltaResources;
+            resKey = "r" + resType;
+            resMaxKey = "r" + resType + "max";
             _loc12_ = 0;
-            if(_loc7_[_loc10_].Get() < _loc7_[_loc11_] || param3)
+            if(resObj[resKey].Get() < resObj[resMaxKey] || param3)
             {
-               if(_loc7_[_loc10_].Get() + param2 < _loc7_[_loc11_] || param3)
+               if(resObj[resKey].Get() + amount < resObj[resMaxKey] || param3)
                {
-                  _loc7_[_loc10_].Add(param2);
+                  resObj[resKey].Add(amount);
                   if(!param5)
                   {
-                     _hpResources[_loc10_] += param2;
+                     _hpResources[resKey] += amount;
                   }
-                  if(_loc8_[_loc10_])
+                  if(resDeltaObj[resKey])
                   {
-                     _loc8_[_loc10_].Add(param2);
-                     _loc9_[_loc10_] += param2;
+                     resDeltaObj[resKey].Add(amount);
+                     hpDeltaResObj[resKey] += amount;
                   }
                   else
                   {
-                     _loc8_[_loc10_] = new SecNum(param2);
-                     _loc9_[_loc10_] = param2;
+                     resDeltaObj[resKey] = new SecNum(amount);
+                     hpDeltaResObj[resKey] = amount;
                   }
                   if(GLOBAL.mode === GLOBAL.e_BASE_MODE.BUILD || GLOBAL.mode === GLOBAL.e_BASE_MODE.IBUILD)
                   {
-                     GLOBAL._resources[_loc10_].Add(param2);
-                     GLOBAL._hpResources[_loc10_] += param2;
+                     GLOBAL._resources[resKey].Add(amount);
+                     GLOBAL._hpResources[resKey] += amount;
                   }
-                  _loc8_.dirty = true;
-                  _loc9_.dirty = true;
-                  _loc12_ = param2;
+                  resDeltaObj.dirty = true;
+                  hpDeltaResObj.dirty = true;
+                  _loc12_ = amount;
                }
                else
                {
-                  _loc12_ = _loc7_[_loc11_] - _loc7_[_loc10_].Get();
-                  _loc7_[_loc10_].Set(_loc7_[_loc11_]);
+                  _loc12_ = resObj[resMaxKey] - resObj[resKey].Get();
+                  resObj[resKey].Set(resObj[resMaxKey]);
                   if(!param5)
                   {
-                     _hpResources[_loc10_] = _loc7_[_loc11_];
+                     _hpResources[resKey] = resObj[resMaxKey];
                   }
-                  if(_loc8_[_loc10_])
+                  if(resDeltaObj[resKey])
                   {
-                     _loc8_[_loc10_].Add(Math.floor(_loc12_));
-                     _loc9_[_loc10_] += Math.floor(_loc12_);
+                     resDeltaObj[resKey].Add(Math.floor(_loc12_));
+                     hpDeltaResObj[resKey] += Math.floor(_loc12_);
                   }
                   else
                   {
-                     _loc8_[_loc10_] = new SecNum(Math.floor(_loc12_));
-                     _loc9_[_loc10_] = Math.floor(_loc12_);
+                     resDeltaObj[resKey] = new SecNum(Math.floor(_loc12_));
+                     hpDeltaResObj[resKey] = Math.floor(_loc12_);
                   }
                   if(GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD || GLOBAL.mode === GLOBAL.e_BASE_MODE.IBUILD)
                   {
-                     GLOBAL._resources[_loc10_].Add(Math.floor(_loc12_));
-                     GLOBAL._hpResources[_loc10_] += Math.floor(_loc12_);
+                     GLOBAL._resources[resKey].Add(Math.floor(_loc12_));
+                     GLOBAL._hpResources[resKey] += Math.floor(_loc12_);
                   }
-                  _loc8_.dirty = true;
-                  _loc9_.dirty = true;
+                  resDeltaObj.dirty = true;
+                  hpDeltaResObj.dirty = true;
                }
                _bankedValue += _loc12_;
                _bankedTime = GLOBAL.Timestamp();
@@ -5423,16 +5423,16 @@ package
             }
             else if((GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD || GLOBAL.mode === GLOBAL.e_BASE_MODE.IBUILD) && !param5 && !WMATTACK._inProgress && param6)
             {
-               UI2._top.OverchargeShow(param1);
+               UI2._top.OverchargeShow(resType);
             }
-            if(param4)
+            if(building)
             {
-               param4._stored.Add(-_loc12_);
-               if(!param4._producing)
+               building._stored.Add(-_loc12_);
+               if(!building._producing)
                {
-                  param4.StartProduction();
+                  building.StartProduction();
                }
-               param4.Update();
+               building.Update();
             }
             if(_loc12_ > 0 && (GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD || GLOBAL.mode === GLOBAL.e_BASE_MODE.IBUILD) && param6)
             {

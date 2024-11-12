@@ -25,348 +25,339 @@ package com.monsters.autobanking
       private static const k_MAX_RESOURCES:uint = 5;
       
       private static var s_logCounter:int = 10;
-       
       
-      public function AutoBankManager(param1:InstanceEnforcer)
+      
+      public function AutoBankManager(instanceEnforcer:InstanceEnforcer)
       {
          super();
-         if(!param1)
+         if (!instanceEnforcer)
          {
             throw new Error("AutoBankManager is a static class not to be instantiated");
          }
       }
       
-      public static function get lastMapRoom3Time() : int
+      public static function get lastMapRoom3Time():int
       {
-         var _loc1_:int = 0;
-         var _loc2_:String = null;
-         for(_loc2_ in BASE.resourceCells)
+         var latestTime:int = 0;
+         var cellTime:String = null;
+         for (cellTime in BASE.resourceCells)
          {
-            if(int(_loc2_) > _loc1_)
+            if (int(cellTime) > latestTime)
             {
-               _loc1_ = int(_loc2_);
+               latestTime = int(cellTime);
             }
          }
-         return _loc1_;
+         return latestTime;
       }
       
-      public static function updateSaveData() : Object
+      public static function updateSaveData():Object
       {
-         var _loc1_:Object = {};
-         setLocalGIP(_loc1_);
-         if(MapRoomManager.instance.isInMapRoom2)
+         var localGIP:Object = {};
+         setLocalGIP(localGIP);
+         if (MapRoomManager.instance.isInMapRoom2)
          {
-            return updateBuildingResources(_loc1_);
+            return updateBuildingResources(localGIP);
          }
-         if(MapRoomManager.instance.isInMapRoom3)
+         if (MapRoomManager.instance.isInMapRoom3)
          {
             return BASE.resourceCells;
          }
          return null;
       }
       
-      public static function updateLoadData(param1:Object, param2:Object, param3:Object, param4:int, param5:Number) : Number
+      private static const TWO_DAYS:int = 3600 * 24 * 2;
+      
+      public static function updateLoadData(rawGIP:Object, GIP:Object, processedGIP:Object, lastProcessed:int, lastProcessedGIP:Number):Number
       {
-         var _loc6_:String = null;
-         var _loc7_:Object = null;
-         var _loc8_:int = 0;
-         var _loc9_:Object = null;
-         var _loc10_:int = 0;
+         var key:String = null;
+         var entry:Object = null;
+         var cellHeight:int = 0;
+         var resEntry:Object = null;
          s_logCounter = 10;
-         if(param1)
+         
+         if (!rawGIP)
          {
-            if(param1[k_OPKEY_BASE + GLOBAL._homeBaseID])
-            {
-               delete param1[k_OPKEY_BASE + GLOBAL._homeBaseID];
-            }
-            if(Boolean(param1[k_OPKEY_TIME]) && (GLOBAL.mode !== GLOBAL.e_BASE_MODE.ATTACK || BYMConfig.instance.AUTOBANK_FIX))
-            {
-               param5 = Number(param1[k_OPKEY_TIME]);
-               delete param1[k_OPKEY_TIME];
-            }
-            else
-            {
-               param5 = param4;
-            }
-            if(GLOBAL.Timestamp() - param5 > 3600 * 24 * 2)
-            {
-               param5 = GLOBAL.Timestamp() - 3600 * 24 * 2;
-            }
-            if(GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD || GLOBAL.mode == GLOBAL.e_BASE_MODE.ATTACK)
-            {
-               for(_loc6_ in param1)
-               {
-                  _loc7_ = param1[_loc6_];
-                  if(_loc6_ == k_OPKEY_TIME)
-                  {
-                     param5 = Number(param1[_loc6_]);
-                  }
-                  else
-                  {
-                     if(_loc7_ is String)
-                     {
-                        break;
-                     }
-                     if(_loc7_[k_OPKEY_TWIGS] != undefined)
-                     {
-                        param3[_loc6_] = {
-                           "r1":new SecNum(_loc7_[k_OPKEY_TWIGS]),
-                           "r2":new SecNum(_loc7_[k_OPKEY_PEBBLES]),
-                           "r3":new SecNum(_loc7_[k_OPKEY_PUTTY]),
-                           "r4":new SecNum(_loc7_[k_OPKEY_GOO])
-                        };
-                     }
-                     else
-                     {
-                        if(_loc8_ = int(param1[_loc6_]["height"]))
-                        {
-                           delete _loc7_["height"];
-                        }
-                        else
-                        {
-                           _loc8_ = 100;
-                        }
-                        param3[_loc6_] = {
-                           "r1":new SecNum(0),
-                           "r2":new SecNum(0),
-                           "r3":new SecNum(0),
-                           "r4":new SecNum(0)
-                        };
-                        for each(_loc9_ in _loc7_)
-                        {
-                           if(_loc9_.t >= 1 && _loc9_.t < k_MAX_RESOURCES)
-                           {
-                              if(_loc9_.l)
-                              {
-                                 _loc10_ = int(OUTPOST_YARD_PROPS._outpostProps[_loc9_.t - 1].produce[_loc9_.l - 1]);
-                              }
-                              else
-                              {
-                                 _loc10_ = int(OUTPOST_YARD_PROPS._outpostProps[_loc9_.t - 1].produce[0]);
-                              }
-                              _loc10_ = Math.max(int(_loc10_ * GLOBAL._averageAltitude.Get() / _loc8_),1);
-                              param3[_loc6_]["r" + _loc9_.t].Add(_loc10_);
-                           }
-                        }
-                        param1[_loc6_] = {
-                           "r1":param3[_loc6_].r1.Get(),
-                           "r2":param3[_loc6_].r2.Get(),
-                           "r3":param3[_loc6_].r3.Get(),
-                           "r4":param3[_loc6_].r4.Get()
-                        };
-                     }
-                     param2[k_OPKEY_TWIGS].Add(param3[_loc6_][k_OPKEY_TWIGS].Get());
-                     param2[k_OPKEY_PEBBLES].Add(param3[_loc6_][k_OPKEY_PEBBLES].Get());
-                     param2[k_OPKEY_PUTTY].Add(param3[_loc6_][k_OPKEY_PUTTY].Get());
-                     param2[k_OPKEY_GOO].Add(param3[_loc6_][k_OPKEY_GOO].Get());
-                  }
-               }
-               param3[k_OPKEY_TIME] = param5;
-            }
+            return lastProcessedGIP;
          }
-         return param5;
+         
+         var sHomeBaseID:String = k_OPKEY_BASE + GLOBAL._homeBaseID;
+         if (rawGIP[sHomeBaseID])
+         {
+            delete rawGIP[sHomeBaseID];
+         }
+         
+         if (Boolean(rawGIP[k_OPKEY_TIME]) && (GLOBAL.mode !== GLOBAL.e_BASE_MODE.ATTACK || BYMConfig.instance.AUTOBANK_FIX))
+         {
+            lastProcessedGIP = Number(rawGIP[k_OPKEY_TIME]);
+            delete rawGIP[k_OPKEY_TIME];
+         } else
+         {
+            lastProcessedGIP = lastProcessed;
+         }
+         
+         if (GLOBAL.Timestamp() - lastProcessedGIP > TWO_DAYS)
+         {
+            lastProcessedGIP = GLOBAL.Timestamp() - TWO_DAYS;
+         }
+         
+         if (GLOBAL.mode != GLOBAL.e_BASE_MODE.BUILD && GLOBAL.mode != GLOBAL.e_BASE_MODE.ATTACK)
+         {
+            return lastProcessedGIP;
+         }
+         
+         for (key in rawGIP)
+         {
+            entry = rawGIP[key];
+            if (key == k_OPKEY_TIME)
+            {
+               lastProcessedGIP = Number(rawGIP[key]);
+               continue;
+            }
+            
+            if (entry is String)
+            {
+               break;
+            }
+            
+            if (entry[k_OPKEY_TWIGS] != undefined)
+            {
+               processedGIP[key] = {
+                  "r1": new SecNum(entry[k_OPKEY_TWIGS]),
+                  "r2": new SecNum(entry[k_OPKEY_PEBBLES]),
+                  "r3": new SecNum(entry[k_OPKEY_PUTTY]),
+                  "r4": new SecNum(entry[k_OPKEY_GOO])
+               };
+            } else
+            {
+               if (cellHeight = int(rawGIP[key]["height"]))
+               {
+                  delete entry["height"];
+               } else
+               {
+                  cellHeight = 100;
+               }
+               processedGIP[key] = {
+                  "r1": new SecNum(0),
+                  "r2": new SecNum(0),
+                  "r3": new SecNum(0),
+                  "r4": new SecNum(0)
+               };
+               for each(resEntry in entry)
+               {
+                  if (!(resEntry.t >= 1 && resEntry.t < k_MAX_RESOURCES))
+                  {
+                     continue;
+                  }
+                  
+                  var producedResources:int = 0;
+                  if (resEntry.l)
+                  {
+                     producedResources = int(OUTPOST_YARD_PROPS._outpostProps[resEntry.t - 1].produce[resEntry.l - 1]);
+                  } else
+                  {
+                     producedResources = int(OUTPOST_YARD_PROPS._outpostProps[resEntry.t - 1].produce[0]);
+                  }
+                  producedResources = Math.max(int(producedResources * GLOBAL._averageAltitude.Get() / cellHeight), 1);
+                  processedGIP[key]["r" + resEntry.t].Add(producedResources);
+               }
+               rawGIP[key] = {
+                  "r1": processedGIP[key].r1.Get(),
+                  "r2": processedGIP[key].r2.Get(),
+                  "r3": processedGIP[key].r3.Get(),
+                  "r4": processedGIP[key].r4.Get()
+               };
+            }
+            GIP[k_OPKEY_TWIGS].Add(processedGIP[key][k_OPKEY_TWIGS].Get());
+            GIP[k_OPKEY_PEBBLES].Add(processedGIP[key][k_OPKEY_PEBBLES].Get());
+            GIP[k_OPKEY_PUTTY].Add(processedGIP[key][k_OPKEY_PUTTY].Get());
+            GIP[k_OPKEY_GOO].Add(processedGIP[key][k_OPKEY_GOO].Get());
+         }
+         processedGIP[k_OPKEY_TIME] = lastProcessedGIP;
+         
+         return lastProcessedGIP;
       }
       
-      public static function setLocalGIP(param1:Object) : void
+      public static function setLocalGIP(localGIP:Object):void
       {
-         var _loc3_:String = null;
-         var _loc2_:Object = BASE._processedGIP;
-         if(!MapRoomManager.instance.isInMapRoom3)
+         var gipEntry:String = null;
+         var processedGIP:Object = BASE._processedGIP;
+         if (!MapRoomManager.instance.isInMapRoom3)
          {
-            for(_loc3_ in _loc2_)
+            for (gipEntry in processedGIP)
             {
-               if(_loc3_ === k_OPKEY_TIME)
+               if (gipEntry === k_OPKEY_TIME)
                {
-                  if(BYMConfig.instance.AUTOBANK_FIX && GLOBAL.mode === GLOBAL.e_BASE_MODE.ATTACK && BASE.isOutpost)
+                  if (BYMConfig.instance.AUTOBANK_FIX && GLOBAL.mode === GLOBAL.e_BASE_MODE.ATTACK && BASE.isOutpost)
                   {
-                     param1[_loc3_] = BASE._lastProcessedGIP;
-                  }
-                  else if(!BASE.isMainYardInfernoOnly)
+                     localGIP[gipEntry] = BASE._lastProcessedGIP;
+                  } else if (!BASE.isMainYardInfernoOnly)
                   {
-                     param1[_loc3_] = GLOBAL.Timestamp();
-                  }
-                  else
+                     localGIP[gipEntry] = GLOBAL.Timestamp();
+                  } else
                   {
-                     param1[_loc3_] = BASE._lastProcessedGIP;
+                     localGIP[gipEntry] = BASE._lastProcessedGIP;
                   }
-               }
-               else
+               } else
                {
-                  param1[_loc3_] = {
-                     "r1":BASE._processedGIP[_loc3_][k_OPKEY_TWIGS].Get(),
-                     "r2":BASE._processedGIP[_loc3_][k_OPKEY_PEBBLES].Get(),
-                     "r3":BASE._processedGIP[_loc3_][k_OPKEY_PUTTY].Get(),
-                     "r4":BASE._processedGIP[_loc3_][k_OPKEY_GOO].Get()
+                  localGIP[gipEntry] = {
+                     "r1": BASE._processedGIP[gipEntry][k_OPKEY_TWIGS].Get(),
+                     "r2": BASE._processedGIP[gipEntry][k_OPKEY_PEBBLES].Get(),
+                     "r3": BASE._processedGIP[gipEntry][k_OPKEY_PUTTY].Get(),
+                     "r4": BASE._processedGIP[gipEntry][k_OPKEY_GOO].Get()
                   };
                }
             }
-         }
-         else
+         } else
          {
-            for(_loc3_ in _loc2_)
+            for (gipEntry in processedGIP)
             {
-               if(_loc3_ === k_OPKEY_TIME)
+               if (gipEntry === k_OPKEY_TIME)
                {
-                  param1[_loc3_] = GLOBAL.Timestamp();
+                  localGIP[gipEntry] = GLOBAL.Timestamp();
                }
             }
          }
       }
       
-      public static function updateBuildingResources(param1:Object) : Object
+      public static function updateBuildingResources(p_oGIPData:Object):Object
       {
-         var _loc2_:uint = 0;
-         var _loc3_:Object = null;
-         var _loc4_:Vector.<Object> = null;
-         var _loc5_:BFOUNDATION = null;
-         var _loc6_:int = 0;
-         var _loc7_:int = 0;
-         if(BASE.isOutpost)
+         var resourceTypeCounter:uint = 0;
+         var newResources:Object = null;
+         var allBResourceObjects:Vector.<Object> = null;
+         var bresourceObj:BFOUNDATION = null;
+         var resourceLvl:int = 0;
+         var addedResources:int = 0;
+         if (BASE.isOutpost)
          {
-            _loc3_ = {
-               "r1":0,
-               "r2":0,
-               "r3":0,
-               "r4":0
+            newResources = {
+               "r1": 0,
+               "r2": 0,
+               "r3": 0,
+               "r4": 0
             };
-            _loc4_ = InstanceManager.getInstancesByClass(BRESOURCE);
-            for each(_loc5_ in _loc4_)
+            allBResourceObjects = InstanceManager.getInstancesByClass(BRESOURCE);
+            for each(bresourceObj in allBResourceObjects)
             {
-               if(_loc5_._type >= 1 && _loc5_._type <= 4)
+               if (bresourceObj._type >= 1 && bresourceObj._type <= 4)
                {
-                  if(_loc5_.health > 0)
+                  if (bresourceObj.health > 0)
                   {
-                     _loc6_ = _loc5_._lvl.Get();
-                     _loc7_ = 0;
-                     if(_loc5_._countdownUpgrade.Get() > 0)
+                     resourceLvl = bresourceObj._lvl.Get();
+                     addedResources = 0;
+                     if (bresourceObj._countdownUpgrade.Get() > 0)
                      {
-                        _loc6_++;
+                        resourceLvl++;
                      }
-                     _loc7_ = int(_loc5_._buildingProps.produce[_loc6_ - 1]);
-                     _loc7_ = Math.max(int(_loc7_ * GLOBAL._averageAltitude.Get() / GLOBAL._currentCell.cellHeight),1);
-                     _loc3_["r" + _loc5_._type] += _loc7_;
+                     addedResources = int(bresourceObj._buildingProps.produce[resourceLvl - 1]);
+                     addedResources = Math.max(int(addedResources * GLOBAL._averageAltitude.Get() / GLOBAL._currentCell.cellHeight), 1);
+                     newResources["r" + bresourceObj._type] += addedResources;
                   }
                }
             }
-            if(BASE._processedGIP[k_OPKEY_BASE + BASE._baseID])
+            if (BASE._processedGIP[k_OPKEY_BASE + BASE._baseID])
             {
-               _loc2_ = 1;
-               while(_loc2_ < k_MAX_RESOURCES)
+               resourceTypeCounter = 1;
+               while (resourceTypeCounter < k_MAX_RESOURCES)
                {
-                  BASE._GIP["r" + _loc2_].Add(-BASE._processedGIP[k_OPKEY_BASE + BASE._baseID]["r" + _loc2_].Get());
-                  BASE._processedGIP[k_OPKEY_BASE + BASE._baseID]["r" + _loc2_].Set(_loc3_["r" + _loc2_]);
-                  BASE._rawGIP[k_OPKEY_BASE + BASE._baseID]["r" + _loc2_] = _loc3_["r" + _loc2_];
-                  _loc2_++;
+                  BASE._GIP["r" + resourceTypeCounter].Add(-BASE._processedGIP[k_OPKEY_BASE + BASE._baseID]["r" + resourceTypeCounter].Get());
+                  BASE._processedGIP[k_OPKEY_BASE + BASE._baseID]["r" + resourceTypeCounter].Set(newResources["r" + resourceTypeCounter]);
+                  BASE._rawGIP[k_OPKEY_BASE + BASE._baseID]["r" + resourceTypeCounter] = newResources["r" + resourceTypeCounter];
+                  resourceTypeCounter++;
                }
-            }
-            else
+            } else
             {
                BASE._processedGIP[k_OPKEY_BASE + BASE._baseID] = {
-                  "r1":new SecNum(_loc3_[k_OPKEY_TWIGS]),
-                  "r2":new SecNum(_loc3_[k_OPKEY_PEBBLES]),
-                  "r3":new SecNum(_loc3_[k_OPKEY_PUTTY]),
-                  "r4":new SecNum(_loc3_[k_OPKEY_GOO])
+                  "r1": new SecNum(newResources[k_OPKEY_TWIGS]),
+                  "r2": new SecNum(newResources[k_OPKEY_PEBBLES]),
+                  "r3": new SecNum(newResources[k_OPKEY_PUTTY]),
+                  "r4": new SecNum(newResources[k_OPKEY_GOO])
                };
                BASE._rawGIP[k_OPKEY_BASE + BASE._baseID] = {
-                  "r1":_loc3_[k_OPKEY_TWIGS],
-                  "r2":_loc3_[k_OPKEY_PEBBLES],
-                  "r3":_loc3_[k_OPKEY_PUTTY],
-                  "r4":_loc3_[k_OPKEY_GOO]
+                  "r1": newResources[k_OPKEY_TWIGS],
+                  "r2": newResources[k_OPKEY_PEBBLES],
+                  "r3": newResources[k_OPKEY_PUTTY],
+                  "r4": newResources[k_OPKEY_GOO]
                };
             }
-            _loc2_ = 1;
-            while(_loc2_ < k_MAX_RESOURCES)
+            resourceTypeCounter = 1;
+            while (resourceTypeCounter < k_MAX_RESOURCES)
             {
-               BASE._GIP["r" + _loc2_].Add(_loc3_["r" + _loc2_]);
-               _loc2_++;
+               BASE._GIP["r" + resourceTypeCounter].Add(newResources["r" + resourceTypeCounter]);
+               resourceTypeCounter++;
             }
-            param1[k_OPKEY_BASE + BASE._baseID] = _loc3_;
+            p_oGIPData[k_OPKEY_BASE + BASE._baseID] = newResources;
          }
-         return param1;
+         return p_oGIPData;
       }
       
-      public static function autobank(param1:int = 10, param2:Boolean = false) : void
+      public static function autobank(param1:int = 10, mr3LogResources:Boolean = false):void
       {
-         var _loc3_:Object = null;
-         var _loc4_:int = 0;
-         var _loc5_:SecNum = null;
-         var _loc6_:Array = null;
-         var _loc7_:SecNum = null;
-         var _loc8_:Vector.<String> = null;
-         var _loc9_:int = 0;
-         var _loc10_:String = null;
-         var _loc11_:int = 0;
-         var _loc12_:int = 0;
-         var _loc13_:Number = NaN;
-         var _loc14_:AutoBankBaseBuff = null;
-         if(MapRoomManager.instance.isInMapRoom2)
+         var baseGIP:Object = null;
+         var iResType:int = 0;
+         var iAutobankedSum:SecNum = null;
+         var vResourcesList1:Array = null;
+         var boostMultiplier:SecNum = null;
+         var oAutoBankBaseBuff:AutoBankBaseBuff = null;
+         if (MapRoomManager.instance.isInMapRoom2)
          {
-            _loc3_ = BASE._GIP;
-            if(!_loc3_)
+            baseGIP = BASE._GIP;
+            if (!baseGIP)
             {
                return;
             }
-            _loc5_ = new SecNum(0);
-            _loc6_ = [new SecNum(0),new SecNum(0),new SecNum(0),new SecNum(0)];
-            if(GLOBAL._harvesterOverdrive >= GLOBAL.Timestamp() && Boolean(GLOBAL._harvesterOverdrivePower.Get()))
+            iAutobankedSum = new SecNum(0);
+            vResourcesList1 = [new SecNum(0), new SecNum(0), new SecNum(0), new SecNum(0)];
+            if (GLOBAL._harvesterOverdrive >= GLOBAL.Timestamp() && Boolean(GLOBAL._harvesterOverdrivePower.Get()))
             {
-               _loc7_ = GLOBAL._harvesterOverdrivePower;
+               boostMultiplier = GLOBAL._harvesterOverdrivePower;
+            } else
+            {
+               boostMultiplier = new SecNum(1);
             }
-            else
+            iResType = 1;
+            while (iResType < k_MAX_RESOURCES)
             {
-               _loc7_ = new SecNum(1);
-            }
-            _loc4_ = 1;
-            while(_loc4_ < k_MAX_RESOURCES)
-            {
-               if(Boolean(_loc3_["r" + _loc4_]) && Boolean(_loc3_["r" + _loc4_].Get()))
+               var resKey:String = "r" + iResType;
+               var resIdx:int = iResType - 1;
+               if (Boolean(baseGIP[resKey]) && Boolean(baseGIP[resKey].Get()))
                {
-                  _loc6_[_loc4_ - 1].Set(BASE.Fund(_loc4_,_loc3_["r" + _loc4_].Get() * _loc7_.Get() * param1 / 10,false,null,false,false));
-                  _loc5_.Add(_loc6_[_loc4_ - 1].Get());
+                  vResourcesList1[resIdx].Set(BASE.Fund(iResType, baseGIP[resKey].Get() * boostMultiplier.Get() * param1 / 10, false, null, false, false));
+                  iAutobankedSum.Add(vResourcesList1[resIdx].Get());
                }
-               if(param1 > 10 || s_logCounter == 0)
+               if (param1 > 10 || s_logCounter == 0)
                {
-                  if(_loc6_[_loc4_ - 1].Get() > 0)
+                  if (vResourcesList1[resIdx].Get() > 0)
                   {
-                     LOGGER.Stat([96,_loc4_,_loc6_[_loc4_ - 1].Get() * (param1 > 10 ? 1 : 10)]);
+                     LOGGER.Stat([96, iResType, vResourcesList1[resIdx].Get() * (param1 > 10 ? 1 : 10)]);
                   }
                   s_logCounter = 10;
                }
-               _loc4_++;
+               iResType++;
             }
-            BASE.PointsAdd(Math.ceil(_loc5_.Get() * 0.375));
-         }
-         else if(MapRoomManager.instance.isInMapRoom3)
+            BASE.PointsAdd(Math.ceil(iAutobankedSum.Get() * 0.375));
+         } else if (MapRoomManager.instance.isInMapRoom3)
          {
-            _loc8_ = new Vector.<String>();
-            _loc13_ = 0;
-            if(_loc14_ = BaseBuffHandler.instance.getBuffByName(AutoBankBaseBuff.k_NAME) as AutoBankBaseBuff)
+            if (oAutoBankBaseBuff = BaseBuffHandler.instance.getBuffByName(AutoBankBaseBuff.k_NAME) as AutoBankBaseBuff)
             {
-               fundAllResources(_loc14_.value * Math.max(0,param1),param2 || s_logCounter == 0);
+               fundAllResourcesMr3(oAutoBankBaseBuff.value * Math.max(0, param1), mr3LogResources || s_logCounter == 0);
             }
          }
          --s_logCounter;
       }
       
-      private static function sortKeys(param1:String, param2:String) : int
+      private static function fundAllResourcesMr3(amount:Number, logResources:Boolean):void
       {
-         return int(param1) - int(param2);
-      }
-      
-      private static function fundAllResources(param1:Number, param2:Boolean) : void
-      {
-         var _loc3_:uint = 0;
-         _loc3_ = 1;
-         while(_loc3_ < k_MAX_RESOURCES)
+         var resType:uint = 1;
+         while (resType < k_MAX_RESOURCES)
          {
-            BASE.Fund(_loc3_,param1,false,null,false,false);
-            if(param2 && Boolean(param1))
+            BASE.Fund(resType, amount, false, null, false, false);
+            if (logResources && Boolean(amount))
             {
-               LOGGER.Stat([96,_loc3_,param1]);
+               LOGGER.Stat([96, resType, amount]);
             }
-            _loc3_++;
+            resType++;
          }
-         if(param2)
+         if (logResources)
          {
             s_logCounter = 10;
          }
@@ -376,7 +367,7 @@ package com.monsters.autobanking
 
 final class InstanceEnforcer
 {
-    
+   
    
    public function InstanceEnforcer()
    {

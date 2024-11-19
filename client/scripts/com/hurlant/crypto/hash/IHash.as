@@ -1,17 +1,20 @@
+/**
+ * IHash
+ *
+ * An interface for each hash function to implement
+ * Copyright (c) 2007 Henri Torgemane
+ *
+ * See LICENSE.txt for full license information.
+ */
 package com.hurlant.crypto.hash
 {
    import flash.utils.ByteArray;
-   
+
    public interface IHash
    {
-       
-      
-      function toString() : String;
-      
-      function getHashSize() : uint;
-      
-      function getInputSize() : uint;
-      
-      function hash(param1:ByteArray) : ByteArray;
+      function getInputSize():uint;
+      function getHashSize():uint;
+      function hash(src:ByteArray):ByteArray;
+      function toString():String;
    }
 }

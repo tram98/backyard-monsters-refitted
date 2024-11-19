@@ -1,69 +1,66 @@
+/**
+ * Hex
+ *
+ * Utility class to convert Hex strings to ByteArray or String types.
+ * Copyright (c) 2007 Henri Torgemane
+ *
+ * See LICENSE.txt for full license information.
+ */
 package com.hurlant.util
 {
    import flash.utils.ByteArray;
-   
+
    public class Hex
    {
-       
-      
-      public function Hex()
-      {
-         super();
-      }
-      
-      public static function fromString(param1:String, param2:Boolean = false) : String
-      {
-         var _loc3_:ByteArray = null;
-         _loc3_ = new ByteArray();
-         _loc3_.writeUTFBytes(param1);
-         return fromArray(_loc3_,param2);
-      }
-      
-      public static function toString(param1:String) : String
-      {
-         var _loc2_:ByteArray = null;
-         _loc2_ = toArray(param1);
-         return _loc2_.readUTFBytes(_loc2_.length);
-      }
-      
-      public static function toArray(param1:String) : ByteArray
-      {
-         var _loc2_:ByteArray = null;
-         var _loc3_:uint = 0;
-         param1 = param1.replace(/\s|:/gm,"");
-         _loc2_ = new ByteArray();
-         if(param1.length & 1 == 1)
-         {
-            param1 = "0" + param1;
+      /**
+       * Support straight hex, or colon-laced hex.
+       * (that means 23:03:0e:f0, but *NOT* 23:3:e:f0)
+       * Whitespace characters are ignored.
+       */
+      public static function toArray(hex:String):ByteArray {
+         hex = hex.replace(/\s|:/gm,'');
+         var a:ByteArray = new ByteArray;
+         if (hex.length&1==1) hex="0"+hex;
+         for (var i:uint=0;i<hex.length;i+=2) {
+            a[i/2] = parseInt(hex.substr(i,2),16);
          }
-         _loc3_ = 0;
-         while(_loc3_ < param1.length)
-         {
-            _loc2_[_loc3_ / 2] = parseInt(param1.substr(_loc3_,2),16);
-            _loc3_ += 2;
-         }
-         return _loc2_;
+         return a;
       }
-      
-      public static function fromArray(param1:ByteArray, param2:Boolean = false) : String
-      {
-         var _loc3_:* = null;
-         var _loc4_:uint = 0;
-         _loc3_ = "";
-         _loc4_ = 0;
-         while(_loc4_ < param1.length)
-         {
-            _loc3_ += ("0" + param1[_loc4_].toString(16)).substr(-2,2);
-            if(param2)
-            {
-               if(_loc4_ < param1.length - 1)
-               {
-                  _loc3_ += ":";
-               }
+
+      public static function fromArray(array:ByteArray, colons:Boolean=false):String {
+         var s:String = "";
+         for (var i:uint=0;i<array.length;i++) {
+            s+=("0"+array[i].toString(16)).substr(-2,2);
+            if (colons) {
+               if (i<array.length-1) s+=":";
             }
-            _loc4_++;
          }
-         return _loc3_;
+         return s;
       }
+
+      /**
+       *
+       * @param hex
+       * @return a UTF-8 string decoded from hex
+       *
+       */
+      public static function toString(hex:String):String {
+         var a:ByteArray = toArray(hex);
+         return a.readUTFBytes(a.length);
+      }
+
+
+      /**
+       *
+       * @param str
+       * @return a hex string encoded from the UTF-8 string str
+       *
+       */
+      public static function fromString(str:String, colons:Boolean=false):String {
+         var a:ByteArray = new ByteArray;
+         a.writeUTFBytes(str);
+         return fromArray(a, colons);
+      }
+
    }
 }

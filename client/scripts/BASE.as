@@ -2997,7 +2997,6 @@ package
          }
          if(GLOBAL.Timestamp() % 10 == 0)
          {
-            CHECKER.Check();
             if(!isInfernoMainYardOrOutpost)
             {
                AutoBankManager.autobank();

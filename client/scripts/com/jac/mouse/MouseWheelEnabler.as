@@ -58,7 +58,8 @@ package com.jac.mouse
             ExternalInterface.addCallback(id,function():void
             {
             });
-            ExternalInterface.call(MouseWheelEnabler_JavaScript.CODE);
+             throw new Exception("NOT IMPLEMENTED");
+			// ExternalInterface.call(MouseWheelEnabler_JavaScript.CODE);
             ExternalInterface.call("mws.InitMouseWheelSupport",id);
             ExternalInterface.addCallback("externalMouseEvent",handleExternalMouseEvent);
          }
@@ -105,7 +106,7 @@ package com.jac.mouse
 
 class MouseWheelEnabler_JavaScript
 {
-   
+   /*
    public static const CODE:XML = <script><![CDATA[
 		function()
 		{
@@ -327,6 +328,9 @@ class MouseWheelEnabler_JavaScript
 	]]></script>;
     
    
+  */
+
+  public static const CODE: Object = null;
    public function MouseWheelEnabler_JavaScript()
    {
       super();

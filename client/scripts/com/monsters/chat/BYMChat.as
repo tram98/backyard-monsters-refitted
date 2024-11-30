@@ -1,8 +1,6 @@
 package com.monsters.chat
 {
    import com.monsters.chat.ui.*;
-   import com.smartfoxserver.v2.entities.*;
-   import com.smartfoxserver.v2.entities.data.*;
    import flash.display.*;
    import flash.events.*;
    import flash.geom.*;

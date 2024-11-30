@@ -102,66 +102,7 @@ package gs.plugins
       
       protected function init(param1:TweenLite, param2:Array, param3:Boolean) : void
       {
-         var _loc5_:int = 0;
-         var _loc6_:String = null;
-         this._target = param1.target;
-         if(param1.exposedVars.orientToBezier == true)
-         {
-            this._orientData = [["x","y","rotation",0]];
-            this._orient = true;
-         }
-         else if(param1.exposedVars.orientToBezier is Array)
-         {
-            this._orientData = param1.exposedVars.orientToBezier;
-            this._orient = true;
-         }
-         var _loc4_:Object = {};
-         _loc5_ = 0;
-         while(_loc5_ < param2.length)
-         {
-            for(_loc6_ in param2[_loc5_])
-            {
-               if(_loc4_[_loc6_] == undefined)
-               {
-                  _loc4_[_loc6_] = [param1.target[_loc6_]];
-               }
-               if(typeof param2[_loc5_][_loc6_] == "number")
-               {
-                  _loc4_[_loc6_].push(param2[_loc5_][_loc6_]);
-               }
-               else
-               {
-                  _loc4_[_loc6_].push(param1.target[_loc6_] + Number(param2[_loc5_][_loc6_]));
-               }
-            }
-            _loc5_++;
-         }
-         for(_loc6_ in _loc4_)
-         {
-            this.overwriteProps[this.overwriteProps.length] = _loc6_;
-            if(param1.exposedVars[_loc6_] != undefined)
-            {
-               if(typeof param1.exposedVars[_loc6_] == "number")
-               {
-                  _loc4_[_loc6_].push(param1.exposedVars[_loc6_]);
-               }
-               else
-               {
-                  _loc4_[_loc6_].push(param1.target[_loc6_] + Number(param1.exposedVars[_loc6_]));
-               }
-               delete param1.exposedVars[_loc6_];
-               _loc5_ = int(param1.tweens.length - 1);
-               while(_loc5_ > -1)
-               {
-                  if(param1.tweens[_loc5_].name == _loc6_)
-                  {
-                     param1.tweens.splice(_loc5_,1);
-                  }
-                  _loc5_--;
-               }
-            }
-         }
-         this._beziers = parseBeziers(_loc4_,param3);
+         throw new Exception("Not Implemented");
       }
       
       override public function killProps(param1:Object) : void

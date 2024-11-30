@@ -85,7 +85,7 @@ package com.monsters.baseplanner.components
          var _loc5_:Number = this.curY;
          var _loc6_:int = param1 < _loc4_ ? -1 : 1;
          var _loc7_:int = param2 < _loc5_ ? -1 : 1;
-         loop0:
+         var exitLoop0:Boolean = false;
          while(Math.abs(_loc4_ - this.curX) < Math.abs(_loc4_ - param1) || Math.abs(_loc5_ - this.curY) < Math.abs(_loc5_ - param2))
          {
             _loc8_ = this.startIndex;
@@ -98,7 +98,8 @@ package com.monsters.baseplanner.components
                {
                   this.remainingDist = this.getDistance(this.curX,this.curY,param1,param2);
                   this.curIndex = _loc8_;
-                  break loop0;
+                  exitLoop0 = true;
+                  break;
                }
                if(_loc8_ % 2 == 0)
                {
@@ -115,6 +116,7 @@ package com.monsters.baseplanner.components
                this.remainingDist = 0;
                _loc8_++;
             }
+            if(exitLoop0) break;
          }
          this.startIndex = this.curIndex;
          if(this.remainingDist != 0)

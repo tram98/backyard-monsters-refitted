@@ -77,20 +77,8 @@ package as3reflect
       
       public static function isImplementationOf(param1:Class, param2:Class) : Boolean
       {
-         var result:Boolean = false;
-         var classDescription:XML = null;
-         var clazz:Class = param1;
-         var interfaze:Class = param2;
-         if(clazz == null)
-         {
-            result = false;
-         }
-         else
-         {
-            classDescription = MetadataUtils.getFromObject(clazz);
-            result = classDescription.factory.implementsInterface.(@type == getQualifiedClassName(interfaze)).length() != 0;
-         }
-         return result;
+         throw new Exception("Not Implemented");
+         return false;
       }
       
       public static function forInstance(param1:*, param2:ApplicationDomain = null) : Class
@@ -196,11 +184,9 @@ package as3reflect
       
       public static function isSubclassOf(param1:Class, param2:Class) : Boolean
       {
-         var clazz:Class = param1;
-         var parentClass:Class = param2;
-         var classDescription:XML = MetadataUtils.getFromObject(clazz);
-         var parentName:String = getQualifiedClassName(parentClass);
-         return classDescription.factory.extendsClass.(@type == parentName).length() != 0;
+
+throw new Exception("Not Implemented");
+return false;
       }
       
       public static function getSuperClass(param1:Class) : Class

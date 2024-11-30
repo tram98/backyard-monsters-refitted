@@ -51,14 +51,7 @@ package gs.plugins
       
       protected function addTween(param1:Object, param2:String, param3:Number, param4:*, param5:String = null) : void
       {
-         var _loc6_:Number = NaN;
-         if(param4 != null)
-         {
-            if((_loc6_ = typeof param4 == "number" ? param4 - param3 : Number(param4)) != 0)
-            {
-               this._tweens[this._tweens.length] = new TweenInfo(param1,param2,param3,_loc6_,param5 || param2,false);
-            }
-         }
+         throw new Exception("Not Implemented");
       }
       
       protected function updateTweens(param1:Number) : void

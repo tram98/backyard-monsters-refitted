@@ -20,15 +20,8 @@ package gs.plugins
       
       override public function onInitTween(param1:Object, param2:*, param3:TweenLite) : Boolean
       {
-         var _loc4_:String = null;
-         if(typeof param2 == "number")
-         {
-            return false;
-         }
-         for(_loc4_ in param2)
-         {
-            this.initRotation(param1,_loc4_,param1[_loc4_],param2[_loc4_]);
-         }
+         throw new Exception("Not Implemented");
+
          return true;
       }
       

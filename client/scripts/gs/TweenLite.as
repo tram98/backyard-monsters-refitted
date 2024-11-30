@@ -91,71 +91,9 @@ package gs
       public function TweenLite(param1:Object, param2:Number, param3:Object)
       {
          super();
-         if(param1 == null)
-         {
-            return;
-         }
-         if(!_tlInitted)
-         {
-            TweenPlugin.activate([TintPlugin,RemoveTintPlugin,FramePlugin,AutoAlphaPlugin,VisiblePlugin,VolumePlugin,EndArrayPlugin,TransformAroundPointPlugin,TransformAroundCenterPlugin]);
-            currentTime = getTimer();
-            timingSprite.addEventListener(Event.ENTER_FRAME,updateAll,false,0,true);
-            if(overwriteManager == null)
-            {
-               overwriteManager = {
-                  "mode":1,
-                  "enabled":false
-               };
-            }
-            _timer.addEventListener("timer",killGarbage,false,0,true);
-            _timer.start();
-            _tlInitted = true;
-         }
-         this.vars = param3;
-         this.duration = param2 || 0.001;
-         this.delay = Number(param3.delay) || 0;
-         this.combinedTimeScale = Number(param3.timeScale) || 1;
-         this.active = Boolean(param2 == 0 && this.delay == 0);
-         this.target = param1;
-         if(typeof this.vars.ease != "function")
-         {
-            this.vars.ease = defaultEase;
-         }
-         if(this.vars.easeParams != null)
-         {
-            this.vars.proxiedEase = this.vars.ease;
-            this.vars.ease = this.easeProxy;
-         }
-         this.ease = this.vars.ease;
-         this.exposedVars = this.vars.isTV == true ? this.vars.exposedVars : this.vars;
-         this.tweens = [];
-         this.initTime = currentTime;
-         this.startTime = this.initTime + this.delay * 1000;
-         var _loc4_:int = param3.overwrite == undefined || !overwriteManager.enabled && param3.overwrite > 1 ? int(overwriteManager.mode) : int(param3.overwrite);
-         if(!(param1 in masterList) || _loc4_ == 1)
-         {
-            masterList[param1] = [this];
-         }
-         else
-         {
-            masterList[param1].push(this);
-         }
-         if(this.vars.runBackwards == true && this.vars.renderOnStart != true || this.active)
-         {
-            this.initTweenVals();
-            if(this.active)
-            {
-               this.render(this.startTime + 1);
-            }
-            else
-            {
-               this.render(this.startTime);
-            }
-            if(this.exposedVars.visible != null && this.vars.runBackwards == true && this.target is DisplayObject)
-            {
-               this.target.visible = this.exposedVars.visible;
-            }
-         }
+                  throw new Exception("Not Implemented");
+
+    
       }
       
       public static function to(param1:Object, param2:Number, param3:Object) : TweenLite
@@ -264,57 +202,8 @@ package gs
       
       public function initTweenVals() : void
       {
-         var _loc1_:String = null;
-         var _loc2_:int = 0;
-         var _loc3_:* = undefined;
-         var _loc4_:TweenInfo = null;
-         if(this.exposedVars.timeScale != undefined && this.target.hasOwnProperty("timeScale"))
-         {
-            this.tweens[this.tweens.length] = new TweenInfo(this.target,"timeScale",this.target.timeScale,this.exposedVars.timeScale - this.target.timeScale,"timeScale",false);
-         }
-         for(_loc1_ in this.exposedVars)
-         {
-            if(!(_loc1_ in _reservedProps))
-            {
-               if(_loc1_ in plugins)
-               {
-                  _loc3_ = new plugins[_loc1_]();
-                  if(_loc3_.onInitTween(this.target,this.exposedVars[_loc1_],this) == false)
-                  {
-                     this.tweens[this.tweens.length] = new TweenInfo(this.target,_loc1_,this.target[_loc1_],typeof this.exposedVars[_loc1_] == "number" ? this.exposedVars[_loc1_] - this.target[_loc1_] : Number(this.exposedVars[_loc1_]),_loc1_,false);
-                  }
-                  else
-                  {
-                     this.tweens[this.tweens.length] = new TweenInfo(_loc3_,"changeFactor",0,1,_loc3_.overwriteProps.length == 1 ? String(_loc3_.overwriteProps[0]) : "_MULTIPLE_",true);
-                     this._hasPlugins = true;
-                  }
-               }
-               else
-               {
-                  this.tweens[this.tweens.length] = new TweenInfo(this.target,_loc1_,this.target[_loc1_],typeof this.exposedVars[_loc1_] == "number" ? this.exposedVars[_loc1_] - this.target[_loc1_] : Number(this.exposedVars[_loc1_]),_loc1_,false);
-               }
-            }
-         }
-         if(this.vars.runBackwards == true)
-         {
-            _loc2_ = int(this.tweens.length - 1);
-            while(_loc2_ > -1)
-            {
-               _loc4_ = this.tweens[_loc2_];
-               _loc4_.start += _loc4_.change;
-               _loc4_.change = -_loc4_.change;
-               _loc2_--;
-            }
-         }
-         if(this.vars.onUpdate != null)
-         {
-            this._hasUpdate = true;
-         }
-         if(Boolean(TweenLite.overwriteManager.enabled) && this.target in masterList)
-         {
-            overwriteManager.manageOverwrites(this,masterList[this.target]);
-         }
-         this.initted = true;
+                  throw new Exception("Not Implemented");
+
       }
       
       public function activate() : void

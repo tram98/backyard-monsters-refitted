@@ -1,8 +1,4 @@
 
-{
-   (global.Void = §§newclass(Void,Object)).__constructs__ = [];
-}
-
 package
 {
    import flash.Boot;

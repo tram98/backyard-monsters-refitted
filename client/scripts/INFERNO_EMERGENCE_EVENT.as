@@ -8,9 +8,9 @@ package
    public class INFERNO_EMERGENCE_EVENT
    {
       
-      private namespace postEvent;
+      // private namespace postEvent;
       
-      private namespace duringEvent;
+      // private namespace duringEvent;
       
       public static const TOWN_HALL_LEVEL_REQUIREMENT:int = 5;
       
@@ -40,7 +40,12 @@ package
       
       private static var _currentDate:Date;
       
-      private static var ns:Namespace;
+      // private static var ns:Namespace;
+
+      private static var eventStage: uint;
+
+      private static const STAGE_PRE:uint  = 0;
+      private static const STAGE_POST:uint  = 1;
       
       public static var isGoingToAttack:Boolean;
        
@@ -78,7 +83,7 @@ package
             INFERNOPORTAL.AddPortal(5);
             return false;
          }
-         ns = IsPostEvent() ? postEvent : duringEvent;
+         eventStage = IsPostEvent() ? STAGE_POST : STAGE_PRE;
          if(ShouldShowUpgradePopup())
          {
             ShowUpgradePopup();
@@ -251,12 +256,12 @@ package
       
       public static function ShouldShowPortal() : Boolean
       {
-         return _SHOULD_RUN_EVENT && !GLOBAL._flags.viximo && GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD && GLOBAL.townHall && (ns == duringEvent || ns == postEvent && GLOBAL.townHall && GLOBAL.townHall._lvl.Get() >= TOWN_HALL_LEVEL_REQUIREMENT || ns == postEvent && _lastLevel > 0) && _maxLevel > 0 && BASE.isMainYardOrInfernoMainYard && TUTORIAL._stage > 200;
+         return _SHOULD_RUN_EVENT && !GLOBAL._flags.viximo && GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD && GLOBAL.townHall && (eventStage == STAGE_PRE || eventStage == STAGE_POST && GLOBAL.townHall && GLOBAL.townHall._lvl.Get() >= TOWN_HALL_LEVEL_REQUIREMENT || eventStage == STAGE_POST && _lastLevel > 0) && _maxLevel > 0 && BASE.isMainYardOrInfernoMainYard && TUTORIAL._stage > 200;
       }
       
       public static function ShouldRunEvent() : Boolean
       {
-         return _SHOULD_RUN_EVENT && !GLOBAL._flags.viximo && GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD && GLOBAL.townHall && (ns == duringEvent || ns == postEvent && GLOBAL.townHall._lvl.Get() >= TOWN_HALL_LEVEL_REQUIREMENT || ns == postEvent && _lastLevel > 0) && _maxLevel > 0 && _lastLevel < 5 && BASE.isMainYard && TUTORIAL._stage > 200;
+         return _SHOULD_RUN_EVENT && !GLOBAL._flags.viximo && GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD && GLOBAL.townHall && (eventStage == STAGE_PRE || eventStage == STAGE_POST && GLOBAL.townHall._lvl.Get() >= TOWN_HALL_LEVEL_REQUIREMENT || eventStage == STAGE_POST && _lastLevel > 0) && _maxLevel > 0 && _lastLevel < 5 && BASE.isMainYard && TUTORIAL._stage > 200;
       }
       
       public static function ShouldShowUpgradePopup() : Boolean

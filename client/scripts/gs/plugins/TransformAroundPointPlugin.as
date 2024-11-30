@@ -30,86 +30,8 @@ package gs.plugins
       
       override public function onInitTween(param1:Object, param2:*, param3:TweenLite) : Boolean
       {
-         var _loc4_:String = null;
-         var _loc5_:ShortRotationPlugin = null;
-         var _loc6_:String = null;
-         var _loc7_:Number = NaN;
-         var _loc8_:Number = NaN;
-         if(!(param2.point is Point))
-         {
-            return false;
-         }
-         this._target = param1 as DisplayObject;
-         this._point = param2.point.clone();
-         this._local = this._target.globalToLocal(this._target.parent.localToGlobal(this._point));
-         if(param2.isTV == true)
-         {
-            param2 = param2.exposedVars;
-         }
-         for(_loc4_ in param2)
-         {
-            if(_loc4_ != "point")
-            {
-               if(_loc4_ == "shortRotation")
-               {
-                  this._shortRotation = new ShortRotationPlugin();
-                  this._shortRotation.onInitTween(this._target,param2[_loc4_],param3);
-                  addTween(this._shortRotation,"changeFactor",0,1,"shortRotation");
-                  for(_loc6_ in param2[_loc4_])
-                  {
-                     this.overwriteProps[this.overwriteProps.length] = _loc6_;
-                  }
-               }
-               else if(_loc4_ == "x" || _loc4_ == "y")
-               {
-                  addTween(this._point,_loc4_,this._point[_loc4_],param2[_loc4_],_loc4_);
-                  this.overwriteProps[this.overwriteProps.length] = _loc4_;
-               }
-               else if(_loc4_ == "scale")
-               {
-                  addTween(this._target,"scaleX",this._target.scaleX,param2.scale,"scaleX");
-                  addTween(this._target,"scaleY",this._target.scaleY,param2.scale,"scaleY");
-                  this.overwriteProps[this.overwriteProps.length] = "scaleX";
-                  this.overwriteProps[this.overwriteProps.length] = "scaleY";
-               }
-               else
-               {
-                  addTween(this._target,_loc4_,this._target[_loc4_],param2[_loc4_],_loc4_);
-                  this.overwriteProps[this.overwriteProps.length] = _loc4_;
-               }
-            }
-         }
-         if(param3 != null)
-         {
-            if("x" in param3.exposedVars || "y" in param3.exposedVars)
-            {
-               if("x" in param3.exposedVars)
-               {
-                  _loc7_ = typeof param3.exposedVars.x == "number" ? Number(param3.exposedVars.x) : this._target.x + Number(param3.exposedVars.x);
-               }
-               if("y" in param3.exposedVars)
-               {
-                  _loc8_ = typeof param3.exposedVars.y == "number" ? Number(param3.exposedVars.y) : this._target.y + Number(param3.exposedVars.y);
-               }
-               param3.killVars({
-                  "x":true,
-                  "y":true
-               });
-               this.changeFactor = 1;
-               if(!isNaN(_loc7_))
-               {
-                  addTween(this._point,"x",this._point.x,this._point.x + (_loc7_ - this._target.x),"x");
-                  this.overwriteProps[this.overwriteProps.length] = "x";
-               }
-               if(!isNaN(_loc8_))
-               {
-                  addTween(this._point,"y",this._point.y,this._point.y + (_loc8_ - this._target.y),"y");
-                  this.overwriteProps[this.overwriteProps.length] = "y";
-               }
-               this.changeFactor = 0;
-            }
-         }
-         return true;
+         throw new Exception("Not Implemented");
+         return false;
       }
       
       override public function killProps(param1:Object) : void

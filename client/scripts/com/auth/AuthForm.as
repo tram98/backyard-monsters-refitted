@@ -734,7 +734,6 @@ package com.auth
             errorText.htmlText = errorMessage;
             errorText.textColor = RED;
             errorText.x = inputField.x;
-            ;
             errorText.y = inputField.y + inputField.height + 5;
             errorText.width = inputField.width + 100;
             errorText.height = 40;

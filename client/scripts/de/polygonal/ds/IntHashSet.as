@@ -482,36 +482,7 @@ package de.polygonal.ds
       }
       
       public function contains(param1:Object) : Boolean
-      {
-         var _loc4_:Boolean = false;
-         var _loc2_:int = int(param1);
-         null;
-         var _loc3_:int = int(_hash[_loc2_ * 73856093 & _mask]);
-         if(_loc3_ == -1)
-         {
-            §§push(false);
-         }
-         else if(int(_data[_loc3_]) == _loc2_)
-         {
-            §§push(true);
-         }
-         else
-         {
-            _loc4_ = false;
-            _loc3_ = int(_data[_loc3_ + 1]);
-            while(_loc3_ != -1)
-            {
-               if(int(_data[_loc3_]) == _loc2_)
-               {
-                  _loc4_ = true;
-                  break;
-               }
-               _loc3_ = int(_data[_loc3_ + 1]);
-            }
-            §§push(_loc4_);
-         }
-         return §§pop();
-      }
+      { throw new Exception("Not Implemented")   }
       
       public function clone(param1:Boolean, param2:Object = undefined) : Collection
       {

@@ -259,18 +259,9 @@ package utils.exposed
       
       private function SaveContentsState(param1:String) : XML
       {
-         var _loc5_:XML = null;
-         var _loc2_:XML = <contents/>;
-         var _loc3_:uint = this.m_Contents.length;
-         _loc2_.@length = _loc3_;
-         var _loc4_:uint = 0;
-         while(_loc4_ < _loc3_)
-         {
-            (_loc5_ = this.m_Contents[_loc4_].SaveState(param1)).setName("object");
-            _loc2_.appendChild(_loc5_);
-            _loc4_++;
-         }
-         return _loc2_;
+
+throw new Exception("Not Implemented");
+         return null;
       }
    }
 }

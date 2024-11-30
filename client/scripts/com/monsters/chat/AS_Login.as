@@ -1,7 +1,5 @@
 package com.monsters.chat
-{
-   import com.smartfoxserver.v2.entities.data.SFSObject;
-   
+{   
    public class AS_Login implements IAuthenticationSystem
    {
        
@@ -10,7 +8,7 @@ package com.monsters.chat
       
       private var password:String = null;
       
-      private var params:SFSObject = null;
+     // private var params:SFSObject = null;
       
       private const SALT_SEED:String = "073c187f8a02f626210bbcb7f55a4cee";
       
@@ -24,9 +22,9 @@ package com.monsters.chat
       {
          var _loc1_:int = int(Math.random() * 9999999);
          this.password = md5(this.SALT_SEED + this.user.Name + _loc1_ * (_loc1_ % 11));
-         this.params = new SFSObject();
+         /*this.params = new SFSObject();
          this.params.putLong("hnumber",_loc1_);
-         this.params.putUtfString("pass",this.password);
+         this.params.putUtfString("pass",this.password);*/
          return true;
       }
       

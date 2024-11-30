@@ -840,7 +840,9 @@ package
                }
                else
                {
-                  _loc1_.m = {(_loc3_.valueOf()):_loc2_};
+                  var key = _loc3_.valueOf();
+                  _loc1_.m = {};
+                  _loc1_.m[key] = _loc2_;
                }
             }
          }

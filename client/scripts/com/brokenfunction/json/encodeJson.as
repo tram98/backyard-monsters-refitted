@@ -8,5 +8,5 @@ import flash.utils.ByteArray;
 
 function initDecodeJson():Function
 {
-   throw new Exception("NOT IMPLEMENTED");
+   throw new Error("NOT IMPLEMENTED");
 }

@@ -78,9 +78,9 @@ package
             bB["mcR" + _loc1_].tValue.htmlText = "<b>0</b>";
             _loc1_++;
          }
-         bB.mcTime.visible = false;
+         /*bB.mcTime.visible = false;
          bB.mcTime.gotoAndStop((BASE.isInfernoMainYardOrOutpost ? this._infernoFrameOffset : 0) + 6);
-         bB.mcTime.tTitle.htmlText = "<b>" + KEYS.Get("#r_time#") + "</b>";
+         bB.mcTime.tTitle.htmlText = "<b>" + KEYS.Get("#r_time#") + "</b>";*/
          for(_loc2_ in CREATURELOCKER._creatures)
          {
             if(CREATURES.GetProperty(_loc2_,"speed",10) > _maxSpeed)
@@ -177,25 +177,25 @@ package
          ImageCache.GetImageWithCallBack("monsters/" + _monsterID + "-portrait.jpg",this.UpdatePortrait,true,1,"",[_monsterID]);
          if(_loc2_.time)
          {
-            bA.bAction.removeEventListener(MouseEvent.CLICK,this.SpeedUp);
+/*            bA.bAction.removeEventListener(MouseEvent.CLICK,this.SpeedUp);
             bA.bAction.removeEventListener(MouseEvent.CLICK,this.InstantMonsterUpgrade);
             bB.bAction.removeEventListener(MouseEvent.CLICK,this.StartMonsterUpgrade);
-            bB.bAction.removeEventListener(MouseEvent.CLICK,this.CancelMonsterUpgrade);
-            bA.gArrow.visible = false;
-            bA.tDescription.visible = false;
-            bA.gCoin.visible = false;
-            bA.bAction.SetupKey("btn_speedup");
-            bA.bAction.addEventListener(MouseEvent.CLICK,this.SpeedUp);
-            bA.bAction.Highlight = true;
-            bA.bAction.Enabled = true;
-            bB.bAction.SetupKey("btn_cancel");
-            bB.bAction.addEventListener(MouseEvent.CLICK,this.CancelMonsterUpgrade);
-            bB.bAction.visible = true;
-            bB.mcR1.visible = false;
+            bB.bAction.removeEventListener(MouseEvent.CLICK,this.CancelMonsterUpgrade);*/
+//            bA.gArrow.visible = false;
+//            bA.tDescription.visible = false;
+//            bA.gCoin.visible = false;
+            //bA.bAction.SetupKey("btn_speedup");
+            //bA.bAction.addEventListener(MouseEvent.CLICK,this.SpeedUp);
+            //bA.bAction.Highlight = true;
+            //bA.bAction.Enabled = true;
+            //bB.bAction.SetupKey("btn_cancel");
+            //bB.bAction.addEventListener(MouseEvent.CLICK,this.CancelMonsterUpgrade);
+            //bB.bAction.visible = true;
+        /*    bB.mcR1.visible = false;
             bB.mcR2.visible = false;
             bB.mcR3.visible = false;
             bB.mcR4.visible = false;
-            bB.mcTime.visible = false;
+            bB.mcTime.visible = false;*/
             if(_monsterID == ACADEMY._building._upgrading)
             {
                bPrevious.visible = bNext.visible = false;
@@ -205,34 +205,34 @@ package
          {
             if(!_loc3_.error)
             {
-               bA.tDescription.htmlText = KEYS.Get("academy_traininstantly");
+//               bA.tDescription.htmlText = KEYS.Get("academy_traininstantly");
                this.CalculateInstantCost();
-               bA.gArrow.visible = true;
-               bA.tDescription.visible = true;
-               bA.gCoin.visible = true;
-               bA.bAction.removeEventListener(MouseEvent.CLICK,this.SpeedUp);
-               bA.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":_instantUpgradeCost}));
-               bA.bAction.removeEventListener(MouseEvent.CLICK,this.SpeedUp);
-               bA.bAction.Enabled = true;
-               bA.bAction.Highlight = true;
-               bA.bAction.removeEventListener(MouseEvent.CLICK,this.InstantMonsterUpgrade);
-               bA.bAction.addEventListener(MouseEvent.CLICK,this.InstantMonsterUpgrade);
-               bB.bAction.SetupKey("acad_starttraining_btn");
-               bB.bAction.addEventListener(MouseEvent.CLICK,this.StartMonsterUpgrade);
-               bB.bAction.removeEventListener(MouseEvent.CLICK,this.CancelMonsterUpgrade);
-               bB.bAction.visible = true;
-               bB.bAction.Enabled = true;
-               bB.mcR1.visible = true;
-               bB.mcR2.visible = true;
-               bB.mcR3.visible = true;
-               bB.mcR3.tValue.htmlText = "<b><font color=\"#" + (_loc4_[0] > GLOBAL._resources.r3.Get() ? "FF0000" : "000000") + "\">" + GLOBAL.FormatNumber(_loc4_[0]) + "</font></b>";
-               bB.mcR4.visible = true;
-               bB.mcTime.visible = true;
-               bB.mcTime.tValue.htmlText = "<b>" + GLOBAL.ToTime(_loc4_[1]) + "</b>";
+  //             bA.gArrow.visible = true;
+    //           bA.tDescription.visible = true;
+      //         bA.gCoin.visible = true;
+               //bA.bAction.removeEventListener(MouseEvent.CLICK,this.SpeedUp);
+               //bA.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":_instantUpgradeCost}));
+               //bA.bAction.removeEventListener(MouseEvent.CLICK,this.SpeedUp);
+               //bA.bAction.Enabled = true;
+               //bA.bAction.Highlight = true;
+               //bA.bAction.removeEventListener(MouseEvent.CLICK,this.InstantMonsterUpgrade);
+               //bA.bAction.addEventListener(MouseEvent.CLICK,this.InstantMonsterUpgrade);
+               //bB.bAction.SetupKey("acad_starttraining_btn");
+               //bB.bAction.addEventListener(MouseEvent.CLICK,this.StartMonsterUpgrade);
+               //bB.bAction.removeEventListener(MouseEvent.CLICK,this.CancelMonsterUpgrade);
+               //bB.bAction.visible = true;
+               //bB.bAction.Enabled = true;
+//               bB.mcR1.visible = true;
+  //             bB.mcR2.visible = true;
+    //           bB.mcR3.visible = true;
+      //         bB.mcR3.tValue.htmlText = "<b><font color=\"#" + (_loc4_[0] > GLOBAL._resources.r3.Get() ? "FF0000" : "000000") + "\">" + GLOBAL.FormatNumber(_loc4_[0]) + "</font></b>";
+        //       bB.mcR4.visible = true;
+        //       bB.mcTime.visible = true;
+          //     bB.mcTime.tValue.htmlText = "<b>" + GLOBAL.ToTime(_loc4_[1]) + "</b>";
             }
             else if(_loc3_.status == KEYS.Get("acad_err_putty") || _loc3_.status == KEYS.Get("acad_err_sulfur"))
             {
-               bA.tDescription.visible = true;
+/*               bA.tDescription.visible = true;
                bA.gArrow.visible = true;
                bA.gCoin.visible = true;
                bA.tDescription.htmlText = KEYS.Get("academy_traininstantly");
@@ -242,22 +242,22 @@ package
                bB.mcR3.tValue.htmlText = "<b><font color=\"#" + (_loc4_[0] > GLOBAL._resources.r3.Get() ? "FF0000" : "000000") + "\">" + GLOBAL.FormatNumber(_loc4_[0]) + "</font></b>";
                bB.mcR4.visible = true;
                bB.mcTime.visible = true;
-               bB.mcTime.tValue.htmlText = "<b>" + GLOBAL.ToTime(_loc4_[1]) + "</b>";
+               bB.mcTime.tValue.htmlText = "<b>" + GLOBAL.ToTime(_loc4_[1]) + "</b>";*/
                this.CalculateInstantCost();
-               bA.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":_instantUpgradeCost}));
-               bA.bAction.removeEventListener(MouseEvent.CLICK,this.InstantMonsterUpgrade);
-               bA.bAction.addEventListener(MouseEvent.CLICK,this.InstantMonsterUpgrade);
-               bA.bAction.removeEventListener(MouseEvent.CLICK,this.SpeedUp);
-               bA.bAction.Enabled = true;
-               bA.bAction.Highlight = true;
-               bB.bAction.Setup(_loc3_.errorMessage);
-               bB.bAction.removeEventListener(MouseEvent.CLICK,this.StartMonsterUpgrade);
-               bB.bAction.removeEventListener(MouseEvent.CLICK,this.CancelMonsterUpgrade);
-               bB.bAction.Enabled = false;
-               bB.bAction.visible = true;
+               //bA.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":_instantUpgradeCost}));
+               //bA.bAction.removeEventListener(MouseEvent.CLICK,this.InstantMonsterUpgrade);
+               //bA.bAction.addEventListener(MouseEvent.CLICK,this.InstantMonsterUpgrade);
+               //bA.bAction.removeEventListener(MouseEvent.CLICK,this.SpeedUp);
+               //bA.bAction.Enabled = true;
+               //bA.bAction.Highlight = true;
+               //bB.bAction.Setup(_loc3_.errorMessage);
+               //bB.bAction.removeEventListener(MouseEvent.CLICK,this.StartMonsterUpgrade);
+               //bB.bAction.removeEventListener(MouseEvent.CLICK,this.CancelMonsterUpgrade);
+               //bB.bAction.Enabled = false;
+               //bB.bAction.visible = true;
             }
-            else if(bA.label != _loc3_.errorMessage)
-            {
+            else if(true /*bA.label != _loc3_.errorMessage*/)
+            {/*
                bA.gArrow.visible = false;
                bA.tDescription.visible = false;
                bA.gCoin.visible = false;
@@ -265,20 +265,25 @@ package
                bB.mcR2.visible = false;
                bB.mcR3.visible = false;
                bB.mcR4.visible = false;
-               bB.mcTime.visible = false;
-               bA.bAction.removeEventListener(MouseEvent.CLICK,this.InstantMonsterUpgrade);
-               bA.bAction.removeEventListener(MouseEvent.CLICK,this.SpeedUp);
-               bA.bAction.Setup(_loc3_.errorMessage);
-               bA.bAction.Enabled = false;
-               bA.bAction.Highlight = false;
-               bB.bAction.removeEventListener(MouseEvent.CLICK,this.StartMonsterUpgrade);
-               bB.bAction.removeEventListener(MouseEvent.CLICK,this.CancelMonsterUpgrade);
-               bB.bAction.visible = false;
+               bB.mcTime.visible = false;*/
+               //bA.bAction.removeEventListener(MouseEvent.CLICK,this.InstantMonsterUpgrade);
+               //bA.bAction.removeEventListener(MouseEvent.CLICK,this.SpeedUp);
+               //bA.bAction.Setup(_loc3_.errorMessage);
+               //bA.bAction.Enabled = false;
+               //bA.bAction.Highlight = false;
+               //bB.bAction.removeEventListener(MouseEvent.CLICK,this.StartMonsterUpgrade);
+               //bB.bAction.removeEventListener(MouseEvent.CLICK,this.CancelMonsterUpgrade);
+               //bB.bAction.visible = false;
             }
-            bA.bAction.Highlight = false;
+            //bA.bAction.Highlight = false;
             bPrevious.visible = bNext.visible = true;
          }
-         var _loc5_:* = (_loc5_ = (_loc5_ = "<b>" + KEYS.Get("acad_mon_name") + "</b> " + KEYS.Get(CREATURELOCKER._creatures[_monsterID].name) + "<br>") + ("<b>" + KEYS.Get("acad_mon_status") + "</b> " + _loc3_.status)) + ("<br>" + KEYS.Get(CREATURELOCKER._creatures[_monsterID].description));
+         var _loc5_:* = (
+               "<b>" + KEYS.Get("acad_mon_name") + "</b> " 
+               + KEYS.Get(CREATURELOCKER._creatures[_monsterID].name) + "<br>"
+               ) 
+               + ("<b>" + KEYS.Get("acad_mon_status") + "</b> " + _loc3_.status) 
+               + ("<br>" + KEYS.Get(CREATURELOCKER._creatures[_monsterID].description));
          tName.htmlText = _loc5_;
          var _loc6_:int;
          if((_loc6_ = CREATURES.GetProperty(_monsterID,"damage")) > 0)
@@ -487,9 +492,9 @@ package
             }
             popupMC = new popup_monster();
             popupMC.tText.htmlText = KEYS.Get("acad_pop_complete",{"v1":monsterName});
-            popupMC.bAction.SetupKey("btn_warnyourfriends");
-            popupMC.bAction.addEventListener(MouseEvent.CLICK,Post);
-            popupMC.bAction.Highlight = true;
+            //popupMC.bAction.SetupKey("btn_warnyourfriends");
+            //popupMC.bAction.addEventListener(MouseEvent.CLICK,Post);
+            //popupMC.bAction.Highlight = true;
             popupMC.bSpeedup.visible = false;
             POPUPS.Push(popupMC,null,null,null,"" + _monsterID + "-150.png");
          }

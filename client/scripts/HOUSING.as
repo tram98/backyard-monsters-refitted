@@ -45,8 +45,8 @@ package
             _housingPopup = new HOUSINGPOPUP();
          }
          GLOBAL._layerWindows.addChild(_housingPopup);
-         _housingPopup.Center();
-         _housingPopup.ScaleUp();
+         // _housingPopup.Center();
+         // _housingPopup.ScaleUp();
       }
       
       public static function Hide(param1:MouseEvent = null) : void
@@ -289,7 +289,7 @@ package
       {
          if(_open)
          {
-            _housingPopup.Update();
+            // _housingPopup.Update();
          }
       }
       

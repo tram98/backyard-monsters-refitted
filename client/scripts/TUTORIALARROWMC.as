@@ -127,11 +127,11 @@ package
             mcArrow.rotation = this.ResizeParams[3];
             if(mcArrow.rotation >= 0)
             {
-               mcArrow.mcArrow.gotoAndStop(1);
+//               mcArrow.mcArrow.gotoAndStop(1);
             }
             else
             {
-               mcArrow.mcArrow.gotoAndStop(2);
+  //             mcArrow.mcArrow.gotoAndStop(2);
             }
          }
          else
@@ -146,11 +146,11 @@ package
             }
             if(x < GLOBAL._ROOT.stage.stageWidth / 2)
             {
-               mcArrow.mcArrow.gotoAndStop(1);
+//               mcArrow.mcArrow.gotoAndStop(1);
             }
             else
             {
-               mcArrow.mcArrow.gotoAndStop(2);
+  //             mcArrow.mcArrow.gotoAndStop(2);
             }
          }
       }
@@ -160,22 +160,22 @@ package
          if(this.wobbleCountdown == 0)
          {
             this.wobbleCountdown = 80;
-            mcArrow.mcArrow.y = -60;
-            TweenLite.to(mcArrow.mcArrow,0.6,{
+//             mcArrow.mcArrow.y = -60;
+/*             TweenLite.to(mcArrow.mcArrow,0.6,{
                "y":-70,
                "ease":Expo.easeInOut,
                "onComplete":this.WobbleB
-            });
+            });*/
          }
          --this.wobbleCountdown;
       }
       
       public function WobbleB() : void
       {
-         TweenLite.to(mcArrow.mcArrow,0.6,{
+/*          TweenLite.to(mcArrow.mcArrow,0.6,{
             "y":-60,
             "ease":Bounce.easeOut
-         });
+         });*/
       }
       
       public function SetPos(param1:int, param2:int) : void

@@ -51,7 +51,7 @@ package gs.plugins
       
       protected function addTween(param1:Object, param2:String, param3:Number, param4:*, param5:String = null) : void
       {
-         throw new Exception("Not Implemented");
+         throw new Error("Not Implemented");
       }
       
       protected function updateTweens(param1:Number) : void

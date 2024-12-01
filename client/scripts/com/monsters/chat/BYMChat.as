@@ -12,7 +12,7 @@ package com.monsters.chat
    public class BYMChat extends Sprite
    {
       
-      private static var _chat:CS_SmartFoxServer2X = null;
+      private static var _chat:Object = null;
       
       public static var _userRecord:UserRecord = null;
       
@@ -138,8 +138,10 @@ package com.monsters.chat
       
       public function initServer() : void
       {
+         throw new Error("NOT IMPLEMENTED");
          try
          {
+            /*
             _chat = new CS_SmartFoxServer2X(this._chatHost,this._chatPort);
             _chat.addEventListener(ChatEvent.CONNECT,this.onConnect);
             _chat.addEventListener(ChatEvent.LOGIN,this.onLogin);
@@ -152,7 +154,7 @@ package com.monsters.chat
             _chat.addEventListener(ChatEvent.IGNOREERROR,this.onIgnoreError);
             _chat.addEventListener(ChatEvent.UPDATE_NAME,this.onUpdateName);
             _chat.addEventListener(ChatEvent.USER_ENTER,this.onUserEnter);
-            _chat.addEventListener(ChatEvent.USER_EXIT,this.onUserExit);
+            _chat.addEventListener(ChatEvent.USER_EXIT,this.onUserExit);*/
             _serverInited = true;
          }
          catch(e:*)
@@ -186,8 +188,8 @@ package com.monsters.chat
          {
             return;
          }
-         _chat.setDisplayNameUserVar("[" + param1 + "] " + _userRecord.Id);
-         _chat.updateDisplayName(this.sector_channel,_userRecord.Name,"[" + param1 + "] " + _userRecord.Id);
+         // _chat.setDisplayNameUserVar("[" + param1 + "] " + _userRecord.Id);
+         // _chat.updateDisplayName(this.sector_channel,_userRecord.Name,"[" + param1 + "] " + _userRecord.Id);
       }
       
       private function clearChat() : void
@@ -237,7 +239,7 @@ package com.monsters.chat
                   case "/ignored":
                   case "/listignored":
                   case "/igd":
-                     _chat.showIgnore();
+                     // _chat.showIgnore();
                      break;
                   case "/?":
                   case "/h":
@@ -260,7 +262,7 @@ package com.monsters.chat
       {
          if(!this._isConnected)
          {
-            _chat.connect();
+            // _chat.connect();
          }
       }
       
@@ -271,7 +273,7 @@ package com.monsters.chat
          this._auth.authenticate();
          if(this._isConnected)
          {
-            _chat.login(this._auth);
+            // _chat.login(this._auth);
          }
       }
       
@@ -279,7 +281,7 @@ package com.monsters.chat
       {
          if(_chat)
          {
-            _chat.logout();
+            // _chat.logout();
             this.isLoggingOut = true;
             TweenLite.delayedCall(3,this.logoutDelayCB);
          }
@@ -335,7 +337,7 @@ package com.monsters.chat
          }
          if(this.globalChatTimer == null)
          {
-            _chat.say(this.GLOBAL_CHANNEL,param1);
+            // _chat.say(this.GLOBAL_CHANNEL,param1);
             this.delay += this.DELAY_INCREASE;
             this.globalChatLastSent = new Date();
             this.globalChatTimer = new Timer(250);
@@ -379,7 +381,7 @@ package com.monsters.chat
             if(this.messageQueue.length > 0)
             {
                _loc4_ = this.messageQueue.shift() as String;
-               _chat.say(this.GLOBAL_CHANNEL,_loc4_);
+               // _chat.say(this.GLOBAL_CHANNEL,_loc4_);
                this.globalChatLastSent = new Date();
                this.delay += this.DELAY_INCREASE;
                if(this.messageQueue.length == 0)
@@ -469,7 +471,7 @@ package com.monsters.chat
          {
             if(this.sector_channel != null)
             {
-               _chat.leave(this.sector_channel);
+               // _chat.leave(this.sector_channel);
             }
          }
          this.sector_channel = new Channel(param1,"system");
@@ -493,11 +495,11 @@ package com.monsters.chat
          }
          if(this.sector_channel != null)
          {
-            _chat.say(this.sector_channel,param1);
+            // _chat.say(this.sector_channel,param1);
          }
          else
          {
-            _chat.error(ChatEvent.SAY,"Not in a sector channel.");
+            // _chat.error(ChatEvent.SAY,"Not in a sector channel.");
          }
       }
       
@@ -513,7 +515,7 @@ package com.monsters.chat
             return;
          }
          var _loc3_:Channel = new Channel(param1,"private");
-         _chat.say(_loc3_,param2);
+         // _chat.say(_loc3_,param2);
       }
       
       private function onConnect(param1:ChatEvent) : void
@@ -530,7 +532,7 @@ package com.monsters.chat
             }
             else if(this._auth != null && _chat != null)
             {
-               _chat.login(this._auth);
+               // _chat.login(this._auth);
             }
             else
             {
@@ -551,7 +553,7 @@ package com.monsters.chat
          if(param1.Success)
          {
             this.joinSector();
-            _chat.getIgnore();
+            // _chat.getIgnore();
          }
          else
          {
@@ -564,7 +566,7 @@ package com.monsters.chat
       public function joinGlobal() : void
       {
          this.clearChat();
-         _chat.join(this.GLOBAL_CHANNEL);
+         // _chat.join(this.GLOBAL_CHANNEL);
       }
       
       public function joinSector() : void
@@ -572,7 +574,7 @@ package com.monsters.chat
          if(this.sector_channel != null)
          {
             this.clearDisplayNameMap();
-            _chat.join(this.sector_channel);
+            // _chat.join(this.sector_channel);
             this.default_chat_channel = "sector";
          }
       }
@@ -586,8 +588,8 @@ package com.monsters.chat
             this.clearChat();
             this.system_message("Joined channel " + _loc2_.Name + ".");
             this.system_message("Type /h for help.");
-            _chat.setDisplayNameUserVar("[" + BASE.BaseLevel().level + "] " + _userRecord.Id);
-            _chat.updateDisplayName(_loc2_,_userRecord.Name,"[" + BASE.BaseLevel().level + "] " + _userRecord.Id);
+            // _chat.setDisplayNameUserVar("[" + BASE.BaseLevel().level + "] " + _userRecord.Id);
+            // _chat.updateDisplayName(_loc2_,_userRecord.Name,"[" + BASE.BaseLevel().level + "] " + _userRecord.Id);
             this.chatBox.EnableInput(true);
             this._isJoined = true;
          }
@@ -743,7 +745,7 @@ package com.monsters.chat
          {
             return;
          }
-         _chat.updateDisplayNameDirect(this.sector_channel,_loc2_.name,_userRecord.Name,"[" + BASE.BaseLevel().level + "] " + _userRecord.Id);
+         // _chat.updateDisplayNameDirect(this.sector_channel,_loc2_.name,_userRecord.Name,"[" + BASE.BaseLevel().level + "] " + _userRecord.Id);
       }
       
       private function onUserExit(param1:ChatEvent) : void
@@ -886,7 +888,7 @@ package com.monsters.chat
       {
          if(param1 != null)
          {
-            GLOBAL.Message(KEYS.Get("chat_ignore") + " \'" + param2 + "\' (id: " + param1 + ")<br><br>" + KEYS.Get("chat_ignore_confirm"),KEYS.Get("btn_yes"),_chat.ignore,[param1,param2]);
+            GLOBAL.Message(KEYS.Get("chat_ignore") + " \'" + param2 + "\' (id: " + param1 + ")<br><br>" + KEYS.Get("chat_ignore_confirm"),KEYS.Get("btn_yes"),null,[param1,param2]);
          }
       }
       
@@ -894,7 +896,7 @@ package com.monsters.chat
       {
          if(param1 != null)
          {
-            _chat.unignore(param1);
+            // _chat.unignore(param1);
          }
       }
       
@@ -985,9 +987,10 @@ package com.monsters.chat
       
       public function get roomNames() : Array
       {
+         throw new Error("NOT IMPLEMENTED");
          if(_chat != null)
          {
-            return _chat.roomNames;
+            return null;
          }
          return [];
       }

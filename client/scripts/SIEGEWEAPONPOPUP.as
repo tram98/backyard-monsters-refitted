@@ -95,9 +95,9 @@ package
          _image.mouseChildren = false;
          this._items = [];
          _bar.alpha = 0;
-         _bar.timebar.visible = false;
-         _bar._tB.visible = false;
-         _bar._tB.htmlText = "";
+         // _bar.timebar.visible = false;
+         // _bar._tB.visible = false;
+         // _bar._tB.htmlText = "";
          timeLeftMC.mouseEnabled = false;
          timeLeftMC.mouseChildren = false;
          timeLeftMC.alpha = 0;
@@ -187,22 +187,22 @@ package
                "y":65,
                "ease":Bounce.easeOut
             });
-            if(this._currentSiegeWeapon.weaponID == Decoy.ID)
-            {
-               _bar._tA.htmlText = KEYS.Get("siege_target_ground");
-            }
-            else if(this._currentSiegeWeapon.weaponID == Jars.ID)
-            {
-               _bar._tA.htmlText = KEYS.Get("siege_target_towers");
-            }
-            else
-            {
-               _bar._tA.htmlText = KEYS.Get("siege_target_targets");
-            }
-            _bar._tA.y = 12;
-            _bar._tB.y = _bar.timebar.y;
-            _bar._tB.visible = false;
-            _bar.timebar.visible = false;
+            // if(this._currentSiegeWeapon.weaponID == Decoy.ID)
+            // {
+            //    _bar._tA.htmlText = KEYS.Get("siege_target_ground");
+            // }
+            // else if(this._currentSiegeWeapon.weaponID == Jars.ID)
+            // {
+            //    _bar._tA.htmlText = KEYS.Get("siege_target_towers");
+            // }
+            // else
+            // {
+            //    _bar._tA.htmlText = KEYS.Get("siege_target_targets");
+            // }
+            // _bar._tA.y = 12;
+            // _bar._tB.y = _bar.timebar.y;
+            // _bar._tB.visible = false;
+            // _bar.timebar.visible = false;
          }
          else if(this._state == 2)
          {
@@ -236,21 +236,21 @@ package
                      "y":65,
                      "ease":Sine.easeOut
                   });
-                  _bar._tA.htmlText = this._currentSiegeWeapon.name;
-                  _bar._tA.y = 4;
-                  if(_loc4_ = this._currentSiegeWeapon.duration)
-                  {
-                     _bar.timebar.visible = true;
-                     _bar.timebar.alpha = 1;
-                     _bar.timebar.mcBar.width = 100 / _loc4_ * _loc2_;
-                     _bar._tB.visible = true;
-                     _bar._tB.htmlText = _loc3_;
-                  }
-                  else
-                  {
-                     _bar.timebar.visible = false;
-                     _bar.timebar.alpha = 0;
-                  }
+                  // _bar._tA.htmlText = this._currentSiegeWeapon.name;
+                  // _bar._tA.y = 4;
+                  // if(_loc4_ = this._currentSiegeWeapon.duration)
+                  // {
+                  //    _bar.timebar.visible = true;
+                  //    _bar.timebar.alpha = 1;
+                  //    _bar.timebar.mcBar.width = 100 / _loc4_ * _loc2_;
+                  //    _bar._tB.visible = true;
+                  //    _bar._tB.htmlText = _loc3_;
+                  // }
+                  // else
+                  // {
+                  //    _bar.timebar.visible = false;
+                  //    _bar.timebar.alpha = 0;
+                  // }
                }
                else
                {
@@ -259,8 +259,8 @@ package
                      "y":23,
                      "ease":Circ.easeOut
                   });
-                  TweenLite.to(_bar.timebar,0.3,{"autoAlpha":0});
-                  _bar._tB.visible = false;
+                  // TweenLite.to(_bar.timebar,0.3,{"autoAlpha":0});
+                  // _bar._tB.visible = false;
                }
             }
             TweenLite.to(_bar,0.3,{
@@ -320,7 +320,7 @@ package
          var _loc1_:Number = SiegeWeapons.getTimeRemaingOnActiveWeapon();
          var _loc2_:uint = _loc1_ < 10 ? 16711680 : 255;
          timeLeftMC.alpha = 1;
-         timeLeftMC.timeLeftText.text = _loc1_ + "s";
+         // timeLeftMC.timeLeftText.text = _loc1_ + "s";
          timeLeftMC.filters = [new GlowFilter(_loc2_)];
       }
       
@@ -446,8 +446,8 @@ package
             _loc5_++;
          }
          _loc4_ += "</ul>";
-         this._tooltip.tTitle.htmlText = _loc2_;
-         this._tooltip.tBody.htmlText = _loc4_;
+         // this._tooltip.tTitle.htmlText = _loc2_;
+         // this._tooltip.tBody.htmlText = _loc4_;
          addChild(this._tooltip);
       }
       

@@ -1442,7 +1442,7 @@ package
                         loader = new Loader();
                         loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR,LoadImageError,false,0,true);
                         loader.contentLoaderInfo.addEventListener(Event.COMPLETE,onImageLoad);
-                        popupMC.mcPic.mcBG.addChild(loader);
+//                        popupMC.mcPic.mcBG.addChild(loader);
                         loader.load(new URLRequest(attackObj.pic));
                      }
                      if(attackObj.friend == 1)
@@ -2571,7 +2571,7 @@ package
                               POPUPS.Next();
                            };
                            fbPromoPopup = new FBPROMO_711_CLIP();
-                           fbPromoPopup.bAction3.buttonMode = true;
+/*                           fbPromoPopup.bAction3.buttonMode = true;
                            fbPromoPopup.bAction3.useHandCursor = true;
                            fbPromoPopup.bAction3.mouseChildren = false;
                            fbPromoPopup.bAction3.txt.htmlText = KEYS.Get("btn_goldenbiggulp");
@@ -2586,7 +2586,7 @@ package
                            fbPromoPopup.bInfo.useHandCursor = true;
                            fbPromoPopup.bInfo.buttonMode = true;
                            fbPromoPopup.bInfo.mouseChildren = false;
-                           fbPromoPopup.bInfo.addEventListener(MouseEvent.CLICK,MoreInfo711);
+                           fbPromoPopup.bInfo.addEventListener(MouseEvent.CLICK,MoreInfo711);*/
                            POPUPS.Push(fbPromoPopup,BUY.logFB711PromoShown,null,null,null,false);
                            GLOBAL.StatSet("fbpromotimer",GLOBAL.Timestamp());
                            GLOBAL._displayedPromoNew = true;
@@ -2679,11 +2679,11 @@ package
                   POPUPS.Next();
                };
                popupMCdamaged = new popup_damagedbase_onvisit();
-               popupMCdamaged.title_txt.htmlText = "<b>" + KEYS.Get("base_damaged_title") + "</b>";
+/*               popupMCdamaged.title_txt.htmlText = "<b>" + KEYS.Get("base_damaged_title") + "</b>";
                popupMCdamaged.body_txt.htmlText = KEYS.Get("base_damaged_body",{"v1":BASE._ownerName});
                popupMCdamaged.bAction.SetupKey("base_damaged_alert_btn");
                popupMCdamaged.bAction.Highlight = true;
-               popupMCdamaged.bAction.addEventListener(MouseEvent.CLICK,Action);
+               popupMCdamaged.bAction.addEventListener(MouseEvent.CLICK,Action);*/
                POPUPS.Push(popupMCdamaged);
             }
          }
@@ -2921,10 +2921,10 @@ package
          var ShowLab:Function;
          var popup:MovieClip = param1;
          var weaponID:String = param2;
-         popup.tTitle.htmlText = "<b>" + KEYS.Get("whatsnew_title") + "</b>";
+//         popup.tTitle.htmlText = "<b>" + KEYS.Get("whatsnew_title") + "</b>";
          if(isInfernoMainYardOrOutpost || !INFERNOPORTAL.isAboveMaxLevel() || !MAPROOM_DESCENT.DescentPassed)
          {
-            popup.bAction.visible = false;
+//            popup.bAction.visible = false;
          }
          else if(GLOBAL._bSiegeLab)
          {
@@ -2934,13 +2934,13 @@ package
                SiegeBuilding.Show("lab",weaponID);
                POPUPS.Next();
             };
-            popup.bAction.SetupKey("btn_unlocknow");
-            popup.bAction.addEventListener(MouseEvent.CLICK,ShowLab);
+//            popup.bAction.SetupKey("btn_unlocknow");
+//            popup.bAction.addEventListener(MouseEvent.CLICK,ShowLab);
          }
          else
          {
-            popup.bAction.SetupKey("btn_buildnow");
-            popup.bAction.addEventListener(MouseEvent.CLICK,ShowBuildLab);
+//            popup.bAction.SetupKey("btn_buildnow");
+//            popup.bAction.addEventListener(MouseEvent.CLICK,ShowBuildLab);
          }
       }
       
@@ -5463,7 +5463,7 @@ package
          {
             return;
          }
-         _loc4_ = _loc3_.mcPoints.txt;
+//         _loc4_ = _loc3_.mcPoints.txt;
          if(param2 >= 0)
          {
             _loc5_ = "00FF00";
@@ -5476,7 +5476,7 @@ package
          }
          _loc4_.y = 0;
          _loc4_.x = 0;
-         _loc3_.mcPoints.alpha = 1;
+//         _loc3_.mcPoints.alpha = 1;
          _loc4_.alpha = 1;
          _loc4_.htmlText = "<font color=\"#" + _loc5_ + "\">" + _loc6_ + GLOBAL.FormatNumber(param2) + "</font>";
          TweenLite.to(_loc4_,3 + Math.random(),{

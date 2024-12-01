@@ -19,9 +19,9 @@ package com.monsters.baseplanner.components
          this._nodeList = new Vector.<PlannerNode>();
          mc = new BasePlannerPopup_ExplorerItem_Type();
          addChild(mc);
-         mc.tLabel.htmlText = param1.displayName;
-         mc.tLabel.mouseEnabled = false;
-         mc.mcFrame.gotoAndStop("off");
+         // mc.tLabel.htmlText = param1.displayName;
+         // mc.tLabel.mouseEnabled = false;
+         // mc.mcFrame.gotoAndStop("off");
          mc.buttonMode = true;
          this._clicked = false;
          this.increment(param1);
@@ -45,7 +45,7 @@ package com.monsters.baseplanner.components
       public function increment(param1:PlannerNode) : void
       {
          this._nodeList.push(param1);
-         mc.mcLevel.tLabel.htmlText = this._nodeList.length;
+         // mc.mcLevel.tLabel.htmlText = this._nodeList.length;
       }
       
       public function clear() : void
@@ -64,14 +64,14 @@ package com.monsters.baseplanner.components
          {
             alpha = 0;
          }
-         mc.mcLevel.tLabel.htmlText = this._nodeList.length - 1;
+         // mc.mcLevel.tLabel.htmlText = this._nodeList.length - 1;
          if(this._nodeList.length - 1 > 0 && param1)
          {
             PLANNER.basePlanner.popup.designView.addInventoryItem(this._nodeList[this._nodeList.length - 2]);
          }
          else
          {
-            mc.mcFrame.gotoAndStop("off");
+            // mc.mcFrame.gotoAndStop("off");
          }
          return this._nodeList.pop();
       }
@@ -91,7 +91,7 @@ package com.monsters.baseplanner.components
          if(param1 != this.displayName)
          {
             this._clicked = false;
-            mc.mcFrame.gotoAndStop("off");
+            // mc.mcFrame.gotoAndStop("off");
          }
       }
       
@@ -105,21 +105,21 @@ package com.monsters.baseplanner.components
          {
             this._clicked = Boolean(param1);
          }
-         if(this._clicked)
-         {
-            mc.mcFrame.gotoAndStop("on");
-         }
-         else
-         {
-            mc.mcFrame.gotoAndStop("off");
-         }
+         // if(this._clicked)
+         // {
+         //    mc.mcFrame.gotoAndStop("on");
+         // }
+         // else
+         // {
+         //    mc.mcFrame.gotoAndStop("off");
+         // }
       }
       
       override public function onRollOver(param1:MouseEvent = null) : void
       {
          if(alpha > 0)
          {
-            mc.mcFrame.gotoAndStop("on");
+            // mc.mcFrame.gotoAndStop("on");
             dispatchEvent(new BasePlannerNodeEvent(PlannerExplorer.EXPLORER_ITEM_OVER,this._nodeList[0]));
             param1.stopImmediatePropagation();
          }
@@ -131,7 +131,7 @@ package com.monsters.baseplanner.components
          {
             if(!this._clicked)
             {
-               mc.mcFrame.gotoAndStop("off");
+               // mc.mcFrame.gotoAndStop("off");
             }
             dispatchEvent(new BasePlannerNodeEvent(PlannerExplorer.EXPLORER_ITEM_OUT,this._nodeList[0]));
             param1.stopImmediatePropagation();

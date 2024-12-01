@@ -564,19 +564,19 @@ package
             this.bAction3.y = _props.bActionY;
             this.bAction3.width = _props.bActionW;
             this.bAction3.height = _props.bActionH;
-            this.bAction3.txt.htmlText = _props.bActionText;
+            // this.bAction3.txt.htmlText = _props.bActionText;
             this.bAction3.visible = true;
             this.bAction4.x = _props.bAction2X;
             this.bAction4.y = _props.bAction2Y;
             this.bAction4.width = _props.bAction2W;
             this.bAction4.height = _props.bAction2H;
-            this.bAction4.txt.htmlText = _props.bActionText2;
+            // this.bAction4.txt.htmlText = _props.bActionText2;
             if(TUTORIAL._stage < 200)
             {
                if(this.bAction3)
                {
                   this.bAction3.visible = true;
-                  this.bAction3.txt.htmlText = KEYS.Get("tut_continue");
+                  // this.bAction3.txt.htmlText = KEYS.Get("tut_continue");
                }
                if(this.bAction4)
                {

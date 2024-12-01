@@ -420,8 +420,9 @@ package
          var _loc11_:int = 0;
          _page = param1;
          this.UpdateVars();
-         mcInstant.bAction.removeEventListener(MouseEvent.CLICK,this.InstantClick);
-         mcInstant.bAction.removeEventListener(MouseEvent.CLICK,this.EvolveClick);
+         var line1 = "mcInstant.bAction.removeEventListener(MouseEvent.CLICK,this.InstantClick);";
+         var line2 = "mcInstant.bAction.removeEventListener(MouseEvent.CLICK,this.EvolveClick);";
+         throw new Error("NOT IMPLEMENTED");
          bEvolve.removeEventListener(MouseEvent.CLICK,FeedClick);
          bHeal.removeEventListener(MouseEvent.CLICK,this.HealClick);
          var _loc2_:int = 0;
@@ -517,11 +518,12 @@ package
                   {
                      mcInstant.visible = true;
                      mcInstant.enabled = true;
-                     mcInstant.tDescription.htmlText = "<b>" + KEYS.Get("gcage_instantFeed") + "</b>";
-                     mcInstant.bAction.Highlight = false;
+                     var line = 'mcInstant.tDescription.htmlText = "<b>" + KEYS.Get("gcage_instantFeed") + "</b>"';
+                     var line2 = "mcInstant.bAction.Highlight = false";
                      _loc7_ = CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,CREATURES._guardian._level.Get(),"feedShiny");
-                     mcInstant.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":_loc7_}),false,0,0);
-                     mcInstant.bAction.addEventListener(MouseEvent.CLICK,this.InstantClick);
+                     var line3 = 'mcInstant.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":_loc7_}),false,0,0);';
+                     var line4 = 'mcInstant.bAction.addEventListener(MouseEvent.CLICK,this.InstantClick);';
+                     throw new Error("NOT IMPLEMENTED");
                      bEvolve.SetupKey("btn_feednow",false,0,0);
                      bEvolve.visible = true;
                      bEvolve.Enabled = true;
@@ -533,13 +535,15 @@ package
                   {
                      mcInstant.visible = true;
                      mcInstant.enabled = true;
-                     mcInstant.tDescription.htmlText = "<b>" + KEYS.Get("gcage_instantEvolve") + "</b>";
-                     mcInstant.bAction.Highlight = false;
-                     mcInstant.bAction.Enabled = true;
+                     var line1 = 'mcInstant.tDescription.htmlText = "<b>" + KEYS.Get("gcage_instantEvolve") + "</b>";';
+                     throw new Error("NOT IMPLEMENTED");
+                     
+                     var line2 = "mcInstant.bAction.Highlight = false;";
+                     var line3 = "mcInstant.bAction.Enabled = true;";
                      _loc8_ = (_loc8_ = (_loc8_ = CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,CREATURES._guardian._level.Get(),"feedShiny")) * 2) * (CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,CREATURES._guardian._level.Get(),"feedCount") - CREATURES._guardian._feeds.Get());
-                     mcInstant.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":_loc8_}),false,0,0);
-                     mcInstant.bAction.removeEventListener(MouseEvent.CLICK,this.InstantClick);
-                     mcInstant.bAction.addEventListener(MouseEvent.CLICK,this.EvolveClick);
+                     var line4 = 'mcInstant.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":_loc8_}),false,0,0);';
+                     var line5 = 'mcInstant.bAction.removeEventListener(MouseEvent.CLICK,this.InstantClick);';
+                     var line6 = 'mcInstant.bAction.addEventListener(MouseEvent.CLICK,this.EvolveClick);';
                      bEvolve.SetupKey("btn_feednow",false,0,0);
                      bEvolve.visible = true;
                      bEvolve.Enabled = false;
@@ -573,12 +577,14 @@ package
                   {
                      mcInstant.visible = true;
                      mcInstant.enabled = true;
-                     mcInstant.tDescription.htmlText = "<b>" + KEYS.Get("gcage_instantBuff") + "</b>";
-                     mcInstant.bAction.Highlight = false;
-                     mcInstant.bAction.Enabled = true;
+                     var line1 = 'mcInstant.tDescription.htmlText = "<b>" + KEYS.Get("gcage_instantBuff") + "</b>";';
+                     var line2 = 'mcInstant.bAction.Highlight = false;';
+                     var line3 = 'mcInstant.bAction.Enabled = true;';
                      _loc7_ = CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,CREATURES._guardian._foodBonus.Get() + 1,"bonusFeedShiny");
-                     mcInstant.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":_loc7_}),false,0,0);
-                     mcInstant.bAction.addEventListener(MouseEvent.CLICK,this.InstantClick);
+                     var line4 = 'mcInstant.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":_loc7_}),false,0,0);';
+                     var line5 = 'mcInstant.bAction.addEventListener(MouseEvent.CLICK,this.InstantClick);';
+                     throw new Error("NOT IMPLEMENTED");
+                     
                      bEvolve.SetupKey("btn_feednow",false,0,0);
                      bEvolve.visible = true;
                      bEvolve.Enabled = true;
@@ -589,20 +595,21 @@ package
                   {
                      mcInstant.visible = true;
                      mcInstant.enabled = true;
-                     mcInstant.tDescription.htmlText = "<b>" + KEYS.Get("gcage_instantBuffAdd") + "</b>";
-                     mcInstant.bAction.Highlight = false;
-                     mcInstant.bAction.Enabled = true;
+                     var line0 = 'mcInstant.tDescription.htmlText = "<b>" + KEYS.Get("gcage_instantBuffAdd") + "</b>";';
+                     var line1 = 'mcInstant.bAction.Highlight = false;';
+                     var line2 = 'mcInstant.bAction.Enabled = true;';
                      _loc8_ = (_loc8_ = CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,CREATURES._guardian._foodBonus.Get() + 1,"bonusFeedShiny")) * 2;
-                     mcInstant.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":_loc8_}),false,0,0);
-                     mcInstant.bAction.removeEventListener(MouseEvent.CLICK,this.InstantClick);
+                     var line3 = 'mcInstant.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":_loc8_}),false,0,0);';
+                     var line4 = 'mcInstant.bAction.removeEventListener(MouseEvent.CLICK,this.InstantClick);';
+                     throw new Error("NOT IMPLEMENTED");
                      if(CREATURES._guardian._foodBonus.Get() >= 3)
                      {
-                        mcInstant.bAction.Enabled = false;
-                        mcInstant.bAction.addEventListener(MouseEvent.CLICK,this.CantInstantClick);
+//                        mcInstant.bAction.Enabled = false;
+//                        mcInstant.bAction.addEventListener(MouseEvent.CLICK,this.CantInstantClick);
                      }
                      else
                      {
-                        mcInstant.bAction.addEventListener(MouseEvent.CLICK,this.InstantClick);
+                    //    mcInstant.bAction.addEventListener(MouseEvent.CLICK,this.InstantClick);
                      }
                      bEvolve.SetupKey("btn_feednow",false,0,0);
                      bEvolve.visible = true;
@@ -727,7 +734,7 @@ package
          var _loc1_:Video = new Video(this._PREVIEW_WIDTH,this._PREVIEW_HEIGHT);
          this._videoStream = VideoUtils.getVideoStream(_loc1_,this._kothVideoURL);
          VideoUtils.loopStream(this._videoStream);
-         p3_mcImage.videoCanvas.addChild(_loc1_);
+         // p3_mcImage.videoCanvas.addChild(_loc1_);
          _loc1_.x = 25;
          _loc1_.y = -20;
       }
@@ -746,16 +753,16 @@ package
                   }
                   this._currentVideoURL = this._kothVideoURL;
                   this._videoStream.play(this._kothVideoURL);
-                  p3_mcImage.videoCanvas.visible = true;
-                  p3_mcImage.imageCanvas.visible = false;
+//                  p3_mcImage.videoCanvas.visible = true;
+  //                p3_mcImage.imageCanvas.visible = false;
                }
             }
             else if(this._currentPreviewUrl != this._kothPreviewURL)
             {
                this._currentPreviewUrl = this._kothPreviewURL;
-               p3_mcImage.videoCanvas.visible = false;
-               p3_mcImage.imageCanvas.visible = true;
-               ImageCache.GetImageWithCallBack(this._kothPreviewURL,this.onPreviewImageLoaded,true,1,"",[p3_mcImage.imageCanvas]);
+   //            p3_mcImage.videoCanvas.visible = false;
+     //          p3_mcImage.imageCanvas.visible = true;
+//               ImageCache.GetImageWithCallBack(this._kothPreviewURL,this.onPreviewImageLoaded,true,1,"",[p3_mcImage.imageCanvas]);
             }
             this.UpdateStats();
             this.UpdatePortrait();
@@ -832,15 +839,15 @@ package
                {
                   this.addVideo();
                }
-               p3_mcImage.videoCanvas.visible = true;
-               p3_mcImage.imageCanvas.visible = false;
+//               p3_mcImage.videoCanvas.visible = true;
+  //             p3_mcImage.imageCanvas.visible = false;
             }
             else if(this._currentPreviewUrl != this._kothPreviewURL)
             {
                this._currentPreviewUrl = this._kothPreviewURL;
-               p3_mcImage.videoCanvas.visible = false;
-               p3_mcImage.imageCanvas.visible = true;
-               ImageCache.GetImageWithCallBack(this._kothPreviewURL,this.onPreviewImageLoaded,true,1,"",[p3_mcImage.imageCanvas]);
+        //       p3_mcImage.videoCanvas.visible = false;
+         //      p3_mcImage.imageCanvas.visible = true;
+           //    ImageCache.GetImageWithCallBack(this._kothPreviewURL,this.onPreviewImageLoaded,true,1,"",[p3_mcImage.imageCanvas]);
             }
          }
       }
@@ -1088,7 +1095,7 @@ package
                }
             }
             if(this.guardLevel == _maxLevel)
-            {
+            {/*
                day1.tDay.htmlText = KEYS.Get("gcage_day") + " 1";
                day1.bonusDamage.htmlText = !!CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,1,"bonusDamage") ? "+" + GLOBAL.FormatNumber(Number([CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,1,"bonusDamage")])) + "" : "";
                day1.bonusHealth.htmlText = !!CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,1,"bonusHealth") ? "+" + GLOBAL.FormatNumber(Number([CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,1,"bonusHealth")])) + "" : "";
@@ -1104,7 +1111,7 @@ package
                day3.bonusHealth.htmlText = !!CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,3,"bonusHealth") ? "+" + GLOBAL.FormatNumber(Number([CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,3,"bonusHealth") - CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,2,"bonusHealth")])) + "" : "";
                day3.bonusSpeed.htmlText = !!CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,3,"bonusSpeed") ? "+" + Number([CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,3,"bonusSpeed") - CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,2,"bonusSpeed")]) + "" : "";
                day3.bonusBuff.htmlText = !!CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,3,"bonusBuffs") ? "+" + Number([CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,3,"bonusBuffs") - CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,2,"bonusBuffs")]) * 100 + "%" + "" : "";
-               _loc11_ = 1;
+               */_loc11_ = 1;
                while(_loc11_ <= 3)
                {
                   if(_loc11_ < this.foodBonus + 1)
@@ -1165,8 +1172,8 @@ package
                   "delay":0.15
                });
             }
-            barHP.mcBar.width = 100 / this.guard.maxHealth * Math.max(1,this.guard.health);
-            bFeedTimer.mcBar.width = 100 / CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,CREATURES._guardian._level.Get(),"feedTime") * (CREATURES._guardian._feedTime.Get() - GLOBAL.Timestamp());
+//            barHP.mcBar.width = 100 / this.guard.maxHealth * Math.max(1,this.guard.health);
+  //          bFeedTimer.mcBar.width = 100 / CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,CREATURES._guardian._level.Get(),"feedTime") * (CREATURES._guardian._feedTime.Get() - GLOBAL.Timestamp());
          }
          if(_page == 2 && _kothEnabled)
          {
@@ -1314,7 +1321,7 @@ package
                      _loc26_++;
                   }
                }
-               p3_bHP.mcBar.width = 100 / this.koth.maxHealth * Math.max(1,this.koth.health);
+//               p3_bHP.mcBar.width = 100 / this.koth.maxHealth * Math.max(1,this.koth.health);
             }
          }
       }
@@ -1334,13 +1341,13 @@ package
             }
             tNextFeedTitle.htmlText = "<b>" + KEYS.Get("gcage_hungry") + "</b>";
             tNextFeed.htmlText = GLOBAL.ToTime(_loc1_ + CHAMPIONCAGE.STARVETIMER - GLOBAL.Timestamp());
-            bFeedTimer.mcBar.width = 0;
+            // bFeedTimer.mcBar.width = 0;
          }
          else
          {
             tNextFeedTitle.htmlText = "<b>" + KEYS.Get("gcage_nextFeedIn") + "</b>";
             tNextFeed.htmlText = GLOBAL.ToTime(CREATURES._guardian._feedTime.Get() - GLOBAL.Timestamp());
-            bFeedTimer.mcBar.width = Math.max(100,100 / CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,CREATURES._guardian._level.Get(),"feedTime") * (CREATURES._guardian._feedTime.Get() - GLOBAL.Timestamp()));
+            // bFeedTimer.mcBar.width = Math.max(100,100 / CHAMPIONCAGE.GetGuardianProperty(CREATURES._guardian._creatureID,CREATURES._guardian._level.Get(),"feedTime") * (CREATURES._guardian._feedTime.Get() - GLOBAL.Timestamp()));
          }
          this.UpdateStats();
          if(CREATURES._guardian.health >= CREATURES._guardian.maxHealth)

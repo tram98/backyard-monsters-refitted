@@ -59,8 +59,8 @@ package com.monsters.radio
          var _loc1_:Object = RADIO.getProp("o1");
          if(_loc1_)
          {
-            cbNews.fromInt(_loc1_[RADIO.NEWS_KEY]);
-            cbAttack.fromInt(_loc1_[RADIO.ATTACK_KEY]);
+            // cbNews.fromInt(_loc1_[RADIO.NEWS_KEY]);
+            // cbAttack.fromInt(_loc1_[RADIO.ATTACK_KEY]);
             if(_loc1_[RADIO.ADDRESS_KEY])
             {
                tEmailInput.htmlText = String(_loc1_[RADIO.ADDRESS_KEY]);

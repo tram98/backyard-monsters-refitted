@@ -77,7 +77,7 @@ package as3reflect
       
       public static function isImplementationOf(param1:Class, param2:Class) : Boolean
       {
-         throw new Exception("Not Implemented");
+         throw new Error("Not Implemented");
          return false;
       }
       
@@ -185,7 +185,7 @@ package as3reflect
       public static function isSubclassOf(param1:Class, param2:Class) : Boolean
       {
 
-throw new Exception("Not Implemented");
+throw new Error("Not Implemented");
 return false;
       }
       

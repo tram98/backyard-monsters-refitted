@@ -31,13 +31,13 @@ package utils.exposed
       
       internal function Init() : void
       {
-throw new Exception("Not Implemented");
+throw new Error("Not Implemented");
       }
       
       public function Destroy() : void
       {
          
-throw new Exception("Not Implemented");
+throw new Error("Not Implemented");
         }
       
       private function DestroyExposedStructureProperty(param1:ExposedStructure) : void
@@ -65,13 +65,13 @@ throw new Exception("Not Implemented");
       
       internal function LoadState(param1:XML, param2:String) : void
       {
-throw new Exception("Not Implemented");  }
+throw new Error("Not Implemented");  }
       
       internal function SaveState(param1:String) : XML
       {
          
 
-throw new Exception("Not Implemented");
+throw new Error("Not Implemented");
        }
    }
 }

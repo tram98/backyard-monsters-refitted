@@ -58,7 +58,7 @@ package com.jac.mouse
             ExternalInterface.addCallback(id,function():void
             {
             });
-             throw new Exception("NOT IMPLEMENTED");
+             throw new Error("NOT IMPLEMENTED");
 			// ExternalInterface.call(MouseWheelEnabler_JavaScript.CODE);
             ExternalInterface.call("mws.InitMouseWheelSupport",id);
             ExternalInterface.addCallback("externalMouseEvent",handleExternalMouseEvent);

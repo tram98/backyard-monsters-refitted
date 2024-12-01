@@ -1081,6 +1081,16 @@ package
                   LOGGER.Stat([89,"slow"]);
                }
                break;
+            case 1:
+               _history.nextAttack = _history.lastattack + 172800;
+               _attackVolumeAmplifier = 1.3;
+               _hitsPerCreep = 50;
+               _history.attackPreference = 1;
+               if(BASE.isInfernoMainYardOrOutpost)
+               {
+                  LOGGER.Stat([89,"fast"]);
+               }
+               break;
             case 0:
             default:
                _history.nextAttack = _history.lastattack + 259200;
@@ -1092,15 +1102,6 @@ package
                   LOGGER.Stat([89,"med"]);
                }
                break;
-            case 1:
-               _history.nextAttack = _history.lastattack + 172800;
-               _attackVolumeAmplifier = 1.3;
-               _hitsPerCreep = 50;
-               _history.attackPreference = 1;
-               if(BASE.isInfernoMainYardOrOutpost)
-               {
-                  LOGGER.Stat([89,"fast"]);
-               }
          }
          BASE.Save();
       }

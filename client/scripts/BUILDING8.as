@@ -75,11 +75,11 @@ package
                POPUPS.Next();
             };
             mc = new popup_building();
-            mc.tA.htmlText = "<b>" + KEYS.Get("pop_clocbuilt_title") + "</b>";
+/*            mc.tA.htmlText = "<b>" + KEYS.Get("pop_clocbuilt_title") + "</b>";
             mc.tB.htmlText = " ";
             mc.bPost.SetupKey("btn_brag");
             mc.bPost.addEventListener(MouseEvent.CLICK,Brag);
-            mc.bPost.Highlight = true;
+            mc.bPost.Highlight = true;*/
             POPUPS.Push(mc,null,null,null,"build.v2.png");
          }
       }
@@ -97,11 +97,11 @@ package
                POPUPS.Next();
             };
             mc = new popup_building();
-            mc.tA.htmlText = "<b>" + KEYS.Get("cloc_popupgrade_ta") + "</b>";
+/*            mc.tA.htmlText = "<b>" + KEYS.Get("cloc_popupgrade_ta") + "</b>";
             mc.tB.htmlText = KEYS.Get("cloc_popupgrade_tb",{"v1":_lvl.Get()});
             mc.bPost.SetupKey("btn_brag");
             mc.bPost.addEventListener(MouseEvent.CLICK,Brag);
-            mc.bPost.Highlight = true;
+            mc.bPost.Highlight = true;*/
             POPUPS.Push(mc,null,null,null,"build.v2.png");
          }
       }

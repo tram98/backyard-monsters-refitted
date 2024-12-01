@@ -46,7 +46,7 @@ package
             this.SetupSection(this["m" + (i + 1)],i);
             i++;
          }
-         this._storageWidth = mcStorage.width / mcStorage.scaleX;
+//          this._storageWidth = mcStorage.width / mcStorage.scaleX;
          this.Update();
       }
       
@@ -123,9 +123,9 @@ package
          }
          storedRatio = HOUSING._housingUsed.Get() / HOUSING._housingCapacity.Get();
          queuedRatio = this._newHousingUsed.Get() / HOUSING._housingCapacity.Get();
-         mcStorage.mcBar.width = this._storageWidth * storedRatio;
-         mcStorage.mcBarB.x = this._storageWidth * storedRatio;
-         mcStorage.mcBarB.width = this._storageWidth * (queuedRatio - storedRatio);
+//          mcStorage.mcBar.width = this._storageWidth * storedRatio;
+//          mcStorage.mcBarB.x = this._storageWidth * storedRatio;
+//          mcStorage.mcBarB.width = this._storageWidth * (queuedRatio - storedRatio);
          tStorage.htmlText = "<b>" + GLOBAL.FormatNumber(this._newHousingUsed.Get()) + " / " + GLOBAL.FormatNumber(HOUSING._housingCapacity.Get()) + " (" + Math.floor(queuedRatio * 100) + "%)</b>";
       }
       

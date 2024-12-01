@@ -86,36 +86,7 @@ package de.polygonal.ds
       
       public function merge(param1:Set, param2:Boolean, param3:Object = undefined) : void
       {
-         var _loc4_:* = null;
-         var _loc5_:* = null as Object;
-         if(param2)
-         {
-            _loc4_ = param1.iterator();
-            while(_loc4_.hasNext())
-            {
-               _loc5_ = _loc4_.next();
-               set(_loc5_);
-            }
-         }
-         else if(param3 != null)
-         {
-            _loc4_ = param1.iterator();
-            while(_loc4_.hasNext())
-            {
-               _loc5_ = _loc4_.next();
-               set(param3(_loc5_));
-            }
-         }
-         else
-         {
-            _loc4_ = param1.iterator();
-            while(_loc4_.hasNext())
-            {
-               _loc5_ = _loc4_.next();
-               null;
-               set(_loc5_.clone());
-            }
-         }
+         throw new Error("NOT IMPLEMENTED");
       }
       
       public function iterator() : Itr

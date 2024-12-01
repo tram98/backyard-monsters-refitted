@@ -139,8 +139,8 @@ package
       private function setupBuildMode() : void
       {
          var _loc1_:int = 0;
-         mc.mcPoints.addEventListener(MouseEvent.MOUSE_OVER,this.InfoShow);
-         mc.mcPoints.addEventListener(MouseEvent.MOUSE_OUT,this.InfoHide);
+//         mc.mcPoints.addEventListener(MouseEvent.MOUSE_OVER,this.InfoShow);
+//         mc.mcPoints.addEventListener(MouseEvent.MOUSE_OUT,this.InfoHide);
          _loc1_ = 1;
          while(_loc1_ < 5)
          {
@@ -161,7 +161,7 @@ package
          mc["mcR" + 2]._resource = BASE._resources["r" + 2].Get();
          mc["mcR" + 3]._resource = BASE._resources["r" + 3].Get();
          mc["mcR" + 4]._resource = BASE._resources["r" + 4].Get();
-         mc.mcR5.bAdd.txtAdd.autoSize = TextFieldAutoSize.LEFT;
+/*         mc.mcR5.bAdd.txtAdd.autoSize = TextFieldAutoSize.LEFT;
          mc.mcR5.bAdd.txtAdd.htmlText = KEYS.Get("ui_topaddshiny");
          mc.mcR5.bAdd.mcBG.width = mc.mcR5.bAdd.txtAdd.width + 11;
          mc.mcR5.mcBG.width = 82 + mc.mcR5.bAdd.width;
@@ -234,6 +234,7 @@ package
             mc.bDailyDeal.mouseEnabled = false;
             mc.bDailyDeal.visible = false;
          }
+         */
       }
       
       private function setupScoutMode() : void
@@ -243,14 +244,14 @@ package
          this.setupAttackMode();
          if(!GLOBAL._attackersFlinger)
          {
-            this._creatureButtonsMC._mc._txtContainer.flinger_txt.htmlText = KEYS.Get("no_flinger");
+//            this._creatureButtonsMC._mc._txtContainer.flinger_txt.htmlText = KEYS.Get("no_flinger");
          }
          else
          {
-            this._creatureButtonsMC._mc._txtContainer.flinger_txt.htmlText = BASE.isInfernoMainYardOrOutpost ? KEYS.Get("monster_limit") : KEYS.Get("attack_flingerbar");
+  //          this._creatureButtonsMC._mc._txtContainer.flinger_txt.htmlText = BASE.isInfernoMainYardOrOutpost ? KEYS.Get("monster_limit") : KEYS.Get("attack_flingerbar");
          }
-         this._creatureButtonsMC._mc._txtContainer.mcBar.visible = false;
-         this._creatureButtonsMC._mc._txtContainer.tA.htmlText = "";
+    //     this._creatureButtonsMC._mc._txtContainer.mcBar.visible = false;
+      //   this._creatureButtonsMC._mc._txtContainer.tA.htmlText = "";
          _loc2_ = 1;
          while(_loc2_ < 5)
          {
@@ -265,18 +266,18 @@ package
          var _loc1_:Array = null;
          var _loc2_:Sprite = null;
          this._creatureButtonsMC = mc.addChild(new flingerLevel()) as flingerLevel;
-         this._creatureButtonsMC._mc._txtContainer.flinger_txt.htmlText = KEYS.Get("txt_flinger_capacity");
+/*         this._creatureButtonsMC._mc._txtContainer.flinger_txt.htmlText = KEYS.Get("txt_flinger_capacity");
          this._creatureButtonsMC._mc._txtContainer.mcBar.visible = true;
          this._creatureButtonsMC._mc._txtContainer.tA.htmlText = "0%";
          this._creatureButtonsMC.y = 180;
          this._creatureButtonsMC._mc.x = 2;
          this._creatureButtonsMC._mc.y = -6;
-         this._creatureButtons = [];
+         this._creatureButtons = [];*/
          if(!GLOBAL._attackersFlinger)
          {
-            this._creatureButtonsMC._mc._txtContainer.flinger_txt.htmlText = KEYS.Get("no_flinger");
-            this._creatureButtonsMC._mc._txtContainer.tA.htmlText = "";
-            this._creatureButtonsMC._mc._bottomBar.visible = false;
+//            this._creatureButtonsMC._mc._txtContainer.flinger_txt.htmlText = KEYS.Get("no_flinger");
+ //           this._creatureButtonsMC._mc._txtContainer.tA.htmlText = "";
+ //           this._creatureButtonsMC._mc._bottomBar.visible = false;
          }
          else
          {
@@ -286,8 +287,8 @@ package
             this.setupCreatureButtons(this.m_creatureContainer,_loc1_[0],_loc1_[1]);
             if(this.m_creatureContainer.numChildren == 0)
             {
-               this._creatureButtonsMC._mc._txtContainer.flinger_txt.htmlText = KEYS.Get("no_monsters");
-               this._creatureButtonsMC._mc._bottomBar.visible = false;
+//               this._creatureButtonsMC._mc._txtContainer.flinger_txt.htmlText = KEYS.Get("no_monsters");
+//               this._creatureButtonsMC._mc._bottomBar.visible = false;
             }
             _loc2_ = new Sprite();
             _loc2_.graphics.beginFill(16777215,1);
@@ -328,8 +329,8 @@ package
          this.setupCreatureButtons(this.m_creatureContainer,_loc1_[0],_loc1_[1]);
          if(this.m_creatureContainer.numChildren == 0)
          {
-            this._creatureButtonsMC._mc._txtContainer.flinger_txt.htmlText = KEYS.Get("no_monsters");
-            this._creatureButtonsMC._mc._bottomBar.visible = false;
+//            this._creatureButtonsMC._mc._txtContainer.flinger_txt.htmlText = KEYS.Get("no_monsters");
+ //           this._creatureButtonsMC._mc._bottomBar.visible = false;
          }
          var _loc2_:Sprite = new Sprite();
          _loc2_.graphics.beginFill(16777215,1);
@@ -383,7 +384,7 @@ package
          }
          if(_loc8_)
          {
-            this._creatureButtonsMC._mc._bottomBar.y = Math.min(GLOBAL._SCREEN.height - 450,_loc8_.y + _loc8_.height - this._creatureButtonsMC._mc._bottomBar.height * 0.8);
+//            this._creatureButtonsMC._mc._bottomBar.y = Math.min(GLOBAL._SCREEN.height - 450,_loc8_.y + _loc8_.height - this._creatureButtonsMC._mc._bottomBar.height * 0.8);
          }
          return [_loc3_,_loc4_];
       }
@@ -419,7 +420,7 @@ package
          }
          if(_loc8_)
          {
-            this._creatureButtonsMC._mc._bottomBar.y = Math.min(GLOBAL._SCREEN.height - 450,_loc8_.y + _loc8_.height - this._creatureButtonsMC._mc._bottomBar.height * 0.8);
+//            this._creatureButtonsMC._mc._bottomBar.y = Math.min(GLOBAL._SCREEN.height - 450,_loc8_.y + _loc8_.height - this._creatureButtonsMC._mc._bottomBar.height * 0.8);
          }
       }
       
@@ -430,18 +431,18 @@ package
       
       private function InfoShow(param1:MouseEvent) : void
       {
-         mc.mcPoints.gotoAndStop(2);
+/*         mc.mcPoints.gotoAndStop(2);
          var _loc2_:Object = BASE.BaseLevel();
          mc.mcPoints.tInfo.htmlText = KEYS.Get("pop_experiencebar",{
             "v1":GLOBAL.FormatNumber(_loc2_.points),
             "v2":GLOBAL.FormatNumber(_loc2_.needed),
             "v3":_loc2_.level + 1
-         });
+         });*/
       }
       
       private function InfoHide(param1:MouseEvent) : void
       {
-         mc.mcPoints.gotoAndStop(1);
+//         mc.mcPoints.gotoAndStop(1);
       }
       
       public function resize(param1:Rectangle) : void
@@ -485,7 +486,7 @@ package
                   this._creatureButtons[_loc3_].y = 34 + _loc3_ * 53;
                   _loc3_++;
                }
-               this._creatureButtonsMC._mc._bottomBar.y = Math.min(GLOBAL._SCREEN.height - 450,this._creatureButtons[_loc2_ - 1].y + this._creatureButtons[_loc2_ - 1].height - this._creatureButtonsMC._mc._bottomBar.height * 0.8);
+//               this._creatureButtonsMC._mc._bottomBar.y = Math.min(GLOBAL._SCREEN.height - 450,this._creatureButtons[_loc2_ - 1].y + this._creatureButtons[_loc2_ - 1].height - this._creatureButtonsMC._mc._bottomBar.height * 0.8);
             }
             (this.m_creatureContainer.mask as Sprite).graphics.clear();
             (this.m_creatureContainer.mask as Sprite).graphics.beginFill(16777215,1);
@@ -501,7 +502,7 @@ package
          var _loc1_:int = 0;
          if(GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD)
          {
-            if(mc.mcPoints)
+/*            if(mc.mcPoints)
             {
                mc.mcPoints.removeEventListener(MouseEvent.MOUSE_OVER,this.InfoShow);
                mc.mcPoints.removeEventListener(MouseEvent.MOUSE_OUT,this.InfoHide);
@@ -568,7 +569,7 @@ package
                mc.bDailyDeal.removeEventListener(MouseEvent.CLICK,this.ButtonClick("daily"));
                mc.bDailyDeal.removeEventListener(MouseEvent.MOUSE_OVER,this.ButtonInfoShow);
                mc.bDailyDeal.removeEventListener(MouseEvent.MOUSE_OUT,this.ButtonInfoHide);
-            }
+            }*/
          }
          else if(GLOBAL.mode == GLOBAL.e_BASE_MODE.ATTACK)
          {
@@ -611,7 +612,7 @@ package
          {
             onImageLoad = function(param1:Event):void
             {
-               mc.mcPic.mcBG.addChild(loader);
+//               mc.mcPic.mcBG.addChild(loader);
                if(Boolean(GLOBAL._flags.viximo) || Boolean(GLOBAL._flags.kongregate))
                {
                   loader.width = loader.height = 50;
@@ -624,20 +625,20 @@ package
             {
                if(BASE._ownerName.toLowerCase().charAt(BASE._ownerName.length - 1) == "s")
                {
-                  mc.mcPoints.tName.htmlText = KEYS.Get("uitop_yardownershort",{"v1":BASE._ownerName.toUpperCase()});
+//                   mc.mcPoints.tName.htmlText = KEYS.Get("uitop_yardownershort",{"v1":BASE._ownerName.toUpperCase()});
                }
                else
                {
-                  mc.mcPoints.tName.htmlText = KEYS.Get("uitop_yardownerlong",{"v1":BASE._ownerName.toUpperCase()});
+                  // mc.mcPoints.tName.htmlText = KEYS.Get("uitop_yardownerlong",{"v1":BASE._ownerName.toUpperCase()});
                }
             }
             else if(GLOBAL.mode == GLOBAL._loadmode)
             {
-               mc.mcPoints.tName.htmlText = KEYS.Get("uitop_backyardmonsters");
+               // mc.mcPoints.tName.htmlText = KEYS.Get("uitop_backyardmonsters");
             }
             else
             {
-               mc.mcPoints.tName.htmlText = KEYS.Get("uitop_backyardmonstersinferno");
+               // mc.mcPoints.tName.htmlText = KEYS.Get("uitop_backyardmonstersinferno");
             }
             loader = new Loader();
             loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR,LoadImageError,false,0,true);
@@ -657,11 +658,11 @@ package
          }
          else if(GLOBAL.mode == GLOBAL._loadmode)
          {
-            mc.mcPoints.tName.htmlText = KEYS.Get("uitop_backyardmonsters");
+            // mc.mcPoints.tName.htmlText = KEYS.Get("uitop_backyardmonsters");
          }
          else
          {
-            mc.mcPoints.tName.htmlText = KEYS.Get("uitop_backyardmonstersinferno");
+            // mc.mcPoints.tName.htmlText = KEYS.Get("uitop_backyardmonstersinferno");
          }
          if((GLOBAL._loadmode == GLOBAL.e_BASE_MODE.IWMATTACK || GLOBAL._loadmode == GLOBAL.e_BASE_MODE.IATTACK) && !MAPROOM_DESCENT.DescentPassed)
          {
@@ -683,10 +684,10 @@ package
             param1.x = 222;
             param1.y = 0;
             this._kothIcon = mc.addChild(param1);
-            mc.mcR5.x = 284;
+/*            mc.mcR5.x = 284;
             mc.bEarn.x = 415;
             mc.bDealSpot.x = 502;
-            mc.bDailyDeal.x = 493;
+            mc.bDailyDeal.x = 493;*/
          }
       }
       
@@ -697,10 +698,10 @@ package
             mc.removeChild(param1);
             if(GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD)
             {
-               mc.mcR5.x = 227;
+/*               mc.mcR5.x = 227;
                mc.bEarn.x = 358;
                mc.bDailyDeal.x = 436;
-               mc.bDealSpot.x = 445;
+               mc.bDealSpot.x = 445;*/
             }
          }
          if(this._kothIcon)
@@ -720,11 +721,11 @@ package
          {
             if(MapRoomManager.instance.isInMapRoom2)
             {
-               _loc2_ = mc.mcOutposts;
+//               _loc2_ = mc.mcOutposts;
             }
             else
             {
-               _loc2_ = mc.mcR4;
+//               _loc2_ = mc.mcR4;
             }
             param1.x = -4;
             param1.y = _loc2_.y + 37;
@@ -878,14 +879,14 @@ package
          var _loc5_:Number = NaN;
          var _loc6_:Number = NaN;
          var _loc2_:int = param1;
-         _loc5_ = Number((_loc4_ = mc["mcR" + _loc2_])._resource);
-         _loc4_.tR.htmlText = "<b>" + GLOBAL.FormatNumber(_loc5_) + "</b>";
+//         _loc5_ = Number((_loc4_ = mc["mcR" + _loc2_])._resource);
+  //       _loc4_.tR.htmlText = "<b>" + GLOBAL.FormatNumber(_loc5_) + "</b>";
          _loc3_ = 90 / BASE._resources["r" + _loc2_ + "max"] * _loc5_;
          if(_loc3_ > 90)
          {
             _loc3_ = 90;
          }
-         _loc4_.mcBar.width = _loc3_;
+   //      _loc4_.mcBar.width = _loc3_;
       }
       
       public function Update() : void
@@ -924,7 +925,7 @@ package
          var _loc4_:Number = Number(BASE._resources["r" + 2].Get());
          var _loc5_:Number = Number(BASE._resources["r" + 3].Get());
          var _loc6_:Number = Number(BASE._resources["r" + 4].Get());
-         TweenLite.to(mc.mcR1,0.5,{
+/*         TweenLite.to(mc.mcR1,0.5,{
             "_resource":_loc3_,
             "onUpdate":this.UpdateTweenResourceText,
             "onUpdateParams":[1],
@@ -951,26 +952,26 @@ package
             "onUpdateParams":[4],
             "ease":Linear.easeNone,
             "overwrite":1
-         });
+         });*/
          mc["mcR" + 5].tR.htmlText = "<b>" + GLOBAL.FormatNumber(BASE._credits.Get()) + "</b>";
          if(MapRoomManager.instance.isInMapRoom2)
          {
-            mc.mcOutposts.visible = true;
-            mc.mcOutposts.tR.htmlText = GLOBAL._mapOutpost.length;
+            // mc.mcOutposts.visible = true;
+            // mc.mcOutposts.tR.htmlText = GLOBAL._mapOutpost.length;
          }
          else
          {
-            mc.mcOutposts.visible = false;
+            // mc.mcOutposts.visible = false;
          }
          if(TUTORIAL._stage < 200)
          {
-            mc.bInvite.visible = false;
-            mc.bGift.visible = false;
-            mc.bInbox.visible = false;
-            mc.bAlert.visible = false;
-            mc.mcR5.bAdd.visible = false;
-            mc.bEarn.visible = false;
-            mc.bDailyDeal.visible = false;
+            // mc.bInvite.visible = false;
+            // mc.bGift.visible = false;
+            // mc.bInbox.visible = false;
+            // mc.bAlert.visible = false;
+            // mc.mcR5.bAdd.visible = false;
+            // mc.bEarn.visible = false;
+            // mc.bDailyDeal.visible = false;
             _loc1_ = 1;
             while(_loc1_ < 6)
             {
@@ -983,14 +984,14 @@ package
          {
             if(GLOBAL._flags.sroverlay)
             {
-               mc.mcR5.bAdd.visible = true;
+               // mc.mcR5.bAdd.visible = true;
             }
             else
             {
-               mc.mcR5.bAdd.visible = true;
+               // mc.mcR5.bAdd.visible = true;
             }
-            mc.bEarn.visible = GLOBAL._flags.showFBCEarn == 1;
-            mc.bDailyDeal.visible = GLOBAL._flags.showFBCDaily == 1;
+            // mc.bEarn.visible = GLOBAL._flags.showFBCEarn == 1;
+            // mc.bDailyDeal.visible = GLOBAL._flags.showFBCDaily == 1;
             _loc1_ = 1;
             while(_loc1_ < 6)
             {
@@ -1005,72 +1006,72 @@ package
             {
                if(GLOBAL._sessionCount >= 2 && !GLOBAL._canGift && GLOBAL.Timestamp() - GLOBAL.StatGet("pi") > 60 * 60 * 36)
                {
-                  mc.bInvite.mcSpinner.visible = true;
+                  // mc.bInvite.mcSpinner.visible = true;
                }
                else
                {
-                  mc.bInvite.mcSpinner.visible = false;
+                  // mc.bInvite.mcSpinner.visible = false;
                }
-               mc.bInvite.visible = true;
+               // mc.bInvite.visible = true;
             }
             else
             {
-               mc.bInvite.visible = false;
+               // mc.bInvite.visible = false;
             }
-            if(mc.bInvite.visible)
-            {
-               mc.bInvite.visible = BYMConfig.instance.INVITE_BUTTON;
-            }
+            // if(mc.bInvite.visible)
+            // {
+            //    mc.bInvite.visible = BYMConfig.instance.INVITE_BUTTON;
+            // }
             _loc8_ = this.extraResourceRows * this._RESOURCEBAR_HEIGHT;
             this.SortButtonIcons(2,4,_loc8_);
-            mc.bGift.visible = true;
+            // mc.bGift.visible = true;
             if((_loc7_ = POPUPS.QueueCount("gifts")) > 0)
             {
-               mc.bGift.mcSpinner.visible = true;
-               mc.bGift.mcCounter.visible = true;
-               if(_loc7_ < 10)
-               {
-                  mc.bGift.mcCounter.t.htmlText = "<b>" + _loc7_ + "</b>";
-               }
-               else
-               {
-                  mc.bGift.mcCounter.t.htmlText = "<b>+</b>";
-               }
+               // mc.bGift.mcSpinner.visible = true;
+               // mc.bGift.mcCounter.visible = true;
+               // if(_loc7_ < 10)
+               // {
+               //    mc.bGift.mcCounter.t.htmlText = "<b>" + _loc7_ + "</b>";
+               // }
+               // else
+               // {
+               //    mc.bGift.mcCounter.t.htmlText = "<b>+</b>";
+               // }
             }
             else
             {
-               mc.bGift.mcSpinner.visible = false;
-               mc.bGift.mcCounter.visible = false;
+               // mc.bGift.mcSpinner.visible = false;
+               // mc.bGift.mcCounter.visible = false;
             }
-            mc.bInbox.visible = true;
+            // mc.bInbox.visible = true;
             if(GLOBAL._unreadMessages > 0)
             {
-               mc.bInbox.mcCounter.t.htmlText = "<b>" + GLOBAL._unreadMessages + "</b>";
-               mc.bInbox.mcCounter.visible = true;
-               mc.bInbox.mcSpinner.visible = true;
+               // mc.bInbox.mcCounter.t.htmlText = "<b>" + GLOBAL._unreadMessages + "</b>";
+               // mc.bInbox.mcCounter.visible = true;
+               // mc.bInbox.mcSpinner.visible = true;
             }
             else
             {
-               mc.bInbox.mcCounter.visible = false;
-               mc.bInbox.mcSpinner.visible = false;
+               // mc.bInbox.mcCounter.visible = false;
+               // mc.bInbox.mcSpinner.visible = false;
             }
             if((_loc7_ = POPUPS.QueueCount("alerts")) > 0)
             {
-               mc.bAlert.visible = true;
-               mc.bAlert.mcSpinner.visible = true;
-               mc.bAlert.mcCounter.visible = true;
-               if(_loc7_ < 10)
-               {
-                  mc.bAlert.mcCounter.t.htmlText = "<b>" + _loc7_ + "</b>";
-               }
-               else
-               {
-                  mc.bAlert.mcCounter.t.htmlText = "<b>+</b>";
-               }
+               // mc.bAlert.visible = true;
+               // mc.bAlert.mcSpinner.visible = true;
+               // mc.bAlert.mcCounter.visible = true;
+               // if(_loc7_ < 10)
+               // {
+               //    mc.bAlert.mcCounter.t.htmlText = "<b>" + _loc7_ + "</b>";
+               // }
+               // else
+               // {
+               //    mc.bAlert.mcCounter.t.htmlText = "<b>+</b>";
+               // }
             }
             else
             {
-               mc.bAlert.visible = false;
+               // mc.bAlert.visible = false;
             }
             this.DisplayBuffs();
             if(this._kothIcon)
@@ -1089,11 +1090,11 @@ package
                (this._daveClub as MovieClip).gotoAndStop(_loc11_ ? "on" : "off");
                if(MapRoomManager.instance.isInMapRoom2)
                {
-                  _loc12_ = mc.mcOutposts;
+                  // _loc12_ = mc.mcOutposts;
                }
                else
                {
-                  _loc12_ = mc.mcR4;
+                  // _loc12_ = mc.mcR4;
                }
                this._daveClub.x = -4;
                this._daveClub.y = _loc12_.y + 37;
@@ -1112,8 +1113,8 @@ package
          while(_loc2_ < 5)
          {
             _loc3_ = mc["mcR" + _loc2_];
-            _loc3_.tR.htmlText = "<b>" + GLOBAL.FormatNumber(ATTACK._loot["r" + _loc2_].Get()) + "</b>";
-            _loc3_.mcBar.visible = false;
+            // _loc3_.tR.htmlText = "<b>" + GLOBAL.FormatNumber(ATTACK._loot["r" + _loc2_].Get()) + "</b>";
+            // _loc3_.mcBar.visible = false;
             _loc2_++;
          }
          _loc2_ = 0;
@@ -1148,62 +1149,62 @@ package
                _loc5_ -= CREATURES.GetProperty(_loc6_,"bucket") * ATTACK._flingerBucket[_loc6_].Get();
             }
          }
-         this._creatureButtonsMC._mc._txtContainer.mcBar.width = 115 - 115 / _loc4_ * _loc5_;
-         if(MapRoomManager.instance.isInMapRoom3)
-         {
-            this._creatureButtonsMC._mc._txtContainer.mcBar.scaleX = (1 - _loc5_ / _loc4_) * 1.2;
-         }
-         else
-         {
-            this._creatureButtonsMC._mc._txtContainer.mcBar.scaleX = (100 - 100 / _loc4_ * _loc5_) / 100;
-         }
+         // this._creatureButtonsMC._mc._txtContainer.mcBar.width = 115 - 115 / _loc4_ * _loc5_;
+         // if(MapRoomManager.instance.isInMapRoom3)
+         // {
+         //    this._creatureButtonsMC._mc._txtContainer.mcBar.scaleX = (1 - _loc5_ / _loc4_) * 1.2;
+         // }
+         // else
+         // {
+         //    this._creatureButtonsMC._mc._txtContainer.mcBar.scaleX = (100 - 100 / _loc4_ * _loc5_) / 100;
+         // }
          if(GLOBAL._attackersFlinger)
          {
-            if(MapRoomManager.instance.isInMapRoom3)
-            {
-               this._creatureButtonsMC._mc._txtContainer.tA.width = 60;
-               this._creatureButtonsMC._mc._txtContainer.tA.htmlText = (_loc4_ - _loc5_).toString() + "/" + _loc4_.toString();
-            }
-            else
-            {
-               this._creatureButtonsMC._mc._txtContainer.tA.width = 56;
-               this._creatureButtonsMC._mc._txtContainer.tA.htmlText = Math.min(100,int((1 - _loc5_ / _loc4_) * 100)).toString() + "%";
-            }
+            // if(MapRoomManager.instance.isInMapRoom3)
+            // {
+            //    this._creatureButtonsMC._mc._txtContainer.tA.width = 60;
+            //    this._creatureButtonsMC._mc._txtContainer.tA.htmlText = (_loc4_ - _loc5_).toString() + "/" + _loc4_.toString();
+            // }
+            // else
+            // {
+            //    this._creatureButtonsMC._mc._txtContainer.tA.width = 56;
+            //    this._creatureButtonsMC._mc._txtContainer.tA.htmlText = Math.min(100,int((1 - _loc5_ / _loc4_) * 100)).toString() + "%";
+            // }
          }
          if(GLOBAL.mode != GLOBAL._loadmode)
          {
-            if(ATTACK._countdown > 0)
-            {
-               mc.tMessage.htmlText = KEYS.Get("attack_ui_attacklock");
-            }
-            else
-            {
-               mc.tMessage.htmlText = KEYS.Get("attack_ui_attackends");
-            }
+            // if(ATTACK._countdown > 0)
+            // {
+            //    mc.tMessage.htmlText = KEYS.Get("attack_ui_attacklock");
+            // }
+            // else
+            // {
+            //    mc.tMessage.htmlText = KEYS.Get("attack_ui_attackends");
+            // }
          }
          else if(ATTACK._countdown > 0)
          {
-            mc.tMessage.htmlText = KEYS.Get("attack_ui_flingerlock");
+            // mc.tMessage.htmlText = KEYS.Get("attack_ui_flingerlock");
          }
          else
          {
-            mc.tMessage.htmlText = KEYS.Get("attack_ui_attackends");
+            // mc.tMessage.htmlText = KEYS.Get("attack_ui_attackends");
          }
          if(ATTACK._countdown > 30)
          {
-            mc.tTime.htmlText = GLOBAL.ToTime(ATTACK._countdown,true);
+            // mc.tTime.htmlText = GLOBAL.ToTime(ATTACK._countdown,true);
          }
          else if(ATTACK._countdown > 0)
          {
-            mc.tTime.htmlText = "<font color=\"#FF0000\">" + GLOBAL.ToTime(ATTACK._countdown,true) + "</font>";
+            // mc.tTime.htmlText = "<font color=\"#FF0000\">" + GLOBAL.ToTime(ATTACK._countdown,true) + "</font>";
          }
          else if(ATTACK._countdown > -120)
          {
-            mc.tTime.htmlText = "<font color=\"#FFFFFF\">" + GLOBAL.ToTime(120 + ATTACK._countdown,true) + "</font>";
+            // mc.tTime.htmlText = "<font color=\"#FFFFFF\">" + GLOBAL.ToTime(120 + ATTACK._countdown,true) + "</font>";
          }
          else
          {
-            mc.tTime.htmlText = "<font color=\"#FFFFFF\">" + KEYS.Get("attack_ui_over") + "</font>";
+            // mc.tTime.htmlText = "<font color=\"#FFFFFF\">" + KEYS.Get("attack_ui_over") + "</font>";
          }
       }
       
@@ -1216,8 +1217,8 @@ package
          while(_loc2_ < 5)
          {
             _loc3_ = mc["mcR" + _loc2_];
-            _loc3_.tR.htmlText = "<b>" + GLOBAL.FormatNumber((GLOBAL._currentCell as MapRoom3Cell).attackCost[_loc2_ - 1]) + "</b>";
-            _loc3_.mcBar.visible = false;
+            // _loc3_.tR.htmlText = "<b>" + GLOBAL.FormatNumber((GLOBAL._currentCell as MapRoom3Cell).attackCost[_loc2_ - 1]) + "</b>";
+            // _loc3_.mcBar.visible = false;
             _loc2_++;
          }
          _loc2_ = 0;
@@ -1228,38 +1229,38 @@ package
          }
          if(GLOBAL.mode != GLOBAL._loadmode)
          {
-            if(ATTACK._countdown > 0)
-            {
-               mc.tMessage.htmlText = KEYS.Get("attack_ui_attacklock");
-            }
-            else
-            {
-               mc.tMessage.htmlText = KEYS.Get("attack_ui_attackends");
-            }
+            // if(ATTACK._countdown > 0)
+            // {
+            //    mc.tMessage.htmlText = KEYS.Get("attack_ui_attacklock");
+            // }
+            // else
+            // {
+            //    mc.tMessage.htmlText = KEYS.Get("attack_ui_attackends");
+            // }
          }
          else if(ATTACK._countdown > 0)
          {
-            mc.tMessage.htmlText = KEYS.Get("attack_ui_flingerlock");
+            // mc.tMessage.htmlText = KEYS.Get("attack_ui_flingerlock");
          }
          else
          {
-            mc.tMessage.htmlText = KEYS.Get("attack_ui_attackends");
+            // mc.tMessage.htmlText = KEYS.Get("attack_ui_attackends");
          }
          if(ATTACK._countdown > 30)
          {
-            mc.tTime.htmlText = GLOBAL.ToTime(ATTACK._countdown,true);
+            // mc.tTime.htmlText = GLOBAL.ToTime(ATTACK._countdown,true);
          }
          else if(ATTACK._countdown > 0)
          {
-            mc.tTime.htmlText = "<font color=\"#FF0000\">" + GLOBAL.ToTime(ATTACK._countdown,true) + "</font>";
+            // mc.tTime.htmlText = "<font color=\"#FF0000\">" + GLOBAL.ToTime(ATTACK._countdown,true) + "</font>";
          }
          else if(ATTACK._countdown > -120)
          {
-            mc.tTime.htmlText = "<font color=\"#FFFFFF\">" + GLOBAL.ToTime(120 + ATTACK._countdown,true) + "</font>";
+            // mc.tTime.htmlText = "<font color=\"#FFFFFF\">" + GLOBAL.ToTime(120 + ATTACK._countdown,true) + "</font>";
          }
          else
          {
-            mc.tTime.htmlText = "<font color=\"#FFFFFF\">" + KEYS.Get("attack_ui_over") + "</font>";
+            // mc.tTime.htmlText = "<font color=\"#FFFFFF\">" + KEYS.Get("attack_ui_over") + "</font>";
          }
       }
       
@@ -1302,26 +1303,26 @@ package
       
       public function InitDealspot() : void
       {
-         if(mc.bDealSpot)
-         {
-            mc.bDealSpot.visible = true;
-            mc.bDealSpot.buttonMode = true;
-            mc.bDealSpot.mouseChildren = true;
-            while(mc.bDealSpot.numChildren)
-            {
-               mc.bDealSpot.removeChildAt(0);
-            }
-            this._dealspot = new DealSpot(this);
-            this._dealspot.x = -5;
-            this._dealspot.y = -5;
-            mc.bDealSpot.addChild(this._dealspot);
-         }
-         else if(mc.bDealSpot)
-         {
-            mc.bDealSpot.visible = false;
-            mc.bDealSpot.mouseChildren = false;
-            this._dealspot = null;
-         }
+         // if(mc.bDealSpot)
+         // {
+         //    mc.bDealSpot.visible = true;
+         //    mc.bDealSpot.buttonMode = true;
+         //    mc.bDealSpot.mouseChildren = true;
+         //    while(mc.bDealSpot.numChildren)
+         //    {
+         //       mc.bDealSpot.removeChildAt(0);
+         //    }
+         //    this._dealspot = new DealSpot(this);
+         //    this._dealspot.x = -5;
+         //    this._dealspot.y = -5;
+         //    mc.bDealSpot.addChild(this._dealspot);
+         // }
+         // else if(mc.bDealSpot)
+         // {
+         //    mc.bDealSpot.visible = false;
+         //    mc.bDealSpot.mouseChildren = false;
+         //    this._dealspot = null;
+         // }
       }
       
       public function ButtonClick(param1:String) : Function
@@ -1569,14 +1570,14 @@ package
                   break;
                }
                _loc4_ = " ";
-               mc.bDealSpot.mouseChildren = false;
+               // mc.bDealSpot.mouseChildren = false;
                this.BubbleHide();
-               mc.bDealSpot.visible = false;
-               mc.bDealSpot.enabled = false;
-               if(Boolean(this._dealspot) && Boolean(this._dealspot.parent))
-               {
-                  this._dealspot.parent.removeChild(this._dealspot);
-               }
+               // mc.bDealSpot.visible = false;
+               // mc.bDealSpot.enabled = false;
+               // if(Boolean(this._dealspot) && Boolean(this._dealspot.parent))
+               // {
+               //    this._dealspot.parent.removeChild(this._dealspot);
+               // }
                _loc5_ = false;
                return;
          }
@@ -1599,22 +1600,22 @@ package
          var _loc7_:int = 0;
          if(GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD)
          {
-            mc.mcPoints.mcLevel.text = param5.toString();
+            // mc.mcPoints.mcLevel.text = param5.toString();
             _loc7_ = 200 / (param2 - param1) * (param4 - param1);
-            TweenLite.to(mc.mcPoints.mcBar,0.6,{
+/*             TweenLite.to(mc.mcPoints.mcBar,0.6,{
                "width":_loc7_,
                "ease":Elastic.easeInOut
-            });
+            });*/
             if(param6)
             {
-               mc.mcPoints.mcStar.scaleX = mc.mcPoints.mcStar.scaleY = 0.8;
-               mc.mcPoints.mcStar.rotation = 180;
-               TweenLite.to(mc.mcPoints.mcStar,1,{
+//                mc.mcPoints.mcStar.scaleX = mc.mcPoints.mcStar.scaleY = 0.8;
+//                mc.mcPoints.mcStar.rotation = 180;
+/*                TweenLite.to(mc.mcPoints.mcStar,1,{
                   "scaleX":1,
                   "scaleY":1,
                   "rotation":0,
                   "ease":Elastic.easeOut
-               });
+               });*/
             }
          }
       }

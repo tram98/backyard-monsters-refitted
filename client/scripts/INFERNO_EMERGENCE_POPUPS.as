@@ -42,7 +42,7 @@ package
       {
          var _loc1_:MovieClip = null;
          _loc1_ = new popup_infernoemerge_upgrade();
-         _loc1_.tTitle.htmlText = KEYS.Get("emerge_upgrade_title");
+/*         _loc1_.tTitle.htmlText = KEYS.Get("emerge_upgrade_title");
          _loc1_.tBody.htmlText = KEYS.Get("emerge_upgrade_body");
          _loc1_.bAction.buttonMode = true;
          _loc1_.bAction.useHandCursor = true;
@@ -53,6 +53,7 @@ package
             _loc1_.bAction.visible = false;
          }
          _loc1_.bAction.addEventListener(MouseEvent.CLICK,EmergeUpgradeCB);
+         */
          POPUPS.Push(_loc1_,INFERNO_EMERGENCE_POPUPS.ShownUpgradeCB);
       }
       
@@ -212,24 +213,24 @@ package
                action = POPUPS.Next;
          }
          showRSVP = new popup_infernoemerge_dialog();
-         showRSVP.tBody.htmlText = line;
+/*         showRSVP.tBody.htmlText = line;
          showRSVP.bAction.buttonMode = true;
          showRSVP.bAction.useHandCursor = true;
-         showRSVP.bAction.mouseChildren = false;
+         showRSVP.bAction.mouseChildren = false;*/
          isEventOver = INFERNO_EMERGENCE_EVENT.isLastDay() || INFERNO_EMERGENCE_EVENT.IsPostEvent();
          if(!isEventOver)
          {
-            showRSVP.bAction.Setup(btnLabel);
-            showRSVP.bAction.addEventListener(MouseEvent.CLICK,RSVPLink);
+            //showRSVP.bAction.Setup(btnLabel);
+            //showRSVP.bAction.addEventListener(MouseEvent.CLICK,RSVPLink);
          }
          else if(GLOBAL.townHall._lvl.Get() < INFERNO_EMERGENCE_EVENT.TOWN_HALL_LEVEL_REQUIREMENT)
          {
-            showRSVP.bAction.Setup(KEYS.Get("emerge_upgrade_btnaction"));
-            showRSVP.bAction.addEventListener(MouseEvent.CLICK,EmergeUpgradeCB);
+            //showRSVP.bAction.Setup(KEYS.Get("emerge_upgrade_btnaction"));
+            //showRSVP.bAction.addEventListener(MouseEvent.CLICK,EmergeUpgradeCB);
          }
          else
          {
-            showRSVP.bAction.visible = false;
+            //showRSVP.bAction.visible = false;
          }
          POPUPS.Push(showRSVP,null,null,"");
       }
@@ -245,7 +246,7 @@ package
             var _loc3_:Bitmap = new Bitmap(param2);
             _loc3_.y = -_loc3_.height + 80;
             _loc3_.x = -100;
-            completeRound.mcImage.addChild(_loc3_);
+//            completeRound.mcImage.addChild(_loc3_);
          };
          EmergeBragCB = function(param1:MouseEvent):void
          {
@@ -253,13 +254,13 @@ package
             POPUPS.Next();
          };
          completeRound = new popup_infernoemerge_roundover();
-         completeRound.tBody.htmlText = KEYS.Get("ai_caverndefense");
-         completeRound.bAction.buttonMode = true;
-         completeRound.bAction.useHandCursor = true;
-         completeRound.bAction.mouseChildren = false;
-         completeRound.bAction.Setup(KEYS.Get("btn_brag"));
-         completeRound.bAction.Highlight = true;
-         completeRound.bAction.addEventListener(MouseEvent.CLICK,EmergeBragCB);
+//         completeRound.tBody.htmlText = KEYS.Get("ai_caverndefense");
+         //completeRound.bAction.buttonMode = true;
+         //completeRound.bAction.useHandCursor = true;
+         //completeRound.bAction.mouseChildren = false;
+         //completeRound.bAction.Setup(KEYS.Get("btn_brag"));
+         //completeRound.bAction.Highlight = true;
+         //completeRound.bAction.addEventListener(MouseEvent.CLICK,EmergeBragCB);
          ImageCache.GetImageWithCallBack("popups/" + "portrait_moloch.png",imageCompleteRoundDialogue);
          POPUPS.Push(completeRound,null,null,"");
          _lvl = lvl;
@@ -297,7 +298,7 @@ package
          imageCompleteEmerge = function(param1:String, param2:BitmapData):void
          {
             var _loc3_:Bitmap = new Bitmap(param2);
-            completeEmerge.mcImage.addChild(_loc3_);
+//            completeEmerge.mcImage.addChild(_loc3_);
          };
          var portrait:String = "portrait_moloch.png";
          var imgOffset:Point = new Point(-75,50);
@@ -306,20 +307,20 @@ package
          var btnLabel:String = "Next";
          var action:Function = POPUPS.Next;
          completeEmerge = new popup_infernoemerge_complete();
-         completeEmerge.tBody.htmlText = KEYS.Get("entercavern_popup");
+//         completeEmerge.tBody.htmlText = KEYS.Get("entercavern_popup");
          if(GLOBAL.townHall._lvl.Get() >= INFERNO_EMERGENCE_EVENT.TOWN_HALL_LEVEL_REQUIREMENT)
          {
-            completeEmerge.bAction.buttonMode = true;
+/*            completeEmerge.bAction.buttonMode = true;
             completeEmerge.bAction.useHandCursor = true;
             completeEmerge.bAction.mouseChildren = false;
             completeEmerge.bAction.Highlight = true;
             completeEmerge.bAction.Setup(BASE.isInfernoMainYardOrOutpost ? KEYS.Get(INFERNOPORTAL.EXIT_BUTTON) : KEYS.Get(INFERNOPORTAL.ENTER_BUTTON));
-            completeEmerge.bAction.addEventListener(MouseEvent.CLICK,INFERNOPORTAL.EnterPortal);
+            completeEmerge.bAction.addEventListener(MouseEvent.CLICK,INFERNOPORTAL.EnterPortal);*/
          }
          else
          {
-            completeEmerge.bAction.visible = false;
-            completeEmerge.bAction.mouseEnabled = false;
+     /*       completeEmerge.bAction.visible = false;
+            completeEmerge.bAction.mouseEnabled = false;*/
          }
          ImageCache.GetImageWithCallBack("popups/" + "popup_emergecomplete.v2.jpg",imageCompleteEmerge);
          POPUPS.Push(completeEmerge,null,null,"");

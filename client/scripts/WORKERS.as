@@ -166,14 +166,15 @@ package
       
       public static function Say(param1:String, param2:MovieClip = null, param3:int = 2000) : void
       {
-         if(!param2)
+         throw new Error("MovieClip Broken");
+/*         if(!param2)
          {
             param2 = _workers[0].mc;
             param2.Target(new Point(param2.x + 20,param2.y + 150));
             param2.Move();
             param2.Update();
          }
-         param2.Say(param1,param3);
+         param2.Say(param1,param3);*/
       }
    }
 }

@@ -47,10 +47,10 @@ package com.monsters.baseplanner.components
             default:
                _loc2_ = KEYS.Get("basePlanner_catMisc");
          }
-         mc.tLabel.htmlText = _loc2_;
-         mc.mcCarrot.rotation = 90;
-         mc.mcBG.gotoAndStop(param1);
-         mc.mcFrame.gotoAndStop("off");
+         // mc.tLabel.htmlText = _loc2_;
+         // mc.mcCarrot.rotation = 90;
+         // mc.mcBG.gotoAndStop(param1);
+         // mc.mcFrame.gotoAndStop("off");
          this.emptyCheck();
       }
       
@@ -76,7 +76,7 @@ package com.monsters.baseplanner.components
             this._elementList[_loc1_].alpha = 1;
             _loc1_++;
          }
-         mc.mcCarrot.rotation = 90;
+         // mc.mcCarrot.rotation = 90;
       }
       
       private function collapse() : void
@@ -88,19 +88,19 @@ package com.monsters.baseplanner.components
             this._elementList[_loc1_].alpha = 0;
             _loc1_++;
          }
-         mc.mcCarrot.rotation = 0;
+         // mc.mcCarrot.rotation = 0;
       }
       
       private function emptyCheck() : void
       {
-         if(this._elementList.length == 0)
-         {
-            mc.mcCarrot.visible = 0;
-         }
-         else
-         {
-            mc.mcCarrot.visible = 1;
-         }
+         // if(this._elementList.length == 0)
+         // {
+         //    mc.mcCarrot.visible = 0;
+         // }
+         // else
+         // {
+         //    mc.mcCarrot.visible = 1;
+         // }
       }
       
       public function clear() : void
@@ -148,7 +148,7 @@ package com.monsters.baseplanner.components
                if(this._elementList[_loc2_].numBuildings <= 0)
                {
                   this._elementList[_loc2_].x = 30000;
-                  delete global[this._elementList.splice(_loc2_,1)];
+                  // delete global[this._elementList.splice(_loc2_,1)];
                }
             }
             _loc2_++;
@@ -228,12 +228,12 @@ package com.monsters.baseplanner.components
       
       override public function onRollOver(param1:MouseEvent = null) : void
       {
-         mc.mcFrame.gotoAndStop("on");
+         // mc.mcFrame.gotoAndStop("on");
       }
       
       override public function onRollOut(param1:MouseEvent = null) : void
       {
-         mc.mcFrame.gotoAndStop("off");
+         // mc.mcFrame.gotoAndStop("off");
       }
       
       override public function onMouseDown(param1:MouseEvent = null) : void

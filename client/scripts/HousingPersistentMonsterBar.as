@@ -47,11 +47,11 @@ package
       
       public function getResourceCostInShiny() : int
       {
-         if(currentFrame == k_HealFrame || m_healthBar.mcBar.width == k_monsterBarDisplayBarWidth)
-         {
-            return 0;
-         }
-         return GLOBAL.player.getResourceCostInShinyByID(this.m_creatureID);
+         // if(currentFrame == k_HealFrame || m_healthBar.mcBar.width == k_monsterBarDisplayBarWidth)
+         // {
+         //    return 0;
+         // }
+         // return GLOBAL.player.getResourceCostInShinyByID(this.m_creatureID);
       }
    }
 }

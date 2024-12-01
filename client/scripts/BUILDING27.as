@@ -127,13 +127,13 @@ package
                CUSTOMATTACKS._started = true;
                this._clicked = true;
                _loc2_ = new popup_horse();
-               _loc2_.tA.htmlText = "<b>" + KEYS.Get("ai_trojan_headline") + "</b>";
-               _loc2_.tName.htmlText = KEYS.Get("ai_trojan_letter",{"v1":LOGIN._playerName});
-               _loc2_.bA.SetupKey("ai_trojan_sendback_btn");
-               _loc2_.bA.addEventListener(MouseEvent.CLICK,this.StartAttack,false,0,true);
-               _loc2_.bB.SetupKey("ai_trojan_accept_btn");
-               _loc2_.bB.addEventListener(MouseEvent.CLICK,this.StartAttack,false,0,true);
-               _loc2_.addEventListener(Event.REMOVED_FROM_STAGE,this.popupRemoveFromStage,false,0,true);
+               // _loc2_.tA.htmlText = "<b>" + KEYS.Get("ai_trojan_headline") + "</b>";
+               // _loc2_.tName.htmlText = KEYS.Get("ai_trojan_letter",{"v1":LOGIN._playerName});
+               // _loc2_.bA.SetupKey("ai_trojan_sendback_btn");
+               // _loc2_.bA.addEventListener(MouseEvent.CLICK,this.StartAttack,false,0,true);
+               // _loc2_.bB.SetupKey("ai_trojan_accept_btn");
+               // _loc2_.bB.addEventListener(MouseEvent.CLICK,this.StartAttack,false,0,true);
+               // _loc2_.addEventListener(Event.REMOVED_FROM_STAGE,this.popupRemoveFromStage,false,0,true);
                POPUPS.Push(_loc2_);
             }
          }

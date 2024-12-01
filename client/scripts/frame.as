@@ -304,7 +304,9 @@ package
       {
          if("Help" in parent)
          {
-            (parent as MovieClip).Help();
+            var line = "(parent as MovieClip).Help();";
+            throw new Error("NOT IMPLEMENTED");
+            
          }
       }
       
@@ -313,7 +315,8 @@ package
          GLOBAL.goFullScreen();
          if("FullScreen" in parent)
          {
-            (parent as MovieClip).FullScreen();
+            var line = "(parent as MovieClip).FullScreen();";
+            throw new Error("NOT IMPLEMENTED");
          }
       }
    }

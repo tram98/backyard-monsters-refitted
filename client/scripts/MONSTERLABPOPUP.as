@@ -124,16 +124,16 @@ package
             this.btn_resource["mcR" + _loc1_].gotoAndStop(_loc1_);
             _loc1_++;
          }
-         this.btn_resource.mcTime.visible = false;
+/*         this.btn_resource.mcTime.visible = false;
          this.btn_resource.mcTime.tTitle.htmlText = "<b>" + KEYS.Get("#r_time#") + "</b>";
-         this.btn_resource.mcTime.gotoAndStop(6);
-         this.btn_instant.tDescription.htmlText = "<b>" + KEYS.Get("lab_upgradeinstant") + "</b>";
+         this.btn_resource.mcTime.gotoAndStop(6);*/
+/*         this.btn_instant.tDescription.htmlText = "<b>" + KEYS.Get("lab_upgradeinstant") + "</b>";
          this.tf_title.htmlText = "<b>" + KEYS.Get("monsterlab_title") + "</b>";
-         this.tf_statusIdle.htmlText = "<b>" + KEYS.Get("lab_selectability") + "</b>";
+         this.tf_statusIdle.htmlText = "<b>" + KEYS.Get("lab_selectability") + "</b>";*/
          if(_bMonsterLab._upgrading)
          {
-            this.tf_statusTitle.htmlText = KEYS.Get("monsterlab_currentlyresearching",{"v1":KEYS.Get(MONSTERLAB._powerupProps[_bMonsterLab._upgrading].name)});
-            this.tf_statusDesc.htmlText = "<b>" + KEYS.Get("lab_level",{"v1":_bMonsterLab._upgradeLevel}) + "</b>";
+            /*this.tf_statusTitle.htmlText = KEYS.Get("monsterlab_currentlyresearching",{"v1":KEYS.Get(MONSTERLAB._powerupProps[_bMonsterLab._upgrading].name)});
+            this.tf_statusDesc.htmlText = "<b>" + KEYS.Get("lab_level",{"v1":_bMonsterLab._upgradeLevel}) + "</b>";*/
             _loc2_ = _bMonsterLab._upgradeFinishTime.Get() - GLOBAL.Timestamp();
             this.tf_statusPBarLabel.htmlText = "<b>" + GLOBAL.ToTime(_loc2_,true) + "</b>";
             _loc3_ = MONSTERLAB.GetTimeCost(_bMonsterLab._upgrading,_bMonsterLab._upgradeLevel);
@@ -169,15 +169,15 @@ package
          var key:String = param1;
          UpdatePortraitIcon = function(param1:String, param2:BitmapData):void
          {
-            mcPortraitIcon.mcImage.addChild(new Bitmap(param2));
-            mcPortraitIcon.loading.visible = false;
+//            mcPortraitIcon.mcImage.addChild(new Bitmap(param2));
+//            mcPortraitIcon.loading.visible = false;
          };
          UpdateStatusIcon = function(param1:String, param2:BitmapData):void
          {
-            icon_status.mcImage.addChild(new Bitmap(param2));
-            icon_status.loading.visible = false;
+            //icon_status.mcImage.addChild(new Bitmap(param2));
+//            icon_status.loading.visible = false;
          };
-         this._portraitImage = mcPortraitIcon.mcImage;
+/*         this._portraitImage = mcPortraitIcon.mcImage;
          this._statusImage = this.icon_status.mcImage;
          if(mcPortraitIcon.mcImage)
          {
@@ -192,7 +192,7 @@ package
             {
                this._statusImage.removeChildAt(0);
             }
-         }
+         }*/
          ImageCache.GetImageWithCallBack("popups/" + _creatureID + "-LAB-150.png",UpdatePortraitIcon);
          ImageCache.GetImageWithCallBack("popups/" + _creatureID + "-LAB-75.jpg",UpdateStatusIcon);
       }
@@ -282,16 +282,16 @@ package
          this.tf_statsPBarLabel.htmlText = _loc9_;
          var _loc10_:Number = 100 / _maxLevel * Math.min(_unlockLevel - 1,_maxLevel);
          var _loc11_:Number = 100 / _maxLevel * Math.min(_unlockLevel,_maxLevel) - 1;
-         this.pBar_stats.mcBar.width = Math.max(_loc10_,1);
+/*         this.pBar_stats.mcBar.width = Math.max(_loc10_,1);
          this.pBar_stats.mcBar2.width = Math.max(_loc11_,1);
-         this.pBar_stats.mcBar2.gotoAndStop(3);
+         this.pBar_stats.mcBar2.gotoAndStop(3);*/
          this.tf_statsWarning.visible = false;
          this.UpdatePortrait(_creatureID);
          if(Boolean(_bMonsterLab._upgrading) && GLOBAL.Timestamp() < _bMonsterLab._upgradeFinishTime.Get())
          {
             this.StatusChange("WORKING");
             this.btn_action.removeEventListener(MouseEvent.CLICK,this.SpeedUp);
-            this.btn_instant.bAction.removeEventListener(MouseEvent.CLICK,this.CancelMonsterPowerup);
+/*            this.btn_instant.bAction.removeEventListener(MouseEvent.CLICK,this.CancelMonsterPowerup);
             this.btn_instant.bAction.removeEventListener(MouseEvent.CLICK,this.InstantMonsterPowerup);
             this.btn_instant.gArrow.visible = false;
             this.btn_instant.tDescription.visible = false;
@@ -306,7 +306,7 @@ package
             this.btn_resource.mcR3.visible = false;
             this.btn_resource.mcR4.visible = false;
             this.btn_resource.mcTime.visible = false;
-            this.btn_resource.visible = false;
+            this.btn_resource.visible = false;*/
          }
          else
          {
@@ -316,7 +316,7 @@ package
                _loc12_ = MONSTERLAB.GetPuttyCost(_creatureID,_unlockLevel);
                _loc13_ = MONSTERLAB.GetTimeCost(_creatureID,_unlockLevel);
                _instantUnlockCost = MONSTERLAB.GetShinyCost(_creatureID,_unlockLevel);
-               this.btn_instant.tDescription.htmlText = "<b>" + KEYS.Get("buildoptions_upgradeinstant") + "</b>";
+               /*this.btn_instant.tDescription.htmlText = "<b>" + KEYS.Get("buildoptions_upgradeinstant") + "</b>";
                this.btn_instant.gArrow.visible = true;
                this.btn_instant.tDescription.visible = true;
                this.btn_instant.gCoin.visible = true;
@@ -337,7 +337,7 @@ package
                this.btn_resource.mcTime.visible = true;
                this.btn_resource.mcTime.tValue.htmlText = "<b>" + GLOBAL.ToTime(_loc13_) + "</b>";
                this.btn_instant.visible = true;
-               this.btn_resource.visible = true;
+               this.btn_resource.visible = true;*/
             }
             else if(_loc5_.errorString == KEYS.Get("acad_err_putty"))
             {
@@ -345,7 +345,7 @@ package
                _loc12_ = MONSTERLAB.GetPuttyCost(_creatureID,_unlockLevel);
                _loc13_ = MONSTERLAB.GetTimeCost(_creatureID,_unlockLevel);
                _instantUnlockCost = MONSTERLAB.GetShinyCost(_creatureID,_unlockLevel);
-               this.btn_instant.tDescription.htmlText = KEYS.Get("academy_traininstantly");
+               /*this.btn_instant.tDescription.htmlText = KEYS.Get("academy_traininstantly");
                this.btn_instant.tDescription.visible = true;
                this.btn_instant.gArrow.visible = true;
                this.btn_instant.gCoin.visible = true;
@@ -366,11 +366,11 @@ package
                this.btn_resource.bAction.Highlight = false;
                this.btn_resource.bAction.visible = true;
                this.btn_instant.visible = true;
-               this.btn_resource.visible = true;
+               this.btn_resource.visible = true;*/
             }
             else if(Boolean(GLOBAL.player.m_upgrades[_creatureID]) && GLOBAL.player.m_upgrades[_creatureID].powerup == _maxLevel)
             {
-               this.btn_instant.bAction.SetupKey("acad_err_fullytrained");
+               /*this.btn_instant.bAction.SetupKey("acad_err_fullytrained");
                this.btn_instant.bAction.Enabled = false;
                this.btn_instant.bAction.Highlight = false;
                this.btn_instant.gCoin.visible = false;
@@ -378,11 +378,11 @@ package
                this.btn_instant.tDescription.visible = false;
                this.btn_instant.bAction.removeEventListener(MouseEvent.CLICK,this.InstantMonsterPowerup);
                this.btn_instant.bAction.removeEventListener(MouseEvent.CLICK,this.CancelMonsterPowerup);
-               this.btn_resource.visible = false;
+               this.btn_resource.visible = false;*/
             }
             else if((_bMonsterLab.CanPowerup(_creatureID,_unlockLevel) as Object).error)
             {
-               this.btn_instant.bAction.SetupKey("mon_locked");
+               /*this.btn_instant.bAction.SetupKey("mon_locked");
                this.btn_instant.bAction.Enabled = false;
                this.btn_instant.bAction.Highlight = false;
                this.btn_instant.gCoin.visible = false;
@@ -391,11 +391,11 @@ package
                this.btn_instant.bAction.removeEventListener(MouseEvent.CLICK,this.InstantMonsterPowerup);
                this.btn_instant.bAction.removeEventListener(MouseEvent.CLICK,this.CancelMonsterPowerup);
                this.btn_resource.bAction.removeEventListener(MouseEvent.CLICK,this.StartMonsterPowerup);
-               this.btn_resource.visible = false;
+               this.btn_resource.visible = false;*/
                if(_bMonsterLab._lvl.Get() < _unlockLevel)
                {
-                  this.tf_statsWarning.htmlText = KEYS.Get("monsterlab_requiredlevel",{"v1":_unlockLevel});
-                  this.tf_statsWarning.visible = true;
+                  /*this.tf_statsWarning.htmlText = KEYS.Get("monsterlab_requiredlevel",{"v1":_unlockLevel});
+                  this.tf_statsWarning.visible = true;*/
                }
                else if(CREATURELOCKER._lockerData[_creatureID] == null || CREATURELOCKER._lockerData[_creatureID].t < 2 || GLOBAL.player.m_upgrades[_creatureID] == null || GLOBAL.player.m_upgrades[_creatureID].level <= _unlockLevel)
                {
@@ -417,7 +417,9 @@ package
                }
             }
          }
-         var _loc14_:* = (_loc14_ = (_loc14_ = "<b>" + KEYS.Get("acad_mon_name") + "</b> " + KEYS.Get(CREATURELOCKER._creatures[_creatureID].name) + "<br>") + ("<b>" + KEYS.Get("acad_mon_status") + "</b> " + _loc5_.status)) + ("<br>" + KEYS.Get(CREATURELOCKER._creatures[_creatureID].description));
+         var _loc14_:* = (
+            (
+               "<b>" + KEYS.Get("acad_mon_name") + "</b> " + KEYS.Get(CREATURELOCKER._creatures[_creatureID].name) + "<br>") + ("<b>" + KEYS.Get("acad_mon_status") + "</b> " + _loc5_.status)) + ("<br>" + KEYS.Get(CREATURELOCKER._creatures[_creatureID].description));
          var _loc15_:int;
          if((_loc15_ = CREATURES.GetProperty(_creatureID,"damage",0,true)) > 0)
          {
@@ -503,16 +505,16 @@ package
          this._abilityUpgradesList.sortOn(["order"],Array.NUMERIC);
          if(this._listContainer)
          {
-            this.list_mc.mcContainer.removeChild(this._listContainer);
+//            this.list_mc.mcContainer.removeChild(this._listContainer);
          }
-         this._listContainer = this.list_mc.mcContainer.addChild(new Sprite());
+//         this._listContainer = this.list_mc.mcContainer.addChild(new Sprite());
          this._listContainer.x = 0;
          this._listContainer.y = 0;
-         this._listContainer.mask = this.list_mc.mcMask;
+//         this._listContainer.mask = this.list_mc.mcMask;
          this._scrollbar.x = 190;
          this._scrollbar.y = 0;
          this.list_mc.addChild(this._scrollbar);
-         this._scrollbar.Init(this._listContainer,this.list_mc.mcMask,0,0,this.list_mc.height,20);
+         //this._scrollbar.Init(this._listContainer,this.list_mc.mcMask,0,0,this.list_mc.height,20);
          this._scrollbar.AutoHideEnabled = false;
          this._scrollbar.visible = false;
          offset = 0;
@@ -522,8 +524,8 @@ package
             UpdateItemIcon = function(param1:String, param2:BitmapData):void
             {
                var _loc3_:MONSTERLABITEM_CLIP = _labItems[param1];
-               _loc3_.mcIcon.mcImage.addChild(new Bitmap(param2));
-               _loc3_.mcIcon.loading.visible = false;
+//               _loc3_.mcIcon.mcImage.addChild(new Bitmap(param2));
+  //             _loc3_.mcIcon.loading.visible = false;
             };
             abilityUpgrade = this._abilityUpgradesList[i];
             cr = String(abilityUpgrade.id);
@@ -540,13 +542,13 @@ package
             item.mouseEnabled = true;
             if(Boolean(GLOBAL.player.m_upgrades[cr]) && Boolean(GLOBAL.player.m_upgrades[cr].powerup))
             {
-               item.mcLevel.tLevel.htmlText = "" + GLOBAL.player.m_upgrades[cr].powerup + "";
+//               item.mcLevel.tLevel.htmlText = "" + GLOBAL.player.m_upgrades[cr].powerup + "";
             }
             else
             {
                item.mcLevel.visible = false;
             }
-            itemIconImage = item.mcIcon.mcImage;
+//            itemIconImage = item.mcIcon.mcImage;
             if(itemIconImage)
             {
                while(itemIconImage.numChildren)
@@ -615,8 +617,8 @@ package
                this.tf_statusPBarLabel.htmlText = "<b>" + _loc5_ + "</b>";
                _loc6_ = int(_loc3_[1]);
                _loc7_ = 100 / _loc6_ * (_loc6_ - _loc4_);
-               this.pBar_status.mcBar.width = Math.max(_loc7_,1);
-               this.pBar_status.mcBar2.width = Math.max(_loc7_,1);
+//               this.pBar_status.mcBar.width = Math.max(_loc7_,1);
+  //             this.pBar_status.mcBar2.width = Math.max(_loc7_,1);
          }
       }
       

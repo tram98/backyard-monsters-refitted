@@ -90,8 +90,8 @@ package com.monsters.chat.ui
          {
             _loc6_ += _loc7_ + "<br>";
          }
-         this.background._output.htmlText = _loc6_;
-         this.background._output.autoSize = TextFieldAutoSize.LEFT;
+         // this.background._output.htmlText = _loc6_;
+         // this.background._output.autoSize = TextFieldAutoSize.LEFT;
       }
       
       public function get inputText() : String

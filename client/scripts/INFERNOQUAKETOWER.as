@@ -240,14 +240,14 @@ package
          if(GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD && !BASE.isInfernoMainYardOrOutpost)
          {
             _loc1_ = new popup_building();
-            _loc1_.tA.htmlText = "<b>" + KEYS.Get("pop_tupgraded_title",{
-               "v1":KEYS.Get(_buildingProps.name),
-               "v2":_lvl.Get()
-            }) + "</b>";
-            _loc1_.tB.htmlText = KEYS.Get("pop_tupgraded_body",{"v1":KEYS.Get(_buildingProps.name)});
-            _loc1_.bPost.SetupKey("btn_brag");
-            _loc1_.bPost.addEventListener(MouseEvent.CLICK,this.UpgradedBrag);
-            _loc1_.bPost.Highlight = true;
+            // _loc1_.tA.htmlText = "<b>" + KEYS.Get("pop_tupgraded_title",{
+            //    "v1":KEYS.Get(_buildingProps.name),
+            //    "v2":_lvl.Get()
+            // }) + "</b>";
+            // _loc1_.tB.htmlText = KEYS.Get("pop_tupgraded_body",{"v1":KEYS.Get(_buildingProps.name)});
+            // _loc1_.bPost.SetupKey("btn_brag");
+            // _loc1_.bPost.addEventListener(MouseEvent.CLICK,this.UpgradedBrag);
+            // _loc1_.bPost.Highlight = true;
             POPUPS.Push(_loc1_,null,null,null,"build.v2.png");
          }
       }
@@ -265,14 +265,14 @@ package
          if(GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD && !BASE.isInfernoMainYardOrOutpost)
          {
             _loc1_ = new popup_building();
-            _loc1_.tA.htmlText = "<b>" + KEYS.Get("pop_tupgraded_title",{
-               "v1":KEYS.Get(_buildingProps.name),
-               "v2":_lvl.Get()
-            }) + "</b>";
-            _loc1_.tB.htmlText = KEYS.Get("pop_tbuild_body",{"v1":KEYS.Get(_buildingProps.name)});
-            _loc1_.bPost.SetupKey("btn_brag");
-            _loc1_.bPost.addEventListener(MouseEvent.CLICK,this.ConstructedBrag);
-            _loc1_.bPost.Highlight = true;
+            // _loc1_.tA.htmlText = "<b>" + KEYS.Get("pop_tupgraded_title",{
+            //    "v1":KEYS.Get(_buildingProps.name),
+            //    "v2":_lvl.Get()
+            // }) + "</b>";
+            // _loc1_.tB.htmlText = KEYS.Get("pop_tbuild_body",{"v1":KEYS.Get(_buildingProps.name)});
+            // _loc1_.bPost.SetupKey("btn_brag");
+            // _loc1_.bPost.addEventListener(MouseEvent.CLICK,this.ConstructedBrag);
+            // _loc1_.bPost.Highlight = true;
             POPUPS.Push(_loc1_,null,null,null,"build.v2.png");
          }
       }

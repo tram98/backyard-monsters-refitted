@@ -216,7 +216,7 @@ package
       {
          if("Hide" in parent)
          {
-            (parent as MovieClip).Hide();
+            // (parent as MovieClip).Hide();
          }
          else if(Boolean(this._customCloseFunction))
          {
@@ -232,7 +232,7 @@ package
       {
          if("Help" in parent)
          {
-            (parent as MovieClip).Help();
+            // (parent as MovieClip).Help();
          }
       }
       
@@ -241,7 +241,7 @@ package
          GLOBAL.goFullScreen();
          if("FullScreen" in parent)
          {
-            (parent as MovieClip).FullScreen();
+            // (parent as MovieClip).FullScreen();
          }
       }
    }

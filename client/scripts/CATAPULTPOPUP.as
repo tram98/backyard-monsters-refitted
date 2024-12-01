@@ -59,7 +59,7 @@ package
          var _loc3_:int = 0;
          var _loc4_:String = null;
          var _loc5_:CATAPULTITEM = null;
-         _imageContainer.txtName.selectable = false;
+         // _imageContainer.txtName.selectable = false;
          if(param1)
          {
             _mc.visible = false;
@@ -68,7 +68,7 @@ package
          }
          _mc.visible = true;
          _imageContainer.addEventListener(MouseEvent.MOUSE_DOWN,this.Show);
-         _imageContainer._image.buttonMode = true;
+         // _imageContainer._image.buttonMode = true;
          this._items = [];
          for(_loc4_ in ResourceBombs._bombs)
          {
@@ -100,7 +100,7 @@ package
             {
                Hide();
                ResourceBombs._bombid = b._bombid;
-               _imageContainer.txtName.htmlText = "<font color=\"#FF0000\">Cancel</font>";
+               // _imageContainer.txtName.htmlText = "<font color=\"#FF0000\">Cancel</font>";
                Update();
                Fire(param1);
             }
@@ -164,11 +164,11 @@ package
          }
          if(ResourceBombs._state == 0)
          {
-            _imageContainer.txtName.htmlText = "<font color=\"#FFFFFF\">Catapult</font>";
+            // _imageContainer.txtName.htmlText = "<font color=\"#FFFFFF\">Catapult</font>";
          }
          else if(ResourceBombs._state == 1)
          {
-            _imageContainer.txtName.htmlText = "<font color=\"#FF0000\">Cancel</font>";
+            // _imageContainer.txtName.htmlText = "<font color=\"#FF0000\">Cancel</font>";
          }
       }
       
@@ -184,13 +184,13 @@ package
          }
          this._bm = new Bitmap(param2);
          this._bm.width = this._bm.height = 60;
-         _imageContainer._image.addChild(this._bm);
+         // _imageContainer._image.addChild(this._bm);
          this._currentImage = param1;
       }
       
       public function fired() : void
       {
-         _imageContainer.txtName.htmlText = "<font color=\"#FFFFFF\">Catapult</font>";
+         // _imageContainer.txtName.htmlText = "<font color=\"#FFFFFF\">Catapult</font>";
       }
       
       public function Show(param1:MouseEvent = null) : void
@@ -227,7 +227,7 @@ package
          if(ResourceBombs._state != 0)
          {
             ResourceBombs.BombRemove();
-            _imageContainer.txtName.htmlText = "<font color=\"#FFFFFF\">Catapult</font>";
+            // _imageContainer.txtName.htmlText = "<font color=\"#FFFFFF\">Catapult</font>";
             return;
          }
          addChild(_mc);

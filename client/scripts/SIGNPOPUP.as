@@ -158,7 +158,7 @@ package
       {
          if(Boolean(stage) && stage.displayState == StageDisplayState.FULL_SCREEN)
          {
-            this.fsWarning.tBody.htmlText = KEYS.Get("fswarning");
+            // this.fsWarning.tBody.htmlText = KEYS.Get("fswarning");
             addChild(this.fsWarning);
          }
          else if(this.contains(this.fsWarning))

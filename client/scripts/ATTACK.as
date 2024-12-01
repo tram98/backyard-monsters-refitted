@@ -83,7 +83,7 @@ package
       
       public static var _tauntThreshold:Number = 0.1;
       
-      public static var _attackLog:popup_attack_log;
+//       public static var _attackLog:popup_attack_log;
       
       public static var _shownAIPopup:Boolean;
       
@@ -337,7 +337,7 @@ package
                   if(param1.target.label == "Next" || param1.target.labelKey == "btn_returnhome" || param1.target.labelKey == "btn_skip")
                   {
                      _logOpen = false;
-                     _attackLog.parent.removeChild(_attackLog);
+//                      _attackLog.parent.removeChild(_attackLog);
                      EndB();
                   }
                   if(param1.target.labelKey == "btn_talktrash")
@@ -345,54 +345,54 @@ package
                      ShowTaunt();
                   }
                };
-               _attackLog = new popup_attack_log();
-               _attackLog.Resize = function():void
+//                _attackLog = new popup_attack_log();
+//                _attackLog.Resize = function():void
                {
-                  _attackLog.x = 0;
-                  _attackLog.y = 0;
+//                   _attackLog.x = 0;
+//                   _attackLog.y = 0;
                };
-               (_attackLog.mcFrame as frame).Setup(false);
-               _attackLog.title_txt.htmlText = "<b>" + KEYS.Get("attack_log_title") + "</b>";
-               GLOBAL._layerMessages.addChild(_attackLog);
+//                (_attackLog.mcFrame as frame).Setup(false);
+//                _attackLog.title_txt.htmlText = "<b>" + KEYS.Get("attack_log_title") + "</b>";
+//                GLOBAL._layerMessages.addChild(_attackLog);
                if(shouldShowTaunt && !ATTACK._taunted && MAPROOM._visitingFriend)
                {
-                  _attackLog.bAction.SetupKey("btn_talktrash");
-                  _attackLog.bAction.addEventListener(MouseEvent.CLICK,onActionDown);
-                  _attackLog.bAction.Highlight = true;
+//                   _attackLog.bAction.SetupKey("btn_talktrash");
+//                   _attackLog.bAction.addEventListener(MouseEvent.CLICK,onActionDown);
+//                   _attackLog.bAction.Highlight = true;
                   if(MapRoomManager.instance.isInMapRoom2)
                   {
-                     _attackLog.b2.Setup(KEYS.Get("btn_next"));
+//                      _attackLog.b2.Setup(KEYS.Get("btn_next"));
                   }
                   else
                   {
-                     _attackLog.b2.SetupKey("btn_returnhome");
+//                      _attackLog.b2.SetupKey("btn_returnhome");
                   }
-                  _attackLog.b2.addEventListener(MouseEvent.CLICK,onActionDown);
+//                   _attackLog.b2.addEventListener(MouseEvent.CLICK,onActionDown);
                }
                else
                {
-                  _attackLog.removeChild(_attackLog.b2);
-                  _attackLog.bAction.Highlight = false;
+//                   _attackLog.removeChild(_attackLog.b2);
+//                   _attackLog.bAction.Highlight = false;
                   if(MapRoomManager.instance.isInMapRoom2)
                   {
-                     _attackLog.bAction.Setup(KEYS.Get("btn_next"));
+//                      _attackLog.bAction.Setup(KEYS.Get("btn_next"));
                   }
                   else
                   {
-                     _attackLog.bAction.SetupKey("btn_returnhome");
+//                      _attackLog.bAction.SetupKey("btn_returnhome");
                   }
-                  _attackLog.bAction.addEventListener(MouseEvent.CLICK,onActionDown);
+//                   _attackLog.bAction.addEventListener(MouseEvent.CLICK,onActionDown);
                }
                str = LogRead();
                str += "<br><br>";
-               _attackLog.shell.body_txt.htmlText = str;
-               _attackLog.shell.body_txt.autoSize = TextFieldAutoSize.LEFT;
+//                _attackLog.shell.body_txt.htmlText = str;
+//                _attackLog.shell.body_txt.autoSize = TextFieldAutoSize.LEFT;
                ss = new ScrollSet();
-               _attackLog.addChild(ss);
+//                _attackLog.addChild(ss);
                ss.x = 613;
                ss.y = 115;
-               ss.Init(_attackLog.shell,_attackLog.maskMC,0,_attackLog.maskMC.y,270);
-               _attackLog.shell.mask = _attackLog.maskMC;
+//                ss.Init(_attackLog.shell,_attackLog.maskMC,0,_attackLog.maskMC.y,270);
+//                _attackLog.shell.mask = _attackLog.maskMC;
             }
             else
             {
@@ -413,6 +413,17 @@ package
          var onClose:Function = null;
          var onShare:Function = null;
          var e:MouseEvent = param1;
+         var SwitchB:Function = function(param1:int):void
+         {
+            imgNumber = param1;
+            i = 1;
+            while(i < 4)
+            {
+//                taunt["mcIcon" + i].alpha = 0.4;
+               ++i;
+            }
+//             taunt["mcIcon" + param1].alpha = 1;
+         };
          var Switch:Function = function(param1:int):Function
          {
             var n:int = param1;
@@ -421,56 +432,45 @@ package
                SwitchB(n);
             };
          };
-         var SwitchB:Function = function(param1:int):void
-         {
-            imgNumber = param1;
-            i = 1;
-            while(i < 4)
-            {
-               taunt["mcIcon" + i].alpha = 0.4;
-               ++i;
-            }
-            taunt["mcIcon" + param1].alpha = 1;
-         };
          onClose = function(param1:MouseEvent = null):void
          {
-            if(taunt.parent)
+//             if(taunt.parent)
             {
-               taunt.parent.removeChild(taunt);
+//                taunt.parent.removeChild(taunt);
             }
             End();
          };
          onShare = function(param1:MouseEvent):void
          {
             ATTACK._taunted = true;
-            GLOBAL.CallJS("sendFeed",["taunt",KEYS.Get("attack_taunt_streamtitle"),KEYS.Get("attack_taunt_streambody"),"taunt" + imgNumber + ".png",BASE._loadedFBID]);
+//             GLOBAL.CallJS("sendFeed",["taunt",KEYS.Get("attack_taunt_streamtitle"),KEYS.Get("attack_taunt_streambody"),"taunt" + imgNumber + ".png",BASE._loadedFBID]);
             onClose();
          };
          try
          {
-            _attackLog.parent.removeChild(_attackLog);
+//             _attackLog.parent.removeChild(_attackLog);
          }
          catch(e:Error)
          {
          }
          taunt = new popup_taunt_friend();
          taunt.tTitle.htmlText = KEYS.Get("popup_title_tauntfriend");
-         taunt.Resize = function():void
+//          taunt.Resize = function():void
          {
-            taunt.x = 0;
-            taunt.y = 0;
+//             taunt.x = 0;
+//             taunt.y = 0;
          };
-         taunt.bShare.SetupKey("btn_talktrash");
-         GLOBAL._layerMessages.addChild(taunt);
-         taunt.bShare.addEventListener(MouseEvent.CLICK,onShare);
-         taunt.bShare.Highlight = true;
-         (taunt.mcFrame as frame).Setup(true,onClose);
+//          taunt.bShare.SetupKey("btn_talktrash");
+//          GLOBAL._layerMessages.addChild(taunt);
+//          taunt.bShare.addEventListener(MouseEvent.CLICK,onShare);
+//          taunt.bShare.Highlight = true;
+//          (taunt.mcFrame as frame).Setup(true,onClose);
          i = 1;
          while(i < 4)
          {
-            taunt["mcIcon" + i].buttonMode = true;
-            taunt["mcIcon" + i].gotoAndStop(i);
-            taunt["mcIcon" + i].addEventListener(MouseEvent.CLICK,Switch(i));
+//             taunt["mcIcon" + i].buttonMode = true;
+//             taunt["mcIcon" + i].gotoAndStop(i);
+//             taunt["mcIcon" + i].addEventListener(MouseEvent.CLICK,Switch(i));
             i++;
          }
          SwitchB(1);

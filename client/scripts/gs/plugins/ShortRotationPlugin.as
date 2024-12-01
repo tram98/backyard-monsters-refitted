@@ -20,7 +20,7 @@ package gs.plugins
       
       override public function onInitTween(param1:Object, param2:*, param3:TweenLite) : Boolean
       {
-         throw new Exception("Not Implemented");
+         throw new Error("Not Implemented");
 
          return true;
       }

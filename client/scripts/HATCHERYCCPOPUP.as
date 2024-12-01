@@ -43,7 +43,7 @@ package
          var _loc12_:MovieClip = null;
          var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.setupSubscriptions(HATCHERYCC.queueLimit > HATCHERYCC.DEFAULT_QUEUE_LIMIT);
-         bSpeedup.tName.htmlText = "<b>" + KEYS.Get("btn_speedup") + "</b>";
+//         bSpeedup.tName.htmlText = "<b>" + KEYS.Get("btn_speedup") + "</b>";
          bSpeedup.mouseChildren = false;
          if(!BASE.isInfernoMainYardOrOutpost)
          {
@@ -54,11 +54,11 @@ package
             bSpeedup.addEventListener(MouseEvent.CLICK,STORE.Show(3,2,["HODI","HOD2I","HOD3I"]));
          }
          bSpeedup.buttonMode = true;
-         bFinish.tName.htmlText = "<b>" + KEYS.Get("str_finishnow") + "</b>";
+        // bFinish.tName.htmlText = "<b>" + KEYS.Get("str_finishnow") + "</b>";
          bFinish.mouseChildren = false;
          bFinish.addEventListener(MouseEvent.CLICK,this.FinishNow);
          bFinish.buttonMode = true;
-         bTopup.tName.htmlText = "<b>" + KEYS.Get("btn_topup2") + "</b>";
+      //   bTopup.tName.htmlText = "<b>" + KEYS.Get("btn_topup2") + "</b>";
          bTopup.mouseChildren = false;
          if(!BASE.isInfernoMainYardOrOutpost)
          {
@@ -102,21 +102,21 @@ package
             }
             else
             {
-               (_loc10_ = new HatcheryCCMonsterIcon_CLIP()).id = _loc1_;
-               _loc10_.x = _loc4_.x + _loc2_ % _loc5_ * (_loc10_.mcMonster.width + _loc6_);
-               _loc10_.y = _loc4_.y + Math.floor(_loc2_ / _loc5_) * (_loc10_.mcMonster.height + _loc6_);
-               (_loc11_ = _loc10_.mcMonster).addEventListener(MouseEvent.MOUSE_OVER,this.MonsterInfo(_loc7_[_loc9_].id));
+//               (_loc10_ = new HatcheryCCMonsterIcon_CLIP()).id = _loc1_;
+//               _loc10_.x = _loc4_.x + _loc2_ % _loc5_ * (_loc10_.mcMonster.width + _loc6_);
+//               _loc10_.y = _loc4_.y + Math.floor(_loc2_ / _loc5_) * (_loc10_.mcMonster.height + _loc6_);
+//               (_loc11_ = _loc10_.mcMonster).addEventListener(MouseEvent.MOUSE_OVER,this.MonsterInfo(_loc7_[_loc9_].id));
                monsterCanvas.addChild(_loc10_);
                this._monsterSlots.push(_loc10_);
                _loc11_.addEventListener(MouseEvent.MOUSE_OVER,this.MonsterInfo(_loc7_[_loc9_].id));
                _loc11_.addEventListener(MouseEvent.MOUSE_DOWN,this.QueueAdd(_loc7_[_loc9_].id));
                _loc11_.buttonMode = true;
                ImageCache.GetImageWithCallBack("monsters/" + _loc1_ + "-medium.jpg",this.MonsterIconLoaded,true,1,"",[_loc11_]);
-               _loc12_ = _loc10_.mcLevel;
+//               _loc12_ = _loc10_.mcLevel;
                if(Boolean(GLOBAL.player.m_upgrades[_loc1_]) && GLOBAL.player.m_upgrades[_loc1_].level > 1)
                {
                   _loc12_.visible = true;
-                  _loc12_.tLevel.htmlText = "<b>" + GLOBAL.player.m_upgrades[_loc1_].level + "</b>";
+//                  _loc12_.tLevel.htmlText = "<b>" + GLOBAL.player.m_upgrades[_loc1_].level + "</b>";
                }
                else
                {
@@ -143,7 +143,7 @@ package
             _loc9_++;
          }
          title_txt.htmlText = KEYS.Get("hcc_title");
-         mcMonsterInfo.speed_txt.htmlText = "<b>" + KEYS.Get("mon_att_speed") + "</b>";
+/*         mcMonsterInfo.speed_txt.htmlText = "<b>" + KEYS.Get("mon_att_speed") + "</b>";
          mcMonsterInfo.health_txt.htmlText = "<b>" + KEYS.Get("mon_att_health") + "</b>";
          mcMonsterInfo.damage_txt.htmlText = "<b>" + KEYS.Get("mon_att_damage") + "</b>";
          mcMonsterInfo.goo_txt.htmlText = "<b>" + KEYS.Get("mon_att_cost",{"v1":KEYS.Get(BRESOURCE.GetResourceNameKey(3))}) + "</b>";
@@ -155,7 +155,7 @@ package
          hatlabel4_txt.htmlText = "<b>" + KEYS.Get("hcc_hatcherynum",{"v1":4}) + "</b>";
          hatlabel5_txt.htmlText = "<b>" + KEYS.Get("hcc_hatcherynum",{"v1":5}) + "</b>";
          tHousingLabel.htmlText = "<b>" + KEYS.Get("hcc_housingspace") + "</b>";
-         tGooLabel.htmlText = "<b>" + KEYS.Get("hcc_goousage") + "</b>";
+         tGooLabel.htmlText = "<b>" + KEYS.Get("hcc_goousage") + "</b>";*/
          addEventListener(MouseEvent.MOUSE_UP,this.ClearEvents);
          (this.mcFrame as frame).Setup(true,null);
       }
@@ -171,9 +171,9 @@ package
             {
                gotoAndStop("v2");
                tMagmaLabel.htmlText = "<b>" + KEYS.Get("hcc_magmausage") + "</b>";
-               bTopupMagma.tName.htmlText = "<b>" + KEYS.Get("btn_topup2") + "</b>";
+/*               bTopupMagma.tName.htmlText = "<b>" + KEYS.Get("btn_topup2") + "</b>";
                bTopupMagma.buttonMode = true;
-               bTopupMagma.gotoAndStop(1);
+               bTopupMagma.gotoAndStop(1);*/
                bTopupMagma.addEventListener(MouseEvent.CLICK,STORE.Show(2,4,["BR41I","BR42I","BR43I"]));
             }
          }
@@ -256,7 +256,7 @@ package
             }
          }
          _loc12_ = CREATURES.GetProperty(_loc3_,"damage");
-         TweenLite.to(mcMonsterInfo.bSpeed.mcBar,0.4,{
+/*         TweenLite.to(mcMonsterInfo.bSpeed.mcBar,0.4,{
             "width":100 / _loc5_ * CREATURES.GetProperty(_loc3_,"speed"),
             "ease":Circ.easeInOut,
             "delay":0
@@ -301,21 +301,21 @@ package
             "v2":KEYS.Get(BRESOURCE.GetResourceNameKey(3))
          });
          mcMonsterInfo.tStorage.htmlText = KEYS.Get("mon_att_housingvalue",{"v1":CREATURES.GetProperty(_loc3_,"cStorage")});
-         mcMonsterInfo.tTime.htmlText = GLOBAL.ToTime(CREATURES.GetProperty(_loc3_,"cTime"),true);
+         mcMonsterInfo.tTime.htmlText = GLOBAL.ToTime(CREATURES.GetProperty(_loc3_,"cTime"),true);*/
          var _loc13_:int = 1;
          if(Boolean(GLOBAL.player.m_upgrades[_loc3_]) && GLOBAL.player.m_upgrades[_loc3_].level > 1)
          {
             _loc13_ = int(GLOBAL.player.m_upgrades[_loc3_].level);
          }
-         mcMonsterInfo.tDescription.htmlText = "<b>" + KEYS.Get("hatcherypopup_level",{"v1":_loc13_}) + " " + KEYS.Get(_loc4_.name) + "</b><br>" + KEYS.Get(_loc4_.description);
+         //mcMonsterInfo.tDescription.htmlText = "<b>" + KEYS.Get("hatcherypopup_level",{"v1":_loc13_}) + " " + KEYS.Get(_loc4_.name) + "</b><br>" + KEYS.Get(_loc4_.description);
          if(Boolean(CREATURELOCKER._lockerData[_loc3_]) && CREATURELOCKER._lockerData[_loc3_].t == 2)
          {
-            mcMonsterInfo.mcLocked.visible = false;
+            //mcMonsterInfo.mcLocked.visible = false;
          }
          else
          {
-            mcMonsterInfo.mcLocked.tText.htmlText = "<b>" + KEYS.Get("hat_unlockinlocker",{"v1":KEYS.Get(CREATURELOCKER._creatures[_loc3_].name)}) + "</b>";
-            mcMonsterInfo.mcLocked.visible = true;
+            /*mcMonsterInfo.mcLocked.tText.htmlText = "<b>" + KEYS.Get("hat_unlockinlocker",{"v1":KEYS.Get(CREATURELOCKER._creatures[_loc3_].name)}) + "</b>";
+            mcMonsterInfo.mcLocked.visible = true;*/
          }
          this.MonsterInfoShow();
       }
@@ -400,10 +400,10 @@ package
          var _loc3_:String = null;
          var _loc4_:Object = null;
          var _loc5_:String = null;
-         if(!bFinish.Enabled)
+         /*if(!bFinish.Enabled)
          {
             return;
-         }
+         }*/
          if(Boolean(GLOBAL._bHatcheryCC) && GLOBAL._bHatcheryCC._finishCost.Get() > 0)
          {
             if(BASE._credits.Get() >= GLOBAL._bHatcheryCC._finishCost.Get())
@@ -550,7 +550,7 @@ package
          HOUSING.HousingSpace();
          var _loc4_:int = 0;
          var _loc5_:int = 100 / HOUSING._housingCapacity.Get() * HOUSING._housingUsed.Get();
-         mcStorage.mcBar.width = 535 / HOUSING._housingCapacity.Get() * HOUSING._housingUsed.Get();
+//         mcStorage.mcBar.width = 535 / HOUSING._housingCapacity.Get() * HOUSING._housingUsed.Get();
          var _loc6_:* = "<b>" + GLOBAL.FormatNumber(HOUSING._housingUsed.Get()) + " / " + GLOBAL.FormatNumber(HOUSING._housingCapacity.Get()) + "</b>";
          var _loc7_:int = 0;
          var _loc8_:Vector.<Object> = InstanceManager.getInstancesByClass(BUILDING13);
@@ -569,7 +569,7 @@ package
          }
          if(_loc7_ > 0)
          {
-            bFinish.Enabled = true;
+//            bFinish.Enabled = true;
             if(HATCHERYCC.doesShowInfernoCreeps)
             {
                bFinish.gotoAndStop(3);
@@ -581,7 +581,7 @@ package
          }
          else
          {
-            bFinish.Enabled = false;
+//            bFinish.Enabled = false;
             bFinish.gotoAndStop(1);
          }
          if(HATCHERYCC.doesShowInfernoCreeps)
@@ -622,7 +622,7 @@ package
          {
             _loc5_ = 535;
          }
-         mcStorage.mcBarB.width = _loc5_;
+//         mcStorage.mcBarB.width = _loc5_;
          txtStorage.htmlText = _loc6_;
          var _loc11_:int = int(BASE._resources.r4.Get());
          _loc10_ = 0;
@@ -631,12 +631,12 @@ package
             _loc11_ -= CREATURES.GetProperty(_loc2_[_loc10_][0],"cResource") * _loc2_[_loc10_][1];
             _loc10_++;
          }
-         mcGoo.mcBarB.width = 1;
+//         mcGoo.mcBarB.width = 1;
          if((_loc5_ = 100 / BASE._resources.r4max * BASE._resources.r4.Get()) > 100)
          {
             _loc5_ = 100;
          }
-         mcGoo.mcBar.width = _loc5_;
+//         mcGoo.mcBar.width = _loc5_;
          txtGoo.htmlText = "<b>" + KEYS.Get("hat_gooremaining",{"v1":GLOBAL.FormatNumber(BASE._resources.r4.Get())}) + "</b>";
          bTopup.gotoAndStop(1);
          if(BASE._resources.r4.Get() < BASE._resources.r4max * 0.1)
@@ -652,12 +652,12 @@ package
                _loc11_ -= CREATURES.GetProperty(_loc2_[_loc10_][0],"cResource") * _loc2_[_loc10_][1];
                _loc10_++;
             }
-            mcMagma.mcBarB.width = 1;
+//            mcMagma.mcBarB.width = 1;
             if((_loc5_ = 100 / BASE._iresources.r4max * BASE._iresources.r4.Get()) > 100)
             {
                _loc5_ = 100;
             }
-            mcMagma.mcBar.width = _loc5_;
+//            mcMagma.mcBar.width = _loc5_;
             txtMagma.htmlText = "<b>" + KEYS.Get("hat_magmaremaining",{"v1":GLOBAL.FormatNumber(BASE._iresources.r4.Get())}) + "</b>";
             bTopupMagma.gotoAndStop(1);
             if(BASE._iresources.r4.Get() < BASE._iresources.r4max * 0.1)
@@ -758,27 +758,27 @@ package
          for each(_loc8_ in _loc7_)
          {
             (_loc4_ = this["hatchery" + _loc3_]).mouseEnabled = false;
-            _loc4_.tLabel.text = "";
-            _loc4_.mcImage.visible = false;
-            _loc4_.mcLoading.visible = false;
+//            _loc4_.tLabel.text = "";
+  //          _loc4_.mcImage.visible = false;
+    //        _loc4_.mcLoading.visible = false;
             this["bProgress" + _loc3_].visible = false;
             this["tProgress" + _loc3_].visible = false;
             this["hatcheryRemove" + _loc3_].visible = false;
             if(_loc8_._countdownBuild.Get() > 0)
             {
-               _loc4_.mcImage.visible = false;
-               _loc4_.mcLoading.visible = false;
-               _loc4_.tLabel.htmlText = "<font color=\"#CC0000\">" + KEYS.Get("hat_slot_construction") + "</font>";
+      //         _loc4_.mcImage.visible = false;
+      //         _loc4_.mcLoading.visible = false;
+      //         _loc4_.tLabel.htmlText = "<font color=\"#CC0000\">" + KEYS.Get("hat_slot_construction") + "</font>";
             }
             else if(_loc8_._countdownUpgrade.Get() > 0)
             {
-               _loc4_.mcImage.visible = false;
-               _loc4_.mcLoading.visible = false;
-               _loc4_.tLabel.htmlText = "<font color=\"#CC0000\">" + KEYS.Get("hat_slot_upgrading") + "</font>";
+        //       _loc4_.mcImage.visible = false;
+        //       _loc4_.mcLoading.visible = false;
+        //       _loc4_.tLabel.htmlText = "<font color=\"#CC0000\">" + KEYS.Get("hat_slot_upgrading") + "</font>";
             }
             else if(Boolean(_loc8_._inProduction) && _loc8_._inProduction != "")
             {
-               _loc4_.mcLoading.visible = true;
+//               _loc4_.mcLoading.visible = true;
                ImageCache.GetImageWithCallBack("monsters/" + _loc8_._inProduction + "-medium.jpg",this.IconLoaded,true,1,"",["hatchery",_loc3_]);
                _loc12_ = int(CREATURELOCKER._creatures[_loc8_._inProduction].props.cTime);
                if((_loc13_ = 100 / _loc12_ * _loc8_._countdownProduce.Get()) < 0)
@@ -814,8 +814,8 @@ package
             }
             else
             {
-               _loc4_.mcImage.visible = false;
-               _loc4_.mcLoading.visible = false;
+//               _loc4_.mcImage.visible = false;
+//               _loc4_.mcLoading.visible = false;
                this["bProgress" + _loc3_].visible = false;
                this["tProgress" + _loc3_].visible = false;
             }
@@ -833,8 +833,8 @@ package
             if(_loc10_ <= _loc9_)
             {
                _loc4_.visible = true;
-               _loc4_.tLabel.htmlText = "<font color=\"#CC0000\">" + KEYS.Get("hat_slot_buildanother") + "</font>";
-               _loc4_.mcLoading.visible = false;
+//               _loc4_.tLabel.htmlText = "<font color=\"#CC0000\">" + KEYS.Get("hat_slot_buildanother") + "</font>";
+  //             _loc4_.mcLoading.visible = false;
                this["hatcheryBG" + _loc10_].visible = true;
                this["hatlabel" + _loc10_ + "_txt"].visible = true;
                this["bProgress" + _loc10_].visible = false;
@@ -855,15 +855,15 @@ package
          }
          if(GLOBAL._hatcheryOverdrive > 0)
          {
-            mcOverdrive.t.htmlText = "<b>" + KEYS.Get("hat_xoverdrive",{
+/*            mcOverdrive.t.htmlText = "<b>" + KEYS.Get("hat_xoverdrive",{
                "v1":GLOBAL._hatcheryOverdrivePower.Get(),
                "v2":GLOBAL.ToTime(GLOBAL._hatcheryOverdrive)
             }) + "</b>";
-            mcOverdrive.visible = true;
+            mcOverdrive.visible = true;*/
          }
          else
          {
-            mcOverdrive.visible = false;
+            // mcOverdrive.visible = false;
          }
          this._scrollSet.Update();
       }

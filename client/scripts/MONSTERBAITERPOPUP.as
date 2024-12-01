@@ -185,8 +185,8 @@ package
          {
             _loc4_ = 0;
          }
-         mcStorage.mcBar.width = (1 - _loc4_ / MONSTERBAITER._muskLimit) * BAITER_BAR_WIDTH;
-         mcStorage.mcBarB.width = 0;
+//          mcStorage.mcBar.width = (1 - _loc4_ / MONSTERBAITER._muskLimit) * BAITER_BAR_WIDTH;
+//          mcStorage.mcBarB.width = 0;
          var _loc5_:int = MONSTERBAITER._musk - _loc1_;
          for each(_loc2_ in this.items)
          {

@@ -149,17 +149,17 @@ package
          {
             cacheNCPAvailable = param1;
             _loc2_ = new FACEBOOK_NCP_CLIP();
-            _loc2_.bYes.buttonMode = true;
-            _loc2_.bYes.useHandCursor = true;
-            _loc2_.bYes.mouseChildren = false;
-            _loc2_.bYes.alpha = 0;
-            _loc2_.bYes.addEventListener(MouseEvent.CLICK,FBCNcp_Click);
-            _loc2_.bNo.buttonMode = true;
-            _loc2_.bNo.useHandCursor = true;
-            _loc2_.bNo.mouseChildren = false;
-            _loc2_.bNo.alpha = 0;
-            _loc2_.bNo.addEventListener(MouseEvent.CLICK,BUY.FBCNcpCancelled);
-            FBCNcpRender("upgrade",_loc2_.imageHolder);
+            // _loc2_.bYes.buttonMode = true;
+            // _loc2_.bYes.useHandCursor = true;
+            // _loc2_.bYes.mouseChildren = false;
+            // _loc2_.bYes.alpha = 0;
+            // _loc2_.bYes.addEventListener(MouseEvent.CLICK,FBCNcp_Click);
+            // _loc2_.bNo.buttonMode = true;
+            // _loc2_.bNo.useHandCursor = true;
+            // _loc2_.bNo.mouseChildren = false;
+            // _loc2_.bNo.alpha = 0;
+            // _loc2_.bNo.addEventListener(MouseEvent.CLICK,BUY.FBCNcpCancelled);
+            // FBCNcpRender("upgrade",_loc2_.imageHolder);
             POPUPS.Push(_loc2_,null,null,null,null,false);
          }
          else

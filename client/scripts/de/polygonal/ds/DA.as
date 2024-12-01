@@ -535,76 +535,7 @@ package de.polygonal.ds
       
       public function indexOf(param1:Object, param2:int = 0, param3:Boolean = false, param4:Object = undefined) : int
       {
-         var _loc5_:* = null as Array;
-         var _loc6_:* = 0;
-         var _loc7_:* = 0;
-         var _loc8_:* = 0;
-         var _loc9_:* = 0;
-         if(_size == 0)
-         {
-            return -1;
-         }
-         null;
-         if(param3)
-         {
-            if(param4 != null)
-            {
-               _loc5_ = _a;
-               _loc6_ = _size - 1;
-               null;
-               null;
-               null;
-               null;
-               _loc7_ = param2;
-               _loc9_ = _loc6_ + 1;
-               while(_loc7_ < _loc9_)
-               {
-                  _loc8_ = _loc7_ + (_loc9_ - _loc7_ >> 1);
-                  if(param4(_loc5_[_loc8_],param1) < 0)
-                  {
-                     _loc7_ = _loc8_ + 1;
-                  }
-                  else
-                  {
-                     _loc9_ = _loc8_;
-                  }
-               }
-               return _loc7_ <= _loc6_ && param4(_loc5_[_loc7_],param1) == 0 ? _loc7_ : ~_loc7_;
-            }
-            null;
-            _loc6_ = _size;
-            _loc7_ = param2;
-            _loc9_ = _loc6_;
-            while(_loc7_ < _loc9_)
-            {
-               _loc8_ = _loc7_ + (_loc9_ - _loc7_ >> 1);
-               null;
-               if(int(_a[_loc8_].compare(param1)) < 0)
-               {
-                  _loc7_ = _loc8_ + 1;
-               }
-               else
-               {
-                  _loc9_ = _loc8_;
-               }
-            }
-            null;
-            return _loc7_ <= _loc6_ && int(_a[_loc7_].compare(param1)) == 0 ? _loc7_ : -_loc7_;
-         }
-         _loc6_ = param2;
-         _loc7_ = -1;
-         _loc8_ = _size - 1;
-         do
-         {
-            if(_a[_loc6_] == param1)
-            {
-               _loc7_ = _loc6_;
-               break;
-            }
-         }
-         while(_loc6_++ < _loc8_);
-         
-         return _loc7_;
+         throw new Error("NOT IMPLEMENTED");
       }
       
       public function getPrev(param1:int) : Object

@@ -59,20 +59,20 @@ package
             {
                LOGGER.Log("err","HALT " + _message + " | " + e.getStackTrace());
                this._mc = GLOBAL._ROOT.addChild(new popup_error()) as MovieClip;
-               (this._mc.mcFrame as frame).Setup(false);
+// aad               (this._mc.mcFrame as frame).Setup(false);
                if(KEYS._setup)
                {
-                  this._mc.tA.htmlText = "<b>" + KEYS.Get("pop_oops_title") + "</b>";
-                  this._mc.tB.htmlText = KEYS.Get("pop_oops_body");
-                  this._mc.tB.htmlText = KEYS.Get(_message);
+//                  this._mc.tA.htmlText = "<b>" + KEYS.Get("pop_oops_title") + "</b>";
+//                  this._mc.tB.htmlText = KEYS.Get("pop_oops_body");
+//                  this._mc.tB.htmlText = KEYS.Get(_message);
                }
-               this._blocker = this._mc.blocker;
+//               this._blocker = this._mc.blocker;
                this._blocker.x = GLOBAL._SCREENCENTER.x - 1400;
                this._blocker.y = GLOBAL._SCREENCENTER.y - 1400;
                this._blocker.width = 2800;
                this._blocker.height = 2800;
-               this._mc.bAction.Setup("Reload");
-               this._mc.bAction.addEventListener(MouseEvent.CLICK,Resume);
+//               this._mc.bAction.Setup("Reload");
+//               this._mc.bAction.addEventListener(MouseEvent.CLICK,Resume);
             }
          }
          this._mc.x -= 50;

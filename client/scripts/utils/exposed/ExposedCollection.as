@@ -188,79 +188,82 @@ package utils.exposed
       
       override internal function SaveState(param1:String) : XML
       {
-         var _loc2_:XML = super.SaveState(param1);
-         _loc2_.setName("collection");
-         if(this.SaveContentsSeperately())
-         {
-            return _loc2_;
-         }
-         if(this.m_ContentsLoaded)
-         {
-            _loc2_.appendChild(this.SaveContentsState(param1));
-            return _loc2_;
-         }
-         if(this.m_CachedContentsState != null && this.m_CachedContentsState.@exposedFor == param1)
-         {
-            _loc2_.appendChild(this.m_CachedContentsState.copy());
-            return _loc2_;
-         }
-         return _loc2_;
+          throw new Error("Not migrated. Find an alternative");
+         // var _loc2_:XML = super.SaveState(param1);
+         // _loc2_.setName("collection");
+         // if(this.SaveContentsSeperately())
+         // {
+         //    return _loc2_;
+         // }
+         // if(this.m_ContentsLoaded)
+         // {
+         //    _loc2_.appendChild(this.SaveContentsState(param1));
+         //    return _loc2_;
+         // }
+         // if(this.m_CachedContentsState != null && this.m_CachedContentsState.@exposedFor == param1)
+         // {
+         //    _loc2_.appendChild(this.m_CachedContentsState.copy());
+         //    return _loc2_;
+         // }
+         // return _loc2_;
+         return null;
       }
       
       private function LoadContentsState(param1:XML, param2:String) : void
       {
-         var _loc8_:XML = null;
-         var _loc11_:String = null;
-         if(param1 == null)
-         {
-            return;
-         }
-         var _loc3_:uint = uint(param1.@length);
-         var _loc4_:uint = 0;
-         var _loc5_:ExposedObject = null;
-         var _loc6_:Class = null;
-         var _loc7_:Vector.<ExposedObject> = new Vector.<ExposedObject>(_loc3_);
-         for each(_loc8_ in param1.object)
-         {
-            _loc11_ = String(_loc8_.@id);
-            if((_loc5_ = this.FindAndRemoveChildObject(_loc11_)) != null)
-            {
-               _loc5_.LoadState(_loc8_,param2);
-               var _loc14_:*;
-               _loc7_[_loc14_ = _loc4_++] = _loc5_;
-            }
-            else if((_loc6_ = getDefinitionByName(_loc8_.@type) as Class) != null)
-            {
-               (_loc5_ = new _loc6_()).id = _loc11_;
-               _loc5_.LoadState(_loc8_,param2);
-               _loc7_[_loc14_ = _loc4_++] = _loc5_;
-               ExposedObjectManager.instance.RegisterReferenceableObject(_loc5_);
-            }
-            else
-            {
-               Warning.Show("Object \'" + _loc8_.@id + "\' of unknown type \'" + _loc8_.@type + " found while loading the contents state of collection with id \'" + id + "\'.",ExposedCollection);
-            }
-         }
-         if(_loc4_ != _loc3_)
-         {
-            Warning.Show("While loading the contents state of collection with id \'" + id + "\', we were only able to process \'" + _loc4_ + "\' nodes, but the number of nodes saved was \'" + _loc3_ + "\'.",ExposedCollection);
-            _loc7_.length = _loc4_;
-         }
-         var _loc9_:uint = this.m_Contents.length;
-         var _loc10_:uint = 0;
-         while(_loc10_ < _loc9_)
-         {
-            this.m_Contents[_loc10_].Destroy();
-            _loc10_++;
-         }
-         this.m_Contents.length = 0;
-         this.m_Contents = _loc7_;
+         // var _loc8_:XML = null;
+         // var _loc11_:String = null;
+         // if(param1 == null)
+         // {
+         //    return;
+         // }
+         // var _loc3_:uint = uint(param1.@length);
+         // var _loc4_:uint = 0;
+         // var _loc5_:ExposedObject = null;
+         // var _loc6_:Class = null;
+         // var _loc7_:Vector.<ExposedObject> = new Vector.<ExposedObject>(_loc3_);
+         // for each(_loc8_ in param1.object)
+         // {
+         //    _loc11_ = String(_loc8_.@id);
+         //    if((_loc5_ = this.FindAndRemoveChildObject(_loc11_)) != null)
+         //    {
+         //       _loc5_.LoadState(_loc8_,param2);
+         //       var _loc14_:*;
+         //       _loc7_[_loc14_ = _loc4_++] = _loc5_;
+         //    }
+         //    else if((_loc6_ = getDefinitionByName(_loc8_.@type) as Class) != null)
+         //    {
+         //       (_loc5_ = new _loc6_()).id = _loc11_;
+         //       _loc5_.LoadState(_loc8_,param2);
+         //       _loc7_[_loc14_ = _loc4_++] = _loc5_;
+         //       ExposedObjectManager.instance.RegisterReferenceableObject(_loc5_);
+         //    }
+         //    else
+         //    {
+         //       Warning.Show("Object \'" + _loc8_.@id + "\' of unknown type \'" + _loc8_.@type + " found while loading the contents state of collection with id \'" + id + "\'.",ExposedCollection);
+         //    }
+         // }
+         // if(_loc4_ != _loc3_)
+         // {
+         //    Warning.Show("While loading the contents state of collection with id \'" + id + "\', we were only able to process \'" + _loc4_ + "\' nodes, but the number of nodes saved was \'" + _loc3_ + "\'.",ExposedCollection);
+         //    _loc7_.length = _loc4_;
+         // }
+         // var _loc9_:uint = this.m_Contents.length;
+         // var _loc10_:uint = 0;
+         // while(_loc10_ < _loc9_)
+         // {
+         //    this.m_Contents[_loc10_].Destroy();
+         //    _loc10_++;
+         // }
+         // this.m_Contents.length = 0;
+         // this.m_Contents = _loc7_;#
+         throw new Error("Not implemented");
       }
       
       private function SaveContentsState(param1:String) : XML
       {
 
-throw new Exception("Not Implemented");
+throw new Error("Not Implemented");
          return null;
       }
    }

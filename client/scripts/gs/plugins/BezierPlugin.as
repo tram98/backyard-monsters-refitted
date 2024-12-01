@@ -102,7 +102,7 @@ package gs.plugins
       
       protected function init(param1:TweenLite, param2:Array, param3:Boolean) : void
       {
-         throw new Exception("Not Implemented");
+         throw new Error("Not Implemented");
       }
       
       override public function killProps(param1:Object) : void

@@ -61,8 +61,8 @@ package
          bAction2.y = mcBG.y + mcBG.height - 45;
          GLOBAL.BlockerAdd(GLOBAL._layerTop);
          this._mc = GLOBAL._layerTop.addChild(this) as MESSAGE_CLIP;
-         this._mc.Center();
-         this._mc.ScaleUp();
+         // this._mc.Center();
+         // this._mc.ScaleUp();
          return this;
       }
       

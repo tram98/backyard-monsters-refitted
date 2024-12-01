@@ -815,11 +815,11 @@ package
                      _streamline.tDescription.x = -210;
                      _streamline.tTitle.htmlText = KEYS.Get("streamspd_close_title");
                      _streamline.tDescription.htmlText = KEYS.Get("streamspd_close_desc");
-                     _streamline.mcInstant.tDescription.visible = false;
-                     _streamline.mcInstant.gCoin.visible = false;
-                     _streamline.mcInstant.gArrow.visible = false;
-                     _streamline.mcStoreIcon.visible = false;
-                     _streamline.mcInstant.bAction.Setup(KEYS.Get("str_finishnow"));
+                     // _streamline.mcInstant.tDescription.visible = false;
+                     // _streamline.mcInstant.gCoin.visible = false;
+                     // _streamline.mcInstant.gArrow.visible = false;
+                     // _streamline.mcStoreIcon.visible = false;
+                     // _streamline.mcInstant.bAction.Setup(KEYS.Get("str_finishnow"));
                   }
                   else
                   {
@@ -827,12 +827,12 @@ package
                      _streamline.tDescription.x = -100;
                      _streamline.tTitle.htmlText = KEYS.Get("streamspd_title");
                      _streamline.tDescription.htmlText = KEYS.Get("streamspd_desc",{"v1":GLOBAL.ToTime(_streamline_time,false,false)});
-                     _streamline.mcInstant.tDescription.visible = true;
-                     _streamline.mcInstant.gCoin.visible = true;
-                     _streamline.mcInstant.gArrow.visible = true;
-                     _streamline.mcStoreIcon.visible = true;
-                     _streamline.mcInstant.tDescription.htmlText = "<b>" + KEYS.Get("streamspd_upgrade") + "</b>";
-                     _streamline.mcInstant.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":_streamline_cost}));
+                     // _streamline.mcInstant.tDescription.visible = true;
+                     // _streamline.mcInstant.gCoin.visible = true;
+                     // _streamline.mcInstant.gArrow.visible = true;
+                     // _streamline.mcStoreIcon.visible = true;
+                     // _streamline.mcInstant.tDescription.htmlText = "<b>" + KEYS.Get("streamspd_upgrade") + "</b>";
+                     // _streamline.mcInstant.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":_streamline_cost}));
                   }
                }
                else if(_loc2_._type == 8)
@@ -964,16 +964,16 @@ package
                      }
                   }
                }
-               if(_loc3_ <= 60 * 5)
-               {
-                  _streamline.mcInstant.bAction.Setup(KEYS.Get("str_finishnow"));
-               }
-               else
-               {
-                  _streamline.mcInstant.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":_streamline_cost}));
-               }
-               _streamline.mcInstant.bAction.addEventListener(MouseEvent.CLICK,StreamlineBuy);
-               _streamline.mcInstant.gCoin.mouseEnabled = false;
+               // if(_loc3_ <= 60 * 5)
+               // {
+                  // _streamline.mcInstant.bAction.Setup(KEYS.Get("str_finishnow"));
+               // }
+               // else
+               // {
+                  // _streamline.mcInstant.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":_streamline_cost}));
+               // }
+               // _streamline.mcInstant.bAction.addEventListener(MouseEvent.CLICK,StreamlineBuy);
+               // _streamline.mcInstant.gCoin.mouseEnabled = false;
                POPUPS.Push(_streamline,null,null,null,null);
             }
          }
@@ -1576,7 +1576,7 @@ package
             _items.parent.removeChild(_items);
             _items = null;
          }
-         _items = _mc.window.content.addChild(new MovieClip());
+         // _items = _mc.window.content.addChild(new MovieClip());
          _items.x = 5;
          _items.y = 8;
          if(_scroller && _scroller.parent && _scrollUpdate)
@@ -2287,10 +2287,10 @@ package
             _loc11_ = _loc14_ * 150 + _loc14_ * _loc18_;
             index++;
          }
-         _mc.window.content.mask = _mc.window.msk;
+         // _mc.window.content.mask = _mc.window.msk;
          if(_scrollUpdate)
          {
-            _scroller.Init(_mc.window.content as Sprite,_mc.window.msk as MovieClip,0,0,391,30);
+            // _scroller.Init(_mc.window.content as Sprite,_mc.window.msk as MovieClip,0,0,391,30);
             if(_scrollPosUpdate)
             {
                _scroller.ScrollTo(0,false);
@@ -2835,11 +2835,11 @@ package
                };
                mc = new popup_purchase();
                mc.gotoAndStop(itemCode);
-               mc.tA.htmlText = "<b>" + arr[0] + "</b>";
-               mc.tB.htmlText = arr[1];
-               (mc.bPost as Button).SetupKey("btn_brag");
-               mc.bPost.addEventListener(MouseEvent.CLICK,Brag);
-               mc.bPost.Highlight = true;
+               // mc.tA.htmlText = "<b>" + arr[0] + "</b>";
+               // mc.tB.htmlText = arr[1];
+               // (mc.bPost as Button).SetupKey("btn_brag");
+               // mc.bPost.addEventListener(MouseEvent.CLICK,Brag);
+               // mc.bPost.Highlight = true;
                POPUPS.Push(mc,null,null,"");
             }
             else if(cost > 0 && !_storeItems[itemCode].a)

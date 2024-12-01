@@ -97,13 +97,13 @@ package
       
       private function disableButton(param1:MovieClip) : void
       {
-         param1.Enabled = false;
-         param1.Highlight = false;
+         // param1.Enabled = false;
+         // param1.Highlight = false;
       }
       
       private function enableButton(param1:MovieClip) : void
       {
-         param1.Enabled = true;
+         // param1.Enabled = true;
       }
       
       public function List() : void
@@ -358,38 +358,38 @@ package
             if(CREATURELOCKER._lockerData[this._creatureID].t == 2)
             {
                mcButtons.gotoAndStop(1);
-               mcButtons.bStart.SetupKey("mon_unlocked");
-               mcButtons.bStart.Enabled = false;
-               mcButtons.bStart.Highlight = false;
+               // mcButtons.bStart.SetupKey("mon_unlocked");
+               // mcButtons.bStart.Enabled = false;
+               // mcButtons.bStart.Highlight = false;
                bInstant.visible = false;
             }
             else
             {
                mcButtons.gotoAndStop(2);
-               mcButtons.bStop.SetupKey("btn_cancel");
-               mcButtons.bStop.addEventListener(MouseEvent.CLICK,this.Stop);
-               mcButtons.bSpeedup.SetupKey("btn_speedup");
-               mcButtons.bSpeedup.addEventListener(MouseEvent.CLICK,this.Speedup);
-               mcButtons.bSpeedup.Highlight = true;
+               // mcButtons.bStop.SetupKey("btn_cancel");
+               // mcButtons.bStop.addEventListener(MouseEvent.CLICK,this.Stop);
+               // mcButtons.bSpeedup.SetupKey("btn_speedup");
+               // mcButtons.bSpeedup.addEventListener(MouseEvent.CLICK,this.Speedup);
+               // mcButtons.bSpeedup.Highlight = true;
                bInstant.visible = false;
             }
          }
          else
          {
             mcButtons.gotoAndStop(1);
-            mcButtons.bStart.SetupKey("btn_startunlocking");
-            mcButtons.bStart.Enabled = true;
-            mcButtons.bStart.Highlight = true;
-            mcButtons.bStart.addEventListener(MouseEvent.CLICK,this.Start);
+            // mcButtons.bStart.SetupKey("btn_startunlocking");
+            // mcButtons.bStart.Enabled = true;
+            // mcButtons.bStart.Highlight = true;
+            // mcButtons.bStart.addEventListener(MouseEvent.CLICK,this.Start);
             putty = int(CREATURELOCKER._creatures[this._creatureID].resource);
             time = int(CREATURELOCKER._creatures[this._creatureID].time);
             timeCost = STORE.GetTimeCost(time);
             resourcesCost = Math.ceil(Math.pow(Math.sqrt(putty / 2),0.75));
             this._instantUnlockCost = timeCost + resourcesCost;
-            bInstant.Setup(KEYS.Get("btn_unlockinstantly",{"v1":this._instantUnlockCost}));
-            bInstant.visible = true;
-            bInstant.Enabled = true;
-            bInstant.Highlight = true;
+            // bInstant.Setup(KEYS.Get("btn_unlockinstantly",{"v1":this._instantUnlockCost}));
+            // bInstant.visible = true;
+            // bInstant.Enabled = true;
+            // bInstant.Highlight = true;
          }
          if(Boolean(this._portraitImage) && Boolean(this._portraitImage.parent))
          {

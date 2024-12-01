@@ -12,35 +12,9 @@ package de.polygonal.core.fmt
       
       public static function toBin(param1:int, param2:String = undefined, param3:Boolean = false) : String
       {
-         var _loc5_:* = 0;
-         var _loc6_:* = 0;
-         var _loc8_:int = 0;
-         if(param2 == null)
-         {
-            param2 = "";
-         }
-         var _loc4_:* = 32 - ((_loc5_ = param1) < 0 ? 0 : (_loc5_ |= _loc5_ >> 1, _loc5_ |= _loc5_ >> 2, _loc5_ |= _loc5_ >> 4, _loc5_ |= _loc5_ >> 8, _loc5_ |= _loc5_ >> 16, _loc6_ = _loc5_, _loc6_ = ((_loc6_ = ((_loc6_ -= _loc6_ >> 1 & 1431655765) >> 2 & 858993459) + (_loc6_ & 858993459)) >> 4) + _loc6_ & 252645135, _loc6_ += _loc6_ >> 8, 32 - ((_loc6_ += _loc6_ >> 16) & 63)));
-         var _loc7_:String = (param1 & 1) > 0 ? "1" : "0";
-         param1 >>= 1;
-         _loc5_ = 1;
-         while(_loc5_ < _loc4_)
-         {
-            _loc6_ = _loc5_++;
-            _loc7_ = ((param1 & 1) > 0 ? "1" : "0") + ((_loc6_ & 7) == 0 ? param2 : "") + _loc7_;
-            param1 >>= 1;
-         }
-         if(param3)
-         {
-            _loc5_ = 0;
-            _loc6_ = 32 - _loc4_;
-            while(_loc5_ < _loc6_)
-            {
-               _loc8_ = _loc5_++;
-               _loc7_ = "0" + _loc7_;
-            }
-         }
-         return _loc7_;
-      }
+         throw new Error("NOT IMPLEMENTED");
+         return "";  
+          }
       
       public static function toHex(param1:int) : String
       {
@@ -88,7 +62,7 @@ package de.polygonal.core.fmt
          var _loc6_:* = 0;
          var _loc7_:int = 0;
          var _loc8_:* = null as String;
-         if(Math.isNaN(param1))
+         if(param1 === NaN)
          {
             return "NaN";
          }

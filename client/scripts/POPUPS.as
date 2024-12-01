@@ -224,12 +224,12 @@ package
                POPUPSETTINGS.ScaleUp(_mc);
                try
                {
-                  if(_mc.bMessage)
-                  {
-                     _mc.bMessage.selectable = true;
-                     _mc.bMessage.stage.focus = _mc.bMessage;
-                     _mc.bMessage.setSelection(0,_mc.bMessage.text.length);
-                  }
+                  // if(_mc.bMessage)
+                  // {
+                  //    _mc.bMessage.selectable = true;
+                  //    _mc.bMessage.stage.focus = _mc.bMessage;
+                  //    _mc.bMessage.setSelection(0,_mc.bMessage.text.length);
+                  // }
                }
                catch(e:Error)
                {
@@ -270,21 +270,21 @@ package
                   {
                      try
                      {
-                        if(Boolean(_mc) && Boolean(_mc.mcImage))
-                        {
-                           while(_mc.mcImage.numChildren)
-                           {
-                              _mc.mcImage.removeChildAt(0);
-                           }
-                           _mc.mcImage.addChild(new Bitmap(param2));
-                           _mc.mcImage.mouseEnabled = false;
-                           _mc.mcImage.mouseChildren = false;
-                           if(_mc.mcImageFrame)
-                           {
-                              _mc.mcImage.x = _mc.mcImageFrame.x + (_mc.mcImageFrame.width - _mc.mcImage.width) * 0.5;
-                              _mc.mcImage.y = _mc.mcImageFrame.y + (_mc.mcImageFrame.height - _mc.mcImage.height) * 0.5;
-                           }
-                        }
+                        // if(Boolean(_mc) && Boolean(_mc.mcImage))
+                        // {
+                        //    while(_mc.mcImage.numChildren)
+                        //    {
+                        //       _mc.mcImage.removeChildAt(0);
+                        //    }
+                        //    _mc.mcImage.addChild(new Bitmap(param2));
+                        //    _mc.mcImage.mouseEnabled = false;
+                        //    _mc.mcImage.mouseChildren = false;
+                        //    if(_mc.mcImageFrame)
+                        //    {
+                        //       _mc.mcImage.x = _mc.mcImageFrame.x + (_mc.mcImageFrame.width - _mc.mcImage.width) * 0.5;
+                        //       _mc.mcImage.y = _mc.mcImageFrame.y + (_mc.mcImageFrame.height - _mc.mcImage.height) * 0.5;
+                        //    }
+                        // }
                      }
                      catch(e:Error)
                      {
@@ -393,9 +393,9 @@ package
          _mcBG.height = GLOBAL._SCREEN.height;
          _mcBG.cacheAsBitmap = true;
          movie = new popup_timeout();
-         movie.tA.htmlText = "<b>" + KEYS.Get("pop_noconnect_title") + "</b>";
-         movie.tB.htmlText = KEYS.Get("pop_noconnect_body");
-         movie.bGift.visible = false;
+         // movie.tA.htmlText = "<b>" + KEYS.Get("pop_noconnect_title") + "</b>";
+         // movie.tB.htmlText = KEYS.Get("pop_noconnect_body");
+         // movie.bGift.visible = false;
          movie.x = GLOBAL._SCREENCENTER.x;
          movie.y = GLOBAL._SCREENCENTER.y;
          GLOBAL._layerTop.addChild(movie);
@@ -418,26 +418,26 @@ package
          _mcBG.height = GLOBAL._SCREEN.height;
          _mcBG.cacheAsBitmap = true;
          _loc1_ = new popup_timeout();
-         _loc1_.tA.htmlText = "<b>" + KEYS.Get("pop_timeout_title") + "</b>";
-         _loc1_.tB.htmlText = KEYS.Get("pop_timeout_body");
-         if(!GLOBAL._flags.kongregate)
-         {
-            if(GLOBAL._canGift)
-            {
-               _loc1_.bGift.SetupKey("btn_sendfreegifts");
-               _loc1_.bGift.addEventListener(MouseEvent.CLICK,DisplayGiftSelect);
-            }
-            else
-            {
-               _loc1_.bGift.SetupKey("btn_invitefriendstoplay");
-               _loc1_.bGift.addEventListener(MouseEvent.CLICK,DisplayInviteSelect);
-            }
-            _loc1_.bGift.Highlight = true;
-         }
-         else
-         {
-            _loc1_.bGift.visible = false;
-         }
+         // _loc1_.tA.htmlText = "<b>" + KEYS.Get("pop_timeout_title") + "</b>";
+         // _loc1_.tB.htmlText = KEYS.Get("pop_timeout_body");
+         // if(!GLOBAL._flags.kongregate)
+         // {
+         //    if(GLOBAL._canGift)
+         //    {
+         //       _loc1_.bGift.SetupKey("btn_sendfreegifts");
+         //       _loc1_.bGift.addEventListener(MouseEvent.CLICK,DisplayGiftSelect);
+         //    }
+         //    else
+         //    {
+         //       _loc1_.bGift.SetupKey("btn_invitefriendstoplay");
+         //       _loc1_.bGift.addEventListener(MouseEvent.CLICK,DisplayInviteSelect);
+         //    }
+         //    _loc1_.bGift.Highlight = true;
+         // }
+         // else
+         // {
+         //    _loc1_.bGift.visible = false;
+         // }
          _loc1_.x = GLOBAL._SCREENCENTER.x;
          _loc1_.y = GLOBAL._SCREENCENTER.y;
          GLOBAL._layerTop.addChild(_loc1_);
@@ -476,18 +476,18 @@ package
                   DisplayGiftSelect();
                };
                popupMC = new popup_afk_gift();
-               popupMC.tA.htmlText = "<b>" + KEYS.Get("pop_afk_title") + "</b>";
-               popupMC.tB.htmlText = KEYS.Get("pop_afk_body");
-               if(GLOBAL._canGift)
-               {
-                  popupMC.bAction.SetupKey("btn_sendfreegifts");
-                  popupMC.bAction.addEventListener(MouseEvent.CLICK,SendGift);
-                  popupMC.bAction.Highlight = true;
-               }
-               else
-               {
-                  popupMC.bAction.visible = false;
-               }
+               // popupMC.tA.htmlText = "<b>" + KEYS.Get("pop_afk_title") + "</b>";
+               // popupMC.tB.htmlText = KEYS.Get("pop_afk_body");
+               // if(GLOBAL._canGift)
+               // {
+               //    popupMC.bAction.SetupKey("btn_sendfreegifts");
+               //    popupMC.bAction.addEventListener(MouseEvent.CLICK,SendGift);
+               //    popupMC.bAction.Highlight = true;
+               // }
+               // else
+               // {
+               //    popupMC.bAction.visible = false;
+               // }
                POPUPS.Push(popupMC,null,null,"","resourcetwigs.png");
             }
             else
@@ -503,19 +503,19 @@ package
                Invite();
             };
             popupMC = new popup_invite_friends();
-            if(GLOBAL._friendCount > 0)
-            {
-               popupMC.tA.htmlText = "<b>" + KEYS.Get("pop_invitefriends_title") + "</b>";
-               popupMC.tB.htmlText = KEYS.Get("pop_invitefriends_body");
-            }
-            else
-            {
-               popupMC.tA.htmlText = "<b>" + KEYS.Get("pop_invitenofriends_title") + "</b>";
-               popupMC.tB.htmlText = KEYS.Get("pop_invitenofriends_body");
-            }
-            popupMC.bAction.SetupKey("btn_invitefriends");
-            popupMC.bAction.addEventListener(MouseEvent.CLICK,GetFriends);
-            popupMC.bAction.Highlight = true;
+            // if(GLOBAL._friendCount > 0)
+            // {
+            //    popupMC.tA.htmlText = "<b>" + KEYS.Get("pop_invitefriends_title") + "</b>";
+            //    popupMC.tB.htmlText = KEYS.Get("pop_invitefriends_body");
+            // }
+            // else
+            // {
+            //    popupMC.tA.htmlText = "<b>" + KEYS.Get("pop_invitenofriends_title") + "</b>";
+            //    popupMC.tB.htmlText = KEYS.Get("pop_invitenofriends_body");
+            // }
+            // popupMC.bAction.SetupKey("btn_invitefriends");
+            // popupMC.bAction.addEventListener(MouseEvent.CLICK,GetFriends);
+            // popupMC.bAction.Highlight = true;
             POPUPS.Push(popupMC);
          }
          GLOBAL.StatSet("pg",GLOBAL.Timestamp());
@@ -603,11 +603,11 @@ package
             };
             LOGGER.Stat([23]);
             popupMC = new popup_welcome();
-            popupMC.bAction.SetupKey("btn_share");
-            popupMC.tA.htmlText = KEYS.Get("pop_displaywelcome_title");
-            popupMC.tB.htmlText = KEYS.Get("pop_displaywelcome_body");
-            popupMC.bAction.addEventListener(MouseEvent.CLICK,Share);
-            popupMC.bAction.Highlight = true;
+            // popupMC.bAction.SetupKey("btn_share");
+            // popupMC.tA.htmlText = KEYS.Get("pop_displaywelcome_title");
+            // popupMC.tB.htmlText = KEYS.Get("pop_displaywelcome_body");
+            // popupMC.bAction.addEventListener(MouseEvent.CLICK,Share);
+            // popupMC.bAction.Highlight = true;
             POPUPS.Push(popupMC);
          }
       }
@@ -620,11 +620,11 @@ package
       public static function GetShinyPopup() : MovieClip
       {
          var _loc1_:MovieClip = new popup_noshiny();
-         _loc1_.tA.htmlText = "<b>" + KEYS.Get("pop_noshiny_title") + "</b>";
-         _loc1_.tB.htmlText = KEYS.Get("pop_noshiny_body");
-         _loc1_.bGet.SetupKey("str_getmore_btn");
-         _loc1_.bGet.addEventListener(MouseEvent.CLICK,BUY.Show);
-         _loc1_.bGet.Highlight = true;
+         // _loc1_.tA.htmlText = "<b>" + KEYS.Get("pop_noshiny_title") + "</b>";
+         // _loc1_.tB.htmlText = KEYS.Get("pop_noshiny_body");
+         // _loc1_.bGet.SetupKey("str_getmore_btn");
+         // _loc1_.bGet.addEventListener(MouseEvent.CLICK,BUY.Show);
+         // _loc1_.bGet.Highlight = true;
          return _loc1_;
       }
       
@@ -693,38 +693,38 @@ package
          };
          var workerImage:String = BASE.isInfernoMainYardOrOutpost ? "BYM_WorkerGuy2.png" : "helpinghand.png";
          var mc:MovieClip = new popup_noworker();
-         if(!BASE.isMainYard)
-         {
-            mc.tA.htmlText = KEYS.Get("worker_busy");
-            mc.tB.htmlText = KEYS.Get("worker_speedupoutpost",{"v1":QUEUE.GetFinishCost()});
-            mc.bGet.SetupKey("btn_speedup");
-            mc.bGet.addEventListener(MouseEvent.CLICK,function(param1:MouseEvent):void
-            {
-               DisplayWorkerNext(n,b);
-            });
-            mc.bGet.Highlight = true;
-         }
-         else
-         {
-            mc.tA.htmlText = "<b>" + KEYS.Get("pop_hireanother_title") + "</b>";
-            if(QUEUE.GetBuilding())
-            {
-               mc.tB.htmlText = KEYS.Get("worker_speedup",{"v1":QUEUE.GetFinishCost()});
-               mc.bGet.SetupKey("btn_speedup");
-               mc.bGet.addEventListener(MouseEvent.CLICK,function(param1:MouseEvent):void
-               {
-                  DisplayWorkerNext(n,b);
-               });
-            }
-            else
-            {
-               mc.bGet.SetupKey("btn_hireanother");
-               mc.tB.htmlText = KEYS.Get("pop_hireanother_body");
-               mc.bGet.addEventListener(MouseEvent.CLICK,getWorker);
-            }
-            mc.bGet.Highlight = true;
-         }
-         POPUPS.Push(mc,null,null,null,workerImage);
+         // if(!BASE.isMainYard)
+         // {
+         //    mc.tA.htmlText = KEYS.Get("worker_busy");
+         //    mc.tB.htmlText = KEYS.Get("worker_speedupoutpost",{"v1":QUEUE.GetFinishCost()});
+         //    mc.bGet.SetupKey("btn_speedup");
+         //    mc.bGet.addEventListener(MouseEvent.CLICK,function(param1:MouseEvent):void
+         //    {
+         //       DisplayWorkerNext(n,b);
+         //    });
+         //    mc.bGet.Highlight = true;
+         // }
+         // else
+         // {
+         //    mc.tA.htmlText = "<b>" + KEYS.Get("pop_hireanother_title") + "</b>";
+         //    if(QUEUE.GetBuilding())
+         //    {
+         //       mc.tB.htmlText = KEYS.Get("worker_speedup",{"v1":QUEUE.GetFinishCost()});
+         //       mc.bGet.SetupKey("btn_speedup");
+         //       mc.bGet.addEventListener(MouseEvent.CLICK,function(param1:MouseEvent):void
+         //       {
+         //          DisplayWorkerNext(n,b);
+         //       });
+         //    }
+         //    else
+         //    {
+         //       mc.bGet.SetupKey("btn_hireanother");
+         //       mc.tB.htmlText = KEYS.Get("pop_hireanother_body");
+         //       mc.bGet.addEventListener(MouseEvent.CLICK,getWorker);
+         //    }
+         //    mc.bGet.Highlight = true;
+         // }
+         // POPUPS.Push(mc,null,null,null,workerImage);
       }
       
       public static function DisplayPleaseBuy(param1:String) : void

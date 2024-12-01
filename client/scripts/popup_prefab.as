@@ -283,9 +283,9 @@ package
                _loc4_.clear();
                _loc4_._mc.visible = false;
                _loc4_._mc.removeEventListener(Event.ENTER_FRAME,_loc4_.TickFast);
-               _loc4_._mcBase.Clear();
-               _loc4_.topContainer.Clear();
-               _loc4_.animContainer.Clear();
+               // _loc4_._mcBase.Clear();
+               // _loc4_.topContainer.Clear();
+               // _loc4_.animContainer.Clear();
                _loc4_._animBMD = null;
                _loc4_._animContainerBMD = null;
             }

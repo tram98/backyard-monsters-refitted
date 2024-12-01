@@ -73,11 +73,11 @@ package
          };
          _view = new popup_sign_view();
          GLOBAL._layerWindows.addChild(_view);
-         _view.subject_txt.text = b._subject;
-         _view.name_txt.text = b._senderName;
-         _view.closeBtn.addEventListener(MouseEvent.MOUSE_DOWN,Hide);
+         // _view.subject_txt.text = b._subject;
+         // _view.name_txt.text = b._senderName;
+         // _view.closeBtn.addEventListener(MouseEvent.MOUSE_DOWN,Hide);
          l = new Loader();
-         _view.placeholder.addChild(l);
+         // _view.placeholder.addChild(l);
          _view.x = GLOBAL._SCREENCENTER.x;
          _view.y = GLOBAL._SCREENCENTER.y;
          l.contentLoaderInfo.addEventListener(Event.COMPLETE,onImageComplete);

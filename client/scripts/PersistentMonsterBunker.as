@@ -84,34 +84,34 @@ package
          var _loc4_:int = HOUSING._housingCapacity.Get();
          var _loc5_:int = Math.floor(_loc3_ * 100 / Number(_loc4_));
          tHoused.htmlText = "<b>" + KEYS.Get("bunker_capacity2") + " " + GLOBAL.FormatNumber(_loc3_) + " / " + GLOBAL.FormatNumber(_loc4_) + " (" + _loc5_ + "%)<b>";
-         mcHousing.mcBar.width = kBarWidth * (_loc3_ / _loc4_);
-         mcHousing.mcBarB.width = 0;
+//         mcHousing.mcBar.width = kBarWidth * (_loc3_ / _loc4_);
+//         mcHousing.mcBarB.width = 0;
          this.Update();
       }
       
       public function InitTransferBarAListeners(param1:MovieClip) : void
       {
-         param1.bAdd.addEventListener(MouseEvent.CLICK,this.SelectAdd);
+/*         param1.bAdd.addEventListener(MouseEvent.CLICK,this.SelectAdd);
          param1.bAdd.Setup(">>");
-         param1.bAdd.buttonMode = true;
+         param1.bAdd.buttonMode = true;*/
       }
       
       public function InitTransferBarBListeners(param1:MovieClip) : void
       {
-         param1.bRemove.addEventListener(MouseEvent.CLICK,this.ReturnMonsterId);
+/*         param1.bRemove.addEventListener(MouseEvent.CLICK,this.ReturnMonsterId);
          param1.bRemove.Setup("&lt;&lt;");
-         param1.bRemove.buttonMode = true;
+         param1.bRemove.buttonMode = true;*/
       }
       
       public function RemoveTransferBarListeners(param1:MovieClip) : void
       {
          if(param1 is MonsterBunkerPopup_TransferBtnA_CLIP_Persistant)
          {
-            param1.bAdd.removeEventListener(MouseEvent.CLICK,this.SelectAdd);
+//            param1.bAdd.removeEventListener(MouseEvent.CLICK,this.SelectAdd);
          }
          else if(param1 is MonsterBunkerPopup_TransferBtnB_CLIP_Persistant)
          {
-            param1.bRemove.removeEventListener(MouseEvent.CLICK,this.ReturnMonsterId);
+  //          param1.bRemove.removeEventListener(MouseEvent.CLICK,this.ReturnMonsterId);
          }
       }
       
@@ -202,7 +202,7 @@ package
                if(_loc1_ == "IC8")
                {
                   _loc21_ = "#m_k_wormzer#";
-               }
+               }/*
                _loc20_.tName.htmlText = "<b>" + KEYS.Get(_loc21_) + "</b>";
                _loc20_.id = _loc1_;
                _loc20_._id = _loc1_.substring(_loc1_.indexOf("C") + 1);
@@ -219,6 +219,7 @@ package
                _loc20_.tSize.text = CREATURES.GetProperty(_loc1_,"cStorage",0,true).toString();
                _loc20_.x = 0;
                _loc20_.y = (_loc9_ - 1) * _loc20_.height;
+               */
                this.InitTransferBarAListeners(_loc20_);
                transferCanvasA.addChild(_loc20_);
                _loc9_ += 1;
@@ -248,8 +249,8 @@ package
             _loc5_ += CREATURES.GetProperty(_loc2_,"cStorage",0,true) * this._selected[_loc2_].Get();
          }
          _loc19_ = 100 / this._capacity * (_loc4_ + _loc5_);
-         mcStorage.mcBar.width = 0;
-         mcStorage.mcBarB.width = 535 / this._capacity * (_loc4_ + _loc5_);
+//         mcStorage.mcBar.width = 0;
+ //        mcStorage.mcBarB.width = 535 / this._capacity * (_loc4_ + _loc5_);
          if(_loc4_ + _loc5_ >= this._capacity)
          {
             if(this.m_bunker._lvl.Get() < 3)
@@ -272,7 +273,7 @@ package
             if((_loc22_ = int(this.m_bunker._monsters[_loc2_].length)) > 0)
             {
                _loc7_ = CREATURELOCKER._creatures[_loc2_];
-               (_loc23_ = new MonsterBunkerPopup_TransferBtnB_CLIP_Persistant()).id = _loc2_;
+/*               (_loc23_ = new MonsterBunkerPopup_TransferBtnB_CLIP_Persistant()).id = _loc2_;
                _loc23_._id = _loc2_.substr(1);
                _loc23_.index = _loc2_.substr(1);
                _loc23_.tName.htmlText = "<b>" + KEYS.Get(CREATURELOCKER._creatures[_loc2_].name) + "</b>";
@@ -281,7 +282,7 @@ package
                _loc23_.bRemove.Enabled = _loc22_ != 0;
                _loc23_.tSize.text = CREATURES.GetProperty(_loc2_,"cStorage",0,true).toString();
                _loc23_.x = 0;
-               _loc23_.y = (_loc9_ - 1) * _loc23_.height;
+               _loc23_.y = (_loc9_ - 1) * _loc23_.height;*/
                this.InitTransferBarBListeners(_loc23_);
                transferCanvasB.addChild(_loc23_);
                _loc9_ += 1;

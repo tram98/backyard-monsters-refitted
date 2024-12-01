@@ -36,10 +36,12 @@ package utils.exposed
       
       override internal function SaveState(param1:String) : XML
       {
-         var _loc2_:XML = super.SaveState(param1);
-         _loc2_.setName("object");
-         _loc2_.@id = this.m_Id;
-         return _loc2_;
+         throw new Error("Not implemented");
+         // var _loc2_:XML = super.SaveState(param1);
+         // _loc2_.setName("object");
+         // _loc2_.@id = this.m_Id;
+         // return _loc2_;
+         return null;
       }
    }
 }

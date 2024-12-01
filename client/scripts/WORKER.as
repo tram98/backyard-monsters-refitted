@@ -369,25 +369,25 @@ package
          }
          this._messageMC = MAP._PROJECTILES.addChild(new workerMessage()) as MovieClip;
          this._messageMC.visible = false;
-         this._messageMC.txt.autoSize = "left";
-         this._messageMC.txt.htmlText = param1;
-         if(param1.length < 5)
-         {
-            this._messageMC.txt.width = 40;
-            this._messageMC.mcBG.width = 50;
-         }
-         else if(param1.length < 12)
-         {
-            this._messageMC.txt.width = 70;
-            this._messageMC.mcBG.width = 80;
-         }
-         else
-         {
-            this._messageMC.txt.width = 90;
-            this._messageMC.mcBG.width = 100;
-         }
-         this._messageMC.mcBG.height = this._messageMC.txt.height + 17;
-         this._messageMC.txt.y = 0 - this._messageMC.mcBG.height + 5;
+         // this._messageMC.txt.autoSize = "left";
+         // this._messageMC.txt.htmlText = param1;
+         // if(param1.length < 5)
+         // {
+         //    this._messageMC.txt.width = 40;
+         //    this._messageMC.mcBG.width = 50;
+         // }
+         // else if(param1.length < 12)
+         // {
+         //    this._messageMC.txt.width = 70;
+         //    this._messageMC.mcBG.width = 80;
+         // }
+         // else
+         // {
+         //    this._messageMC.txt.width = 90;
+         //    this._messageMC.mcBG.width = 100;
+         // }
+         // this._messageMC.mcBG.height = this._messageMC.txt.height + 17;
+         // this._messageMC.txt.y = 0 - this._messageMC.mcBG.height + 5;
          this.showTimer.start();
       }
       

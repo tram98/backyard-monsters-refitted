@@ -1024,14 +1024,14 @@ package
          var loader:URLLoader = new URLLoader();
 
          var onComplete:Function = function(event:Event):void {
-            loader.removeEventListener(Event.COMPLETE, onComplete);
-            loader.removeEventListener(IOErrorEvent.IO_ERROR, onError);
+            // loader.removeEventListener(Event.COMPLETE, onComplete);
+            // loader.removeEventListener(IOErrorEvent.IO_ERROR, onError);
             connectionLost = false;
          };
 
          var onError:Function = function(event:IOErrorEvent):void {
-            loader.removeEventListener(Event.COMPLETE, onComplete);
-            loader.removeEventListener(IOErrorEvent.IO_ERROR, onError);
+            // loader.removeEventListener(Event.COMPLETE, onComplete);
+            // loader.removeEventListener(IOErrorEvent.IO_ERROR, onError);
             connectionLost = true;
             POPUPS.NoConnection();
          };

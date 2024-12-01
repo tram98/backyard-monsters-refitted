@@ -37,7 +37,7 @@ package
       {
          this._props = ResourceBombs._bombs[param1];
          this._bombid = param1;
-         _txtMC._tA.htmlText = "<b>" + this._props.name + "</b>";
+         // _txtMC._tA.htmlText = "<b>" + this._props.name + "</b>";
          this._image = new Sprite();
          addChild(this._image);
          this._popup = new bubblepopup3();
@@ -130,7 +130,7 @@ package
       {
          this._enabled = param1;
          var _loc2_:Number = this._enabled ? 1 : 0.5;
-         _txtMC._tA.alpha = _loc2_;
+         // _txtMC._tA.alpha = _loc2_;
          this._image.alpha = _loc2_;
          this.useHandCursor = this._enabled;
          this.buttonMode = this._enabled;

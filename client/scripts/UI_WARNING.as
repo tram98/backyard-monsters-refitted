@@ -11,7 +11,8 @@ package
       
       public function Update(param1:String) : void
       {
-         mc.tText.htmlText = param1;
+         throw new Error("NOT IMPLEMENTED")
+         // mc.tText.htmlText = param1;
       }
    }
 }

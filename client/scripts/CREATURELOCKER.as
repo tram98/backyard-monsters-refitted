@@ -1045,19 +1045,19 @@ package
             BASE.Save();
             LOGGER.Stat([9,int(creatureID.substr(1))]);
             popupMC = new popup_monster();
-            popupMC.bAction.SetupKey("btn_warnyourfriends");
-            popupMC.bAction.addEventListener(MouseEvent.CLICK,StreamPost);
-            if(!CREATURELOCKER._creatures[creatureID].stream[0])
-            {
-               popupMC.bAction.visible = false;
-            }
-            popupMC.bSpeedup.SetupKey("btn_speedup");
-            popupMC.bSpeedup.addEventListener(MouseEvent.CLICK,SpeedUp);
-            popupMC.bSpeedup.Highlight = true;
-            popupMC.tText.htmlText = KEYS.Get("pop_unlock_start",{
-               "v1":KEYS.Get(CREATURELOCKER._creatures[creatureID].name),
-               "v2":GLOBAL.ToTime(CREATURELOCKER._creatures[creatureID].time,false,false,true)
-            });
+            // popupMC.bAction.SetupKey("btn_warnyourfriends");
+            // popupMC.bAction.addEventListener(MouseEvent.CLICK,StreamPost);
+            // if(!CREATURELOCKER._creatures[creatureID].stream[0])
+            // {
+            //    popupMC.bAction.visible = false;
+            // }
+            // popupMC.bSpeedup.SetupKey("btn_speedup");
+            // popupMC.bSpeedup.addEventListener(MouseEvent.CLICK,SpeedUp);
+            // popupMC.bSpeedup.Highlight = true;
+            // popupMC.tText.htmlText = KEYS.Get("pop_unlock_start",{
+            //    "v1":KEYS.Get(CREATURELOCKER._creatures[creatureID].name),
+            //    "v2":GLOBAL.ToTime(CREATURELOCKER._creatures[creatureID].time,false,false,true)
+            // });
             POPUPS.Push(popupMC,null,null,null,creatureID + "-150.png");
             return true;
          }

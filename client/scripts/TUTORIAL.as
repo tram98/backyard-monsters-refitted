@@ -369,7 +369,7 @@ package
                   MAP._canScroll = false;
                   if(BUILDINGOPTIONS._open)
                   {
-                     _loc4_ = (BUILDINGOPTIONS._do as BUILDINGOPTIONSPOPUP).mcResources.bAction as MovieClip;
+                     // _loc4_ = (BUILDINGOPTIONS._do as BUILDINGOPTIONSPOPUP).mcResources.bAction as MovieClip;
                      Add(2,BOBBOTTOMLEFTLOW,KEYS.Get("tut_22"),ARROW_BUILDING_UPGRADE,["mc",_loc4_,new Point(10,20),-130],false,false,ConditionBuildingOptionsClose);
                   }
                   else
@@ -669,7 +669,7 @@ package
                }
                else
                {
-                  Add(6,BOBBOTTOMLEFTLOW,KEYS.Get("tut_60"),new Point(300,30),["mc",UI2._top.mc.mcR5,new Point(0,30),-170],true,true);
+                  // Add(6,BOBBOTTOMLEFTLOW,KEYS.Get("tut_60"),new Point(300,30),["mc",UI2._top.mc.mcR5,new Point(0,30),-170],true,true);
                }
                break;
             case 61:
@@ -1432,7 +1432,7 @@ package
          {
             if(param5)
             {
-               _mcArrow.ResizeParams = param5;
+               // _mcArrow.ResizeParams = param5;
                if(param5[0] == "mc" && param5[1] && param5[1] is DisplayObject)
                {
                   if(param5[2] is Point)
@@ -1446,27 +1446,27 @@ package
                }
                else if(param5[0] == "percent" && param5[1] && param5[1] is Point)
                {
-                  _mcArrow.SetPos(param4.x,param4.y);
+                  // _mcArrow.SetPos(param4.x,param4.y);
                   param4 = AdjustPoint(param4,"percent");
                }
             }
             else
             {
-               _mcArrow.SetPos(param4.x,param4.y);
+               // _mcArrow.SetPos(param4.x,param4.y);
                param4 = AdjustPoint(param4,"hand");
-               _mcArrow.ResizeParams = null;
+               // _mcArrow.ResizeParams = null;
             }
          }
          if(param4)
          {
             _mcArrow.x = param4.x;
             _mcArrow.y = param4.y;
-            _mcArrow.Rotate();
-            _mcArrow.mcArrow.mcArrow.y = -82;
-            TweenLite.to(_mcArrow.mcArrow.mcArrow,0.6,{
-               "y":-72,
-               "ease":Elastic.easeOut
-            });
+            // _mcArrow.Rotate();
+            // _mcArrow.mcArrow.mcArrow.y = -82;
+            // TweenLite.to(_mcArrow.mcArrow.mcArrow,0.6,{
+            //    "y":-72,
+            //    "ease":Elastic.easeOut
+            // });
             _doArrow = _container.addChild(_mcArrow);
          }
          _doBob = _container.addChild(_mcBob);
@@ -2308,10 +2308,10 @@ package
             {
                _mcBob.Resize();
             }
-            if(_mcArrow)
-            {
-               _mcArrow.Resize();
-            }
+            // if(_mcArrow)
+            // {
+            //    _mcArrow.Resize();
+            // }
          }
       }
    }

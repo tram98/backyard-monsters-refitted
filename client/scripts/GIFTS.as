@@ -119,16 +119,16 @@ package
          var giftValue:int = param6;
          _mc = new popup_gift();
          _mc.gotoAndStop(resourceID);
-         _mc.tA.htmlText = KEYS.Get("pop_gift_title",{"v1":giftFromName});
-         _mc.tB.htmlText = "<b>" + GLOBAL.FormatNumber(giftValue) + " " + KEYS.Get(GLOBAL._resourceNames[resourceID - 1]) + "</b>";
-         _mc.bReturn.SetupKey("pop_giftback_btn");
+//         _mc.tA.htmlText = KEYS.Get("pop_gift_title",{"v1":giftFromName});
+  //       _mc.tB.htmlText = "<b>" + GLOBAL.FormatNumber(giftValue) + " " + KEYS.Get(GLOBAL._resourceNames[resourceID - 1]) + "</b>";
+   /*      _mc.bReturn.SetupKey("pop_giftback_btn");
          _mc.bReturn.Highlight = true;
          _mc.bReturn.addEventListener(MouseEvent.CLICK,GIFTS.SendGift);
          _mc.bReturn.visible = true;
          _mc.bReturn.mouseEnabled = true;
          _mc.bThanks.SetupKey("pop_saythanks_btn");
          _mc.bThanks.Highlight = true;
-         _mc.bThanks.addEventListener(MouseEvent.CLICK,GiveThanks(resourceID,giftFromID,giftValue));
+         _mc.bThanks.addEventListener(MouseEvent.CLICK,GiveThanks(resourceID,giftFromID,giftValue));*/
          if(profilePic)
          {
             try
@@ -143,7 +143,7 @@ package
                loader = new Loader();
                loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR,LoadImageError,false,0,true);
                loader.contentLoaderInfo.addEventListener(Event.COMPLETE,onImageLoaded);
-               _mc.mcPic.mcBG.addChild(loader);
+//               _mc.mcPic.mcBG.addChild(loader);
                loader.load(new URLRequest(profilePic));
             }
             catch(e:Error)
@@ -205,7 +205,7 @@ package
          onePctNextLevelXP = lvlInfo.upper * 0.01;
          onePctNextLevelXP = onePctNextLevelXP > _maxXPReward ? int(_maxXPReward) : onePctNextLevelXP;
          _mc = new popup_gift();
-         _mc.tA.htmlText = KEYS.Get("pop_sentgift_title",{"v1":giftFromName});
+/*         _mc.tA.htmlText = KEYS.Get("pop_sentgift_title",{"v1":giftFromName});
          _mc.tB.htmlText = "<b>" + GLOBAL.FormatNumber(onePctNextLevelXP) + " " + KEYS.Get("#r_points#") + "</b>";
          _mc.bReturn.SetupKey("btn_close");
          _mc.bReturn.Highlight = true;
@@ -213,7 +213,7 @@ package
          _mc.bReturn.mouseEnabled = false;
          _mc.bThanks.SetupKey("btn_close");
          _mc.bThanks.Highlight = true;
-         _mc.bThanks.addEventListener(MouseEvent.CLICK,ClosePopup);
+         _mc.bThanks.addEventListener(MouseEvent.CLICK,ClosePopup);*/
          if(profilePic)
          {
             try
@@ -228,7 +228,7 @@ package
                loader = new Loader();
                loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR,LoadImageError,false,0,true);
                loader.contentLoaderInfo.addEventListener(Event.COMPLETE,onImageLoaded);
-               _mc.mcPic.mcBG.addChild(loader);
+//               _mc.mcPic.mcBG.addChild(loader);
                loader.load(new URLRequest(profilePic));
             }
             catch(e:Error)
@@ -256,7 +256,7 @@ package
          onePctNextLevelXP = lvlInfo.upper * 0.01;
          onePctNextLevelXP = onePctNextLevelXP > _maxXPReward ? int(_maxXPReward) : onePctNextLevelXP;
          _mc = new popup_gift();
-         _mc.tA.htmlText = KEYS.Get("pop_sentinvite_title",{"v1":giftFromName});
+/*         _mc.tA.htmlText = KEYS.Get("pop_sentinvite_title",{"v1":giftFromName});
          _mc.tB.htmlText = "<b>" + GLOBAL.FormatNumber(onePctNextLevelXP) + " " + KEYS.Get("#r_points#") + "</b>";
          _mc.bReturn.SetupKey("pop_sentinvite_gift");
          _mc.bReturn.Highlight = true;
@@ -265,7 +265,7 @@ package
          _mc.bReturn.mouseEnabled = true;
          _mc.bThanks.SetupKey("pop_sentinvite_visit");
          _mc.bThanks.Highlight = true;
-         _mc.bThanks.addEventListener(MouseEvent.CLICK,HelpFriend(giftFromID));
+         _mc.bThanks.addEventListener(MouseEvent.CLICK,HelpFriend(giftFromID));*/
          if(profilePic)
          {
             try
@@ -280,7 +280,7 @@ package
                loader = new Loader();
                loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR,LoadImageError,false,0,true);
                loader.contentLoaderInfo.addEventListener(Event.COMPLETE,onImageLoaded);
-               _mc.mcPic.mcBG.addChild(loader);
+//               _mc.mcPic.mcBG.addChild(loader);
                loader.load(new URLRequest(profilePic));
             }
             catch(e:Error)

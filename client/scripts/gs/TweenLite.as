@@ -91,7 +91,7 @@ package gs
       public function TweenLite(param1:Object, param2:Number, param3:Object)
       {
          var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
-                  throw new Exception("Not Implemented");
+                  throw new Error("Not Implemented");
 
     
       }
@@ -202,7 +202,7 @@ package gs
       
       public function initTweenVals() : void
       {
-                  throw new Exception("Not Implemented");
+                  throw new Error("Not Implemented");
 
       }
       

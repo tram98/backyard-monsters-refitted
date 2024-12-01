@@ -351,14 +351,14 @@ package
                      {
                         _top.mcProtected.visible = true;
                      }
-                     if(BASE._isProtected - GLOBAL.Timestamp() > 86400)
-                     {
-                        _top.mcProtected.tCountdown.htmlText = GLOBAL.ToTime(BASE._isProtected - GLOBAL.Timestamp(),true,false);
-                     }
-                     else
-                     {
-                        _top.mcProtected.tCountdown.htmlText = GLOBAL.ToTime(BASE._isProtected - GLOBAL.Timestamp(),true);
-                     }
+                     // if(BASE._isProtected - GLOBAL.Timestamp() > 86400)
+                     // {
+                     //    _top.mcProtected.tCountdown.htmlText = GLOBAL.ToTime(BASE._isProtected - GLOBAL.Timestamp(),true,false);
+                     // }
+                     // else
+                     // {
+                     //    _top.mcProtected.tCountdown.htmlText = GLOBAL.ToTime(BASE._isProtected - GLOBAL.Timestamp(),true);
+                     // }
                   }
                   else if(_top.mcProtected.visible)
                   {
@@ -536,18 +536,18 @@ package
             _warning.x = _loc4_.x + _loc4_.width / 2 - _warning.width / 2 + 50;
             _warning.y = _loc4_.y + 10;
          }
-         if(_visitor)
-         {
-            _visitor.Update();
-            _visitor.mc.x = GLOBAL._SCREEN.x + GLOBAL._SCREEN.width - _visitor.mc.mcBG.width - 10;
-            _visitor.mc.y = GLOBAL._SCREENHUD.y - (_visitor.mc.height + 10);
-         }
-         if(_scareAway)
-         {
-            GLOBAL.RefreshScreen();
-            _scareAway.x = GLOBAL._SCREEN.x + GLOBAL._SCREEN.width - _scareAway.mcBG.width - 10;
-            _scareAway.y = GLOBAL._SCREENHUD.y - (_scareAway.mcBG.height + 10);
-         }
+         // if(_visitor)
+         // {
+         //    _visitor.Update();
+         //    _visitor.mc.x = GLOBAL._SCREEN.x + GLOBAL._SCREEN.width - _visitor.mc.mcBG.width - 10;
+         //    _visitor.mc.y = GLOBAL._SCREENHUD.y - (_visitor.mc.height + 10);
+         // }
+         // if(_scareAway)
+         // {
+         //    GLOBAL.RefreshScreen();
+         //    _scareAway.x = GLOBAL._SCREEN.x + GLOBAL._SCREEN.width - _scareAway.mcBG.width - 10;
+         //    _scareAway.y = GLOBAL._SCREENHUD.y - (_scareAway.mcBG.height + 10);
+         // }
          if(Chat._bymChat)
          {
             Chat._bymChat.position();

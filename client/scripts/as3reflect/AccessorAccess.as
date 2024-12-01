@@ -1,7 +1,7 @@
 package as3reflect
 {
    public final class AccessorAccess
-   {
+   { 
       
       private static const READ_ONLY_VALUE:String = "readonly";
       

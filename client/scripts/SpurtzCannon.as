@@ -213,7 +213,7 @@ package
          var _loc2_:Number = 1;
          var _loc3_:Number = MathUtils.getDistanceBetweenTwoPoints(_position,new Point(_target.x,_target.y));
          var _loc4_:Number = (this._barrelRotation + 180) * (Math.PI / 180);
-         var _loc5_:Point = (_loc5_ = new Point(x + Math.cos(_loc4_) * _loc3_,y + Math.sin(_loc4_) * _loc3_)).add(new Point(this.getSpreadFromDistance(_loc3_ * 0.2),this.getSpreadFromDistance(_loc3_ * 0.2)));
+         var _loc5_:Point = (new Point(x + Math.cos(_loc4_) * _loc3_,y + Math.sin(_loc4_) * _loc3_)).add(new Point(this.getSpreadFromDistance(_loc3_ * 0.2),this.getSpreadFromDistance(_loc3_ * 0.2)));
          if(Boolean(GLOBAL._towerOverdrive) && GLOBAL._towerOverdrive.Get() >= GLOBAL.Timestamp())
          {
             _loc2_ = 1.25;

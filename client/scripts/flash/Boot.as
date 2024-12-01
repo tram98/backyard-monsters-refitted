@@ -130,8 +130,9 @@ package flash
       public static function __string_rec(param1:*, param2:String) : String
       {
    
-throw new Exception("Not Implemented");
-         return new String(param1);
+throw new Error("Not Implemented");
+         // return new String(param1);
+         return null;
       }
       
       public static function __unprotect__(param1:String) : String

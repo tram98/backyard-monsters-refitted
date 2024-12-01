@@ -42,27 +42,27 @@ package
             this._building._type = param2;
             if(!STORE._storeItems["BUILDING" + this._building._type])
             {
-               mcInstant.bAction.addEventListener(MouseEvent.CLICK,this.ActionInstantBuild);
-               mcInstant.bAction.Setup(KEYS.Get("buildoptions_shiny",{"v1":this._building.InstantBuildCost()}));
-               mcInstant.tDescription.htmlText = KEYS.Get("buildoptions_buildinstant");
-               mcInstant.gCoin.mouseEnabled = false;
+               // mcInstant.bAction.addEventListener(MouseEvent.CLICK,this.ActionInstantBuild);
+               // mcInstant.bAction.Setup(KEYS.Get("buildoptions_shiny",{"v1":this._building.InstantBuildCost()}));
+               // mcInstant.tDescription.htmlText = KEYS.Get("buildoptions_buildinstant");
+               // mcInstant.gCoin.mouseEnabled = false;
             }
          }
          else if(param1 == "fortify")
          {
             this._building = BUILDINGOPTIONS._building;
-            mcInstant.bAction.addEventListener(MouseEvent.CLICK,this.ActionInstantFortify);
-            mcInstant.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":this._building.InstantFortifyCost()}));
-            mcInstant.tDescription.htmlText = KEYS.Get("buildoptions_fortifyinstant");
-            mcInstant.gCoin.mouseEnabled = false;
+            // mcInstant.bAction.addEventListener(MouseEvent.CLICK,this.ActionInstantFortify);
+            // mcInstant.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":this._building.InstantFortifyCost()}));
+            // mcInstant.tDescription.htmlText = KEYS.Get("buildoptions_fortifyinstant");
+            // mcInstant.gCoin.mouseEnabled = false;
          }
          else
          {
             this._building = BUILDINGOPTIONS._building;
-            mcInstant.bAction.addEventListener(MouseEvent.CLICK,this.ActionInstantUpgrade);
-            mcInstant.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":this._building.InstantUpgradeCost()}));
-            mcInstant.tDescription.htmlText = KEYS.Get("buildoptions_upgradeinstant");
-            mcInstant.gCoin.mouseEnabled = false;
+            // mcInstant.bAction.addEventListener(MouseEvent.CLICK,this.ActionInstantUpgrade);
+            // mcInstant.bAction.Setup(KEYS.Get("btn_useshiny",{"v1":this._building.InstantUpgradeCost()}));
+            // mcInstant.tDescription.htmlText = KEYS.Get("buildoptions_upgradeinstant");
+            // mcInstant.gCoin.mouseEnabled = false;
          }
          this.toggleCheckbox(false);
          tDescription.autoSize = TextFieldAutoSize.LEFT;
@@ -96,16 +96,16 @@ package
          var _loc5_:Vector.<Object> = InstanceManager.getInstancesByClass(BFOUNDATION);
          if(param1 == "build")
          {
-            mcResources.bAction.addEventListener(MouseEvent.CLICK,this.ActionResourceBuild);
-            mcResources.bAction.Highlight = true;
-            if(InventoryManager.buildingStorageCount(this._building._type) > 0)
-            {
-               mcResources.bAction.SetupKey("btn_place");
-            }
-            else
-            {
-               mcResources.bAction.SetupKey("btn_build");
-            }
+            // mcResources.bAction.addEventListener(MouseEvent.CLICK,this.ActionResourceBuild);
+            // mcResources.bAction.Highlight = true;
+            // if(InventoryManager.buildingStorageCount(this._building._type) > 0)
+            // {
+            //    mcResources.bAction.SetupKey("btn_place");
+            // }
+            // else
+            // {
+            //    mcResources.bAction.SetupKey("btn_build");
+            // }
             for each(_loc6_ in GLOBAL._buildingProps[this._building._type - 1].costs[0].re)
             {
                _loc7_ = 0;
@@ -205,8 +205,8 @@ package
          }
          else if(param1 == "upgrade")
          {
-            mcResources.bAction.addEventListener(MouseEvent.CLICK,this.ActionResourceUpgrade);
-            mcResources.bAction.Setup(KEYS.Get("buildoptions_resources"));
+            // mcResources.bAction.addEventListener(MouseEvent.CLICK,this.ActionResourceUpgrade);
+            // mcResources.bAction.Setup(KEYS.Get("buildoptions_resources"));
             if(this._building._lvl.Get() < this._building._buildingProps.costs.length)
             {
                if(this._building._type != 14)
@@ -289,8 +289,8 @@ package
          }
          else if(param1 == "fortify")
          {
-            mcResources.bAction.addEventListener(MouseEvent.CLICK,this.ActionResourceFortify);
-            mcResources.bAction.Setup(KEYS.Get("buildoptions_resources"));
+            // mcResources.bAction.addEventListener(MouseEvent.CLICK,this.ActionResourceFortify);
+            // mcResources.bAction.Setup(KEYS.Get("buildoptions_resources"));
             if(Boolean(this._building._buildingProps.can_fortify) && this._building._fortification.Get() < this._building._buildingProps.fortify_costs.length)
             {
                for each(_loc6_ in this._building._buildingProps.fortify_costs[this._building._fortification.Get()].re)
@@ -355,8 +355,8 @@ package
          }
          else if(param1 == "more")
          {
-            mcResources.bAction.addEventListener(MouseEvent.CLICK,this.ActionRecycle);
-            mcResources.bAction.SetupKey("btn_recycle");
+            // mcResources.bAction.addEventListener(MouseEvent.CLICK,this.ActionRecycle);
+            // mcResources.bAction.SetupKey("btn_recycle");
             if(this._building._buildingProps.costs.length == 1)
             {
                _loc2_ = KEYS.Get("bdg_morenolevel",{
@@ -382,18 +382,18 @@ package
                   "v4":this._building._recycleDescription
                });
             }
-            if(this._building._class == "decoration")
-            {
-               mcResources.bAction.SetupKey("btn_addstorage");
-            }
-            else
-            {
-               mcResources.bAction.SetupKey("btn_recycle");
-               if(TUTORIAL._stage < 200)
-               {
-                  mcResources.bAction.Enabled = false;
-               }
-            }
+            // if(this._building._class == "decoration")
+            // {
+            //    mcResources.bAction.SetupKey("btn_addstorage");
+            // }
+            // else
+            // {
+            //    mcResources.bAction.SetupKey("btn_recycle");
+            //    if(TUTORIAL._stage < 200)
+            //    {
+            //       mcResources.bAction.Enabled = false;
+            //    }
+            // }
             _loc3_ = this._building.RecycleCost();
             this.toggleCheckbox();
          }
@@ -409,8 +409,8 @@ package
                _loc17_ = (_loc16_ = BASE.isInfernoBuilding(this._building._type)) ? BASE._iresources : BASE._resources;
                _loc18_ = _loc16_ ? GLOBAL.iresourceNames : GLOBAL._resourceNames;
                _loc15_.gotoAndStop(_loc16_ || BASE.isInfernoMainYardOrOutpost ? _loc14_ + 6 : _loc14_);
-               _loc15_.tTitle.htmlText = "<b>" + KEYS.Get(_loc18_[_loc14_ - 1]) + "</b>";
-               _loc15_.tValue.htmlText = "<b><font color=\"#" + (_loc3_["r" + _loc14_] > _loc17_["r" + _loc14_].Get() && (param1 == "upgrade" || param1 == "build" || param1 == "fortify") ? "FF0000" : "000000") + "\">" + GLOBAL.FormatNumber(_loc3_["r" + _loc14_]) + "</font></b>";
+               // _loc15_.tTitle.htmlText = "<b>" + KEYS.Get(_loc18_[_loc14_ - 1]) + "</b>";
+               // _loc15_.tValue.htmlText = "<b><font color=\"#" + (_loc3_["r" + _loc14_] > _loc17_["r" + _loc14_].Get() && (param1 == "upgrade" || param1 == "build" || param1 == "fortify") ? "FF0000" : "000000") + "\">" + GLOBAL.FormatNumber(_loc3_["r" + _loc14_]) + "</font></b>";
                if(Boolean(_loc3_["r" + _loc14_]) && _loc3_["r" + _loc14_] > 0)
                {
                   _loc15_.alpha = 1;
@@ -421,17 +421,17 @@ package
                }
                _loc14_++;
             }
-            (_loc15_ = this.mcResources.mcTime).gotoAndStop(BASE.isInfernoBuilding(this._building._type) || BASE.isInfernoMainYardOrOutpost ? 12 : 6);
-            if(TUTORIAL._stage >= 200 && _loc3_.time > 0)
-            {
-               _loc15_.visible = true;
-               _loc15_.tTitle.htmlText = "<b>" + KEYS.Get(_loc18_[5]) + "</b>";
-               _loc15_.tValue.htmlText = "<b>" + GLOBAL.ToTime(_loc13_,true,false) + "</b>";
-            }
-            else
-            {
-               _loc15_.visible = false;
-            }
+            // (_loc15_ = this.mcResources.mcTime).gotoAndStop(BASE.isInfernoBuilding(this._building._type) || BASE.isInfernoMainYardOrOutpost ? 12 : 6);
+            // if(TUTORIAL._stage >= 200 && _loc3_.time > 0)
+            // {
+            //    _loc15_.visible = true;
+            //    _loc15_.tTitle.htmlText = "<b>" + KEYS.Get(_loc18_[5]) + "</b>";
+            //    _loc15_.tValue.htmlText = "<b>" + GLOBAL.ToTime(_loc13_,true,false) + "</b>";
+            // }
+            // else
+            // {
+            //    _loc15_.visible = false;
+            // }
             if(this._doStreamPost && BASE.isMainYard)
             {
                if(_loc3_.time > 600)

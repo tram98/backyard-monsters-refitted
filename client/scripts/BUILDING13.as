@@ -532,11 +532,11 @@ package
                POPUPS.Next();
             };
             mc = new popup_building();
-            mc.tA.htmlText = "<b>" + KEYS.Get("pop_hatbuilt_title") + "</b>";
-            mc.tB.htmlText = KEYS.Get("pop_hatbuilt_body");
-            mc.bPost.SetupKey("btn_brag");
-            mc.bPost.addEventListener(MouseEvent.CLICK,Brag);
-            mc.bPost.Highlight = true;
+            // mc.tA.htmlText = "<b>" + KEYS.Get("pop_hatbuilt_title") + "</b>";
+            // mc.tB.htmlText = KEYS.Get("pop_hatbuilt_body");
+            // mc.bPost.SetupKey("btn_brag");
+            // mc.bPost.addEventListener(MouseEvent.CLICK,Brag);
+            // mc.bPost.Highlight = true;
             POPUPS.Push(mc,null,null,null,"build.v2.png");
          }
       }
@@ -566,11 +566,11 @@ package
                POPUPS.Next();
             };
             mc = new popup_building();
-            mc.tA.htmlText = "<b>" + KEYS.Get("pop_hatupgraded_title") + "</b>";
-            mc.tB.htmlText = KEYS.Get("pop_hatupgraded_body",{"v1":_lvl.Get()});
-            mc.bPost.SetupKey("btn_brag");
-            mc.bPost.addEventListener(MouseEvent.CLICK,Brag);
-            mc.bPost.Highlight = true;
+            // mc.tA.htmlText = "<b>" + KEYS.Get("pop_hatupgraded_title") + "</b>";
+            // mc.tB.htmlText = KEYS.Get("pop_hatupgraded_body",{"v1":_lvl.Get()});
+            // mc.bPost.SetupKey("btn_brag");
+            // mc.bPost.addEventListener(MouseEvent.CLICK,Brag);
+            // mc.bPost.Highlight = true;
             POPUPS.Push(mc,null,null,null,"build.v2.png");
          }
       }

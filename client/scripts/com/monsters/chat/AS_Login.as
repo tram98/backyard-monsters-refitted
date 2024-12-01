@@ -37,10 +37,10 @@ package com.monsters.chat
       {
          return this.password;
       }
-      
+   /*   
       public function get Params() : SFSObject
       {
          return this.params;
-      }
+      }*/
    }
 }

@@ -123,7 +123,7 @@ package com.gskinner.utils
          this._pointer = (this._pointer + 1) % 200000;
          
          "return (this.bmpd.getPixel32(this._pointer % 1000,this._pointer / 1000 >> 0) * 0.999999999999998 + 1e-15) / 4294967295;";
-         throw new Exception("NOT IMPLEMENTED");
+         throw new Error("NOT IMPLEMENTED");
       }
       
       public function float(param1:Number, param2:Number = NaN) : Number

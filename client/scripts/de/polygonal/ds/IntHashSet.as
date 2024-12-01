@@ -482,7 +482,7 @@ package de.polygonal.ds
       }
       
       public function contains(param1:Object) : Boolean
-      { throw new Exception("Not Implemented")   }
+      { throw new Error("Not Implemented")   }
       
       public function clone(param1:Boolean, param2:Object = undefined) : Collection
       {

@@ -265,16 +265,16 @@ package
                   LOGGER.Log("err","MAPROOM.RequestTruce: " + JSON.encode(param1));
                }
             };
-            new URLLoaderApi().load(GLOBAL._apiURL + "player/requesttruce",[["baseid",baseid],["duration",1209600],["message",mc.bMessage.text]],handleLoadSuccessful);
+            new URLLoaderApi().load(GLOBAL._apiURL + "player/requesttruce",[["baseid",baseid],["duration",1209600],["message","mc.bMessage.text"]],handleLoadSuccessful);
             POPUPS.Next();
-            TruceSent(name,mc.bMessage.text);
+            TruceSent(name,"mc.bMessage.text");
          };
          mc = new popup_truce();
-         mc.tA.htmlText = "<b>" + KEYS.Get("map_trucerequest") + " " + name + ".</b>";
-         mc.tB.htmlText = KEYS.Get("map_trucerequest_desc");
-         mc.bSend.SetupKey("map_trucereq_btn");
-         mc.bSend.addEventListener(MouseEvent.CLICK,Truce);
-         mc.bMessage.htmlText = "";
+//         mc.tA.htmlText = "<b>" + KEYS.Get("map_trucerequest") + " " + name + ".</b>";
+//         mc.tB.htmlText = KEYS.Get("map_trucerequest_desc");
+//         mc.bSend.SetupKey("map_trucereq_btn");
+//         mc.bSend.addEventListener(MouseEvent.CLICK,Truce);
+//         mc.bMessage.htmlText = "";
          POPUPS.Push(mc);
       }
       
@@ -291,14 +291,6 @@ package
             GLOBAL.CallJS("sendFeed",["Truce",KEYS.Get("map_truceaccept_streamtitle",{"v1":name}),KEYS.Get("map_truceaccept_streambody"),"truceaccept" + imgNumber + ".png",0]);
             POPUPS.Next();
          };
-         var Switch:Function = function(param1:int):Function
-         {
-            var n:int = param1;
-            return function(param1:MouseEvent = null):void
-            {
-               SwitchB(n);
-            };
-         };
          var SwitchB:Function = function(param1:int):void
          {
             imgNumber = param1;
@@ -310,11 +302,19 @@ package
             }
             mc["mcIcon" + param1].alpha = 1;
          };
+         var Switch:Function = function(param1:int):Function
+         {
+            var n:int = param1;
+            return function(param1:MouseEvent = null):void
+            {
+               SwitchB(n);
+            };
+         };
          mc = new popup_truce_accept();
-         mc.bShare.SetupKey("btn_share");
+/*         mc.bShare.SetupKey("btn_share");
          mc.bShare.addEventListener(MouseEvent.CLICK,Share);
          mc.bShare.Highlight = true;
-         mc.tTitle.htmlText = KEYS.Get("popup_desc_truceaccept");
+         mc.tTitle.htmlText = KEYS.Get("popup_desc_truceaccept");*/
          i = 1;
          while(i < 4)
          {
@@ -340,14 +340,6 @@ package
             GLOBAL.CallJS("sendFeed",["Truce",KEYS.Get("map_truceproposed_streamtitle",{"v1":name}),KEYS.Get("map_truceproposed_streambody"),"truceaccept" + imgNumber + ".png",0]);
             POPUPS.Next();
          };
-         var Switch:Function = function(param1:int):Function
-         {
-            var n:int = param1;
-            return function(param1:MouseEvent = null):void
-            {
-               SwitchB(n);
-            };
-         };
          var SwitchB:Function = function(param1:int):void
          {
             imgNumber = param1;
@@ -359,11 +351,19 @@ package
             }
             mc["mcIcon" + param1].alpha = 1;
          };
+         var Switch:Function = function(param1:int):Function
+         {
+            var n:int = param1;
+            return function(param1:MouseEvent = null):void
+            {
+               SwitchB(n);
+            };
+         };
          mc = new popup_truce_sent();
-         mc.bShare.SetupKey("btn_share");
+/*         mc.bShare.SetupKey("btn_share");
          mc.bShare.addEventListener(MouseEvent.CLICK,Share);
          mc.bShare.Highlight = true;
-         mc.tTitle.htmlText = KEYS.Get("popup_desc_trucesent");
+         mc.tTitle.htmlText = KEYS.Get("popup_desc_trucesent");*/
          i = 1;
          while(i < 4)
          {
@@ -389,14 +389,6 @@ package
             GLOBAL.CallJS("sendFeed",["Truce",KEYS.Get("map_trucerejected_streamtitle",{"v1":name}),KEYS.Get("map_trucerejected_streambody"),"taunt" + imgNumber + ".png",0]);
             POPUPS.Next();
          };
-         var Switch:Function = function(param1:int):Function
-         {
-            var n:int = param1;
-            return function(param1:MouseEvent = null):void
-            {
-               SwitchB(n);
-            };
-         };
          var SwitchB:Function = function(param1:int):void
          {
             imgNumber = param1;
@@ -408,11 +400,19 @@ package
             }
             mc["mcIcon" + param1].alpha = 1;
          };
-         mc = new popup_truce_sent();
+         var Switch:Function = function(param1:int):Function
+         {
+            var n:int = param1;
+            return function(param1:MouseEvent = null):void
+            {
+               SwitchB(n);
+            };
+         };
+         /*mc = new popup_truce_sent();
          mc.bShare.SetupKey("btn_share");
          mc.bShare.addEventListener(MouseEvent.CLICK,Share);
          mc.bShare.Highlight = true;
-         mc.tTitle.htmlText = KEYS.Get("popup_desc_trucesent");
+         mc.tTitle.htmlText = KEYS.Get("popup_desc_trucesent");*/
          i = 1;
          while(i < 4)
          {

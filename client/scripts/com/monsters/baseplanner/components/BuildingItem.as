@@ -65,14 +65,14 @@ package com.monsters.baseplanner.components
          this.mcSize = mc.width;
          mc.x = mc.width / 2;
          mc.y = mc.height / 2;
-         mc.mcFrame.gotoAndStop(1);
-         mc.mcBG.gotoAndStop(this.category);
-         if(this.category == TYPE_TRAP && this.node.type == 117)
-         {
-            mc.mcBG.gotoAndStop("htrap");
-         }
-         mc.mcIcon.gotoAndStop(this.node.type);
-         mc.mcInvalid.visible = false;
+         // mc.mcFrame.gotoAndStop(1);
+         // mc.mcBG.gotoAndStop(this.category);
+         // if(this.category == TYPE_TRAP && this.node.type == 117)
+         // {
+         //    mc.mcBG.gotoAndStop("htrap");
+         // }
+         // mc.mcIcon.gotoAndStop(this.node.type);
+         // mc.mcInvalid.visible = false;
          this.toggleMoreInfo(false);
       }
       
@@ -157,37 +157,37 @@ package com.monsters.baseplanner.components
       {
          if(this.node.category == PlannerNode.TYPE_DECORATION)
          {
-            mc.mcFort.mcLevel.tLabel.visible = false;
-            mc.mcFort.mcLevel.tLabel.htmlText = "";
-            mc.mcLevel.tLabel.htmlText = "";
-            mc.mcLevel.tLabel.visible = false;
+            // mc.mcFort.mcLevel.tLabel.visible = false;
+            // mc.mcFort.mcLevel.tLabel.htmlText = "";
+            // mc.mcLevel.tLabel.htmlText = "";
+            // mc.mcLevel.tLabel.visible = false;
             return;
          }
-         if(Boolean(this.node.level) && param1)
-         {
-            mc.mcLevel.tLabel.htmlText = this.node.level;
-            mc.mcLevel.tLabel.visible = true;
-         }
-         else
-         {
-            mc.mcLevel.tLabel.htmlText = "";
-            mc.mcLevel.tLabel.visible = false;
-         }
-         if(this.node.fortification && param1 && param2)
-         {
-            mc.mcFort.mcLevel.tLabel.htmlText = this.node.fortification;
-            mc.mcFort.mcLevel.tLabel.visible = true;
-         }
-         else
-         {
-            mc.mcFort.mcLevel.tLabel.htmlText = "";
-            mc.mcFort.mcLevel.tLabel.visible = false;
-         }
+         // if(Boolean(this.node.level) && param1)
+         // {
+         //    mc.mcLevel.tLabel.htmlText = this.node.level;
+         //    mc.mcLevel.tLabel.visible = true;
+         // }
+         // else
+         // {
+         //    mc.mcLevel.tLabel.htmlText = "";
+         //    mc.mcLevel.tLabel.visible = false;
+         // }
+         // if(this.node.fortification && param1 && param2)
+         // {
+         //    mc.mcFort.mcLevel.tLabel.htmlText = this.node.fortification;
+         //    mc.mcFort.mcLevel.tLabel.visible = true;
+         // }
+         // else
+         // {
+         //    mc.mcFort.mcLevel.tLabel.htmlText = "";
+         //    mc.mcFort.mcLevel.tLabel.visible = false;
+         // }
       }
       
       public function toggleInvalid(param1:Boolean = false) : void
       {
-         mc.mcInvalid.visible = param1;
+         // mc.mcInvalid.visible = param1;
       }
       
       override public function onMouseDown(param1:MouseEvent = null) : void
@@ -207,13 +207,13 @@ package com.monsters.baseplanner.components
       override public function onRollOver(param1:MouseEvent = null) : void
       {
          dispatchEvent(new BasePlannerNodeEvent(PlannerDesignView.BUILDING_OVER,this.node));
-         mc.mcFrame.gotoAndStop("on");
+         // mc.mcFrame.gotoAndStop("on");
       }
       
       override public function onRollOut(param1:MouseEvent = null) : void
       {
          dispatchEvent(new BasePlannerNodeEvent(PlannerDesignView.BUILDING_OUT,this.node));
-         mc.mcFrame.gotoAndStop("off");
+         // mc.mcFrame.gotoAndStop("off");
       }
       
       public function addShadow() : void

@@ -54,7 +54,7 @@ package com.monsters.siege.weapons
       {
          weaponID = ID;
          dropTarget = DROPZONE.SIEGEWEAPON_GROUND_SPECIAL;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          addProperty(DAMAGE,new SiegeWeaponProperty([1000,1500,2500,3500,4500,6500,9000,12500,17000,23500],1));
          addProperty(RANGE,new SiegeWeaponProperty([250,270,290,310,320,350,380,410,440,480],2));
          addProperty(DURATION,new SiegeWeaponProperty([10,11,12,12,14,15,17,18,19,21],3));

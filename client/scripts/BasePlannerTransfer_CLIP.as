@@ -16,7 +16,7 @@ package
       
       public function BasePlannerTransfer_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -34,7 +34,7 @@ package
       {
          this._middle = new Point(0,0);
          this._targetedBuildings = new Vector.<BFOUNDATION>();
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._size = param1;
          this._dropTarget = param2;
          ring1.addEventListener(MouseEvent.MOUSE_UP,this.Place);

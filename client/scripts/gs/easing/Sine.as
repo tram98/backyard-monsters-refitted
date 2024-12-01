@@ -8,7 +8,7 @@ package gs.easing
       
       public function Sine()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function easeIn(param1:Number, param2:Number, param3:Number, param4:Number) : Number

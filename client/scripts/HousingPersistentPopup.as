@@ -53,7 +53,7 @@ package
          this._juiceList = {};
          this.m_monsterBarList = {};
          this.m_bunkerIDList = [];
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          if(!BASE.isInfernoMainYardOrOutpost)
          {
             bTransfer.SetupKey("btn_ascendmonsters");

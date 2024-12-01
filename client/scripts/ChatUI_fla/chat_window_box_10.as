@@ -9,7 +9,7 @@ package ChatUI_fla
       
       public function chat_window_box_10()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          addFrameScript(0,this.frame1,4,this.frame5);
       }
       

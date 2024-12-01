@@ -90,7 +90,7 @@ package gs
       
       public function TweenLite(param1:Object, param2:Number, param3:Object)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
                   throw new Exception("Not Implemented");
 
     

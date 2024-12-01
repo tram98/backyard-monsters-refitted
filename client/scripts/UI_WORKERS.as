@@ -31,7 +31,7 @@ package
       
       public function UI_WORKERS()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Setup() : void

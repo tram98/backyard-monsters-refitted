@@ -22,7 +22,7 @@ package
       public function BUILDING52()
       {
          _type = 52;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _footprint = [new Rectangle(0,0,40,40)];
          _gridCost = [[new Rectangle(0,0,40,40),20]];
          imageData = GLOBAL._buildingProps[_type - 1].imageData;

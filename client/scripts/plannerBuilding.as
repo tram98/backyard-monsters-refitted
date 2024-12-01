@@ -24,7 +24,7 @@ package
       public function plannerBuilding(param1:BFOUNDATION, param2:*)
       {
          var _loc3_:Point = null;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          mouseEnabled = false;
          this._building = param1;
          mcSquare.width = this._building._footprint[0].width;

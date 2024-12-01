@@ -20,7 +20,7 @@ package
       
       public function BUILDINGBUTTON()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function setOnClickedWhenLockedCallback(param1:int, param2:Function) : void

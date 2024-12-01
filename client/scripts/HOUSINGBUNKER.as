@@ -40,7 +40,7 @@ package
       
       public function HOUSINGBUNKER()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _type = 128;
          _footprint = [new Rectangle(0,0,160,160)];
          _gridCost = [[new Rectangle(10,10,140,20),400],[new Rectangle(10,30,20,120),400],[new Rectangle(30,130,120,20),400],[new Rectangle(130,30,20,30),400],[new Rectangle(130,100,20,30),400]];

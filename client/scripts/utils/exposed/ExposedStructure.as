@@ -17,7 +17,7 @@ package utils.exposed
       
       public function ExposedStructure()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_Definition = ExposedDefinitionManager.instance.FindOrCacheExposedDefinition(this);
       }
       

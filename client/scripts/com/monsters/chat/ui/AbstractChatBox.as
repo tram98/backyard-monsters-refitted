@@ -48,7 +48,7 @@ package com.monsters.chat.ui
          this.fmt = new TextFormat(this._fontName,this._fontSize,this._defaultColor);
          this.fmt_input = new TextFormat(this._fontName,this._fontSize,this._inputColor);
          this.fmt_userIndent = new TextFormat(this._fontName,this._fontSize,this._defaultColor);
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._displayAssets = param1;
          this.addChild(this._displayAssets);
       }

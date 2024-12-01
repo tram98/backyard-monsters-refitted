@@ -26,7 +26,7 @@ package com.monsters.monsters.components.abilities
       
       public function BlinkOnAttack(param1:uint = 3, param2:uint = 200, param3:int = 10)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_maxBlinkPoints = param3;
          this.m_attacksToBlink = param1;
          this.m_maxBlinkDistance = param2;

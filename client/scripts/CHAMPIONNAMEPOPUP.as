@@ -9,7 +9,7 @@ package
       public function CHAMPIONNAMEPOPUP()
       {
          var _loc2_:String = null;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          tTitle.htmlText = "<b>" + "CONGRATULATIONS!" + "</b>";
          tDescription.htmlText = "<b>" + "You can now start raising your Champion. What will you name him?" + "<b>";
          var _loc1_:int = CREATURES._guardian._type;

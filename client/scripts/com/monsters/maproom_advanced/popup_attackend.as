@@ -13,7 +13,7 @@ package com.monsters.maproom_advanced
       
       public function popup_attackend(param1:Boolean)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._success = param1;
          if(this._success)
          {

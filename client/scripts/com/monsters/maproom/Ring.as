@@ -14,7 +14,7 @@ package com.monsters.maproom
       
       public function Ring(param1:Number, param2:uint)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.graphics.beginFill(0,0);
          this.graphics.lineStyle(param1,param2);
          this.graphics.drawEllipse(-10,-10,20,20);

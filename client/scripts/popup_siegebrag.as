@@ -20,7 +20,7 @@ package
       
       public function popup_siegebrag()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -18,7 +18,7 @@ package com.monsters.maproom3.bookmarks
       
       public function BookmarkDisplay(param1:Bookmark, param2:String, param3:BitmapData)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_BookmarkToDisplay = param1;
          background.gotoAndStop(param2);
          buttonMode = true;

@@ -33,7 +33,7 @@ package
          this._juiceList = {};
          this._creatureList = {};
          this._creatureData = {};
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          if(GLOBAL._bJuicer)
          {
             gotoAndStop(2);

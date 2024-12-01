@@ -36,7 +36,7 @@ package com.monsters.maproom
          onLoadError = function(param1:IOErrorEvent):void
          {
          };
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.data = {};
          this.data.baseid = new SecNum(int(baseID));
          this.data.baseseed = new SecNum(int(baseSeed));

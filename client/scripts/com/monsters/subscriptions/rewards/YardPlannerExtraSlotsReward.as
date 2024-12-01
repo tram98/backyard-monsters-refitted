@@ -12,7 +12,7 @@ package com.monsters.subscriptions.rewards
       
       public function YardPlannerExtraSlotsReward()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       override public function canBeApplied() : Boolean

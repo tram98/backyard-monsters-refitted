@@ -30,7 +30,7 @@ package com.monsters.enums
       
       public function EnumBaseMode()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

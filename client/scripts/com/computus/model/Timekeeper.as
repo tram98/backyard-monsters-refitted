@@ -28,7 +28,7 @@ package com.computus.model
       {
          if(_instance == null)
          {
-            super();
+            var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
             this.init();
             _instance = this;
          }

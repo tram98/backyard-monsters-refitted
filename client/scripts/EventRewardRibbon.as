@@ -15,7 +15,7 @@ package
       
       public function EventRewardRibbon()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

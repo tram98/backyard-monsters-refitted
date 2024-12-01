@@ -14,7 +14,7 @@ package
       
       public function icon_costs()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

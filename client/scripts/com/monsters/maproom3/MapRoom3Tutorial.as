@@ -55,7 +55,7 @@ package com.monsters.maproom3
       
       public function MapRoom3Tutorial(param1:InstanceEnforcer)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          if(!param1)
          {
             throw new Error(this + " must be used as a singleton.");
@@ -392,6 +392,6 @@ final class InstanceEnforcer
    
    public function InstanceEnforcer()
    {
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
    }
 }

@@ -6360,7 +6360,7 @@ package
       
       public function OUTPOST_YARD_PROPS()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

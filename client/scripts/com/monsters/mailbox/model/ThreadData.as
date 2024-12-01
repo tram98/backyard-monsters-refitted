@@ -50,7 +50,7 @@ package com.monsters.mailbox.model
       
       public function ThreadData(param1:Object)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.Setup(param1);
       }
       

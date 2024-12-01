@@ -47,7 +47,7 @@ package com.monsters.mailbox
       public function Inbox()
       {
          var _loc2_:MovieClip = null;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          (mcFrame as frame).Setup(true,MailBox.Hide);
          newBtn.SetupKey("btn_compose");
          newBtn.addEventListener(MouseEvent.CLICK,this.onNewDown);

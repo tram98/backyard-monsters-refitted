@@ -9,7 +9,7 @@ package
       
       public function buttonClose()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.buttonMode = true;
          this.addEventListener(MouseEvent.MOUSE_OVER,this.Over);
          this.addEventListener(MouseEvent.MOUSE_OUT,this.Out);

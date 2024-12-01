@@ -25,7 +25,7 @@ package gs.plugins
       
       public function FilterPlugin()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       protected function initFilter(param1:Object, param2:BitmapFilter) : void

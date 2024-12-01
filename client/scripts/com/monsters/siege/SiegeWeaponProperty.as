@@ -16,7 +16,7 @@ package com.monsters.siege
       
       public function SiegeWeaponProperty(param1:Array, param2:int = 0)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._values = param1;
          this.order = param2;
       }

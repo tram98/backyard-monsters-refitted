@@ -20,7 +20,7 @@ package
       
       public function MapRoom3BookmarksPopup()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

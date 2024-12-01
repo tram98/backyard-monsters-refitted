@@ -27,7 +27,7 @@ package com.monsters.rewarding
       
       public function RewardLibrary()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function initialize() : void

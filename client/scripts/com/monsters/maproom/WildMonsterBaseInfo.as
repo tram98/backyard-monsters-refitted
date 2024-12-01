@@ -16,7 +16,7 @@ package com.monsters.maproom
       
       public function WildMonsterBaseInfo()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

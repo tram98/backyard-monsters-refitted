@@ -32,7 +32,7 @@ package
       
       public function HousingPersistentMonsterBar_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

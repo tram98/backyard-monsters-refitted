@@ -12,7 +12,7 @@ package com.monsters.baseplanner.popups.transfer
       
       public function BasePlannerLoadPopup()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          tTitle.htmlText = KEYS.Get("basePlanner_loadtitle");
       }
       

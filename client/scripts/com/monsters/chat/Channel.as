@@ -12,7 +12,7 @@ package com.monsters.chat
       
       public function Channel(param1:String, param2:String)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.name = param1;
          this.type = param2;
       }

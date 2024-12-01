@@ -103,7 +103,7 @@ package com.monsters.alliances
       
       public function AllyInfo(param1:Object)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.alliance_id = param1.alliance_id;
          this.name = param1.name;
          this.image = param1.image;

@@ -36,7 +36,7 @@ package
       
       public function Inbox_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

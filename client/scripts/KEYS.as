@@ -26,7 +26,7 @@ package
 
       public function KEYS()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
 
       public static function Setup(language:String = "english"):void

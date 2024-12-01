@@ -14,7 +14,7 @@ package
       
       public function CATAPULTPOPUP_view()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -18,7 +18,7 @@ package
       
       public function popup_infernoemerge_complete()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -36,7 +36,7 @@ package com.monsters.maproom_inferno
       
       public function PushPin()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Setup() : void

@@ -11,7 +11,7 @@ package com.monsters.frontPage.categories
       public function ReplayableEventsCategory()
       {
          this.m_importedData = {};
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          priority = 6;
          name = "Replayable Events";
          _doesViewRepeatedly = false;

@@ -14,7 +14,7 @@ package
       
       public function QUESTITEM()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

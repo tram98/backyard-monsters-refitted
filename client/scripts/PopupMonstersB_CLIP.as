@@ -22,7 +22,7 @@ package
       
       public function PopupMonstersB_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

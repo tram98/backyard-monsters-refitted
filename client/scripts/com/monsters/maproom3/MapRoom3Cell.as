@@ -59,7 +59,7 @@ package com.monsters.maproom3
       
       public function MapRoom3Cell(param1:int, param2:int, param3:int, param4:int)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          if(param4 == -1)
          {
             param4 = int(EnumYardType.EMPTY);

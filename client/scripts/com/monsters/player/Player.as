@@ -60,7 +60,7 @@ package com.monsters.player
       {
          this._handlers = Vector.<IHandler>([RewardHandler.instance,KOTHHandler.instance,SubscriptionHandler.instance,BaseBuffHandler.instance]);
          this.m_upgrades = {};
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_monsterList = new Vector.<MonsterData>();
          this.m_monsterIndexList = new Array();
          this.m_iMonsterList = new Vector.<MonsterData>();

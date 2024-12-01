@@ -9,7 +9,7 @@ package
       
       public function boneCrusherHit()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -12,7 +12,7 @@ package com.monsters.maproom_advanced
       
       public function PopupInfoMonster()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function Setup(param1:int, param2:int, param3:String, param4:int) : void

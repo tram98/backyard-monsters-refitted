@@ -36,7 +36,7 @@ package com.monsters.maproom.views
       
       public function ListViewItem_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

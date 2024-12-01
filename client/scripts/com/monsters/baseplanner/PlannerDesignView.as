@@ -123,7 +123,7 @@ package com.monsters.baseplanner
       {
          this.fontSize = new Point(14, 12);
          this._windowRect = new Rectangle(35, 65, 565, 425);
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.displayData = param1;
       }
 

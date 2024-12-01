@@ -76,7 +76,7 @@ package com.monsters.maproom3
       
       public function MapRoom3CellGraphic()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_BackgroundLayer = new Sprite();
          this.m_BackgroundLayer.mouseEnabled = false;
          this.m_BackgroundLayer.mouseChildren = false;

@@ -10,7 +10,7 @@ package
       
       public function BUILDING5()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _type = 5;
          _footprint = [new Rectangle(0,0,90,90)];
          _gridCost = [[new Rectangle(0,0,90,90),10],[new Rectangle(10,10,70,70),200]];

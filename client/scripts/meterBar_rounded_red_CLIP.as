@@ -15,7 +15,7 @@ package
       
       public function meterBar_rounded_red_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

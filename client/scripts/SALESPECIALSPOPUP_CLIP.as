@@ -26,7 +26,7 @@ package
       
       public function SALESPECIALSPOPUP_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          addFrameScript(0,this.frame1,1,this.frame2);
       }
       

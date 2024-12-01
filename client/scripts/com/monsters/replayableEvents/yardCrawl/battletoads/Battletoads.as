@@ -28,7 +28,7 @@ package com.monsters.replayableEvents.yardCrawl.battletoads
          _imageURL = "events/creatureCarnage/creatureCarnage_event.v3.png";
          _messages = Vector.<Message>([new BattletoadsPromoMessage1(),new BattletoadsPromoMessage2(),new BattletoadsPromoMessage3(),new BattletoadsStartMessage(),new BattletoadsEndMessage()]);
          _rewardMessage = new BattletoadsRewardMessage();
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       override public function doesQualify() : Boolean

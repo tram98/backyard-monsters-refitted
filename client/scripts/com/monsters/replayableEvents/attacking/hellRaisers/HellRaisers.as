@@ -31,7 +31,7 @@ package com.monsters.replayableEvents.attacking.hellRaisers
          _eventStoreTitleImage = "events/hellraisers/hellraisers_event_store_title.png";
          _imageURL = "events/hellraisers/hellraisers_reward.png";
          _messages = Vector.<Message>([new HellRaisersPromoMessage("hellraiserspop1"),new HellRaisersPromoMessage("hellraiserspop2"),new HellRaisersPromoMessage("hellraiserspop3"),new HellRaisersStartMessage(),new KeywordMessage("hellraisersend")]);
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _originalStartDate = 0;
          _duration = _DEFAULT_EVENT_DURATION;
       }

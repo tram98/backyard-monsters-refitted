@@ -11,7 +11,7 @@ package com.monsters.inventory
       
       public function InventoryManager(param1:InstanceEnforcer)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function buildingStorageAdd(param1:int, param2:int = 0) : void
@@ -95,6 +95,6 @@ final class InstanceEnforcer
    
    public function InstanceEnforcer()
    {
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
    }
 }

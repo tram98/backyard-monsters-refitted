@@ -8,7 +8,7 @@ package as3reflect
       
       public function MetaDataContainer(param1:Array = null)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _metaData = param1 == null ? [] : param1;
       }
       

@@ -20,7 +20,7 @@ package com.monsters.maproom_advanced
       
       public function Tutorial()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.Update();
       }
       

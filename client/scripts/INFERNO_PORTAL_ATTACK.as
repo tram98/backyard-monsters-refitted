@@ -6,7 +6,7 @@ package
       
       public function INFERNO_PORTAL_ATTACK()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function GetVariableCreeps() : Array

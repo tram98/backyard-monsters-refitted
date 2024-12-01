@@ -40,7 +40,7 @@ package
       
       public function popup_catapult_mc()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

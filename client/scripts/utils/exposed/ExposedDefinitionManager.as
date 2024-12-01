@@ -22,7 +22,7 @@ package utils.exposed
       {
          this.m_ExposedPrimitives = new Dictionary();
          this.m_ExposedDefinitions = new Dictionary();
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_ExposedPrimitives[getQualifiedClassName(false)] = Boolean;
          this.m_ExposedPrimitives[getQualifiedClassName(0)] = int;
          this.m_ExposedPrimitives[getQualifiedClassName(0.1)] = Number;

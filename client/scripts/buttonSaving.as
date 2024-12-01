@@ -13,7 +13,7 @@ package
       
       public function buttonSaving()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          addEventListener(MouseEvent.MOUSE_OVER,this.Over);
          addEventListener(MouseEvent.MOUSE_OUT,this.Out);
          addEventListener(Event.ENTER_FRAME,this.Tick);

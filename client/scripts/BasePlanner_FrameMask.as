@@ -9,7 +9,7 @@ package
       
       public function BasePlanner_FrameMask()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

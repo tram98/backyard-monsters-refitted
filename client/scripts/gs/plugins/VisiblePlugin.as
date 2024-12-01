@@ -19,7 +19,7 @@ package gs.plugins
       
       public function VisiblePlugin()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.propName = "visible";
          this.overwriteProps = ["visible"];
          this.onComplete = this.onCompleteTween;

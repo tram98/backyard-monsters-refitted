@@ -22,7 +22,7 @@ package com.monsters.monsters.components.abilities
       
       public function Enrage(param1:Number, param2:Number)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_moveSpeedModifier = new MultiplicationPropertyModifier(param1);
          this.m_attackSpeedModifier = new DivisionModifier(param1);
          this.m_armorModifier = new ArmorPropertyModifier(param2);

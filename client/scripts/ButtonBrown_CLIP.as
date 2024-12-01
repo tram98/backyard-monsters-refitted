@@ -7,7 +7,7 @@ package
       
       public function ButtonBrown_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

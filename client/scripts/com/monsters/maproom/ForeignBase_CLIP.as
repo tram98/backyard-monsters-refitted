@@ -29,7 +29,7 @@ package com.monsters.maproom
       
       public function ForeignBase_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -12,7 +12,7 @@ package
       
       public function buttonReinforcement_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

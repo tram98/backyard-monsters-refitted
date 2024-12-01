@@ -35,7 +35,7 @@ package
       
       public function INFERNO_EMERGENCE_POPUPS()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function ShowUpgrade() : void

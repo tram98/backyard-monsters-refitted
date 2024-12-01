@@ -17,7 +17,7 @@ package
       
       public function SIGNS()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function CreateForBuilding(param1:BFOUNDATION) : void

@@ -29,7 +29,7 @@ package com.monsters.autobanking
       
       public function AutoBankManager(param1:InstanceEnforcer)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          if(!param1)
          {
             throw new Error("AutoBankManager is a static class not to be instantiated");
@@ -380,6 +380,6 @@ final class InstanceEnforcer
    
    public function InstanceEnforcer()
    {
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
    }
 }

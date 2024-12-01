@@ -24,7 +24,7 @@ package com.jac.mouse
       
       public function MouseWheelEnabler()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function init(param1:Stage, param2:Boolean = false) : void
@@ -333,6 +333,6 @@ class MouseWheelEnabler_JavaScript
   public static const CODE: Object = null;
    public function MouseWheelEnabler_JavaScript()
    {
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
    }
 }

@@ -8,7 +8,7 @@ package
       
       public function UI_WILDMONSTERBAR()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          info.addEventListener(MouseEvent.CLICK,this.infoDown);
          tA.htmlText = KEYS.Get("ai_monsterbar_title");
          info.addEventListener(MouseEvent.MOUSE_OVER,this.infoOver);

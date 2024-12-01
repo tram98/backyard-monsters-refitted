@@ -6,7 +6,7 @@ package gs.easing
       
       public function Bounce()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function easeOut(param1:Number, param2:Number, param3:Number, param4:Number) : Number

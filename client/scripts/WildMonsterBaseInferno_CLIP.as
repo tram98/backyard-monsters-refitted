@@ -29,7 +29,7 @@ package
       
       public function WildMonsterBaseInferno_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

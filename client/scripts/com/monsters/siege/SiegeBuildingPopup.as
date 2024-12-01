@@ -61,7 +61,7 @@ package com.monsters.siege
       public function SiegeBuildingPopup(param1:String, param2:String = null)
       {
          this._timer = new Timer(1000);
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          if(param2)
          {
             this._currentWeapon = SiegeWeapons.getWeapon(param2);

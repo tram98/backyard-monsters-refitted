@@ -9,7 +9,7 @@ package
       
       public function magmaTowerHit()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

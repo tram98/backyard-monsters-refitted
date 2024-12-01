@@ -17,7 +17,7 @@ package
       
       public function CHAMPIONSELECTPOPUP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._guardCage = GLOBAL._bCage as CHAMPIONCAGE;
          tTitle.htmlText = KEYS.Get("popup_championselecttitle");
          this.createScrollBar(this.createSlots());

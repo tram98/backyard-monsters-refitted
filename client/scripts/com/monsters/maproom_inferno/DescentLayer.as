@@ -100,7 +100,7 @@ package com.monsters.maproom_inferno
             }
          };
          this.descentBaseIDs = [201,202,203,204,205,206,207];
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.basesForeign = [].concat();
          this.baseData = [].concat();
          this.basesAll = [].concat();

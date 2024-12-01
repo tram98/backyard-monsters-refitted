@@ -23,6 +23,6 @@ final class InstanceEnforcer
    
    public function InstanceEnforcer()
    {
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
    }
 }

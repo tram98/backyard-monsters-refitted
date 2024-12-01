@@ -27,7 +27,7 @@ package
       
       public function GuardTower()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          m_teslaPositions = Vector.<TeslaData>([new TeslaData(new Point(-0.5,-68),new Point(-180,0)),new TeslaData(new Point(58,-37),new Point(-90,90)),new TeslaData(new Point(-0.5,-7),new Point(0,180)),new TeslaData(new Point(-59,-40),k_SPECIAL_ANGLE)]);
          m_teslaDamagedPositions = Vector.<TeslaData>([new TeslaData(new Point(-0.5,-68),new Point(-180,0)),new TeslaData(new Point(58,-26),new Point(-90,90)),new TeslaData(new Point(-6,-7),new Point(0,180)),new TeslaData(new Point(-67,-53),k_SPECIAL_ANGLE)]);
          this.m_teslas = new Vector.<GuardTowerTesla>();
@@ -180,7 +180,7 @@ class GuardTowerTesla implements ITickable
    
    public function GuardTowerTesla(param1:Number, param2:Number, param3:Point, param4:Number = 0)
    {
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       this.m_timeAbleToFire = 0;
       this.m_damage = param1;
       this.m_attackSpeed = param4;
@@ -267,7 +267,7 @@ class TeslaData
    
    public function TeslaData(param1:Point, param2:Point)
    {
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       this.position = param1;
       this.angleRange = param2;
    }

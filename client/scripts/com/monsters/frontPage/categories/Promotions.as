@@ -6,7 +6,7 @@ package com.monsters.frontPage.categories
       
       public function Promotions()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          name = "Promotions";
          priority = 1;
          _doesViewRepeatedly = false;

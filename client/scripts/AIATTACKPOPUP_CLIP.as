@@ -28,7 +28,7 @@ package
       
       public function AIATTACKPOPUP_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -28,7 +28,7 @@ package com.monsters.maproom.views
       
       public function WMListViewItem_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

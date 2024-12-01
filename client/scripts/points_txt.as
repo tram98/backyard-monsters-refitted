@@ -12,7 +12,7 @@ package
       
       public function points_txt()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

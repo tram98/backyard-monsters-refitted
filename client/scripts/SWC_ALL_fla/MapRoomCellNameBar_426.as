@@ -18,7 +18,7 @@ package SWC_ALL_fla
       
       public function MapRoomCellNameBar_426()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          addFrameScript(0,this.frame1);
       }
       

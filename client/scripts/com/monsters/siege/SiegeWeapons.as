@@ -28,7 +28,7 @@ package com.monsters.siege
       
       public function SiegeWeapons()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function getTimeRemaingOnActiveWeapon() : Number

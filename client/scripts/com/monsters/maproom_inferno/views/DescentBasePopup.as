@@ -23,7 +23,7 @@ package com.monsters.maproom_inferno.views
       
       public function DescentBasePopup()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function initWithTitleAndButtons(param1:String, param2:Array, param3:Array) : void

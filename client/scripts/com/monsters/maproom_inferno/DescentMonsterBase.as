@@ -63,7 +63,7 @@ package com.monsters.maproom_inferno
       
       public function DescentMonsterBase()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.popUp = new DescentBasePopup();
          this.popUp.tDepth.htmlText = "<b>" + KEYS.Get("descent_depthBar") + "</b>";
          this.popUp.x = 20;

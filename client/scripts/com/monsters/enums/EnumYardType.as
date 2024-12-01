@@ -26,7 +26,7 @@ package com.monsters.enums
       
       public function EnumYardType()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -13,7 +13,7 @@ package com.monsters.creep_types
       public function CreepTypeManager(param1:SingletonLock)
       {
          this.m_CreepTypes = new Vector.<CreepType>();
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function get instance() : CreepTypeManager

@@ -46,7 +46,7 @@ package com.monsters.ai
       
       public function Solution(param1:Number, param2:Number, param3:Number)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          var _loc4_:Number = 0.0174532925;
          this.degrees = param1;
          this.entryPoint = new Point(param2 * Math.cos(param1 * _loc4_),param3 * Math.sin(param1 * _loc4_));

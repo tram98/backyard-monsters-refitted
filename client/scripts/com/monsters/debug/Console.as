@@ -24,7 +24,7 @@ package com.monsters.debug
       
       public function Console()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function initialize(param1:Stage) : void

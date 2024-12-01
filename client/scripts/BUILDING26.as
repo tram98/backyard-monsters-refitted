@@ -21,7 +21,7 @@ package
       
       public function BUILDING26()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _type = 26;
          _footprint = BASE.isInfernoMainYardOrOutpost ? [new Rectangle(0,0,80,80)] : [new Rectangle(0,0,100,100)];
          _gridCost = [[new Rectangle(0,0,100,100),10],[new Rectangle(10,10,80,80),200]];

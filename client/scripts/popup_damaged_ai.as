@@ -24,7 +24,7 @@ package
       
       public function popup_damaged_ai()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

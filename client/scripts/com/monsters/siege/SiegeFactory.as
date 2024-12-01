@@ -16,7 +16,7 @@ package com.monsters.siege
       {
          _type = ID;
          GLOBAL._bSiegeFactory = this;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Show() : void

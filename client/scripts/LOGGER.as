@@ -18,7 +18,7 @@ package
       
       public function LOGGER()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Log(logType:String, message:String, param3:Boolean = false) : void

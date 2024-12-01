@@ -15,7 +15,7 @@ package com.monsters.baseplanner.components
       
       public function PlannerExplorerButton(param1:PlannerNode)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._nodeList = new Vector.<PlannerNode>();
          mc = new BasePlannerPopup_ExplorerItem_Type();
          addChild(mc);

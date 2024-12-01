@@ -8,7 +8,7 @@ package com.monsters.frontPage.categories
       
       public function WhatsAvailable()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          priority = 3;
          name = "What\'s Available";
          _doesViewRepeatedly = false;

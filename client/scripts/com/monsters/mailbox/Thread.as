@@ -87,7 +87,7 @@ package com.monsters.mailbox
             "maskHeight":300,
             "smallOutlineVisible":true
          };
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          mask_mc.visible = false;
          removeChild(sendBtn);
          removeChild(acceptBtn);

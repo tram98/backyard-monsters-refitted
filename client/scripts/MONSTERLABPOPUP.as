@@ -96,7 +96,7 @@ package
          var _loc2_:int = 0;
          var _loc3_:int = 0;
          var _loc4_:int = 0;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.tf_title = title_txt;
          this.tf_statusTitle = tStatusTitle;
          this.tf_statusDesc = tStatusDesc;

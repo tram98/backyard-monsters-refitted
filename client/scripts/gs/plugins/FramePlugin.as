@@ -17,7 +17,7 @@ package gs.plugins
       
       public function FramePlugin()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.propName = "frame";
          this.overwriteProps = ["frame"];
          this.round = true;

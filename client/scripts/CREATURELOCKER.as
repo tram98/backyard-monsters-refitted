@@ -52,7 +52,7 @@ package
       
       public function CREATURELOCKER()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function get _creatures() : Object

@@ -10,7 +10,7 @@ package
       
       public function BHEAVYTRAP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       override public function FindTargets() : void

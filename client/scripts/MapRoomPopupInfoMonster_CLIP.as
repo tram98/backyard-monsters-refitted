@@ -14,7 +14,7 @@ package
       
       public function MapRoomPopupInfoMonster_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -16,7 +16,7 @@ package
       
       public function OutpostDefender()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          colorData = Vector.<ColorData>([new ColorData("self.light.png"),new ColorData("enemy.light.png"),new ColorData("ally.light.png"),new ColorData("neutral.light.png")]);
          _animRandomStart = false;
          _footprint = [new Rectangle(0,0,130,130)];
@@ -57,7 +57,7 @@ class ColorData
    
    public function ColorData(param1:String)
    {
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       this.lightAnimation = "buildings/outpostdefender/" + param1;
    }
 }

@@ -30,7 +30,7 @@ package
       
       public function EventStoreDisplayItem()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

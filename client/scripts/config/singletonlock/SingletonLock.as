@@ -6,7 +6,7 @@ package config.singletonlock
       
       public function SingletonLock()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

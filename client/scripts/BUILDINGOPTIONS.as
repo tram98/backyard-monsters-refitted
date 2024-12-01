@@ -17,7 +17,7 @@ package
       
       public function BUILDINGOPTIONS()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Show(param1:BFOUNDATION, param2:String = "info") : void

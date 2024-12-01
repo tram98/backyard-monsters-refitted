@@ -22,7 +22,7 @@ package com.monsters.monsters.components.abilities
       
       public function AOEEnrage(param1:uint, param2:Number, param3:Number, param4:Number = 0)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_radius = param1;
          this.m_duration = param4;
          this.m_speedMultiplier = param2;

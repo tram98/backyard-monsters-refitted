@@ -49,7 +49,7 @@ package
       
       public function INFERNOAPI(param1:InternalClass)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _infernoapi = this;
       }
       
@@ -244,6 +244,6 @@ class InternalClass
    
    public function InternalClass()
    {
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
    }
 }

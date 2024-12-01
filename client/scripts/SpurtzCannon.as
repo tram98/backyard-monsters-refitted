@@ -49,7 +49,7 @@ package
       
       public function SpurtzCannon(param1:int = 0)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _animRandomStart = false;
          _top = -32;
          _footprint = [new Rectangle(0,0,70,70)];

@@ -13,7 +13,7 @@ package com.adobe.crypto
       
       public function MD5()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function hash(param1:String) : String

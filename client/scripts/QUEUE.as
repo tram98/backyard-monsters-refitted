@@ -25,7 +25,7 @@ package
       
       public function QUEUE()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Setup() : void

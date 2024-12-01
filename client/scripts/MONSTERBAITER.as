@@ -35,7 +35,7 @@ package
       
       public function MONSTERBAITER()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Tick() : void

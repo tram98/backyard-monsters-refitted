@@ -662,7 +662,7 @@ package com.monsters.monsters.creeps.rebalance
       
       public function RebalancedCreatures()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -10,7 +10,7 @@ package com.monsters.chat
       
       public function UserRecord(param1:String, param2:String = null)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.name = param2;
          this.id = param1;
       }

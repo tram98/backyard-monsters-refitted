@@ -42,7 +42,7 @@ package com.monsters.display
       
       public function ImageCache()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          if(allowInstantiation)
          {
             load = [].concat();

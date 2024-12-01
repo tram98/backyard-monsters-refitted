@@ -17,7 +17,7 @@ package
       
       public function BUILDING14()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _type = 14;
          _footprint = BASE.isInfernoMainYardOrOutpost ? [new Rectangle(0,0,160,160)] : [new Rectangle(0,0,130,130)];
          _gridCost = BASE.isInfernoMainYardOrOutpost ? [[new Rectangle(0,0,160,160),10],[new Rectangle(10,10,140,140),200]] : [[new Rectangle(0,0,130,130),10],[new Rectangle(10,10,110,110),200]];

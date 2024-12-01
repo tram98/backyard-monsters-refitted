@@ -19,7 +19,7 @@ package com.monsters.projectiles.projectileComponents
       
       public function GlaiveProjectileComponent(param1:uint, param2:uint, param3:Number = 0)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_targetsLeft = param1;
          this.m_targetFlags = param3;
          this.m_targetsAlreadyHit = new Vector.<IAttackable>();

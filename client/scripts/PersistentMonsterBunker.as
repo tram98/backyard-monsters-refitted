@@ -56,7 +56,7 @@ package
       public function PersistentMonsterBunker()
       {
          var _loc1_:MovieClip = null;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_bunker = GLOBAL._selectedBuilding;
          this._capacity = GLOBAL._buildingProps[21].capacity[this.m_bunker._lvl.Get() - 1];
          this._selected = {};

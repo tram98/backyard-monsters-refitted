@@ -6,7 +6,7 @@ package org
       
       public function commons()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

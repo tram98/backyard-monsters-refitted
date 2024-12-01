@@ -6,7 +6,7 @@ package com.monsters.frontPage.categories
       
       public function ProTips()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          priority = 6;
          name = "Pro-Tips";
       }

@@ -8,7 +8,7 @@ package
       
       public function STOREPOPUP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function Hide(param1:MouseEvent = null) : void

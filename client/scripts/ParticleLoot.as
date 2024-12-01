@@ -13,7 +13,7 @@ package
       
       public function ParticleLoot(param1:BFOUNDATION, param2:int, param3:int)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          if(!GLOBAL._catchup)
          {
             this._building = param1;

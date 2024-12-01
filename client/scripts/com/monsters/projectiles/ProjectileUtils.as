@@ -15,7 +15,7 @@ package com.monsters.projectiles
       
       public function ProjectileUtils()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function getFireballBitmapData() : BitmapData

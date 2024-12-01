@@ -20,7 +20,7 @@ package com.monsters.replayableEvents.looting
          _titleImage = "events/koth/koth_title.png";
          _imageURL = "events/koth/koth_reward.png";
          _messages = Vector.<Message>([new KOTHPromoMessage1(),new KOTHPromoMessage2(),new KOTHPromoMessage3(),new KOTHStartMessage(),new DebugMessage()]);
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _originalStartDate = 1339441200;
          _duration = 604800;
       }

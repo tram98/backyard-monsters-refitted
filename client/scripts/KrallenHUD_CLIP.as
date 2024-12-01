@@ -11,7 +11,7 @@ package
       
       public function KrallenHUD_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

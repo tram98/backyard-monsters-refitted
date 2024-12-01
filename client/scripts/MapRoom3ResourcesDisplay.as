@@ -17,7 +17,7 @@ package
       
       public function MapRoom3ResourcesDisplay()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -23,7 +23,7 @@ package
       
       public function INFERNOQUAKETOWER()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _type = 129;
          _top = 40;
          _footprint = [new Rectangle(0,0,70,70)];
@@ -314,7 +314,7 @@ class QuakeGraphic
    
    public function QuakeGraphic(param1:uint, param2:uint)
    {
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       this.graphic = new Shape();
       this.graphic.graphics.lineStyle(0.3,6710988,0.5);
       this.graphic.graphics.drawEllipse(-param1,-param1 / 2,param1 * 2,param1);

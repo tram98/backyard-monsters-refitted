@@ -8,7 +8,7 @@ package com.adobe.utils
       
       public function IntUtil()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function rol(param1:int, param2:int) : int

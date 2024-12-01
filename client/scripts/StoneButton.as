@@ -71,7 +71,7 @@ package
       
       public function StoneButton()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function getButtonWidth() : int

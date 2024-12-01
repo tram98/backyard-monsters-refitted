@@ -27,7 +27,7 @@ package
       
       public function INFERNO_DESCENT_POPUPS()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function ShowTauntDialog(param1:uint) : void
@@ -188,7 +188,7 @@ class InfernoBattleReportPopup extends popup_infernodescent_battle_report
    {
       var _loc5_:String = null;
       var _loc6_:MovieClip = null;
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       tTitle.htmlText = param1;
       tBody.htmlText = param2;
       var _loc4_:int = 0;

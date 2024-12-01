@@ -60,7 +60,7 @@ package
       
       public function screenshot_ui_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

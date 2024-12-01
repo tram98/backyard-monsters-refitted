@@ -9,7 +9,7 @@ package
       
       public function buildinggnomehit()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

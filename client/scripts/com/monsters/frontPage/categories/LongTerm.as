@@ -6,7 +6,7 @@ package com.monsters.frontPage.categories
       
       public function LongTerm()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          priority = 5;
          name = "Long-Term Projects";
       }

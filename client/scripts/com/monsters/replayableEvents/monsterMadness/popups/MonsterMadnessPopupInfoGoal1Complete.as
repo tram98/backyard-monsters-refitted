@@ -9,7 +9,7 @@ package com.monsters.replayableEvents.monsterMadness.popups
       
       public function MonsterMadnessPopupInfoGoal1Complete()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          isOnlySeenOnce = true;
       }
       

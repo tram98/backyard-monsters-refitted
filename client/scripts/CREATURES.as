@@ -23,7 +23,7 @@ package
       
       public function CREATURES()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _creatures = {};
          _creatureID = 0;
          _creatureCount = 0;

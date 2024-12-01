@@ -54,7 +54,7 @@ package com.monsters.maproom3.bookmarks
          this.m_FriendBookmarks = new Vector.<Bookmark>();
          this.m_PlayerResourceBookmarks = new Vector.<Bookmark>();
          this.m_PlayerStrongholdBookmarks = new Vector.<Bookmark>();
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function get instance() : BookmarksManager

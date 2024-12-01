@@ -10,7 +10,7 @@ package com.monsters.subscriptions.ui.controlPanel
       
       public function SubscriptionCancelPopup()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          tTitle.htmlText = KEYS.Get("dc_panel_cancel");
          tDesc.htmlText = KEYS.Get("dc_cancel_confirmation");
          bConfirm.Highlight = false;

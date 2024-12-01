@@ -28,7 +28,7 @@ package com.monsters.maproom_advanced
       
       public function PopupInfoMine()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          x = 760 / 2 + 75;
          y = 520 / 2;
          mMonsters.mask = mMonstersMask;

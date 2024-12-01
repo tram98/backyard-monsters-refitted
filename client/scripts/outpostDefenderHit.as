@@ -9,7 +9,7 @@ package
       
       public function outpostDefenderHit()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

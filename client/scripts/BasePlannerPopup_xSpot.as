@@ -9,7 +9,7 @@ package
       
       public function BasePlannerPopup_xSpot()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

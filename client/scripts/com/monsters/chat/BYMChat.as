@@ -92,7 +92,7 @@ package com.monsters.chat
       public function BYMChat(param1:ChatBox, param2:String)
       {
          this.messageQueue = new Array();
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.chatBox = param1;
          addChild(param1 as MovieClip);
          param1.addEventListener(KeyboardEvent.KEY_DOWN,this.keyboardEventHandler);

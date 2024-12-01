@@ -15,7 +15,7 @@ package com.monsters.monsters.components
       
       public function Component()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function register(param1:MonsterBase, param2:String = null) : void

@@ -6,7 +6,7 @@ package com.monsters.configs
       
       public function InstanceEnforcer()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

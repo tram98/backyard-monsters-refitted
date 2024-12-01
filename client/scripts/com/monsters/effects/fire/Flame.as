@@ -82,7 +82,7 @@ package com.monsters.effects.fire
       {
          var _loc9_:Particle = null;
          var _loc10_:Particle = null;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._emitter = param1;
          this._width = param2;
          this._height = param3;

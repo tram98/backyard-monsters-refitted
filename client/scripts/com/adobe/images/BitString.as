@@ -10,7 +10,7 @@ package com.adobe.images
       
       public function BitString()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

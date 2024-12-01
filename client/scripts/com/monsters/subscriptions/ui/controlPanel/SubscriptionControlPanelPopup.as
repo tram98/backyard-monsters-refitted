@@ -29,7 +29,7 @@ package com.monsters.subscriptions.ui.controlPanel
       
       public function SubscriptionControlPanelPopup()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.setup();
          tDavesGold_title.htmlText = KEYS.Get("dc_panel_golddave");
          mcDave1.gotoAndStop(1);

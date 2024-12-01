@@ -9,7 +9,7 @@ package
       
       public function sniperTowerHit()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

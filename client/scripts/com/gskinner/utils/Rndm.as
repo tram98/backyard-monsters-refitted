@@ -18,7 +18,7 @@ package com.gskinner.utils
       
       public function Rndm(param1:uint = 0)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._seed = param1;
          this.bmpd = new BitmapData(1000,200);
       }

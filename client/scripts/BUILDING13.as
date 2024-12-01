@@ -16,7 +16,7 @@ package
       
       public function BUILDING13()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._frameNumber = 0;
          _type = 13;
          _inProduction = "";

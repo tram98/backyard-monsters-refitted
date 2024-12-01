@@ -9,7 +9,7 @@ package
       
       public function emptyMc()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -11,7 +11,7 @@ package com.monsters.maproom
       
       public function MiniMap_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -9,7 +9,7 @@ package
       
       public function popup_bg2()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

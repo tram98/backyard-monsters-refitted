@@ -34,7 +34,7 @@ package com.monsters.radio
       
       public function RADIO()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Setup(param1:Object = null) : void

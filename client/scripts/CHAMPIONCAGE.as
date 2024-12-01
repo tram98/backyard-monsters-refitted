@@ -273,7 +273,7 @@ package
       
       public function CHAMPIONCAGE()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _type = 114;
          _footprint = [new Rectangle(0,0,160,160)];
          _gridCost = [[new Rectangle(10,10,140,20),400],[new Rectangle(130,30,20,120),400],[new Rectangle(10,30,20,120),400],[new Rectangle(30,130,30,20),400],[new Rectangle(100,130,30,20),400]];

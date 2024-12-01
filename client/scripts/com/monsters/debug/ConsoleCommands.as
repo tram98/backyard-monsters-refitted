@@ -27,7 +27,7 @@ package com.monsters.debug
    {
       public function ConsoleCommands()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
 
       public static function initialize():void

@@ -28,7 +28,7 @@ package
       
       public function CATAPULTPOPUP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Format(param1:Number, param2:Boolean = false) : String

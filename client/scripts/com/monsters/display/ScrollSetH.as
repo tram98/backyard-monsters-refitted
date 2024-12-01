@@ -22,7 +22,7 @@ package com.monsters.display
       
       public function ScrollSetH(param1:DisplayObject, param2:DisplayObject, param3:Boolean = false)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._content = param1;
          this._mask = param2;
          this._scroller = mcScroller;

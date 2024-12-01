@@ -32,7 +32,7 @@ package com.monsters.maproom
       
       public function MapRoom()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function init(param1:Object) : void

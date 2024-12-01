@@ -9,7 +9,7 @@ package
       
       public function doodad_mushroom_shadow()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

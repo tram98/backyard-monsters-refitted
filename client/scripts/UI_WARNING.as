@@ -6,7 +6,7 @@ package
       
       public function UI_WARNING()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function Update(param1:String) : void

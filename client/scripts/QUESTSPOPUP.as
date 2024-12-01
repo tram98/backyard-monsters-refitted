@@ -31,7 +31,7 @@ package
       public function QUESTSPOPUP()
       {
          var _loc2_:Object = null;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._groupID = -1;
          this._questID = "";
          this.ListGroups();

@@ -30,7 +30,7 @@ package
       
       public function BSTORAGE()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       override public function Loot(param1:int) : uint

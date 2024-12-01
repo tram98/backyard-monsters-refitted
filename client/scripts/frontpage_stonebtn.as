@@ -14,7 +14,7 @@ package
       
       public function frontpage_stonebtn()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

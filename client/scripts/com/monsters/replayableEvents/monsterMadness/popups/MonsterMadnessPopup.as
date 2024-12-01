@@ -33,7 +33,7 @@ package com.monsters.replayableEvents.monsterMadness.popups
       public function MonsterMadnessPopup()
       {
          var _loc3_:String = null;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          var _loc1_:int = this.getUserState();
          var _loc2_:MonsterMadnessPopupInfo = _infoSets[getSetIndex()];
          this.infoIndex = _infoSets.indexOf(_loc2_);

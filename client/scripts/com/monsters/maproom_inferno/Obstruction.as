@@ -14,7 +14,7 @@ package com.monsters.maproom_inferno
       
       public function Obstruction()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Clear() : void

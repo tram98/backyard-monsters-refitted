@@ -30,7 +30,7 @@ package com.monsters.maproom_inferno
       
       public function DescentMapRoom()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function init(param1:Object) : void

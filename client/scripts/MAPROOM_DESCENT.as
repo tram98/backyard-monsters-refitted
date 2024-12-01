@@ -66,7 +66,7 @@ package
       
       public function MAPROOM_DESCENT()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Setup(param1:Boolean = false) : void

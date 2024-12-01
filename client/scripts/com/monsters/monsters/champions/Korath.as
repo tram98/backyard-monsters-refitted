@@ -281,7 +281,7 @@ class G4QuakeGraphic
    public function G4QuakeGraphic(param1:uint, param2:uint, param3:Point = null)
    {
       var _loc5_:Sprite = null;
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       this.graphic = new Shape();
       this.graphic.graphics.lineStyle(0.3,15893760,0.5);
       this.graphic.graphics.drawEllipse(-param1,-param1 / 2,param1 * 2,param1);

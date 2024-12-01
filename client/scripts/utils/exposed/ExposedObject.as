@@ -10,7 +10,7 @@ package utils.exposed
       
       public function ExposedObject()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       internal function get id() : String

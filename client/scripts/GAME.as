@@ -48,7 +48,7 @@ package
          var serverUrl:String = GLOBAL.serverUrl;
          var apiVersionSuffix:String = GLOBAL.apiVersionSuffix;
          var cdnUrl:String = GLOBAL.cdnUrl;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _instance = this;
          GLOBAL._local = !ExternalInterface.available;
          ReferencedExposedStructures.Include();

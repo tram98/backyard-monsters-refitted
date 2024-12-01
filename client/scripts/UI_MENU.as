@@ -37,7 +37,7 @@ package
       
       public function UI_MENU()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.bBuild = new StoneButton();
          this.bQuests = new StoneButton();
          this.bStore = new StoneButton();

@@ -17,7 +17,7 @@ package com.monsters.monsters.components.abilities
       
       public function AOEDamage(param1:uint, param2:int, param3:uint = 4294967295)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_radius = param1;
          this.m_maxTargets = param3;
          this.m_targetFlags = param2;

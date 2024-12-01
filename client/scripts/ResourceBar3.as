@@ -20,7 +20,7 @@ package
       
       public function ResourceBar3()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

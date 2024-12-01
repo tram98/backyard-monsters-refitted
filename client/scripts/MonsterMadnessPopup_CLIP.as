@@ -24,7 +24,7 @@ package
       
       public function MonsterMadnessPopup_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

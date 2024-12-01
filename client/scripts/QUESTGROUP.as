@@ -12,7 +12,7 @@ package
       
       public function QUESTGROUP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

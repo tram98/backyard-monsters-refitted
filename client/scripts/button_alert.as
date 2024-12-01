@@ -13,7 +13,7 @@ package
       
       public function button_alert()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

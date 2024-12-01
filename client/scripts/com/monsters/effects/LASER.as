@@ -51,7 +51,7 @@ package com.monsters.effects
       
       public function LASER()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function Fire(param1:MovieClip, param2:Point, param3:Point, param4:int, param5:Number, param6:Number, param7:Function) : void

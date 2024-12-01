@@ -9,7 +9,7 @@ package
       
       public function townHallHit()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

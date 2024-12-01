@@ -33,7 +33,7 @@ package com.cc.screenshot
       {
          this.offsetPoint = new Point(-20,-20);
          this.presets = [["Normal",0,0,0,0,0,0],["B&W",10,10,-100,0,0,1],["B&W 2",0,40,-100,0,0,1],["Toy",0,0,10,60,0,2],["Toy 2",10,30,20,60,0,2],["Old",10,40,-30,10,1,3]];
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          mcImage.addEventListener(MouseEvent.MOUSE_DOWN,this.DragStart);
          mcImage.addEventListener(MouseEvent.MOUSE_UP,this.DragStop);
          bBrightnessDown.Setup("-");

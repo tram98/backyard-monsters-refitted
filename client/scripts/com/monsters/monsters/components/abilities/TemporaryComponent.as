@@ -15,7 +15,7 @@ package com.monsters.monsters.components.abilities
       
       public function TemporaryComponent(param1:Component, param2:Number)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_temporaryComponent = param1;
          this.m_durationInSeconds = param2;
          this.m_timeToRemove = GLOBAL.Timestamp() + param2;

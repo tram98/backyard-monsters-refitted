@@ -30,7 +30,7 @@ package
       
       public function InboxMessage_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -14,7 +14,7 @@ package com.monsters.monsters.components.modifiers
       
       public function BeastMode()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

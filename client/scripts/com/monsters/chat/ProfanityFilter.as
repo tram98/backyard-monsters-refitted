@@ -8,7 +8,7 @@ package com.monsters.chat
       
       public function ProfanityFilter()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function filterMessage(param1:String) : String

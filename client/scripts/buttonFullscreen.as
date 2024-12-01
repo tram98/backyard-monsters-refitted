@@ -13,7 +13,7 @@ package
       
       public function buttonFullscreen()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          addEventListener(MouseEvent.CLICK,this.Click);
          addEventListener(MouseEvent.MOUSE_OVER,this.Over);
          addEventListener(MouseEvent.MOUSE_OUT,this.Out);

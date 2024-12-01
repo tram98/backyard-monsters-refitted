@@ -14,7 +14,7 @@ package
       
       public function PLEASEWAITMC()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

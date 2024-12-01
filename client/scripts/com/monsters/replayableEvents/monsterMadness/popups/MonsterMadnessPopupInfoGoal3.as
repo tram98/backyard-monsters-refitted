@@ -8,7 +8,7 @@ package com.monsters.replayableEvents.monsterMadness.popups
       
       public function MonsterMadnessPopupInfoGoal3()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       override public function getCopy(param1:int) : String

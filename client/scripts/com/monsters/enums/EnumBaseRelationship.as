@@ -16,7 +16,7 @@ package com.monsters.enums
       
       public function EnumBaseRelationship()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

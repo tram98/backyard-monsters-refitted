@@ -18,7 +18,7 @@ package
       
       public function popup_infernoemerge_roundover()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -22,7 +22,7 @@ package
       
       public function subscriptions_membership_popup()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

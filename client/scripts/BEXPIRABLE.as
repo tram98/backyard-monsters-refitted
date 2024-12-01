@@ -12,7 +12,7 @@ package
       
       public function BEXPIRABLE()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       override public function Tick(param1:int) : void

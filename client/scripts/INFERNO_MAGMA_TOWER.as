@@ -32,7 +32,7 @@ package
       public function INFERNO_MAGMA_TOWER()
       {
          this._targetArray = [4,4,6,8,10,12];
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _frameNumber = 0;
          _type = 132;
          _top = -30;

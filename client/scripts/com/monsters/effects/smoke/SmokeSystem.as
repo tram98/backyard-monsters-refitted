@@ -20,7 +20,7 @@ package com.monsters.effects.smoke
       
       public function SmokeSystem()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

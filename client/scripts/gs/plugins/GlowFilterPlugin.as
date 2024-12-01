@@ -14,7 +14,7 @@ package gs.plugins
       
       public function GlowFilterPlugin()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.propName = "glowFilter";
          this.overwriteProps = ["glowFilter"];
       }

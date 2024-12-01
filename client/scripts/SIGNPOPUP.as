@@ -55,7 +55,7 @@ package
       
       public function SIGNPOPUP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          addEventListener(Event.ADDED_TO_STAGE,this.onAdd);
          addEventListener(Event.REMOVED_FROM_STAGE,this.onRemoved);
          this.timer = new Timer(100);

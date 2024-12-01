@@ -13,7 +13,7 @@ package com.monsters.subscriptions.ui.controlPanel
       public function MembershipPopup()
       {
          var _loc1_:Boolean = false;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _loc1_ = this.subscriptionActive();
          tTitle.htmlText = KEYS.Get("dc_panel_benefits");
          tDescription.htmlText = KEYS.Get("dc_benefits_desc");

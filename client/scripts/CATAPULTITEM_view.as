@@ -11,7 +11,7 @@ package
       
       public function CATAPULTITEM_view()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

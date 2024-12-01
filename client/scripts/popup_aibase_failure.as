@@ -18,7 +18,7 @@ package
       
       public function popup_aibase_failure()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

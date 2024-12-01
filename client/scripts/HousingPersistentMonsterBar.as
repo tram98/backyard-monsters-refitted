@@ -14,7 +14,7 @@ package
       
       public function HousingPersistentMonsterBar(param1:String)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_creatureID = param1;
       }
       

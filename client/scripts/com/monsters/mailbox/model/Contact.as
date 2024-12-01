@@ -22,7 +22,7 @@ package com.monsters.mailbox.model
       
       public function Contact(param1:String, param2:Object, param3:Boolean = false)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.userid = int(param1);
          this.firstname = param2.first_name;
          this.lastname = param2.last_name;

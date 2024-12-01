@@ -32,7 +32,7 @@ package
       
       public function QUESTS()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function get amountCompleted() : int

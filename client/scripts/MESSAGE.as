@@ -22,7 +22,7 @@ package
       
       public function MESSAGE()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function Show(param1:String = null, param2:String = null, param3:Function = null, param4:Array = null, param5:String = null, param6:Function = null, param7:Array = null, param8:int = 1, param9:Boolean = true) : MESSAGE

@@ -14,7 +14,7 @@ package com.monsters.maproom3.popups
       
       public function MapRoom3ConfirmMigrationPopup(param1:SingletonLock)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function get instance() : MapRoom3ConfirmMigrationPopup

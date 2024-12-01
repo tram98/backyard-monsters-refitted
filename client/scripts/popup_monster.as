@@ -20,7 +20,7 @@ package
       
       public function popup_monster()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

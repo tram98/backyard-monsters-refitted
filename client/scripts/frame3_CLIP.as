@@ -7,7 +7,7 @@ package
       
       public function frame3_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

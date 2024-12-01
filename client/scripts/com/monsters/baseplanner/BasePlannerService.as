@@ -9,7 +9,7 @@ package com.monsters.baseplanner
       
       public function BasePlannerService()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function callServerMethod(url:String, keyValue:Array, onComplete:Function = null) : void

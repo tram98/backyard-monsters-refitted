@@ -17,7 +17,7 @@ package
       
       public function BasePlannerPopup_DisplayViewContainer()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

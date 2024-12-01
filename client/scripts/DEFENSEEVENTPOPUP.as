@@ -33,7 +33,7 @@ package
             mcImage.width = 200;
             mcImage.height = 200;
          };
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          if(popupnum == -1)
          {
             popupnum = Math.floor(Math.random() * 3) + 1;

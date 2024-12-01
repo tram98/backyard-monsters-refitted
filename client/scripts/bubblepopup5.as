@@ -14,7 +14,7 @@ package
       
       public function bubblepopup5()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

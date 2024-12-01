@@ -68,7 +68,7 @@ package
       {
          this._healthBarSource = new bmp_healthbarlarge();
          this._healthBar = new BitmapData(50,6,true,0);
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Format(param1:Number, param2:Boolean = false) : String

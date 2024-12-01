@@ -12,7 +12,7 @@ package
       
       public function BUILDINGBUTTONSOON()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

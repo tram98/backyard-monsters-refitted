@@ -16,7 +16,7 @@ package
       
       public function BasePlannerPopup_ExplorerItem_Type()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

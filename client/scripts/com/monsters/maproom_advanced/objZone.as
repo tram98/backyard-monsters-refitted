@@ -10,7 +10,7 @@ package com.monsters.maproom_advanced
       
       public function objZone()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

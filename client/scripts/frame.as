@@ -44,7 +44,7 @@ package
       
       public function frame(param1:Boolean = true)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          if(param1)
          {
             this.Setup();

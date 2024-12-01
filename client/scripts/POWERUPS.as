@@ -42,7 +42,7 @@ package
       
       public function POWERUPS()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Setup(param1:Array = null, param2:Array = null, param3:Boolean = false) : void

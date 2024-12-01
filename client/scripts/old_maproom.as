@@ -17,7 +17,7 @@ package
       
       public function old_maproom()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          addFrameScript(0,this.frame1);
       }
       

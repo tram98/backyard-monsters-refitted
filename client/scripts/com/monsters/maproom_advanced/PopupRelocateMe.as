@@ -25,7 +25,7 @@ package com.monsters.maproom_advanced
       
       public function PopupRelocateMe()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function Setup(param1:MapRoomCell, param2:String = "outpost") : void

@@ -16,7 +16,7 @@ package com.monsters.subscriptions.rewards
       
       public function GoldenDAVEReward()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       override protected function onApplication() : void

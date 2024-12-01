@@ -42,7 +42,7 @@ package com.monsters.maproom_advanced
          var costMC:MovieClip = null;
          var colorString:String = null;
          var cell:MapRoomCell = param1;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          ImageLoaded = function(param1:String, param2:BitmapData):void
          {
             mcImage.addChild(new Bitmap(param2));

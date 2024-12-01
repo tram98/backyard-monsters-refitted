@@ -27,7 +27,7 @@ package com.monsters.maproom3.bookmarks
       
       public function BookmarksDisplayList(param1:Vector.<Bookmark>, param2:Function, param3:int = -1)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_BookmarksToDisplay = param1;
          this.m_BookmarkDisplayFactory = param2;
          this.m_Container = new Sprite();

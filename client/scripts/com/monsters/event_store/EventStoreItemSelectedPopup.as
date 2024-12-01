@@ -22,7 +22,7 @@ package com.monsters.event_store
       
       public function EventStoreItemSelectedPopup(param1:SingletonLock)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_TitleImage = new Bitmap();
          titleImageHolder.addChild(this.m_TitleImage);
          this.m_PreviewImage = new Bitmap();

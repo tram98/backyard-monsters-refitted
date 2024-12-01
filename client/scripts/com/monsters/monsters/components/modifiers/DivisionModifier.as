@@ -10,7 +10,7 @@ package com.monsters.monsters.components.modifiers
       
       public function DivisionModifier(param1:Number)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.divisor = param1;
       }
       

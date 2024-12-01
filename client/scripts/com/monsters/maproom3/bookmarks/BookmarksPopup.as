@@ -10,7 +10,7 @@ package com.monsters.maproom3.bookmarks
       
       public function BookmarksPopup()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          titleText.text = KEYS.Get("mr3_bookmarks_popup_title");
          contentsFrame.mouseEnabled = false;
          contentsMask.mouseEnabled = false;

@@ -55,7 +55,7 @@ package com.monsters.siege.weapons
       {
          this._quantity = new SecNum(0);
          this._level = new SecNum(0);
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._properties = {};
          this.image = _IMAGE_FOLDER_URL + this.weaponID + ".png";
          this.icon = _ICON_FOLDER_URL + "siege_icon_" + this.weaponID + ".png";

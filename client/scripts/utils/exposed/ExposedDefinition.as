@@ -24,7 +24,7 @@ package utils.exposed
       public function ExposedDefinition(param1:ExposedStructure)
       {
          this.m_ExposedAccessors = new Dictionary();
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          var _loc2_:XML = describeType(param1);
          this.m_QualifiedClassName = _loc2_.@name;
          this.m_ClassType = getDefinitionByName(this.m_QualifiedClassName) as Class;

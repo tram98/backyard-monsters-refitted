@@ -9,7 +9,7 @@ package
       
       public function map_bg_inferno()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

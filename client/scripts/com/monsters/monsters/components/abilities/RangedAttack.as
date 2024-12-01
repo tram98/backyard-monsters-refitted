@@ -29,7 +29,7 @@ package com.monsters.monsters.components.abilities
       
       public function RangedAttack(param1:uint, param2:int, param3:int, param4:Projectilev2)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_range = param1;
          this.m_rechargeDuration = param2;
          this.m_projectile = param4;

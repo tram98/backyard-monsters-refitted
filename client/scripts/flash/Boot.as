@@ -23,7 +23,7 @@ package flash
       
       public function Boot()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          if(Boot.skip_constructor)
          {
             return;

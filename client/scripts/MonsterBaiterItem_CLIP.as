@@ -21,7 +21,7 @@ package
       
       public function MonsterBaiterItem_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

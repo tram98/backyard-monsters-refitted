@@ -38,7 +38,7 @@ package
          var _loc3_:* = false;
          var _loc4_:String = null;
          var _loc5_:int = 0;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          bPrevious.SetupKey("btn_previous");
          bPrevious.addEventListener(MouseEvent.CLICK,this.PagePrevious);
          bNext.SetupKey("btn_next");

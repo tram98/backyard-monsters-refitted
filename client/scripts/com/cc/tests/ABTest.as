@@ -8,7 +8,7 @@ package com.cc.tests
       
       public function ABTest()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function isInTestGroup(param1:String, param2:int) : Boolean

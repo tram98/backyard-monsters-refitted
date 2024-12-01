@@ -43,7 +43,7 @@ package as3reflect
       
       public function Type()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _methods = new Array();
          _accessors = new Array();
          _staticConstants = new Array();
@@ -293,7 +293,7 @@ class TypeXmlParser
    
    public function TypeXmlParser()
    {
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
    }
    
    public static function parseMetaData(param1:XMLList, param2:IMetaDataContainer) : void

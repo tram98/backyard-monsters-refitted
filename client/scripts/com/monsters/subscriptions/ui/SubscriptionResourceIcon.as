@@ -6,7 +6,7 @@ package com.monsters.subscriptions.ui
       
       public function SubscriptionResourceIcon(param1:Boolean)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.update(param1);
          buttonMode = true;
          mouseChildren = false;

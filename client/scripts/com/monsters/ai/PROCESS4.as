@@ -21,7 +21,7 @@ package com.monsters.ai
       
       public function PROCESS4()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function Trigger(param1:Number = 1) : void

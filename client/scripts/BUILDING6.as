@@ -24,7 +24,7 @@ package
       
       public function BUILDING6()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._frameNumber = 0;
          _type = 6;
          _footprint = [new Rectangle(0,0,80,80)];

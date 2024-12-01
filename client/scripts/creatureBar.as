@@ -11,7 +11,7 @@ package
       
       public function creatureBar()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

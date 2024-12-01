@@ -24,7 +24,7 @@ package
       public function CREATUREBUTTON(param1:String, param2:int, param3:DisplayObjectContainer)
       {
          var _loc4_:String = null;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._creatureID = param1;
          this._creatureData = CREATURELOCKER._creatures[this._creatureID];
          ImageCache.GetImageWithCallBack("monsters/" + this._creatureID + "-small.png",this.IconLoaded,true,1);

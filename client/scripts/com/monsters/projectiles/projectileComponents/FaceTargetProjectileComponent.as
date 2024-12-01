@@ -14,7 +14,7 @@ package com.monsters.projectiles.projectileComponents
       
       public function FaceTargetProjectileComponent(param1:Projectilev2, param2:SpriteSheetAnimation)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_animation = param2;
          this.m_projectile = param1;
       }

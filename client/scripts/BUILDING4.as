@@ -21,7 +21,7 @@ package
       public function BUILDING4()
       {
          this._frameNumber = Math.random() * 5;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._frameNumber = int(Math.random() * 5);
          _type = 4;
          _footprint = [new Rectangle(0,0,70,70)];

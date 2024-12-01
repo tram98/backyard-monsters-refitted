@@ -22,7 +22,7 @@ package
       
       public function BUILDING27()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _type = 27;
          _footprint = [new Rectangle(0,0,140,140)];
          _gridCost = [[new Rectangle(0,0,140,140),200]];

@@ -27,7 +27,7 @@ package com.monsters.pathing
       public function PATHINGfloodobject()
       {
          this.startpoints = {};
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

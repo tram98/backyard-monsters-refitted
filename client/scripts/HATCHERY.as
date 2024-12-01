@@ -14,7 +14,7 @@ package
       
       public function HATCHERY()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Show(param1:BUILDING13) : void

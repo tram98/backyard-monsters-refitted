@@ -81,7 +81,7 @@ package com.adobe.images
          this.YDU = new Array(64);
          this.UDU = new Array(64);
          this.VDU = new Array(64);
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          if(param1 <= 0)
          {
             param1 = 1;

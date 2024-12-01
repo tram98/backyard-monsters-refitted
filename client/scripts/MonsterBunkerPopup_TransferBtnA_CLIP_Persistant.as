@@ -20,7 +20,7 @@ package
       
       public function MonsterBunkerPopup_TransferBtnA_CLIP_Persistant()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

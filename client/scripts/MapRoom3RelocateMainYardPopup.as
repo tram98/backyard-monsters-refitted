@@ -34,7 +34,7 @@ package
       
       public function MapRoom3RelocateMainYardPopup()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

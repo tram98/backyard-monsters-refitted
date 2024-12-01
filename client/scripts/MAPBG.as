@@ -13,7 +13,7 @@ package
       
       public function MAPBG()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function MakeTile(param1:String = "grass") : BitmapData

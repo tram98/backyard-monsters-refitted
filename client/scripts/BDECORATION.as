@@ -28,7 +28,7 @@ package
          _type = param1;
          _footprint = [new Rectangle(0,0,_loc2_,_loc2_)];
          _gridCost = [[new Rectangle(0,0,_loc2_,_loc2_),2]];
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          super.SetProps();
       }
       

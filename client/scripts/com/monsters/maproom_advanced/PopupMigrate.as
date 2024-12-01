@@ -17,7 +17,7 @@ package com.monsters.maproom_advanced
       public function PopupMigrate(param1:Function = null)
       {
          var _loc5_:icon_costs = null;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._closeHandler = param1;
          var _loc2_:int = GLOBAL._bMap.InstantUpgradeCost();
          var _loc3_:Object = GLOBAL._bMap.UpgradeCost();

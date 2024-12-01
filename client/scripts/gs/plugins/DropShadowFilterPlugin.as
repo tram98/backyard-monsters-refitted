@@ -14,7 +14,7 @@ package gs.plugins
       
       public function DropShadowFilterPlugin()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.propName = "dropShadowFilter";
          this.overwriteProps = ["dropShadowFilter"];
       }

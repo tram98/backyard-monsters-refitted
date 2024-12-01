@@ -14,7 +14,7 @@ package as3reflect
       
       public function MetaData(param1:String, param2:Array = null)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _name = param1;
          _arguments = param2 == null ? [] : param2;
       }

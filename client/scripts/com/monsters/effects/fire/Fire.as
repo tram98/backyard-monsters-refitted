@@ -28,7 +28,7 @@ package com.monsters.effects.fire
       
       public function Fire()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Add(param1:DisplayObject, param2:Bitmap, param3:Point) : void

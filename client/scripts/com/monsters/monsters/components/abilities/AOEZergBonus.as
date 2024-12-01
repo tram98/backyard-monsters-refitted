@@ -18,7 +18,7 @@ package com.monsters.monsters.components.abilities
       
       public function AOEZergBonus(param1:String, param2:Number = 200, param3:Number = 0.5, param4:Number = 10)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_modifierPerUnit = param3;
          this.m_radius = param2;
          this.m_type = param1;

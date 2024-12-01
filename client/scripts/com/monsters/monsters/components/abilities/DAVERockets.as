@@ -11,7 +11,7 @@ package com.monsters.monsters.components.abilities
       
       public function DAVERockets()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       override protected function onRegister() : void

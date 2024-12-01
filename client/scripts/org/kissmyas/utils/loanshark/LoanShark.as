@@ -47,7 +47,7 @@ package org.kissmyas.utils.loanshark
       
       public function LoanShark(param1:Class, param2:Boolean = false, param3:uint = 0, param4:uint = 0, param5:Object = null, param6:String = "", param7:String = "")
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._dispatcher = new EventDispatcher();
          this._ObjectClass = param1;
          this._strictMode = param2;

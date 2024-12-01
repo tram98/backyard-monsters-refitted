@@ -53,7 +53,7 @@ package com.monsters.replayableEvents
       public function ReplayableEvent()
       {
          this._maxScore = 1.7976931348623157e+308;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          if(this._rewardMessage)
          {
             if(FrontPageLibrary.EVENTS === null)

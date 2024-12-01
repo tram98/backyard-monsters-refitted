@@ -18,7 +18,7 @@ package
       
       public function UI_WILDMONSTERBAR_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

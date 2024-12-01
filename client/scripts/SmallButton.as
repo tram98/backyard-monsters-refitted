@@ -14,7 +14,7 @@ package
       
       public function SmallButton()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          stop();
          mouseChildren = false;
          buttonMode = true;

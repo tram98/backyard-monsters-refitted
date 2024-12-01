@@ -22,7 +22,7 @@ package
       
       public function BUY()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Show(param1:MouseEvent = null) : void

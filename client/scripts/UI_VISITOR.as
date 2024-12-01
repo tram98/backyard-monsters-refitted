@@ -35,7 +35,7 @@ package
       
       public function UI_VISITOR()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          s_mc = mc;
          if(GLOBAL.mode == GLOBAL.e_BASE_MODE.ATTACK || GLOBAL.mode == GLOBAL.e_BASE_MODE.WMATTACK)
          {

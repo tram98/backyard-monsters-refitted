@@ -33,7 +33,7 @@ package com.monsters.mailbox
       
       public function FriendPicker(param1:String = "all")
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.scroller = new ScrollSet();
          this.scroller.x = 292;
          this.scroller.y = 63;

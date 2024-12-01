@@ -49,7 +49,7 @@ package com.monsters.monsters.creeps
       public function CreepBase(param1:String, param2:String, param3:Point, param4:Number, param5:int = 0, param6:int = 2147483647, param7:Point = null, param8:Boolean = false, param9:BFOUNDATION = null, param10:Number = 1, param11:Boolean = false, param12:MonsterBase = null)
       {
          var _loc13_:Point = null;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _friendly = param8;
          setInitialFriendlyFlags(_friendly);
          _creatureID = param1;

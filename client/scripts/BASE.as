@@ -295,7 +295,7 @@ package
       
       public function BASE()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _baseID = 0;
          Setup();
          Load();

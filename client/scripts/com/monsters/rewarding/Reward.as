@@ -18,7 +18,7 @@ package com.monsters.rewarding
       
       public function Reward()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       internal function applyReward() : Boolean

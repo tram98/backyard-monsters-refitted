@@ -20,7 +20,7 @@ package com.monsters.baseplanner.popups.transfer
       
       public function BasePlannerTransferPopup()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function updateList(param1:Vector.<BaseTemplate>) : void

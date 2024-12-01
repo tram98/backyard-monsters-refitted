@@ -29,7 +29,7 @@ package
       public function BUILDING115()
       {
          this._targetArray = [4,4,6,8,10,12,14,16];
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _frameNumber = 0;
          _type = 115;
          _top = -5;

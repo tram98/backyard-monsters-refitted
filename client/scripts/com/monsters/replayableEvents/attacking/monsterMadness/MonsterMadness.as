@@ -37,7 +37,7 @@ package com.monsters.replayableEvents.attacking.monsterMadness
       
       public function MonsterMadness()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function get points() : uint

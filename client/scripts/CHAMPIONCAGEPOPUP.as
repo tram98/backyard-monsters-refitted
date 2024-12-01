@@ -149,7 +149,7 @@ package
       public function CHAMPIONCAGEPOPUP()
       {
          this._timer = new Timer(1000);
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          tTitle.htmlText = KEYS.Get("gcage_title");
          _bCage = GLOBAL._bCage as CHAMPIONCAGE;
          page1Assets = [mcImage,tEvoStage,damage_txt,tDamage,bDamage,health_txt,tHealth,bHealth,speed_txt,tSpeed,bSpeed,buff_txt,tBuff,bBuff,tEvoDesc,tHP,barHP,bHeal];

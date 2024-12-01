@@ -23,7 +23,7 @@ package gs.plugins
       
       public function TintPlugin()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.propName = "tint";
          this.overwriteProps = ["tint"];
       }

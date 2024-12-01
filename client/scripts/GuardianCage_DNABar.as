@@ -9,7 +9,7 @@ package
       
       public function GuardianCage_DNABar()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

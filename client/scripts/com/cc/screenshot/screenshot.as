@@ -19,7 +19,7 @@ package com.cc.screenshot
       
       public function screenshot()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Take(param1:Number, param2:Number) : void

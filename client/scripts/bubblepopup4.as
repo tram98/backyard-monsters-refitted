@@ -9,7 +9,7 @@ package
       
       public function bubblepopup4()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.mouseEnabled = false;
          this.mouseChildren = false;
       }

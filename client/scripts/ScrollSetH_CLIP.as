@@ -13,7 +13,7 @@ package
       
       public function ScrollSetH_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

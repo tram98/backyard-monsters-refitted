@@ -16,7 +16,7 @@ package
       
       public function HousingPopupMonster_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

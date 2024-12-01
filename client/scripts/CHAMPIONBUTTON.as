@@ -26,7 +26,7 @@ package
       
       public function CHAMPIONBUTTON(param1:String, param2:int, param3:int, param4:int, param5:DisplayObjectContainer)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._index = param3;
          this._creatureID = param1;
          this._creatureData = CHAMPIONCAGE._guardians[param1];

@@ -33,7 +33,7 @@ package com.monsters.monsters.components.statusEffects
       
       public function CStatusEffect(param1:MonsterBase)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._target = param1;
       }
       

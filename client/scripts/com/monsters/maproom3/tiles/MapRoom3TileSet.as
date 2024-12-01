@@ -18,7 +18,7 @@ package com.monsters.maproom3.tiles
          var _loc2_:int = 0;
          var _loc5_:MapRoom3TileSetRange = null;
          var _loc6_:int = 0;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_TileSetInfo = param1;
          this.m_TileSetRanges = new Array();
          this.m_URLLookup = new Object();

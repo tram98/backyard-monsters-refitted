@@ -38,7 +38,7 @@ package com.monsters.maproom3
       public function MapRoom3(headerUrl:String)
       {
          this.m_CurrentBookmarkData = {};
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          if(headerUrl != null)
          {
             this.m_HeightMapLoader = new URLLoader(new URLRequest(headerUrl));

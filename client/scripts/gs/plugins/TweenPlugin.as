@@ -26,7 +26,7 @@ package gs.plugins
       public function TweenPlugin()
       {
          this._tweens = [];
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function activate(param1:Array) : Boolean

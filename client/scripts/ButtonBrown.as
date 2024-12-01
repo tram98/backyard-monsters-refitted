@@ -38,7 +38,7 @@ package
       
       public function ButtonBrown()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._startY = y;
          addEventListener(MouseEvent.MOUSE_OVER,this.Over);
          addEventListener(MouseEvent.MOUSE_OUT,this.Out);

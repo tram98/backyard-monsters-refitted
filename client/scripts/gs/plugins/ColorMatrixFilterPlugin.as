@@ -26,7 +26,7 @@ package gs.plugins
       
       public function ColorMatrixFilterPlugin()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.propName = "colorMatrixFilter";
          this.overwriteProps = ["colorMatrixFilter"];
       }

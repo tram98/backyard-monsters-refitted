@@ -25,7 +25,7 @@ package com.monsters.replayableEvents.attacking.monsterMadness
       
       public function MonsterMadnessInfoBar()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function ShowEventPopup(param1:MouseEvent = null) : void

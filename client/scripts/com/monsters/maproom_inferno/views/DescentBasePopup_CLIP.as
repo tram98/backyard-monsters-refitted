@@ -26,7 +26,7 @@ package com.monsters.maproom_inferno.views
       
       public function DescentBasePopup_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

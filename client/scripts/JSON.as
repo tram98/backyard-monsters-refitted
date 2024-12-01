@@ -9,7 +9,7 @@ package
       
       public function JSON()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function decode(param1:String) : Object

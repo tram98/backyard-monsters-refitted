@@ -34,7 +34,7 @@ package com.monsters.ai
       {
          var imageComplete:Function = null;
          var attArr:Array = param1;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          imageComplete = function(param1:String, param2:BitmapData):void
          {
             bm = new Bitmap(param2);

@@ -110,7 +110,7 @@ package
       
       public function ATTACK()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function get waitingForSaveToComplete() : Boolean

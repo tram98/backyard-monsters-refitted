@@ -41,7 +41,7 @@ package com.monsters.effects.smoke
       
       public function Smoke()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Setup() : void

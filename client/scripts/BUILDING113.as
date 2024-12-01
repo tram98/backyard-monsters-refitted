@@ -10,7 +10,7 @@ package
       
       public function BUILDING113()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _type = 113;
          _footprint = [new Rectangle(0,0,80,80)];
          _gridCost = [[new Rectangle(0,0,80,80),200]];

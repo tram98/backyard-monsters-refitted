@@ -13,7 +13,7 @@ package
       
       public function creatureBarAdv()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

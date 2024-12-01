@@ -11,7 +11,7 @@ package com.monsters.projectiles.projectileComponents
       
       public function ProjectileComponent()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function onAttack(param1:IAttackable, param2:Number, param3:ITargetable = null) : Number

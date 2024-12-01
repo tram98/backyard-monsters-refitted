@@ -276,7 +276,7 @@ package
             "bActionText":KEYS.Get("special_goldenbiggulp"),
             "bActionText2":KEYS.Get("special_hatcheryod")
          };
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _page = param1;
          this.Switch(_page);
       }

@@ -109,7 +109,7 @@ package com.monsters.baseplanner.popups
       
       public function BasePlannerPopup(param1:PlannerTemplate)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._plannerTemplate = param1;
          this.setup();
          this.Resize();

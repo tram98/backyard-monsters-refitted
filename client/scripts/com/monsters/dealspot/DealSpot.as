@@ -44,7 +44,7 @@ package com.monsters.dealspot
       
       public function DealSpot(param1:UI_TOP)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          var _loc2_:LoaderContext = new LoaderContext();
          _loc2_.checkPolicyFile = true;
          Security.allowDomain("*");

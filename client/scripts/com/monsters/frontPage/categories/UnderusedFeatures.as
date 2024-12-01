@@ -6,7 +6,7 @@ package com.monsters.frontPage.categories
       
       public function UnderusedFeatures()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          priority = 4;
          name = "Underused Feature Reminders";
       }

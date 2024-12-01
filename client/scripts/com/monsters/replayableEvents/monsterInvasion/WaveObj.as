@@ -27,7 +27,7 @@ package com.monsters.replayableEvents.monsterInvasion
       
       public function WaveObj(param1:String, param2:String, param3:int, param4:int, param5:int = 0, param6:int = 0, param7:Boolean = false)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.creatureID = param1;
          this.behavior = param2;
          this.numCreep = param3;

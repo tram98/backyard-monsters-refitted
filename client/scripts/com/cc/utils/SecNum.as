@@ -17,7 +17,7 @@ package com.cc.utils
 
       public function SecNum(param1:Number)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.Set(param1);
       }
 

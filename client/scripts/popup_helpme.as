@@ -16,7 +16,7 @@ package
       
       public function popup_helpme()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

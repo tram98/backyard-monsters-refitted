@@ -41,7 +41,7 @@ package com.monsters.effects
       
       public function ResourceBombs()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function get launchedBomb() : Boolean

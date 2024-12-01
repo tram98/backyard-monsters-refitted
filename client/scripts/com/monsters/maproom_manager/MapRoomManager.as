@@ -32,7 +32,7 @@ package com.monsters.maproom_manager
       public function MapRoomManager(param1:SingletonLock)
       {
          this.m_AttackCostMultiplier = new CModifiableProperty(Number.MAX_VALUE,Number.MIN_VALUE,1);
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function get instance() : MapRoomManager

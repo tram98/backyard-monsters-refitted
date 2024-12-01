@@ -9,7 +9,7 @@ package
       
       public function housingBunkerHit()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -59,7 +59,7 @@ package com.monsters.maproom_inferno
       
       public function MiniMap(param1:MovieClip)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._mc = param1;
          addChild(this._mc);
       }

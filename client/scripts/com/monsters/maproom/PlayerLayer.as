@@ -51,7 +51,7 @@ package com.monsters.maproom
       
       public function PlayerLayer()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.basesForeign = [].concat();
          this.baseData = [].concat();
          this.basesAll = [].concat();

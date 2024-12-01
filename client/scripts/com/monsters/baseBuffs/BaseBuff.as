@@ -14,7 +14,7 @@ package com.monsters.baseBuffs
       
       public function BaseBuff(param1:String = "", param2:String = "")
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_name = param1;
          this.m_imageURL = param2;
       }

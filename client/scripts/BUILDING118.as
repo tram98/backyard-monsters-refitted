@@ -37,7 +37,7 @@ package
       {
          this._gunballs = [];
          this._trail = [];
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _frameNumber = 0;
          _type = 118;
          _top = 15;

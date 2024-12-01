@@ -17,7 +17,7 @@ package com.monsters.baseBuffs
       
       public function BaseBuffHandler()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function get isInitialized() : Boolean

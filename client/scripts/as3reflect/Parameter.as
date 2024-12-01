@@ -12,7 +12,7 @@ package as3reflect
       
       public function Parameter(param1:int, param2:Type, param3:Boolean = false)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _index = param1;
          _type = param2;
          _isOptional = param3;

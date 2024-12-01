@@ -36,7 +36,7 @@ package
       
       public function CREEPS()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _creeps = {};
          m_attackingCreeps.length = 0;
          _creepID = 0;

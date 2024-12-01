@@ -21,7 +21,7 @@ package
       
       public function BUILDINGS()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Reset(param1:Boolean = false) : void

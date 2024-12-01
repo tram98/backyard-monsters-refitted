@@ -40,7 +40,7 @@ package
       
       public function subscriptions_promo_popup()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

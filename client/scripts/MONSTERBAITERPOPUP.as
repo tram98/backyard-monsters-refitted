@@ -29,7 +29,7 @@ package
       
       public function MONSTERBAITERPOPUP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          title_txt.htmlText = KEYS.Get("bait_title");
       }
       

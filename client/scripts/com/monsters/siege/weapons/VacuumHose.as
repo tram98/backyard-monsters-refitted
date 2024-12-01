@@ -71,7 +71,7 @@ package com.monsters.siege.weapons
       public function VacuumHose(param1:BFOUNDATION, param2:uint, param3:uint)
       {
          this._vacuumHealthBar = new bmp_healthbarsmall(0,0);
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          SPRITES.SetupSprite("vacuum_pipe");
          SPRITES.SetupSprite("vacuum_end");
          this._target = param1;

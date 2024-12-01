@@ -16,7 +16,7 @@ package com.monsters.managers
       
       public function InstanceManager()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function getInstance(param1:Class) : Object

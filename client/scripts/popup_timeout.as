@@ -18,7 +18,7 @@ package
       
       public function popup_timeout()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

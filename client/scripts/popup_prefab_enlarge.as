@@ -11,7 +11,7 @@ package
       
       public function popup_prefab_enlarge()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function Setup(param1:int) : void

@@ -12,7 +12,7 @@ package
       
       public function POPUPSETTINGS()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function AlignToCenter(param1:DisplayObject) : void

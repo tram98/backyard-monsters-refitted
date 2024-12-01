@@ -9,7 +9,7 @@ package SWC_ALL_fla
       
       public function creatureBarAdv_Fill_227()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          addFrameScript(0,this.frame1);
       }
       

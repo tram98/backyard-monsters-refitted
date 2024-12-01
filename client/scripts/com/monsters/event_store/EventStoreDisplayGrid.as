@@ -28,7 +28,7 @@ package com.monsters.event_store
       public function EventStoreDisplayGrid(param1:Sprite)
       {
          this.m_DisplayItems = new Vector.<EventStorePrize>();
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_ScrollContents = new Sprite();
          addChild(this.m_ScrollContents);
          this.m_ScrollSpacer = new Sprite();

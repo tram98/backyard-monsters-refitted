@@ -22,7 +22,7 @@ package
       
       public function PLANNER()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _open = false;
       }
       

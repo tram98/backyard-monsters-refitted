@@ -46,7 +46,7 @@ package
       public function ACADEMYPOPUP()
       {
          var _loc2_:String = null;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          if(BASE.isInfernoMainYardOrOutpost)
          {
             _monsterString = "IC";

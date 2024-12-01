@@ -205,7 +205,7 @@ package com.monsters.maproom3.tiles
       public function MapRoom3TileSetManager(param1:SingletonLock)
       {
          this.m_TileSetsInUse = new Dictionary();
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function get instance() : MapRoom3TileSetManager

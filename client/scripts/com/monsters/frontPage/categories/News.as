@@ -6,7 +6,7 @@ package com.monsters.frontPage.categories
       
       public function News()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          priority = 2;
          name = "News";
          _doesViewRepeatedly = false;

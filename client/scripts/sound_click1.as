@@ -9,7 +9,7 @@ package
       
       public function sound_click1()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

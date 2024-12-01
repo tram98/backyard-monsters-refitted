@@ -16,7 +16,7 @@ package
       
       public function ERRORMESSAGE()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function Show(param1:String, param2:int = 0) : void

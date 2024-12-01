@@ -18,7 +18,7 @@ package
       
       public function attackCostPopup()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

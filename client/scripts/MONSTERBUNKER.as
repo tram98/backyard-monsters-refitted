@@ -31,7 +31,7 @@ package
       
       public function MONSTERBUNKER()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Data(param1:Object) : void

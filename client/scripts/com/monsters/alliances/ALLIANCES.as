@@ -17,7 +17,7 @@ package com.monsters.alliances
       
       public function ALLIANCES()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Setup(param1:int = 0) : void

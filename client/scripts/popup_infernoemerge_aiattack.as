@@ -30,7 +30,7 @@ package
       
       public function popup_infernoemerge_aiattack()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -18,7 +18,7 @@ package gs.plugins
       
       public function VolumePlugin()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.propName = "volume";
          this.overwriteProps = ["volume"];
       }

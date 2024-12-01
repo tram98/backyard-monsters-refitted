@@ -30,7 +30,7 @@ package
          this._monsterUi = new Vector.<InfernoTransferMonster_CLIP>(this.NUM_MONSTER_ENTRIES,true);
          this._monsterUiIds = new Vector.<String>(this.NUM_MONSTER_ENTRIES,true);
          this._newHousingUsed = new SecNum(0);
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          title_txt.text = KEYS.Get("ascdlg_title");
          capacity_desc_txt.text = KEYS.Get("ascdlg_capacity_desc");
          transfer_action_txt.text = KEYS.Get("ascdlg_transfer_action");

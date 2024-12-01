@@ -14,7 +14,7 @@ package com.monsters.siege
       public function SiegeLab()
       {
          _type = ID;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Show() : void

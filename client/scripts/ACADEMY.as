@@ -30,7 +30,7 @@ package
       
       public function ACADEMY()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Show(param1:BFOUNDATION) : void

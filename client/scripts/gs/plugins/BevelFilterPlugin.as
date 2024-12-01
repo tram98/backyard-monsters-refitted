@@ -14,7 +14,7 @@ package gs.plugins
       
       public function BevelFilterPlugin()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.propName = "bevelFilter";
          this.overwriteProps = ["bevelFilter"];
       }

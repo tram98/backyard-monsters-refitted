@@ -24,7 +24,7 @@ package
       
       public function MapRoom3ExpandableFrame()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

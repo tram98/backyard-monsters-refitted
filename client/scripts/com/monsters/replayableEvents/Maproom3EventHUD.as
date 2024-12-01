@@ -27,7 +27,7 @@ package com.monsters.replayableEvents
       
       public function Maproom3EventHUD()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       private function getCurrentState() : uint

@@ -29,7 +29,7 @@ package
       
       public function UI_TOP_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

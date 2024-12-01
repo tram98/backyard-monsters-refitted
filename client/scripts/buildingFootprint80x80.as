@@ -9,7 +9,7 @@ package
       
       public function buildingFootprint80x80()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

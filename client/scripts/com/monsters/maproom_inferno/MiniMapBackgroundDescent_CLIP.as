@@ -9,7 +9,7 @@ package com.monsters.maproom_inferno
       
       public function MiniMapBackgroundDescent_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

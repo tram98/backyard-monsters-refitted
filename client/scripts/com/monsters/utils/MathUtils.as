@@ -12,7 +12,7 @@ package com.monsters.utils
       
       public function MathUtils()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function getDistanceBetweenTwoPoints(param1:Point, param2:Point) : Number

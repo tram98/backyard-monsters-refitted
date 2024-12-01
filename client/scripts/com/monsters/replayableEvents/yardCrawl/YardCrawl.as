@@ -17,7 +17,7 @@ package com.monsters.replayableEvents.yardCrawl
       
       public function YardCrawl()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _buttonCopy = KEYS.Get("btn_attack");
       }
       

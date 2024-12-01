@@ -20,7 +20,7 @@ package com.monsters.monsters.components.abilities
       
       public function Zombiefy(param1:Number, param2:Number, param3:Number)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_attackDelayModifier = new DivisionModifier(param1);
          this.m_moveSpeedModifier = new MultiplicationPropertyModifier(param1);
          this.m_damageModifier = new MultiplicationPropertyModifier(param3);

@@ -11,7 +11,7 @@ package
       
       public function button_buildings()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -32,7 +32,7 @@ package com.monsters.projectiles
       
       public function ResurrectProjectile()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       override public function setup(param1:IBitmapDrawable, param2:Number, param3:Number, param4:ITargetable, param5:Number, param6:Number = 0, param7:IAttackable = null, ... rest) : void

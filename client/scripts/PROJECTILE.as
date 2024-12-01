@@ -16,7 +16,7 @@ package
       
       public function PROJECTILE()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function Tick() : Boolean

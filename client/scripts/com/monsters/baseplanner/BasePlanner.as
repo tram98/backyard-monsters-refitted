@@ -38,7 +38,7 @@ package com.monsters.baseplanner
       
       public function BasePlanner()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function setup(param1:Boolean = true) : void

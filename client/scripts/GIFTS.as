@@ -26,7 +26,7 @@ package
       
       public function GIFTS()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Process(param1:*) : void

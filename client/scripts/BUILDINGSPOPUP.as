@@ -23,7 +23,7 @@ package
       
       public function BUILDINGSPOPUP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._subButtonsMC = null;
          this._thumbnailsMC = null;
          this._buildingInfoMC = null;

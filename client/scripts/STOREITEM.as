@@ -22,7 +22,7 @@ package
       
       public function STOREITEM()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

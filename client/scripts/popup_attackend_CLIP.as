@@ -20,7 +20,7 @@ package
       
       public function popup_attackend_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

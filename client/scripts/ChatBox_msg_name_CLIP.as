@@ -14,7 +14,7 @@ package
       
       public function ChatBox_msg_name_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -20,7 +20,7 @@ package
       
       public function HATCHERYCC()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Show() : void

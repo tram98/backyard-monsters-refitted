@@ -19,7 +19,7 @@ package com.monsters.maproom
       
       public function PlayerHandler()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function configure(param1:*) : Object

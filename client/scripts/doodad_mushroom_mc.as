@@ -11,7 +11,7 @@ package
       
       public function doodad_mushroom_mc()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

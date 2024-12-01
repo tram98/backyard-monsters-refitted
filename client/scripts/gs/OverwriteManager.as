@@ -24,7 +24,7 @@ package gs
       
       public function OverwriteManager()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function init(param1:int = 2) : int

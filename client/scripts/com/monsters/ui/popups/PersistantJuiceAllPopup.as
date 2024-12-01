@@ -16,7 +16,7 @@ package com.monsters.ui.popups
       
       public function PersistantJuiceAllPopup()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function setup(param1:String, param2:Function, param3:Function) : void

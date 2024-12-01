@@ -18,7 +18,7 @@ package com.monsters.maproom3.popups
       
       public function Maproom3JumpPopup()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          addEventListener(Event.ADDED_TO_STAGE,this.addedToStage);
       }
       

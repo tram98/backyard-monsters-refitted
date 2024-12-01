@@ -30,7 +30,7 @@ package
       
       public function Message_CLIPB()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

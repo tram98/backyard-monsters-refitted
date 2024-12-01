@@ -34,7 +34,7 @@ package
       
       public function BUILDING23()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _type = 23;
          _frameNumber = 0;
          _footprint = [new Rectangle(0,0,70,70)];

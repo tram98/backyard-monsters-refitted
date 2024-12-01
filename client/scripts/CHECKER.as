@@ -10,7 +10,7 @@ package
       
       public function CHECKER()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Check() : void

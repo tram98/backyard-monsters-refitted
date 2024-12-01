@@ -24,7 +24,7 @@ package
       
       public function Checkbox()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.addEventListener(MouseEvent.MOUSE_DOWN,this.onDown);
          this.addEventListener(MouseEvent.MOUSE_UP,this.onUp);
          this.addEventListener(MouseEvent.MOUSE_OVER,this.onOver);

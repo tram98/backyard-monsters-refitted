@@ -35,7 +35,7 @@ package
       
       public function MapRoomPopup_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

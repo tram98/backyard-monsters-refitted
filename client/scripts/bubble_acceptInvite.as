@@ -16,7 +16,7 @@ package
       
       public function bubble_acceptInvite()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

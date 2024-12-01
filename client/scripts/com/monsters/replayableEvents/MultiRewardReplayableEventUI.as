@@ -33,7 +33,7 @@ package com.monsters.replayableEvents
       public function MultiRewardReplayableEventUI()
       {
          this.m_rewardGraphics = new Vector.<RewardGraphics>();
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function get eventUI() : DisplayObject
@@ -226,7 +226,7 @@ class RewardGraphics
    
    public function RewardGraphics(param1:Sprite, param2:EventRewardRibbon)
    {
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       this.width = param1.width;
       this.height = param1.height;
       this.ribbon = param2;

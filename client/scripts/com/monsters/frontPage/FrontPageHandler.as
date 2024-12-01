@@ -29,7 +29,7 @@ package com.monsters.frontPage
       
       public function FrontPageHandler()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function get isVisible() : Boolean

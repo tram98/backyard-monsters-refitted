@@ -38,7 +38,7 @@ package
       
       public function MultiRewardEventsBar()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

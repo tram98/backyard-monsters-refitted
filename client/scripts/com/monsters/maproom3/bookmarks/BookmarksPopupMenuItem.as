@@ -12,7 +12,7 @@ package com.monsters.maproom3.bookmarks
       
       public function BookmarksPopupMenuItem(param1:Bookmark)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_BookmarkToDisplay = param1;
          buttonMode = true;
          nameText.htmlText = param1.displayName;

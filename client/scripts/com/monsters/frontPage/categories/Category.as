@@ -19,7 +19,7 @@ package com.monsters.frontPage.categories
       public function Category()
       {
          this._messages = new Vector.<Message>();
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function getNextQualifiedMessage() : Message

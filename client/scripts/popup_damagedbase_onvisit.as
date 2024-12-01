@@ -20,7 +20,7 @@ package
       
       public function popup_damagedbase_onvisit()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

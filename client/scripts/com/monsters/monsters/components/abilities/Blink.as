@@ -15,7 +15,7 @@ package com.monsters.monsters.components.abilities
       
       public function Blink(param1:int = 10)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_maxBlinkPoints = param1;
       }
       

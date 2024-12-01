@@ -10,7 +10,7 @@ package com.monsters.subscriptions.rewards
       
       public function ExtraTilesReward()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       override public function canBeApplied() : Boolean

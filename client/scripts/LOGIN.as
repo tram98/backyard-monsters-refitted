@@ -45,7 +45,7 @@ package
 
       public function LOGIN()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
 
       public static function Login():void

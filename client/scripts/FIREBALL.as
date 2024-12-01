@@ -51,7 +51,7 @@ package
       
       public function FIREBALL()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function Setup(param1:String = "fireball") : void

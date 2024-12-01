@@ -75,7 +75,7 @@ package
       
       public function BTOWER()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._priority = 1;
          this._retarget = 0;
          attackFlags = Targeting.getOldStyleTargets(0);

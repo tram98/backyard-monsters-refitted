@@ -47,7 +47,7 @@ package
       
       public function frame1()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.Setup(true,false,false);
       }
       

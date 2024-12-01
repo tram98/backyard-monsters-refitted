@@ -8,7 +8,7 @@ package com.monsters.display
       
       public function BuildingAssetContainer()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.Clear();
       }
       

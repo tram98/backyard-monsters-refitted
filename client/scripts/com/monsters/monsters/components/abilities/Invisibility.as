@@ -16,7 +16,7 @@ package com.monsters.monsters.components.abilities
       
       public function Invisibility(param1:Number)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_cooldownDuration = param1;
       }
       

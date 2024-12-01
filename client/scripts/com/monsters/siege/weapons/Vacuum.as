@@ -23,7 +23,7 @@ package com.monsters.siege.weapons
       {
          weaponID = ID;
          dropTarget = DROPZONE.SIEGEWEAPON_GROUND;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          addProperty(LOOT_BONUS,new SiegeWeaponProperty([25000,38153,58225,88856,135604,206945,292002,380324,495361,593977],1));
          addProperty(DURABILITY,new SiegeWeaponProperty([6000,7200,7800,9400,10300,11200,14600,20500,29000,44200],2));
          addProperty(DURATION,new SiegeWeaponProperty([30,35,40,45,50,60,65,70,80,85],3));

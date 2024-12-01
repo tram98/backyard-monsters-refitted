@@ -11,7 +11,7 @@ package com.monsters.maproom_advanced
       
       public function PopupLostMainBase()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function Setup() : void

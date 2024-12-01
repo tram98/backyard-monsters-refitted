@@ -31,7 +31,7 @@ package
       {
          var posx:Number = param1;
          var posy:Number = param2;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.posX = posx;
          this.posY = posy;
          if(GLOBAL._local)

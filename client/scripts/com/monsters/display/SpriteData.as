@@ -24,7 +24,7 @@ package com.monsters.display
       
       public function SpriteData(param1:String, param2:Number, param3:Number, param4:Number, param5:Number)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.key = param1;
          this.rect.width = param2;
          this.rect.height = param3;

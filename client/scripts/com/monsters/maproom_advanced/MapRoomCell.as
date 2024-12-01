@@ -151,7 +151,7 @@ package com.monsters.maproom_advanced
             "ext":".png"
          };
          this.testAllianceIDs = [1,2,3,102,111];
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          mc.mcHit.addEventListener(MouseEvent.MOUSE_OVER,this.Over);
          mc.mcHit.addEventListener(MouseEvent.MOUSE_OUT,this.Out);
          mc.mcHit.addEventListener(MouseEvent.MOUSE_UP,this.Click);

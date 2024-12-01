@@ -23,7 +23,7 @@ package com.monsters.baseplanner
       {
          this.inventoryData = new Vector.<PlannerNode>();
          this.displayData = new Vector.<PlannerNode>();
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          if(param1)
          {
             this.importData(param1);

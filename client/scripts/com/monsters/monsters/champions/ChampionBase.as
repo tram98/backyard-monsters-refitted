@@ -81,7 +81,7 @@ package com.monsters.monsters.champions
       
       public function ChampionBase(param1:String, param2:Point, param3:Number, param4:Point = null, param5:Boolean = false, param6:BFOUNDATION = null, param7:int = 1, param8:int = 0, param9:int = 0, param10:int = 1, param11:int = 20000, param12:int = 0, param13:int = 0)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          var _loc14_:int = getTimer();
          _friendly = param5;
          setInitialFriendlyFlags(_friendly);

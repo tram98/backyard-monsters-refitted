@@ -18,7 +18,7 @@ package com.monsters.monsters.components.abilities
       
       public function AcidOnDeath(param1:uint, param2:Number, param3:uint)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_radius = param1;
          this.m_damage = param2;
          this.m_duration = param3;
@@ -104,7 +104,7 @@ class AcidPool implements ITickable, ITargetable
    
    public function AcidPool(param1:Number, param2:Number, param3:Number, param4:uint)
    {
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       this.m_radius = param4;
       this.m_damage = param3;
       this.m_y = param2;

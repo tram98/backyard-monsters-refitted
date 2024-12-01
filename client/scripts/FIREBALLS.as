@@ -29,7 +29,7 @@ package
       
       public function FIREBALLS()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          Clear();
       }
       

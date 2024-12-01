@@ -33,7 +33,7 @@ package
       
       public function BUILDING19()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _type = 19;
          this._frameNumber = 0;
          _footprint = [new Rectangle(0,0,80,80)];

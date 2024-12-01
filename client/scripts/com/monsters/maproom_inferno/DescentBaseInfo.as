@@ -16,7 +16,7 @@ package com.monsters.maproom_inferno
       
       public function DescentBaseInfo()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

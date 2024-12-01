@@ -36,7 +36,7 @@ package
       
       public function INFERNOPORTAL()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _type = 127;
          _footprint = [new Rectangle(0,0,190,160)];
          _gridCost = [[new Rectangle(0,0,190,160),200]];

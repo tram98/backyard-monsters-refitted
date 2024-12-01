@@ -10,7 +10,7 @@ package
       
       public function BWALL()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       override public function GridCost(param1:Boolean = true) : void

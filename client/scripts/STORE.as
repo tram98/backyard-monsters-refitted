@@ -85,7 +85,7 @@ package
       
       public function STORE()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Data(storeItems:Object, storeData:Object, param3:Object = null) : void

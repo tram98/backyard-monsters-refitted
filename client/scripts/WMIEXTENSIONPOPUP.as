@@ -31,7 +31,7 @@ package
             mcImage.width = 672;
             mcImage.height = 200;
          };
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          ImageCache.GetImageWithCallBack(SPECIALEVENT.BANNERIMAGE,bannerComplete);
          ImageCache.GetImageWithCallBack("specialevent/wmi2_4-v2.png",imageComplete);
          mcFrame.Setup(true);

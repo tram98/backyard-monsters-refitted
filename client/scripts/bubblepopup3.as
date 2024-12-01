@@ -15,7 +15,7 @@ package
       
       public function bubblepopup3()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._dropShadow = new DropShadowFilter();
          this._dropShadow.distance = 1;
          this._dropShadow.angle = 45;

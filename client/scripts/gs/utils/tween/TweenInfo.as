@@ -18,7 +18,7 @@ package gs.utils.tween
       
       public function TweenInfo(param1:Object, param2:String, param3:Number, param4:Number, param5:String, param6:Boolean)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.target = param1;
          this.property = param2;
          this.start = param3;

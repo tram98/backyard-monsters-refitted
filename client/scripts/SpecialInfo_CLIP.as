@@ -14,7 +14,7 @@ package
       
       public function SpecialInfo_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

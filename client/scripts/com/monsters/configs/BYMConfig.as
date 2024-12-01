@@ -38,7 +38,7 @@ package com.monsters.configs
       
       public function BYMConfig(param1:InstanceEnforcer)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function get instance() : BYMConfig

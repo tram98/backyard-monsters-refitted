@@ -24,7 +24,7 @@ package com.monsters.effects
       
       public function LASERS()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Fire(param1:int, param2:int, param3:int, param4:int, param5:int = 0, param6:Number = 0, param7:Number = 0, param8:Function = null) : void

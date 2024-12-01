@@ -38,7 +38,7 @@ package com.monsters.baseplanner.components
          this.lengthsArray = new Array();
          this.fill = new Shape();
          this.stroke = new Shape();
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          if(param3 != null)
          {
             this.lengthsArray = param3;

@@ -18,7 +18,7 @@ package
       
       public function popup_afk_gift()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

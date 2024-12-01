@@ -13,7 +13,7 @@ package com.monsters.projectiles.projectileComponents
       
       public function SetFireProjectileComponent(param1:uint)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_DoT = param1;
       }
       

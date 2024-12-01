@@ -17,7 +17,7 @@ package
       
       public function BMUSHROOM()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       override public function SetProps() : void

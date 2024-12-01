@@ -13,7 +13,7 @@ package com.monsters.maproom3.bookmarks
       
       public function Bookmark(param1:MapRoom3Cell, param2:String = "")
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_MapRoom3Cell = param1;
          this.m_UserDefinedName = param2;
       }

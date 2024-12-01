@@ -24,7 +24,7 @@ package com.monsters.baseBuffs
       
       public function BaseBuffLibrary()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       internal static function initialize() : void
@@ -92,7 +92,7 @@ class BuffData
    
    public function BuffData(param1:Class, param2:String = "")
    {
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       this.type = param1;
       if(!param2)
       {

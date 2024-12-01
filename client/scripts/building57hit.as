@@ -9,7 +9,7 @@ package
       
       public function building57hit()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

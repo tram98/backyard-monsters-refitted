@@ -20,7 +20,7 @@ package
       
       public function popup_new_map_confirm()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

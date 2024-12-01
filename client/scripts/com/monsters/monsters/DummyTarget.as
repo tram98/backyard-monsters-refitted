@@ -12,7 +12,7 @@ package com.monsters.monsters
       
       public function DummyTarget(param1:Number, param2:Number)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_x = param1;
          this.m_y = param2;
       }

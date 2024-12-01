@@ -22,7 +22,7 @@ package com.monsters.subscriptions.ui
       
       public function SubscriptionJoinPopup()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          POPUPSETTINGS.AlignToCenter(this);
          this.circleNavigation = [mcCircle1,mcCircle2,mcCircle3,mcCircle4,mcCircle5,mcCircle6];
          this.visible = false;

@@ -24,7 +24,7 @@ package
       
       public function NewPopupSystem()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function get dialogShowing() : Boolean
@@ -244,6 +244,6 @@ final class RequireData
    
    public function RequireData()
    {
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
    }
 }

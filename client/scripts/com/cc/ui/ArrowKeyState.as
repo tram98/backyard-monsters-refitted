@@ -28,7 +28,7 @@ package com.cc.ui
       
       public function ArrowKeyState()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Reset() : void

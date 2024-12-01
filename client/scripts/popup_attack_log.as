@@ -22,7 +22,7 @@ package
       
       public function popup_attack_log()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

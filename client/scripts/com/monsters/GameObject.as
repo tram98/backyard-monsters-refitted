@@ -52,7 +52,7 @@ package com.monsters
       
       public function GameObject()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._mc = new Sprite();
          this._health = new SecNum(0);
          this.moveSpeedProperty = new CModifiableProperty(Number.MAX_VALUE,0,1);
@@ -334,7 +334,7 @@ final class RasterDataContainer
    
    public function RasterDataContainer(param1:DisplayObject, param2:RasterData, param3:Point, param4:Number)
    {
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       this.m_source = param1;
       this.m_rasterData = param2;
       this.m_rasterPt = param3;

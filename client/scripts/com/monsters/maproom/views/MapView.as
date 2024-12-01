@@ -52,7 +52,7 @@ package com.monsters.maproom.views
       
       public function MapView()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          instance = this;
          this.bases = [].concat();
       }

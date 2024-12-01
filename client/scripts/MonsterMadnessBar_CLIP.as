@@ -26,7 +26,7 @@ package
       
       public function MonsterMadnessBar_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -18,7 +18,7 @@ package
       
       public function popup_infernoentice_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

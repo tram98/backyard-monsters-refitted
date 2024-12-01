@@ -14,7 +14,7 @@ package as3reflect
       
       public function ClassUtils()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function getName(param1:Class) : String

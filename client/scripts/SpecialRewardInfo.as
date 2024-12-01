@@ -10,7 +10,7 @@ package
       
       public function SpecialRewardInfo()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function Setup(param1:String, param2:int, param3:String) : void

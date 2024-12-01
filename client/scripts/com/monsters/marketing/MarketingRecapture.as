@@ -18,7 +18,7 @@ package com.monsters.marketing
       
       public function MarketingRecapture(param1:InstanceEnforcer)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          if(!param1)
          {
             throw new Error("MarketingRecapture is a Singleton, use instance.");
@@ -57,6 +57,6 @@ final class InstanceEnforcer
    
    public function InstanceEnforcer()
    {
-      super();
+      var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
    }
 }

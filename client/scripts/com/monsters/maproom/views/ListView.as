@@ -44,7 +44,7 @@ package com.monsters.maproom.views
       public function ListView()
       {
          var _loc1_:MovieClip = null;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.btns = [levelBtn,lastSeenBtn,nameBtn,winBtn,statusBtn];
          for each(_loc1_ in this.btns)
          {

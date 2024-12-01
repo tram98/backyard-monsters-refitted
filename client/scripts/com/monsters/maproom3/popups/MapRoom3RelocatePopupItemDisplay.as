@@ -20,7 +20,7 @@ package com.monsters.maproom3.popups
       
       public function MapRoom3RelocatePopupItemDisplay(param1:MapRoom3FriendData)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.m_FriendToDisplay = param1;
          this.m_ProfilePicture = new Loader();
          this.m_ProfilePicture.load(new URLRequest("http://graph.facebook.com/" + this.m_FriendToDisplay.facebookId + "/picture"));

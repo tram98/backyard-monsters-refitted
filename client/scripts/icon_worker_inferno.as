@@ -14,7 +14,7 @@ package
       
       public function icon_worker_inferno()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

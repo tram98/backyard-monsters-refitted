@@ -14,7 +14,7 @@ package
       
       public function BasePlannerPopup_ToolTip()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

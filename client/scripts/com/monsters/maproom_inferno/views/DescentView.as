@@ -54,7 +54,7 @@ package com.monsters.maproom_inferno.views
       
       public function DescentView()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          instance = this;
          this.bases = [].concat();
       }

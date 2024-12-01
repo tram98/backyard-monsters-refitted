@@ -13,7 +13,7 @@ package gs.plugins
       
       public function RoundPropsPlugin()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.propName = "roundProps";
          this.overwriteProps = [];
          this.round = true;

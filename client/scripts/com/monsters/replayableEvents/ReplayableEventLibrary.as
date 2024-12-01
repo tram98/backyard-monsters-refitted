@@ -21,7 +21,7 @@ package com.monsters.replayableEvents
       
       public function ReplayableEventLibrary()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function getEventByName(param1:String) : ReplayableEvent

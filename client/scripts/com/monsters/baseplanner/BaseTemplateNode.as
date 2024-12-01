@@ -16,7 +16,7 @@ package com.monsters.baseplanner
       
       public function BaseTemplateNode(param1:int = 0, param2:int = 0, param3:uint = 0, param4:uint = 0)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.x = param1;
          this.y = param2;
          this.id = param3;

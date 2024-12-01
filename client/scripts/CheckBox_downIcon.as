@@ -9,7 +9,7 @@ package
       
       public function CheckBox_downIcon()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

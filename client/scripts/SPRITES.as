@@ -15,7 +15,7 @@ package
       
       public function SPRITES()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function Setup() : void

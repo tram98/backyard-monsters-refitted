@@ -6,7 +6,7 @@ package
       
       public function ReferencedExposedStructures()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       internal static function Include() : void

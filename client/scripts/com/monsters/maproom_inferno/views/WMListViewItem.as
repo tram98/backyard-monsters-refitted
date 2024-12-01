@@ -39,7 +39,7 @@ package com.monsters.maproom_inferno.views
       
       public function WMListViewItem()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          removeChild(dot);
          removeChild(attacks_txt);
          removeChild(status_txt);

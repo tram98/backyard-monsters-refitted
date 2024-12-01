@@ -15,7 +15,7 @@ package com.monsters.maproom_inferno
       
       public function MiniMapDescent_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

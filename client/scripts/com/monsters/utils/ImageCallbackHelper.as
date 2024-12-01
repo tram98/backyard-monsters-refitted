@@ -15,7 +15,7 @@ package com.monsters.utils
 
         public function ImageCallbackHelper(ref:Function, state:String, level:int, imageDataA:Object, imageDataB:Object)
         {
-            super();
+            var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
             this._ref = ref;
             this._state = state;
             this._level = level;

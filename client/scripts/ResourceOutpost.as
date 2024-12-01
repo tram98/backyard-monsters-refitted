@@ -13,7 +13,7 @@ package
       
       public function ResourceOutpost()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _footprint = [new Rectangle(0,0,130,130)];
          _gridCost = [[new Rectangle(0,0,130,130),10],[new Rectangle(10,10,110,110),200]];
          _type = k_TYPE;

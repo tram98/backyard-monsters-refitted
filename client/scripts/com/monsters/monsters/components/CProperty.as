@@ -32,7 +32,7 @@ package com.monsters.monsters.components
       public function CProperty(param1:Number = 1.7976931348623157e+308, param2:Number = 0, param3:Number = -1)
       {
          this._value = this._maximum;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this._eventDispatcher = new EventDispatcher();
          this._maximum = param1;
          this._minimum = param2;

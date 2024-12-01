@@ -24,7 +24,7 @@ package
       
       public function BTRAP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _fired = false;
          this._retarget = 0;
          _range = 20;

@@ -17,7 +17,7 @@ package
       
       public function PROJECTILES()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          Clear();
       }
       

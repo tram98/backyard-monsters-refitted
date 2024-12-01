@@ -16,7 +16,7 @@ package com.monsters.pathing
       
       public function PATHINGobject()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public function Init() : void

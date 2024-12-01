@@ -9,7 +9,7 @@ package
       
       public function cannonTowerHit()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

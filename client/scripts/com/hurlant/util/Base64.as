@@ -12,7 +12,7 @@ package com.hurlant.util
       
       public function Base64()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          throw new Error("Base64 class is static container only");
       }
       

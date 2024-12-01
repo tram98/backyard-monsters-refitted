@@ -12,7 +12,7 @@ package
       
       public function BUILDING16()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _type = 16;
          _spoutPoint = new Point(0,-5);
          _spoutHeight = 55;

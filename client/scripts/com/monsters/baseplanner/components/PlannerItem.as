@@ -15,7 +15,7 @@ package com.monsters.baseplanner.components
       
       public function PlannerItem()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          addEventListener(MouseEvent.CLICK,this.onClick);
          addEventListener(MouseEvent.ROLL_OVER,this.onRollOver);
          addEventListener(MouseEvent.ROLL_OUT,this.onRollOut);

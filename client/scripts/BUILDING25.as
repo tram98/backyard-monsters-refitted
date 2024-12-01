@@ -28,7 +28,7 @@ package
       
       public function BUILDING25()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _type = 25;
          _frameNumber = 0;
          _animTick = 0;

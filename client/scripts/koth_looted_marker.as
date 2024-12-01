@@ -13,7 +13,7 @@ package
       
       public function koth_looted_marker()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -15,7 +15,7 @@ package
       
       public function BUILDING20()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _frameNumber = 0;
          _type = 20;
          _top = -4;

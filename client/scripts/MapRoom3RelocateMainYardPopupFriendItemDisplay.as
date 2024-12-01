@@ -22,7 +22,7 @@ package
       
       public function MapRoom3RelocateMainYardPopupFriendItemDisplay()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

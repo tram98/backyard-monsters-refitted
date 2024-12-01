@@ -133,7 +133,7 @@ package
          var rect:Rectangle = null;
          var efxbmp:Bitmap = null;
          var texture:String = param1;
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _instance = this;
          try
          {

@@ -20,7 +20,7 @@ package
       
       public function TUTORIALPOPUPMC_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

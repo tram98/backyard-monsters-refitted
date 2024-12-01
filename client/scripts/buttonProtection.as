@@ -9,7 +9,7 @@ package
       
       public function buttonProtection()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          mouseChildren = false;
          addEventListener(MouseEvent.CLICK,this.Show);
          buttonMode = true;

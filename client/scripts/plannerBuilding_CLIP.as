@@ -13,7 +13,7 @@ package
       
       public function plannerBuilding_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

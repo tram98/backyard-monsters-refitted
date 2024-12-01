@@ -14,7 +14,7 @@ package com.monsters.chat
       
       public function AS_Login(param1:UserRecord)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.user = param1;
       }
       

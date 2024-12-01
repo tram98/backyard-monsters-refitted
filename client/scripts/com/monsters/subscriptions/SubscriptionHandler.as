@@ -55,7 +55,7 @@ package com.monsters.subscriptions
       public function SubscriptionHandler()
       {
          this._rewardIDs = Vector.<String>([ImprovedHCCReward.ID,DAVEStatueReward.ID,GoldenDAVEReward.ID,ExtraTilesReward.ID,YardPlannerExtraSlotsReward.ID]);
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
       
       public static function get instance() : SubscriptionHandler

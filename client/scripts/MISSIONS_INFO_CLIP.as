@@ -34,7 +34,7 @@ package
       
       public function MISSIONS_INFO_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

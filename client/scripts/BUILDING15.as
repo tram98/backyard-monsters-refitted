@@ -18,7 +18,7 @@ package
       
       public function BUILDING15()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          _type = 15;
          this._capacity = 0;
          this._housing = {};

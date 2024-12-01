@@ -13,7 +13,7 @@ package SWC_ALL_fla
       
       public function icon_tips_584()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          addFrameScript(0,this.frame1);
       }
       

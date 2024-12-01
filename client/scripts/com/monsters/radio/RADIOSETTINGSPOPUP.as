@@ -22,7 +22,7 @@ package com.monsters.radio
       public function RADIOSETTINGSPOPUP()
       {
          this._emailAddress = KEYS.Get("radio_insertemail");
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          addEventListener(Event.ADDED_TO_STAGE,this.onAdded);
          if(RADIO._settings)
          {

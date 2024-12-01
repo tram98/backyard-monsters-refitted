@@ -17,7 +17,7 @@ package
       
       public function FACEBOOK_NCP_CLIP()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

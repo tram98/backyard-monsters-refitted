@@ -9,7 +9,7 @@ package
       
       public function mc_buildingalerticon()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

@@ -44,7 +44,7 @@ package
       
       public function subscriptions_controlPanel_popup()
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
       }
    }
 }

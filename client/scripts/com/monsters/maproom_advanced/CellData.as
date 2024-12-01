@@ -10,7 +10,7 @@ package com.monsters.maproom_advanced
       
       public function CellData(param1:MapRoomCell, param2:int)
       {
-         super();
+         var __conversionComment:String = "EMPTY SUPER CALL REMOVED";
          this.cell = param1;
          this.range = param2;
       }

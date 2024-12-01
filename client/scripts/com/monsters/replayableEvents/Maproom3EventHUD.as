@@ -1,6 +1,5 @@
 package com.monsters.replayableEvents
 {
-   import com.monsters.chat.Chat;
    import com.monsters.display.ImageCache;
    import com.monsters.event_store.EventStorePopup;
    import com.monsters.maproom3.MapRoom3;

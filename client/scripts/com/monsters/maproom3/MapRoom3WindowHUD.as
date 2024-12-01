@@ -1,6 +1,5 @@
 package com.monsters.maproom3
 {
-   import com.monsters.chat.Chat;
    import com.monsters.enums.EnumYardType;
    import com.monsters.maproom3.bookmarks.Bookmark;
    import com.monsters.maproom3.bookmarks.BookmarkDisplay;

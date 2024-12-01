@@ -5,7 +5,6 @@ package
    import com.computus.model.Timekeeper;
    import com.gskinner.utils.Rndm;
    import com.monsters.ai.WMBASE;
-   import com.monsters.chat.Chat;
    import com.monsters.configs.BYMConfig;
    import com.monsters.debug.Console;
    import com.monsters.display.ImageCache;

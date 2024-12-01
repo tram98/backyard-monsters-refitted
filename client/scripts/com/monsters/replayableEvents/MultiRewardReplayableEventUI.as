@@ -1,6 +1,5 @@
 package com.monsters.replayableEvents
 {
-   import com.monsters.chat.Chat;
    import com.monsters.display.ImageCache;
    import flash.display.Bitmap;
    import flash.display.BitmapData;

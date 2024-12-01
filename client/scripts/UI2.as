@@ -1,7 +1,6 @@
 package
 {
    import com.cc.tests.ABTest;
-   import com.monsters.chat.Chat;
    import com.monsters.ui.*;
    import flash.display.MovieClip;
    import flash.display.StageDisplayState;

@@ -11,7 +11,6 @@ package
    import com.monsters.baseplanner.BaseTemplate;
    import com.monsters.baseplanner.BaseTemplateNode;
    import com.monsters.baseplanner.PlannerTemplate;
-   import com.monsters.chat.Chat;
    import com.monsters.configs.BYMConfig;
    import com.monsters.debug.Console;
    import com.monsters.display.BuildingOverlay;

@@ -1,6 +1,5 @@
 package com.monsters.ui
 {
-   import com.monsters.chat.Chat;
    import com.monsters.maproom3.MapRoom3;
    import com.monsters.maproom_manager.MapRoomManager;
    import com.monsters.missions.UI_MISSIONMENU;

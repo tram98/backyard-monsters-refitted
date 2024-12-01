@@ -1,6 +1,5 @@
 package com.monsters.chat.ui
 {
-   import com.monsters.chat.Chat;
    import com.monsters.display.ScrollSet;
    import com.monsters.maproom3.MapRoom3;
    import flash.display.*;
@@ -359,10 +358,10 @@ package com.monsters.chat.ui
             }
             _loc4_ = this._openProps;
             this._maximized = false;
-            this.background.arrowUp.gotoAndStop("on" + this._skinTag);
-            this.background.arrowDown.gotoAndStop("on" + this._skinTag);
-            this.background.arrowUp.buttonMode = true;
-            this.background.arrowDown.buttonMode = true;
+            // this.background.arrowUp.gotoAndStop("on" + this._skinTag);
+            // this.background.arrowDown.gotoAndStop("on" + this._skinTag);
+            // this.background.arrowUp.buttonMode = true;
+            // this.background.arrowDown.buttonMode = true;
          }
          else if(Chat._bymChat._open && !_loc3_)
          {
@@ -372,20 +371,20 @@ package com.monsters.chat.ui
                Chat._bymChat._open = false;
                _loc4_ = this._closeProps;
                this._maximized = false;
-               this.background.arrowUp.gotoAndStop("on" + this._skinTag);
-               this.background.arrowDown.gotoAndStop("off" + this._skinTag);
-               this.background.arrowUp.buttonMode = true;
-               this.background.arrowDown.buttonMode = false;
+               // this.background.arrowUp.gotoAndStop("on" + this._skinTag);
+               // this.background.arrowDown.gotoAndStop("off" + this._skinTag);
+               // this.background.arrowUp.buttonMode = true;
+               // this.background.arrowDown.buttonMode = false;
                GLOBAL.StatSet("chatmin",1);
             }
             else if(_loc2_)
             {
                _loc4_ = this._maxProps;
                this._maximized = true;
-               this.background.arrowUp.gotoAndStop("on" + this._skinTag);
-               this.background.arrowDown.gotoAndStop("on" + this._skinTag);
-               this.background.arrowUp.buttonMode = true;
-               this.background.arrowDown.buttonMode = false;
+               // this.background.arrowUp.gotoAndStop("on" + this._skinTag);
+               // this.background.arrowDown.gotoAndStop("on" + this._skinTag);
+               // this.background.arrowUp.buttonMode = true;
+               // this.background.arrowDown.buttonMode = false;
                GLOBAL.StatSet("chatmin",0);
             }
             else if(_loc3_)
@@ -402,10 +401,10 @@ package com.monsters.chat.ui
             Chat._bymChat._open = true;
             _loc4_ = this._openProps;
             this._maximized = false;
-            this.background.arrowUp.gotoAndStop("on" + this._skinTag);
-            this.background.arrowDown.gotoAndStop("on" + this._skinTag);
-            this.background.arrowUp.buttonMode = true;
-            this.background.arrowDown.buttonMode = true;
+            // this.background.arrowUp.gotoAndStop("on" + this._skinTag);
+            // this.background.arrowDown.gotoAndStop("on" + this._skinTag);
+            // this.background.arrowUp.buttonMode = true;
+            // this.background.arrowDown.buttonMode = true;
             GLOBAL.StatSet("chatmin",0);
          }
          if(_loc4_ == null)
@@ -418,8 +417,8 @@ package com.monsters.chat.ui
             "onUpdate":this.toggleOnUpdate,
             "onComplete":this.toggleVisibleB
          });
-         TweenLite.to(this.background.mcScreen,_loc5_,{"height":_loc4_.screenHeight});
-         TweenLite.to(this.background.mcMask,_loc5_,{"height":_loc4_.maskHeight});
+         // TweenLite.to(this.background.mcScreen,_loc5_,{"height":_loc4_.screenHeight});
+         // TweenLite.to(this.background.mcMask,_loc5_,{"height":_loc4_.maskHeight});
          TweenLite.to(this._scrollbar,_loc5_,{"y":_loc4_.scrollerY});
          if(Chat._bymChat._open)
          {
@@ -428,10 +427,10 @@ package com.monsters.chat.ui
                "autoAlpha":1,
                "ease":Expo.easeOut
             });
-            TweenLite.to(this.background.alert,_loc5_,{
-               "autoAlpha":0,
-               "ease":Expo.easeOut
-            });
+            // TweenLite.to(this.background.alert,_loc5_,{
+            //    "autoAlpha":0,
+            //    "ease":Expo.easeOut
+            // });
          }
          else
          {
@@ -447,21 +446,21 @@ package com.monsters.chat.ui
          {
             if(this._maximized)
             {
-               TweenLite.to(this.background.arrowUp,_loc5_,{
-                  "rotation":180,
-                  "autoAlpha":_loc6_,
-                  "y":this._chatWidthDefault.arrowDownY,
-                  "ease":Expo.easeOut
-               });
+               // TweenLite.to(this.background.arrowUp,_loc5_,{
+               //    "rotation":180,
+               //    "autoAlpha":_loc6_,
+               //    "y":this._chatWidthDefault.arrowDownY,
+               //    "ease":Expo.easeOut
+               // });
             }
             else
             {
-               TweenLite.to(this.background.arrowUp,_loc5_,{
-                  "rotation":0,
-                  "autoAlpha":_loc6_,
-                  "y":this._chatWidthDefault.arrowUpY,
-                  "ease":Expo.easeOut
-               });
+               // TweenLite.to(this.background.arrowUp,_loc5_,{
+               //    "rotation":0,
+               //    "autoAlpha":_loc6_,
+               //    "y":this._chatWidthDefault.arrowUpY,
+               //    "ease":Expo.easeOut
+               // });
             }
          }
       }
@@ -479,7 +478,7 @@ package com.monsters.chat.ui
          this._animating = false;
          var _loc1_:Object = this._maximized ? this._maxProps : this._openProps;
          this._scrollbar.Update();
-         this._scrollbar.visible = this._shell.height > this.background.mcMask.height;
+         // this._scrollbar.visible = this._shell.height > this.background.mcMask.height;
          if(!Chat._bymChat._open)
          {
             Chat._bymChat.toggleMinimizedStat(true);
@@ -495,26 +494,26 @@ package com.monsters.chat.ui
       
       public function ResizeWindow() : void
       {
-         if(this._chatWidth != this._chatWidthDefault.sizeW)
-         {
-            this.background.header.width = this._chatWidthDefault.headerW;
-            this.background.tTitle.x = this._chatWidthDefault.titleTxtX;
-            this.background.alert.x = this._chatWidthDefault.alertX;
-            this.background.arrowUp.x = this._chatWidthDefault.arrowUpX;
-            this.background.arrowDown.x = this._chatWidthDefault.arrowDownX;
-            this.background.arrowUp.y = this._chatWidthDefault.arrowUpY;
-            this.background.arrowDown.y = this._chatWidthDefault.arrowDownY;
-            this.background.border.width = this._chatWidthDefault.borderW;
-            this.background.mcMask.width = this._chatWidthDefault.mcMaskW;
-            this.background.mcScreen.width = this._chatWidthDefault.mcScreenW;
-            this.background._output.width = this._chatWidthDefault.tOutputW;
-            this.inputbar.inputWoodBg.width = this._chatWidthDefault.inputWoodBgW;
-            this.input.width = this._chatWidthDefault.inputTxtW;
-            this.inputbar.inputTxtBG.width = this._chatWidthDefault.inputTxtBgW;
-            this._sendBtn.x = this._chatWidthDefault.sendBtnX;
-            this._scrollbar.x = this._chatWidthDefault.scrollerX;
-            this._chatWidth = this._chatWidthDefault.sizeW;
-         }
+         // if(this._chatWidth != this._chatWidthDefault.sizeW)
+         // {
+         //    this.background.header.width = this._chatWidthDefault.headerW;
+         //    this.background.tTitle.x = this._chatWidthDefault.titleTxtX;
+         //    this.background.alert.x = this._chatWidthDefault.alertX;
+         //    this.background.arrowUp.x = this._chatWidthDefault.arrowUpX;
+         //    this.background.arrowDown.x = this._chatWidthDefault.arrowDownX;
+         //    this.background.arrowUp.y = this._chatWidthDefault.arrowUpY;
+         //    this.background.arrowDown.y = this._chatWidthDefault.arrowDownY;
+         //    this.background.border.width = this._chatWidthDefault.borderW;
+         //    this.background.mcMask.width = this._chatWidthDefault.mcMaskW;
+         //    this.background.mcScreen.width = this._chatWidthDefault.mcScreenW;
+         //    this.background._output.width = this._chatWidthDefault.tOutputW;
+         //    this.inputbar.inputWoodBg.width = this._chatWidthDefault.inputWoodBgW;
+         //    this.input.width = this._chatWidthDefault.inputTxtW;
+         //    this.inputbar.inputTxtBG.width = this._chatWidthDefault.inputTxtBgW;
+         //    this._sendBtn.x = this._chatWidthDefault.sendBtnX;
+         //    this._scrollbar.x = this._chatWidthDefault.scrollerX;
+         //    this._chatWidth = this._chatWidthDefault.sizeW;
+         // }
       }
       
       public function ResizeMessages() : void
@@ -528,8 +527,8 @@ package com.monsters.chat.ui
          }
          this._chatMessages = new MovieClip();
          this._shell.addChild(this._chatMessages);
-         this._chatMessages.x = this.background.mcMask.x;
-         this._chatMessages.y = this.background.mcMask.y;
+         // this._chatMessages.x = this.background.mcMask.x;
+         // this._chatMessages.y = this.background.mcMask.y;
          var _loc3_:Number = 1;
          var _loc4_:int = 0;
          while(_loc4_ < this._chatHistory.length)
@@ -552,7 +551,7 @@ package com.monsters.chat.ui
          }
          if(!this._scrollbar.visible && Chat._bymChat._open)
          {
-            this._scrollbar.visible = this._shell.height > this.background.mcMask.height;
+            // this._scrollbar.visible = this._shell.height > this.background.mcMask.height;
          }
          addChild(this._scrollbar);
          this._scrollbar.Update();
@@ -567,31 +566,31 @@ package com.monsters.chat.ui
          var _loc2_:String = null;
          if(!this._useAlerts)
          {
-            this.background.alert.visible = false;
+            // this.background.alert.visible = false;
             return;
          }
          if(!Chat._bymChat._open)
          {
             this._alertsCounter += param1;
             _loc2_ = this._alertsCounter < 100 ? String(this._alertsCounter) : "99+";
-            this.background.alert.alert_txt.htmlText = "<b>" + _loc2_ + "</b>";
-            this.background.alert.alert_txt.x = 2;
-            this.background.alert.bg.width = this.background.alert.alert_txt.width + 6;
+            // this.background.alert.alert_txt.htmlText = "<b>" + _loc2_ + "</b>";
+            // this.background.alert.alert_txt.x = 2;
+            // this.background.alert.bg.width = this.background.alert.alert_txt.width + 6;
          }
-         if(this._alertsCounter > 0 && !Chat._bymChat._open && this._useAlerts)
-         {
-            TweenLite.to(this.background.alert,0.5,{
-               "autoAlpha":1,
-               "ease":Circ.easeIn
-            });
-         }
-         else if(Chat._bymChat._open && this.background.alert.alpha != 0)
-         {
-            TweenLite.to(this.background.alert,0.5,{
-               "autoAlpha":0,
-               "ease":Expo.easeOut
-            });
-         }
+         // if(this._alertsCounter > 0 && !Chat._bymChat._open && this._useAlerts)
+         // {
+         //    TweenLite.to(this.background.alert,0.5,{
+         //       "autoAlpha":1,
+         //       "ease":Circ.easeIn
+         //    });
+         // }
+         // else if(Chat._bymChat._open && this.background.alert.alpha != 0)
+         // {
+         //    TweenLite.to(this.background.alert,0.5,{
+         //       "autoAlpha":0,
+         //       "ease":Expo.easeOut
+         //    });
+         // }
       }
       
       public function ClearAlert() : void
@@ -628,8 +627,8 @@ package com.monsters.chat.ui
          _loc8_.addEventListener(MouseEvent.ROLL_OUT,this.OnMsgMouseOut);
          _loc8_.ignoreBtn.visible = false;
          _loc8_.ignoreBtn.buttonMode = true;
-         _loc8_.msgData = _loc7_;
-         _loc8_.isOwnMessage = param3 == LOGIN._playerID.toString();
+         // _loc8_.msgData = _loc7_;
+         // _loc8_.isOwnMessage = param3 == LOGIN._playerID.toString();
          if(param2 != null)
          {
             _loc8_.ignoreBtn.addEventListener(MouseEvent.MOUSE_DOWN,this.OnMsgIgnoreMouseDown);
@@ -671,9 +670,9 @@ package com.monsters.chat.ui
             this._skinnedElements[_loc2_].gotoAndStop(_loc1_);
             _loc2_++;
          }
-         this.background.mcToggle.gotoAndStop(this._enabled ? "on" + this._skinTag : "close" + this._skinTag);
-         this.background.arrowUp.gotoAndStop("on" + this._skinTag);
-         this.background.arrowDown.gotoAndStop("on" + this._skinTag);
+         // this.background.mcToggle.gotoAndStop(this._enabled ? "on" + this._skinTag : "close" + this._skinTag);
+         // this.background.arrowUp.gotoAndStop("on" + this._skinTag);
+         // this.background.arrowDown.gotoAndStop("on" + this._skinTag);
       }
       
       override public function update() : void
@@ -681,27 +680,27 @@ package com.monsters.chat.ui
          super.update();
          this.ResizeWindow();
          this.ResizeMessages();
-         if(!TUTORIAL.hasFinished)
-         {
-            this.background.arrowUp.visible = TUTORIAL.hasFinished;
-            this.background.mcToggle.visible = TUTORIAL.hasFinished;
-         }
-         else if(GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD)
-         {
-            this.background.arrowUp.visible = TUTORIAL.hasFinished;
-            this.background.mcToggle.visible = TUTORIAL.hasFinished;
-         }
+         // if(!TUTORIAL.hasFinished)
+         // {
+         //    this.background.arrowUp.visible = TUTORIAL.hasFinished;
+         //    this.background.mcToggle.visible = TUTORIAL.hasFinished;
+         // }
+         // else if(GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD)
+         // {
+         //    this.background.arrowUp.visible = TUTORIAL.hasFinished;
+         //    this.background.mcToggle.visible = TUTORIAL.hasFinished;
+         // }
          this.Skin();
          this.UpdateChatStatus();
       }
       
       public function UpdateChatStatus() : void
       {
-         this.background.mcToggle.gotoAndStop(this._enabled ? "close" + this._skinTag : "on" + this._skinTag);
-         if(Chat._bymChat.isLoggingOut)
-         {
-            this.background.mcToggle.gotoAndStop("wait" + this._skinTag);
-         }
+         // this.background.mcToggle.gotoAndStop(this._enabled ? "close" + this._skinTag : "on" + this._skinTag);
+         // if(Chat._bymChat.isLoggingOut)
+         // {
+         //    this.background.mcToggle.gotoAndStop("wait" + this._skinTag);
+         // }
       }
       
       override public function clearChat() : void
@@ -712,22 +711,30 @@ package com.monsters.chat.ui
       
       override public function get background() : MovieClip
       {
-         return this._displayAssets.frame;
+         throw new Error("NOT IMPLEMENTED");
+         // return this._displayAssets.frame;
+         return null;
       }
       
       override public function get input() : TextField
       {
-         return this._displayAssets.input._input;
+         throw new Error("NOT IMPLEMENTED");
+         // return this._displayAssets.input._input;
+         return null;
       }
       
       override public function get output() : TextField
       {
-         return this.background._output;
+         throw new Error("NOT IMPLEMENTED");
+         return null;
+         // return this.background._output;
       }
       
       public function get inputbar() : MovieClip
       {
-         return this._displayAssets.input;
+         throw new Error("NOT IMPLEMENTED");
+         return null;
+         // return this._displayAssets.input;
       }
       
       public function OnMsgMouseOver(param1:MouseEvent) : void
@@ -738,19 +745,19 @@ package com.monsters.chat.ui
             if(param1.currentTarget.msgData.userid)
             {
                _loc2_ = param1.currentTarget as ChatBox_msg_CLIP;
-               if(_loc2_.msgData.msgtype == "IgnoreList")
-               {
-                  if(Chat._bymChat.userIsIgnored(_loc2_.msgData.userid))
-                  {
-                     _loc2_.ignoreBtn.gotoAndStop(2);
-                     _loc2_.ignoreBtn.visible = true;
-                  }
-               }
-               else if(!Chat._bymChat.userIsIgnored(_loc2_.msgData.userid))
-               {
-                  _loc2_.ignoreBtn.gotoAndStop(1);
-                  _loc2_.ignoreBtn.visible = true;
-               }
+               // if(_loc2_.msgData.msgtype == "IgnoreList")
+               // {
+               //    if(Chat._bymChat.userIsIgnored(_loc2_.msgData.userid))
+               //    {
+               //       _loc2_.ignoreBtn.gotoAndStop(2);
+               //       _loc2_.ignoreBtn.visible = true;
+               //    }
+               // }
+               // else if(!Chat._bymChat.userIsIgnored(_loc2_.msgData.userid))
+               // {
+               //    _loc2_.ignoreBtn.gotoAndStop(1);
+               //    _loc2_.ignoreBtn.visible = true;
+               // }
             }
          }
       }
@@ -806,10 +813,10 @@ package com.monsters.chat.ui
          {
             return;
          }
-         if(param1 && param1.currentTarget == this.background.mcToggle && TUTORIAL.hasFinished)
-         {
-            this._enabled = !this._enabled;
-         }
+         // if(param1 && param1.currentTarget == this.background.mcToggle && TUTORIAL.hasFinished)
+         // {
+         //    this._enabled = !this._enabled;
+         // }
          if(TUTORIAL.hasFinished && !Chat._bymChat.isLoggingOut)
          {
             this.EnableInput(this._enabled);

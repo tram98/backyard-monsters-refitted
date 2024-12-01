@@ -1,6 +1,5 @@
 package
 {
-   import com.monsters.chat.Chat;
    import flash.display.DisplayObject;
    import flash.display.MovieClip;
    import flash.events.MouseEvent;

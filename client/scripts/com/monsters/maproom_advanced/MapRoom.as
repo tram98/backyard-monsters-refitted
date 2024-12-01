@@ -3,7 +3,6 @@ package com.monsters.maproom_advanced
    
    import com.cc.utils.SecNum;
    import com.monsters.alliances.ALLIANCES;
-   import com.monsters.chat.Chat;
    import com.monsters.effects.smoke.Smoke;
    import com.monsters.enums.EnumYardType;
    import com.monsters.mailbox.FriendPicker;

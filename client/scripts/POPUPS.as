@@ -850,7 +850,7 @@ package
          {
             if(o)
             {
-               obj = JSON.decode(o);
+               obj = JsonUtil.decode(o);
                BASE._credits.Set(int(obj.credits));
                BASE._hpCredits = int(obj.credits);
                GLOBAL._credits.Set(int(obj.credits));

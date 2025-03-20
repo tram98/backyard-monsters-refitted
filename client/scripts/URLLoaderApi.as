@@ -145,7 +145,7 @@ package
          {
             return;
          }
-         var decodedReqData:Object = JSON.decode(this._req.data);
+         var decodedReqData:Object = JsonUtil.decode(this._req.data);
          if (Boolean(this._onComplete))
          {
             if (decodedReqData)

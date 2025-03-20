@@ -66,7 +66,7 @@ package
                   {
                      _lastUpdateID = _loc2_.id;
                   }
-                  _loc3_ = JSON.decode(_loc2_.data);
+                  _loc3_ = JsonUtil.decode(_loc2_.data);
                   for each(_loc4_ in _loc3_)
                   {
                      _updates.push({
@@ -575,7 +575,7 @@ package
             }
             else
             {
-               LOGGER.Log("err","UPDATES.Create: " + JSON.encode(param1));
+               LOGGER.Log("err","UPDATES.Create: " + JsonUtil.encode(param1));
                GLOBAL.ErrorMessage("UPDATES.Create");
             }
          };
@@ -609,7 +609,7 @@ package
          {
             isHelping = true;
          }
-         loadVars = [["baseid",id],["data",JSON.encode([update])],["lastupdate",lastupdate],["help",isHelping]];
+         loadVars = [["baseid",id],["data",JsonUtil.encode([update])],["lastupdate",lastupdate],["help",isHelping]];
          new URLLoaderApi().load(url + "saveupdate",loadVars,handleLoadSuccessful,handleLoadError);
       }
       

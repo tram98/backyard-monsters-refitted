@@ -1146,7 +1146,7 @@ package
             Push("IC" + i);
             i++;
          }
-         return md5(JSON.encode(tmpArray));
+         return md5(JsonUtil.encode(tmpArray));
       }
       
       public static function GetAppropriateCreatures() : Object

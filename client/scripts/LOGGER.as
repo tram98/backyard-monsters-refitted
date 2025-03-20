@@ -868,7 +868,7 @@ package
                   arg = {};
                   arg["train_" + monsternames[data[1] - 1]] = 1;
             }
-            arrArg = [JSON.encode(arg)];
+            arrArg = [JsonUtil.encode(arg)];
             GLOBAL.CallJS("cc.kg_statsUpdate",[arg],false);
          }
          catch(e:Error)

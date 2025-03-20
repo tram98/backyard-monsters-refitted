@@ -1467,7 +1467,7 @@ package
 
       public static function OpenMap(param1:String):void
       {
-         var _loc2_:Object = JSON.decode(param1);
+         var _loc2_:Object = JsonUtil.decode(param1);
          if (_loc2_.status)
          {
             if (_loc2_.status == "open")
@@ -1667,7 +1667,7 @@ package
       {
          var _loc3_:Object = null;
          var _loc2_:String = param1;
-         _loc3_ = JSON.decode(_loc2_);
+         _loc3_ = JsonUtil.decode(_loc2_);
          var _loc4_:String = String(_loc3_.h);
          var _loc5_:int = int(_loc3_.hid);
          _loc2_ = _loc2_.split(",\"h\":\"" + _loc4_ + "\"").join("");
@@ -1738,7 +1738,7 @@ package
             Push(i);
             i++;
          }
-         return md5(JSON.encode(tmpArray));
+         return md5(JsonUtil.encode(tmpArray));
       }
 
       public static function Brag(param1:String, param2:String, param3:String, param4:String):void
@@ -1750,7 +1750,7 @@ package
       {
          if (debugLogJSCalls)
          {
-            print("CallJS> func: " + param1 + " \n     args: " + JSON.encode(param2) + " \n     exitFS: " + param3);
+            print("CallJS> func: " + param1 + " \n     args: " + JsonUtil.encode(param2) + " \n     exitFS: " + param3);
          }
          if (GLOBAL._local)
          {
@@ -1773,7 +1773,7 @@ package
       {
          if (debugLogJSCalls)
          {
-            print("CallJS> func: " + param1 + " \n     args: " + JSON.encode(param3) + " \n     exitFS: " + param4);
+            print("CallJS> func: " + param1 + " \n     args: " + JsonUtil.encode(param3) + " \n     exitFS: " + param4);
          }
          if (GLOBAL._local)
          {

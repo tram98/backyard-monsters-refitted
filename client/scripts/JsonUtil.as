@@ -3,11 +3,11 @@ package
    import com.brokenfunction.json.decodeJson;
    import com.brokenfunction.json.encodeJson;
    
-   public final class JSON
+   public final class JsonUtil
    {
        
       
-      public function JSON()
+      public function JsonUtil()
       {
          super();
       }

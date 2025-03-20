@@ -20,7 +20,7 @@ package com.monsters.baseplanner
       
       public function saveTemplate(baseTemplate:BaseTemplate, slotId:uint) : void
       {
-         var _loc3_:Object = JSON.encode(baseTemplate.exportData());
+         var _loc3_:Object = JsonUtil.encode(baseTemplate.exportData());
          this.callServerMethod("savetemplate",[["slotid",slotId],["name",baseTemplate.name],["data",_loc3_]],this.savedTemplate);
          print("saving \'" + baseTemplate.name + "\' in slot " + slotId);
       }
@@ -56,7 +56,7 @@ package com.monsters.baseplanner
                slotId = uint(template.slotid);
                baseTemplate.name = template.name;
                baseTemplate.slot = slotId;
-               baseTemplate.importData(JSON.decode(template.data));
+               baseTemplate.importData(JsonUtil.decode(template.data));
                if(slotId < baseTemplateList.length)
                {
                   baseTemplateList[slotId] = baseTemplate;

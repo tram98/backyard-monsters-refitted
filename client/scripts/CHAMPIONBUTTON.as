@@ -32,9 +32,9 @@ package
          this._creatureData = CHAMPIONCAGE._guardians[param1];
          this._level = Math.min(this.MAX_ICON_LEVEL,param2);
          var _loc6_:String = String(CHAMPIONCAGE._guardians[param1].name);
-         if(Boolean(GLOBAL._playerGuardianData[this._index]) && Boolean(GLOBAL._playerGuardianData[this._index].l.Get()))
+         if(Boolean(GLOBAL._playerGuardianData[this._index]) && Boolean(GLOBAL._playerGuardianData[this._index].l))
          {
-            txtName.htmlText = "<b>" + _loc6_ + " Level " + GLOBAL._playerGuardianData[this._index].l.Get() + "</b>";
+            txtName.htmlText = "<b>" + _loc6_ + " Level " + GLOBAL._playerGuardianData[this._index].l + "</b>";
          }
          else
          {

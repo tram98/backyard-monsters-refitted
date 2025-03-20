@@ -356,7 +356,7 @@ package
          var _loc2_:int = int(GLOBAL._playerGuardianData.length);
          while(_loc7_ < _loc2_)
          {
-            if(Boolean(GLOBAL._playerGuardianData[_loc7_]) && GLOBAL._playerGuardianData[_loc7_].hp.Get() > 0)
+            if(Boolean(GLOBAL._playerGuardianData[_loc7_]) && GLOBAL._playerGuardianData[_loc7_].hp > 0)
             {
                if((_loc6_ = !!GLOBAL._playerGuardianData[_loc7_].status ? int(GLOBAL._playerGuardianData[_loc7_].status) : ChampionBase.k_CHAMPION_STATUS_NORMAL) == ChampionBase.k_CHAMPION_STATUS_NORMAL)
                {
@@ -370,7 +370,7 @@ package
                      {
                         _loc5_ = true;
                      }
-                     (_loc8_ = param1.addChild(new CHAMPIONBUTTON("G" + GLOBAL._playerGuardianData[_loc7_].t,GLOBAL._playerGuardianData[_loc7_].l.Get(),_loc7_,_loc3_,this._creatureButtonsMC)) as CHAMPIONBUTTON).x = 14;
+                     (_loc8_ = param1.addChild(new CHAMPIONBUTTON("G" + GLOBAL._playerGuardianData[_loc7_].t,GLOBAL._playerGuardianData[_loc7_].l,_loc7_,_loc3_,this._creatureButtonsMC)) as CHAMPIONBUTTON).x = 14;
                      _loc8_.y = 34 + _loc3_ * 53;
                      _loc8_.addEventListener(UI_TOP.CREATUREBUTTONOVER,this.sortCreatureButtons);
                      this._creatureButtons.push(_loc8_);

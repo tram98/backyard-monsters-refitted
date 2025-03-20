@@ -1,7 +1,6 @@
 package
 {
-   
-   
+   import com.bymr.champions.ChampionModel;
    import com.cc.utils.SecNum;
    import com.monsters.configs.BYMConfig;
    import com.monsters.monsters.champions.ChampionBase;
@@ -20,12 +19,12 @@ package
       
       public static var _popup:CHAMPIONCHAMBERPOPUP;
        
-      
-      public var _frozen:Array;
+
+      public var _frozen:Vector.<ChampionModel>;
       
       public function CHAMPIONCHAMBER()
       {
-         this._frozen = [];
+         this._frozen = new Vector.<ChampionModel>();
          super();
          _type = 119;
          _footprint = [new Rectangle(0,0,100,100)];
@@ -68,7 +67,7 @@ package
             _loc2_ = !!BASE._guardianData[_loc3_].status ? int(BASE._guardianData[_loc3_].status) : ChampionBase.k_CHAMPION_STATUS_NORMAL;
             if(BASE._guardianData[_loc3_] && _loc2_ == ChampionBase.k_CHAMPION_STATUS_NORMAL && CREATURES._guardian == null)
             {
-               GLOBAL._bCage.SpawnGuardian(BASE._guardianData[_loc3_].l.Get(),BASE._guardianData[_loc3_].fd,BASE._guardianData[_loc3_].ft,BASE._guardianData[_loc3_].t,BASE._guardianData[_loc3_].hp.Get(),BASE._guardianData[_loc3_].nm,BASE._guardianData[_loc3_].fb.Get(),BASE._guardianData[_loc3_].pl.Get());
+               GLOBAL._bCage.SpawnGuardian(BASE._guardianData[_loc3_].l,BASE._guardianData[_loc3_].fd,BASE._guardianData[_loc3_].ft,BASE._guardianData[_loc3_].t,BASE._guardianData[_loc3_].hp,BASE._guardianData[_loc3_].nm,BASE._guardianData[_loc3_].fb,BASE._guardianData[_loc3_].pl);
             }
             _loc3_++;
          }
@@ -151,20 +150,18 @@ package
                }
                _loc2_++;
             }
-            LOGGER.Stat([69,BASE._guardianData[_loc1_].t,BASE._guardianData[_loc1_].l.Get()]);
+            LOGGER.Stat([69,BASE._guardianData[_loc1_].t,BASE._guardianData[_loc1_].l]);
             BASE._guardianData[_loc1_].ft -= GLOBAL.Timestamp();
             CREATURES._guardian.export();
             CREATURES._guardian.changeModeFreeze();
             this._frozen.push(BASE._guardianData[_loc1_]);
             BASE._guardianData[_loc1_].status = ChampionBase.k_CHAMPION_STATUS_FROZEN;
-            BASE._guardianData[_loc1_].log += "," + ChampionBase.k_CHAMPION_STATUS_FROZEN.toString();
             if(GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD)
             {
                _loc3_ = GLOBAL.getPlayerGuardianIndex(CREATURES._guardian._type);
                if(_loc3_ != -1 && GLOBAL._playerGuardianData[_loc3_] != BASE._guardianData[_loc1_])
                {
                   GLOBAL._playerGuardianData[_loc3_].status = ChampionBase.k_CHAMPION_STATUS_FROZEN;
-                  GLOBAL._playerGuardianData[_loc3_].log += "," + ChampionBase.k_CHAMPION_STATUS_FROZEN.toString();
                   GLOBAL._playerGuardianData[_loc3_].ft -= GLOBAL.Timestamp();
                }
             }
@@ -180,10 +177,10 @@ package
          var p:Point = null;
          var level:int = 0;
          var target:Point = null;
-         var newFrozen:Array = null;
+         var newFrozen:Vector.<ChampionModel> = null;
          var j:int = 0;
          var spawnClass:Class = null;
-         var obj:Object = null;
+         var obj:ChampionModel = null;
          var mc:popup_monster = null;
          var type:int = param1;
          if(health < maxHealth)
@@ -202,9 +199,9 @@ package
             if(this._frozen[i].t == type)
             {
                p = new Point(x,y + 80);
-               level = int(this._frozen[i].l.Get());
+               level = int(this._frozen[i].l);
                target = GRID.FromISO(GLOBAL._bCage.x,GLOBAL._bCage.y + 20);
-               newFrozen = [];
+               newFrozen = new Vector.<ChampionModel>();
                j = 0;
                while(j < this._frozen.length)
                {
@@ -215,13 +212,12 @@ package
                   j++;
                }
                spawnClass = CHAMPIONCAGE.getGuardianSpawnClass(type);
-               CREATURES._guardian = new spawnClass("cage",p,0,target,true,this,this._frozen[i].l.Get(),this._frozen[i].fd,this._frozen[i].ft + GLOBAL.Timestamp(),this._frozen[i].t,this._frozen[i].hp.Get(),this._frozen[i].fb.Get(),this._frozen[i].pl.Get());
+               CREATURES._guardian = new spawnClass("cage",p,0,target,true,this,this._frozen[i].l,this._frozen[i].fd,this._frozen[i].ft + GLOBAL.Timestamp(),this._frozen[i].t,this._frozen[i].hp,this._frozen[i].fb,this._frozen[i].pl);
                for each(obj in BASE._guardianData)
                {
                   if(obj.t == type)
                   {
                      obj.status = ChampionBase.k_CHAMPION_STATUS_NORMAL;
-                     obj.log += "," + ChampionBase.k_CHAMPION_STATUS_NORMAL.toString();
                      break;
                   }
                }
@@ -230,7 +226,6 @@ package
                   if(obj.t == type)
                   {
                      obj.status = ChampionBase.k_CHAMPION_STATUS_NORMAL;
-                     obj.log += "," + ChampionBase.k_CHAMPION_STATUS_NORMAL.toString();
                      break;
                   }
                }
@@ -272,10 +267,10 @@ package
       
       override public function Setup(param1:Object) : void
       {
-         var _loc2_:Object = null;
+         var _loc2_:ChampionModel = null;
          var _loc3_:Array = null;
          var _loc4_:Dictionary = null;
-         var _loc5_:Object = null;
+         var _loc5_:ChampionModel = null;
          var _loc6_:Object = null;
          var _loc7_:int = 0;
          var _loc8_:int = 0;
@@ -283,7 +278,7 @@ package
          if(param1.fz)
          {
             _loc3_ = JsonUtil.decode(param1.fz) as Array;
-            this._frozen = [];
+            this._frozen = new Vector.<ChampionModel>();
             _loc4_ = new Dictionary();
             _loc5_ = null;
             _loc8_ = 0;
@@ -300,7 +295,7 @@ package
                }
                if(_loc5_ == null)
                {
-                  _loc5_ = {};
+                  _loc5_ = new ChampionModel();
                   if(_loc6_.nm)
                   {
                      _loc5_.nm = _loc6_.nm;
@@ -320,38 +315,37 @@ package
                   }
                   if(_loc6_.l)
                   {
-                     _loc5_.l = new SecNum(_loc6_.l);
+                     _loc5_.l = _loc6_.l;
                   }
                   else
                   {
-                     _loc5_.l = new SecNum(0);
+                     _loc5_.l = 0;
                   }
                   if(_loc6_.hp)
                   {
-                     _loc5_.hp = new SecNum(_loc6_.hp);
+                     _loc5_.hp = _loc6_.hp;
                   }
                   else
                   {
-                     _loc5_.hp = new SecNum(0);
+                     _loc5_.hp = 0;
                   }
                   if(_loc6_.fb)
                   {
-                     _loc5_.fb = new SecNum(_loc6_.fb);
+                     _loc5_.fb = _loc6_.fb;
                   }
                   else
                   {
-                     _loc5_.fb = new SecNum(0);
+                     _loc5_.fb = 0;
                   }
                   if(_loc6_.pl)
                   {
-                     _loc5_.pl = new SecNum(_loc6_.pl);
+                     _loc5_.pl = _loc6_.pl;
                   }
                   else
                   {
-                     _loc5_.pl = new SecNum(0);
+                     _loc5_.pl = 0;
                   }
                   _loc5_.status = ChampionBase.k_CHAMPION_STATUS_FROZEN;
-                  _loc5_.log = ChampionBase.k_CHAMPION_STATUS_FROZEN.toString();
                   BASE._guardianData.push(_loc5_);
                   if(GLOBAL.getPlayerGuardianIndex(_loc5_.t) == -1)
                   {
@@ -419,7 +413,7 @@ package
             }
             if(this._frozen[_loc5_].hp)
             {
-               _loc6_.hp = this._frozen[_loc5_].hp.Get();
+               _loc6_.hp = this._frozen[_loc5_].hp;
             }
             else
             {
@@ -427,7 +421,7 @@ package
             }
             if(this._frozen[_loc5_].l)
             {
-               _loc6_.l = this._frozen[_loc5_].l.Get();
+               _loc6_.l = this._frozen[_loc5_].l;
             }
             if(this._frozen[_loc5_].ft)
             {
@@ -443,7 +437,7 @@ package
             }
             if(this._frozen[_loc5_].fb)
             {
-               _loc6_.fb = this._frozen[_loc5_].fb.Get();
+               _loc6_.fb = this._frozen[_loc5_].fb;
             }
             else
             {
@@ -453,7 +447,7 @@ package
             {
                if(this._frozen[_loc5_].pl is SecNum)
                {
-                  _loc6_.pl = this._frozen[_loc5_].pl.Get();
+                  _loc6_.pl = this._frozen[_loc5_].pl;
                }
                else
                {

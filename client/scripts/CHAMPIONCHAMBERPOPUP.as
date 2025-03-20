@@ -1,5 +1,6 @@
 package
 {
+   import com.bymr.champions.ChampionModel;
    import com.monsters.display.ImageCache;
    import com.monsters.display.ScrollSetH;
    import flash.display.Bitmap;
@@ -46,7 +47,7 @@ package
       private function createSlots() : Sprite
       {
          var _loc3_:int = 0;
-         var _loc4_:Object = null;
+         var _loc4_:ChampionModel = null;
          var _loc5_:ChampionChamberFrozen = null;
          var _loc6_:int = 0;
          var _loc7_:String = null;
@@ -59,7 +60,7 @@ package
          for each(_loc4_ in CHAMPIONCAGE.GetAllGuardianData())
          {
             _loc5_ = new ChampionChamberFrozen();
-            _loc6_ = int(_loc4_.l.Get());
+            _loc6_ = int(_loc4_.l);
             _loc7_ = "G" + _loc4_.t;
             _loc8_ = CHAMPIONCAGE._guardians[_loc7_];
             _loc5_.name = _loc4_.t.toString();
@@ -142,7 +143,7 @@ package
          this.UpdateStats(CHAMPIONCAGE.GetGuardianData(param1));
       }
       
-      private function UpdateStats(param1:Object = null) : void
+      private function UpdateStats(param1:ChampionModel = null) : void
       {
          var _loc2_:int = 0;
          var _loc3_:int = 0;
@@ -157,8 +158,8 @@ package
          if(param1)
          {
             _loc2_ = int(param1.t);
-            _loc3_ = int(param1.l.Get());
-            _loc4_ = int(param1.fb.Get());
+            _loc3_ = int(param1.l);
+            _loc4_ = int(param1.fb);
             _loc5_ = "G" + _loc2_;
             if(_loc6_ = "monsters/" + "G" + _loc2_ + "_L" + _loc3_ + "-150.png")
             {

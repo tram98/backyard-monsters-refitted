@@ -1,5 +1,6 @@
 package com.monsters.monsters.champions
 {
+   import com.bymr.champions.ChampionModel;
    import com.cc.utils.SecNum;
    import com.monsters.configs.BYMConfig;
    import com.monsters.interfaces.ILootable;
@@ -319,14 +320,12 @@ package com.monsters.monsters.champions
          CREATURES._creatures[CREATURES._creatureID] = this;
          var _loc1_:int = BASE.getGuardianIndex(CREATURES._guardian._type);
          BASE._guardianData[_loc1_].status = ChampionBase.k_CHAMPION_STATUS_JUICED;
-         BASE._guardianData[_loc1_].log += "," + ChampionBase.k_CHAMPION_STATUS_JUICED.toString();
          if(GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD)
          {
             _loc1_ = GLOBAL.getPlayerGuardianIndex(CREATURES._guardian._type);
             if(_loc1_ != -1)
             {
                GLOBAL._playerGuardianData[_loc1_].status = ChampionBase.k_CHAMPION_STATUS_JUICED;
-               GLOBAL._playerGuardianData[_loc1_].log += "," + ChampionBase.k_CHAMPION_STATUS_JUICED.toString();
             }
          }
          CREATURES._guardian = null;
@@ -1388,86 +1387,85 @@ package com.monsters.monsters.champions
       {
       }
       
-      public function export(param1:Boolean = true) : void
+      public function export(friendly:Boolean = true) : void
       {
-         var _loc4_:int = 0;
-         var _loc5_:String = null;
-         var _loc6_:int = 0;
-         var _loc7_:Boolean = false;
+         var status:int = 0;
+         var log:String = null;
+         var baseGuardianCount:int = 0;
+         var foundBaseGuardian:Boolean = false;
          if(_behaviour == "juice" || _behaviour == "freeze")
          {
             return;
          }
-         var _loc2_:int = 0;
-         var _loc3_:Boolean = false;
-         _loc2_ = 0;
-         while(_loc2_ < CREATURES._guardianList.length)
+         var i:int = 0;
+         var foundCreatureGuardian:Boolean = false;
+         while(i < CREATURES._guardianList.length)
          {
-            if(CREATURES._guardianList[_loc2_] == this)
+            if(CREATURES._guardianList[i] == this)
             {
-               _loc3_ = true;
+               foundCreatureGuardian = true;
                break;
             }
-            _loc2_++;
+            i++;
          }
-         if(param1 && _loc3_)
+         if(friendly && foundCreatureGuardian)
          {
-            _loc6_ = int(BASE._guardianData.length);
-            _loc7_ = false;
-            _loc2_ = 0;
-            while(_loc2_ < _loc6_)
+            baseGuardianCount = int(BASE._guardianData.length);
+            foundBaseGuardian = false;
+            i = 0;
+            while(i < baseGuardianCount)
             {
-               if(BASE._guardianData[_loc2_].t == int(_creatureID.substr(1)))
+               if(BASE._guardianData[i].t == int(_creatureID.substr(1)))
                {
-                  _loc7_ = true;
+                  foundBaseGuardian = true;
                   break;
                }
-               _loc2_++;
+               i++;
             }
-            if(!_loc7_)
+            if(!foundBaseGuardian)
             {
-               _loc2_ = int(BASE._guardianData.push({}) - 1);
+               i = int(BASE._guardianData.push(new ChampionModel()) - 1);
             }
-            _loc4_ = int(BASE._guardianData[_loc2_].status);
-            if((_loc5_ = String(BASE._guardianData[_loc2_].log)) == null)
+            status = int(BASE._guardianData[i].status);
+            if((log = String(BASE._guardianData[i].log)) == null)
             {
-               _loc5_ = _loc4_.toString();
+               log = status.toString();
             }
-            BASE._guardianData[_loc2_] = {};
-            BASE._guardianData[_loc2_].hp = new SecNum(health);
-            BASE._guardianData[_loc2_].l = new SecNum(this._level.Get());
-            BASE._guardianData[_loc2_].fd = this._feeds.Get();
-            BASE._guardianData[_loc2_].ft = this._feedTime.Get();
-            BASE._guardianData[_loc2_].nm = this._name;
-            BASE._guardianData[_loc2_].t = int(_creatureID.substr(1));
-            BASE._guardianData[_loc2_].fb = new SecNum(this._foodBonus.Get());
-            BASE._guardianData[_loc2_].pl = new SecNum(this._powerLevel.Get());
-            BASE._guardianData[_loc2_].status = _loc4_;
-            BASE._guardianData[_loc2_].log = _loc5_;
+            BASE._guardianData[i] = new ChampionModel();
+            BASE._guardianData[i].hp = health;
+            BASE._guardianData[i].l = this._level.Get();
+            BASE._guardianData[i].fd = this._feeds.Get();
+            BASE._guardianData[i].ft = this._feedTime.Get();
+            BASE._guardianData[i].nm = this._name;
+            BASE._guardianData[i].t = int(_creatureID.substr(1));
+            BASE._guardianData[i].fb = this._foodBonus.Get();
+            BASE._guardianData[i].pl = this._powerLevel.Get();
+            BASE._guardianData[i].status = status;
+            BASE._guardianData[i].log = log;
          }
-         if(!param1 && GLOBAL.mode != GLOBAL.e_BASE_MODE.BUILD || param1 && _loc3_ && GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD)
+         if(!friendly && GLOBAL.mode != GLOBAL.e_BASE_MODE.BUILD || friendly && foundCreatureGuardian && GLOBAL.mode == GLOBAL.e_BASE_MODE.BUILD)
          {
-            _loc2_ = GLOBAL.getPlayerGuardianIndex(int(_creatureID.substr(1)));
-            if(_loc2_ < 0)
+            i = GLOBAL.getPlayerGuardianIndex(int(_creatureID.substr(1)));
+            if(i < 0)
             {
-               _loc2_ = int(GLOBAL._playerGuardianData.push({}) - 1);
+               i = int(GLOBAL._playerGuardianData.push(new ChampionModel()) - 1);
             }
-            _loc4_ = int(GLOBAL._playerGuardianData[_loc2_].status);
-            if((_loc5_ = String(GLOBAL._playerGuardianData[_loc2_].log)) == null)
+            status = int(GLOBAL._playerGuardianData[i].status);
+            if((log = String(GLOBAL._playerGuardianData[i].log)) == null)
             {
-               _loc5_ = _loc4_.toString();
+               log = status.toString();
             }
-            GLOBAL._playerGuardianData[_loc2_] = {};
-            GLOBAL._playerGuardianData[_loc2_].hp = new SecNum(health);
-            GLOBAL._playerGuardianData[_loc2_].l = new SecNum(this._level.Get());
-            GLOBAL._playerGuardianData[_loc2_].fd = this._feeds.Get();
-            GLOBAL._playerGuardianData[_loc2_].ft = this._feedTime.Get();
-            GLOBAL._playerGuardianData[_loc2_].nm = this._name;
-            GLOBAL._playerGuardianData[_loc2_].t = int(_creatureID.substr(1));
-            GLOBAL._playerGuardianData[_loc2_].fb = new SecNum(this._foodBonus.Get());
-            GLOBAL._playerGuardianData[_loc2_].pl = new SecNum(this._powerLevel.Get());
-            GLOBAL._playerGuardianData[_loc2_].status = _loc4_;
-            GLOBAL._playerGuardianData[_loc2_].log = _loc5_;
+            GLOBAL._playerGuardianData[i] = new ChampionModel();
+            GLOBAL._playerGuardianData[i].hp = health;
+            GLOBAL._playerGuardianData[i].l = this._level.Get();
+            GLOBAL._playerGuardianData[i].fd = this._feeds.Get();
+            GLOBAL._playerGuardianData[i].ft = this._feedTime.Get();
+            GLOBAL._playerGuardianData[i].nm = this._name;
+            GLOBAL._playerGuardianData[i].t = int(_creatureID.substr(1));
+            GLOBAL._playerGuardianData[i].fb = this._foodBonus.Get();
+            GLOBAL._playerGuardianData[i].pl = this._powerLevel.Get();
+            GLOBAL._playerGuardianData[i].status = status;
+            GLOBAL._playerGuardianData[i].log = log;
          }
       }
       

@@ -1,5 +1,6 @@
 package
 {
+   import com.bymr.champions.ChampionModel;
    import com.cc.utils.SecNum;
    import com.monsters.ai.*;
    import com.monsters.alliances.ALLIANCES;
@@ -120,17 +121,17 @@ package
       
       public static function get hasCreaturesToAttackWith() : Boolean
       {
-         var _loc5_:Object = null;
+         var _loc5_:ChampionModel = null;
          var _loc6_:String = null;
          var _loc1_:Object = CREATURELOCKER._creatures;
          var _loc2_:Object = ATTACK._curCreaturesAvailable;
          var _loc3_:int = int(GLOBAL._playerGuardianData.length);
-         var _loc4_:Vector.<Object> = GLOBAL._playerGuardianData;
+         var _loc4_:Vector.<ChampionModel> = GLOBAL._playerGuardianData;
          if(GLOBAL._loadmode == GLOBAL.mode || GLOBAL._loadmode != GLOBAL.mode && !MAPROOM_DESCENT.DescentPassed)
          {
             for each(_loc5_ in _loc4_)
             {
-               if(_loc5_ && _loc5_.hp.Get() > 0 && _loc5_.status == ChampionBase.k_CHAMPION_STATUS_NORMAL)
+               if(_loc5_ && _loc5_.hp > 0 && _loc5_.status == ChampionBase.k_CHAMPION_STATUS_NORMAL)
                {
                   return true;
                }
@@ -239,7 +240,7 @@ package
          var _loc3_:int = 0;
          while(_loc3_ < GLOBAL._playerGuardianData.length)
          {
-            if(GLOBAL._playerGuardianData[_loc3_] && GLOBAL._playerGuardianData[_loc3_].hp.Get() > 0 && GLOBAL._playerGuardianData[_loc3_].status == ChampionBase.k_CHAMPION_STATUS_NORMAL)
+            if(GLOBAL._playerGuardianData[_loc3_] && GLOBAL._playerGuardianData[_loc3_].hp > 0 && GLOBAL._playerGuardianData[_loc3_].status == ChampionBase.k_CHAMPION_STATUS_NORMAL)
             {
                _loc2_++;
             }
@@ -586,16 +587,16 @@ package
                if(_loc8_.substr(0,1) == "G")
                {
                   _loc10_ = GLOBAL.getPlayerGuardianIndex(int(_loc8_.substr(1)));
-                  _loc11_ = int(GLOBAL._playerGuardianData[_loc10_].l.Get());
+                  _loc11_ = int(GLOBAL._playerGuardianData[_loc10_].l);
                   _loc3_ = Math.random() * 360 * 0.0174532925;
                   _loc4_ = Math.random() * param2 / 2;
                   _loc5_ = param1.add(new Point(Math.sin(_loc3_) * _loc4_,Math.cos(_loc3_) * _loc4_));
-                  CREEPS.SpawnGuardian(GLOBAL._playerGuardianData[_loc10_].t,MAP._BUILDINGTOPS,"bounce",_loc11_,_loc5_,Math.random() * 360,GLOBAL._playerGuardianData[_loc10_].hp.Get(),GLOBAL._playerGuardianData[_loc10_].fb.Get(),GLOBAL._playerGuardianData[_loc10_].pl.Get());
+                  CREEPS.SpawnGuardian(GLOBAL._playerGuardianData[_loc10_].t,MAP._BUILDINGTOPS,"bounce",_loc11_,_loc5_,Math.random() * 360,GLOBAL._playerGuardianData[_loc10_].hp,GLOBAL._playerGuardianData[_loc10_].fb,GLOBAL._playerGuardianData[_loc10_].pl);
                   if(!MapRoomManager.instance.isInMapRoom3)
                   {
                      _flungSpace.Add(CHAMPIONCAGE.GetGuardianProperty(_loc8_,_loc11_,"bucket"));
                   }
-                  _loc12_ = "Level " + GLOBAL._playerGuardianData[_loc10_].l.Get() + " " + CHAMPIONCAGE._guardians["G" + GLOBAL._playerGuardianData[_loc10_].t].name;
+                  _loc12_ = "Level " + GLOBAL._playerGuardianData[_loc10_].l + " " + CHAMPIONCAGE._guardians["G" + GLOBAL._playerGuardianData[_loc10_].t].name;
                   _loc6_.push([1,_loc12_]);
                   CREEPS._flungGuardian[_loc10_] = true;
                }
@@ -676,7 +677,7 @@ package
             _loc4_ = GLOBAL.getPlayerGuardianIndex(int(param1.substr(1)));
             if(!MapRoomManager.instance.isInMapRoom3)
             {
-               _loc2_ -= CHAMPIONCAGE.GetGuardianProperty(param1.substr(0,2),GLOBAL._playerGuardianData[_loc4_].l.Get(),"bucket");
+               _loc2_ -= CHAMPIONCAGE.GetGuardianProperty(param1.substr(0,2),GLOBAL._playerGuardianData[_loc4_].l,"bucket");
             }
             ATTACK._flingerBucket[param1] = new SecNum(1);
             _creaturesLoaded.Add(1);
@@ -741,7 +742,7 @@ package
                   }
                   _loc3_++;
                }
-               _loc1_ += CHAMPIONCAGE.GetGuardianProperty(_loc2_.substr(0,2),GLOBAL._playerGuardianData[_loc3_].l.Get(),"bucket");
+               _loc1_ += CHAMPIONCAGE.GetGuardianProperty(_loc2_.substr(0,2),GLOBAL._playerGuardianData[_loc3_].l,"bucket");
             }
             else
             {

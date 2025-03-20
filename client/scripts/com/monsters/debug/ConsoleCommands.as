@@ -1,5 +1,6 @@
 package com.monsters.debug
 {
+   import com.bymr.champions.ChampionModel;
    import com.cc.utils.SecNum;
    // this is used by commented out methods
    // import com.monsters.baseplanner.BaseTemplate;
@@ -416,10 +417,10 @@ package com.monsters.debug
             return "ERROR: can only set level in your base!";
          }
          CHAMPIONCAGE._guardians["G4"].props.powerLevel = param1;
-         var _loc2_:Object = CHAMPIONCAGE.GetGuardianData(4);
+         var _loc2_:ChampionModel = CHAMPIONCAGE.GetGuardianData(4);
          if (_loc2_)
          {
-            _loc2_.pl = new SecNum(param1);
+            _loc2_.pl = param1;
          }
          return "Korath level targeted: " + param1 + " set: " + _loc2_.pl;
       }

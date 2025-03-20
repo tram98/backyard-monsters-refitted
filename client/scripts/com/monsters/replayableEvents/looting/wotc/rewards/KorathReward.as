@@ -1,6 +1,6 @@
 package com.monsters.replayableEvents.looting.wotc.rewards
 {
-   import com.cc.utils.SecNum;
+   import com.bymr.champions.ChampionModel;
    import com.monsters.monsters.champions.ChampionBase;
    import com.monsters.rewarding.Reward;
    
@@ -35,10 +35,10 @@ package com.monsters.replayableEvents.looting.wotc.rewards
          {
             _loc1_._powerLevel.Set(_value);
          }
-         var _loc2_:Object = CHAMPIONCAGE.GetGuardianData(4);
+         var _loc2_:ChampionModel = CHAMPIONCAGE.GetGuardianData(4);
          if(_loc2_)
          {
-            _loc2_.pl = new SecNum(_value);
+            _loc2_.pl = _value;
          }
       }
       
@@ -50,10 +50,10 @@ package com.monsters.replayableEvents.looting.wotc.rewards
          {
             _loc1_.RemoveGuardian(4);
          }
-         var _loc2_:Object = CHAMPIONCAGE.GetGuardianData(4);
-         if(_loc2_)
+         var champion:ChampionModel = CHAMPIONCAGE.GetGuardianData(4);
+         if(champion)
          {
-            _loc2_.pl = new SecNum(0);
+            champion.pl = 0;
          }
       }
       

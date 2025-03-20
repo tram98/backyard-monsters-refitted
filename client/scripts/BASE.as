@@ -1,5 +1,6 @@
 package
 {
+   import com.bymr.champions.ChampionModel;
    import com.cc.utils.SecNum;
    import com.jac.mouse.MouseWheelEnabler;
    import com.monsters.ai.TRIBES;
@@ -275,7 +276,7 @@ package
       
       public static var _userDigits:Array = [];
       
-      public static var _guardianData:Vector.<Object> = new Vector.<Object>();
+      public static var _guardianData:Vector.<ChampionModel> = new Vector.<ChampionModel>();
       
       public static var s_eventBases:Vector.<Number> = new Vector.<Number>();
       
@@ -1264,7 +1265,7 @@ package
                         if(Boolean(champion[j].t) && !existingGuardians[champion[j].t])
                         {
                            existingGuardians[champion[j].t] = true;
-                           _guardianData[guardianIndex] = {};
+                           _guardianData[guardianIndex] = new ChampionModel();
                            addedGuardian = true;
                            if(champion[j].nm)
                            {
@@ -1285,35 +1286,35 @@ package
                            }
                            if(champion[j].l)
                            {
-                              _guardianData[guardianIndex].l = new SecNum(champion[j].l);
+                              _guardianData[guardianIndex].l = champion[j].l;
                            }
                            else
                            {
-                              _guardianData[guardianIndex].l = new SecNum(0);
+                              _guardianData[guardianIndex].l = 0;
                            }
                            if(champion[j].hp)
                            {
-                              _guardianData[guardianIndex].hp = new SecNum(champion[j].hp);
+                              _guardianData[guardianIndex].hp = champion[j].hp;
                            }
                            else
                            {
-                              _guardianData[guardianIndex].hp = new SecNum(0);
+                              _guardianData[guardianIndex].hp = 0;
                            }
                            if(champion[j].fb)
                            {
-                              _guardianData[guardianIndex].fb = new SecNum(champion[j].fb);
+                              _guardianData[guardianIndex].fb = champion[j].fb;
                            }
                            else
                            {
-                              _guardianData[guardianIndex].fb = new SecNum(0);
+                              _guardianData[guardianIndex].fb = 0;
                            }
                            if(champion[j].pl)
                            {
-                              _guardianData[guardianIndex].pl = new SecNum(champion[j].pl);
+                              _guardianData[guardianIndex].pl = champion[j].pl;
                            }
                            else
                            {
-                              _guardianData[guardianIndex].pl = new SecNum(0);
+                              _guardianData[guardianIndex].pl = 0;
                            }
                            if(champion[j].status is int)
                            {
@@ -1336,7 +1337,6 @@ package
                               if(unfrozenFound && _guardianData[guardianIndex].status == ChampionBase.k_CHAMPION_STATUS_NORMAL)
                               {
                                  _guardianData[guardianIndex].status = ChampionBase.k_CHAMPION_STATUS_FROZEN;
-                                 _guardianData[guardianIndex].log += "," + ChampionBase.k_CHAMPION_STATUS_FROZEN.toString();
                               }
                               else if(!unfrozenFound && _guardianData[guardianIndex].status == ChampionBase.k_CHAMPION_STATUS_NORMAL)
                               {
@@ -1348,7 +1348,7 @@ package
                      catch(e:Error)
                      {
                         var rawChampionString:String = JsonUtil.encode(serverData.champion) as String;
-                        _guardianData[j] = JsonUtil.decode(rawChampionString);
+                        _guardianData[j] = ChampionModel.fromObject(JsonUtil.decode(rawChampionString));
                         Console.warning("Base::handleBaseLoadSuccessful - Error thrown on champion, champion data is - " + rawChampionString,true);
                         continue;
                      }
@@ -3266,121 +3266,43 @@ package
       
       private static function getChampionSaveData() : Array
       {
-         var _loc5_:int = 0;
-         var _loc7_:Vector.<Object> = null;
-         var _loc8_:int = 0;
-         var _loc1_:Dictionary = new Dictionary();
-         var _loc2_:Boolean = false;
-         var _loc3_:int = 0;
-         var _loc4_:Array = new Array();
-         var _loc6_:Boolean = false;
-         _loc5_ = 0;
-         while(_loc5_ < _guardianData.length)
+         var saveData:Array = [];
+         var indexByType:Dictionary = new Dictionary();
+         var activeChampionSaved:Boolean = false;
+         var duplicateChampionDataFound:Boolean = false;
+         for(var i:int = 0; i < _guardianData.length; i++)
          {
-            if(Boolean(_guardianData[_loc5_]) && _loc1_[_guardianData[_loc5_].t] === undefined)
+            if(Boolean(_guardianData[i]) && indexByType[_guardianData[i].t] === undefined)
             {
-               _loc1_[_guardianData[_loc5_].t] = _loc5_;
-               _loc4_.push(new Object());
-               if(_guardianData[_loc5_].nm)
+               indexByType[_guardianData[i].t] = i;
+               if(_guardianData[i].status == ChampionBase.k_CHAMPION_STATUS_NORMAL && _guardianData[i].t != 5)
                {
-                  _loc4_[_loc3_].nm = _guardianData[_loc5_].nm;
-               }
-               if(_guardianData[_loc5_].t)
-               {
-                  _loc4_[_loc3_].t = _guardianData[_loc5_].t;
-               }
-               if(_guardianData[_loc5_].hp)
-               {
-                  _loc4_[_loc3_].hp = _guardianData[_loc5_].hp.Get();
-               }
-               else
-               {
-                  _loc4_[_loc3_].hp = 0;
-               }
-               if(_guardianData[_loc5_].l)
-               {
-                  _loc4_[_loc3_].l = _guardianData[_loc5_].l.Get();
-               }
-               if(_guardianData[_loc5_].ft)
-               {
-                  _loc4_[_loc3_].ft = _guardianData[_loc5_].ft;
-               }
-               if(_guardianData[_loc5_].fd)
-               {
-                  _loc4_[_loc3_].fd = _guardianData[_loc5_].fd;
-               }
-               else
-               {
-                  _loc4_[_loc3_].fd = 0;
-               }
-               if(_guardianData[_loc5_].fb)
-               {
-                  _loc4_[_loc3_].fb = _guardianData[_loc5_].fb.Get();
-               }
-               else
-               {
-                  _loc4_[_loc3_].fb = 0;
-               }
-               if(_guardianData[_loc5_].pl)
-               {
-                  if(_guardianData[_loc5_].pl is SecNum)
+                  if(activeChampionSaved)
                   {
-                     _loc4_[_loc3_].pl = _guardianData[_loc5_].pl.Get();
+                     _guardianData[i].status = ChampionBase.k_CHAMPION_STATUS_FROZEN;
                   }
-                  else
-                  {
-                     _loc4_[_loc3_].pl = _guardianData[_loc5_].pl;
-                  }
+                  activeChampionSaved = true;
                }
-               else
-               {
-                  _loc4_[_loc3_].pl = 0;
-               }
-               if(_guardianData[_loc5_].status == ChampionBase.k_CHAMPION_STATUS_NORMAL && _guardianData[_loc5_].t != 5)
-               {
-                  if(_loc2_)
-                  {
-                     _guardianData[_loc5_].status = ChampionBase.k_CHAMPION_STATUS_FROZEN;
-                     _guardianData[_loc5_].log += "," + ChampionBase.k_CHAMPION_STATUS_FROZEN.toString();
-                  }
-                  _loc2_ = true;
-               }
-               if(_guardianData[_loc5_].status)
-               {
-                  _loc4_[_loc3_].status = _guardianData[_loc5_].status;
-               }
-               else
-               {
-                  _loc4_[_loc3_].status = ChampionBase.k_CHAMPION_STATUS_NORMAL;
-               }
-               if(_guardianData[_loc5_].log)
-               {
-                  _loc4_[_loc3_].log = String(_guardianData[_loc5_].log).substr(0,255);
-               }
-               else
-               {
-                  _loc4_[_loc3_].log = String(_loc4_[_loc3_].status).toString();
-               }
-               _loc3_++;
+               saveData.push(_guardianData[i].toObject());
             }
             else
             {
-               _loc6_ = true;
+               duplicateChampionDataFound = true;
             }
-            _loc5_++;
          }
-         if(_loc6_)
+         // de-duplicate guardian data
+         if(duplicateChampionDataFound)
          {
-            _loc7_ = new Vector.<Object>();
-            for each(_loc8_ in _loc1_)
+            var deduplicatedGuardianData:Vector.<ChampionModel> = new Vector.<ChampionModel>();
+            for each(var index:int in indexByType)
             {
-               _loc7_.push(_guardianData[_loc8_]);
+               deduplicatedGuardianData.push(_guardianData[index]);
             }
-            _guardianData = _loc7_;
+            _guardianData = deduplicatedGuardianData;
          }
-         if(_loc4_.length)
+         if(saveData.length)
          {
-            return _loc4_;
+            return saveData;
          }
          return null;
       }
@@ -3418,51 +3340,6 @@ package
          {
             if(Boolean(GLOBAL._playerGuardianData[_loc3_]) && GLOBAL._playerGuardianData[_loc3_].t > 0)
             {
-               _loc1_[_loc3_] = new Object();
-               if(GLOBAL._playerGuardianData[_loc3_].nm)
-               {
-                  _loc1_[_loc3_].nm = GLOBAL._playerGuardianData[_loc3_].nm;
-               }
-               if(GLOBAL._playerGuardianData[_loc3_].t)
-               {
-                  _loc1_[_loc3_].t = GLOBAL._playerGuardianData[_loc3_].t;
-               }
-               if(GLOBAL._playerGuardianData[_loc3_].hp)
-               {
-                  _loc1_[_loc3_].hp = GLOBAL._playerGuardianData[_loc3_].hp.Get();
-               }
-               if(GLOBAL._playerGuardianData[_loc3_].l)
-               {
-                  _loc1_[_loc3_].l = GLOBAL._playerGuardianData[_loc3_].l.Get();
-               }
-               if(GLOBAL._playerGuardianData[_loc3_].ft)
-               {
-                  _loc1_[_loc3_].ft = GLOBAL._playerGuardianData[_loc3_].ft;
-               }
-               if(GLOBAL._playerGuardianData[_loc3_].fd)
-               {
-                  _loc1_[_loc3_].fd = GLOBAL._playerGuardianData[_loc3_].fd;
-               }
-               else
-               {
-                  _loc1_[_loc3_].fd = 0;
-               }
-               if(GLOBAL._playerGuardianData[_loc3_].fb)
-               {
-                  _loc1_[_loc3_].fb = GLOBAL._playerGuardianData[_loc3_].fb.Get();
-               }
-               else
-               {
-                  _loc1_[_loc3_].fb = 0;
-               }
-               if(GLOBAL._playerGuardianData[_loc3_].pl)
-               {
-                  _loc1_[_loc3_].pl = GLOBAL._playerGuardianData[_loc3_].pl.Get();
-               }
-               else
-               {
-                  _loc1_[_loc3_].pl = 0;
-               }
                if(GLOBAL._playerGuardianData[_loc3_].status == ChampionBase.k_CHAMPION_STATUS_NORMAL && GLOBAL._playerGuardianData[_loc3_].t != 5)
                {
                   if(_loc2_)
@@ -3472,22 +3349,7 @@ package
                   }
                   _loc2_ = true;
                }
-               if(GLOBAL._playerGuardianData[_loc3_].status)
-               {
-                  _loc1_[_loc3_].status = GLOBAL._playerGuardianData[_loc3_].status;
-               }
-               else
-               {
-                  _loc1_[_loc3_].status = 0;
-               }
-               if(GLOBAL._playerGuardianData[_loc3_].log)
-               {
-                  _loc1_[_loc3_].log = GLOBAL._playerGuardianData[_loc3_].log;
-               }
-               else
-               {
-                  _loc1_[_loc3_].log = int(_loc1_[_loc3_].status).toString();
-               }
+               _loc1_[_loc3_] = GLOBAL._playerGuardianData[_loc3_].toObject();
             }
             _loc3_++;
          }

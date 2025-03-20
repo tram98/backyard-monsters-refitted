@@ -1,5 +1,6 @@
 package
 {
+   import com.bymr.champions.ChampionModel;
    import com.cc.tests.ABTest;
    import com.cc.utils.SecNum;
    import com.computus.model.Timekeeper;
@@ -305,7 +306,7 @@ package
 
       public static var _wmCreatureLevels:Array = new Array();
 
-      public static var _playerGuardianData:Vector.<Object> = new Vector.<Object>();
+      public static var _playerGuardianData:Vector.<ChampionModel> = new Vector.<ChampionModel>();
 
       public static var _playerCatapultLevel:SecNum = new SecNum(0);
 

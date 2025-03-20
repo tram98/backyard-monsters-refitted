@@ -1,6 +1,7 @@
 package com.monsters.maproom_advanced
 {
 
+   import com.bymr.champions.ChampionModel;
    import com.cc.utils.SecNum;
    import com.monsters.alliances.*;
    import com.monsters.display.ImageCache;
@@ -203,7 +204,7 @@ package com.monsters.maproom_advanced
          var guardianIndex:int = 0;
          var xPos:int = 0;
          var yPos:int = 0;
-         var guardianData:Object = null;
+         var guardianData:ChampionModel = null;
          var isNormalChampion:Boolean = false;
          var guardianDataIndex:int = 0;
          var popupInfoMonster:PopupInfoMonster = null;
@@ -299,7 +300,7 @@ package com.monsters.maproom_advanced
                guardianIndex = 0;
                while (guardianIndex < GLOBAL._playerGuardianData.length)
                {
-                  if (GLOBAL._playerGuardianData[guardianIndex] && GLOBAL._playerGuardianData[guardianIndex].hp.Get() > 0 && GLOBAL._playerGuardianData[guardianIndex].status == ChampionBase.k_CHAMPION_STATUS_NORMAL)
+                  if (GLOBAL._playerGuardianData[guardianIndex] && GLOBAL._playerGuardianData[guardianIndex].hp > 0 && GLOBAL._playerGuardianData[guardianIndex].status == ChampionBase.k_CHAMPION_STATUS_NORMAL)
                   {
                      this._monstersInRange = true;
                   }
@@ -319,14 +320,14 @@ package com.monsters.maproom_advanced
                while (guardianDataIndex < GLOBAL._playerGuardianData.length)
                {
                   guardianData = GLOBAL._playerGuardianData[guardianDataIndex];
-                  if (guardianData && guardianData.hp.Get() > 0 && guardianData.status == ChampionBase.k_CHAMPION_STATUS_NORMAL && (!isNormalChampion || guardianData.t == 5))
+                  if (guardianData && guardianData.hp > 0 && guardianData.status == ChampionBase.k_CHAMPION_STATUS_NORMAL && (!isNormalChampion || guardianData.t == 5))
                   {
                      if (guardianData.t != 5)
                      {
                         isNormalChampion = true;
                      }
                      attackingMonsterInfo = new PopupInfoMonster();
-                     attackingMonsterInfo.Setup(xPos * 125, yPos * 30, "G" + GLOBAL._playerGuardianData[guardianDataIndex].t + "_L" + GLOBAL._playerGuardianData[guardianDataIndex].l.Get(), 1);
+                     attackingMonsterInfo.Setup(xPos * 125, yPos * 30, "G" + GLOBAL._playerGuardianData[guardianDataIndex].t + "_L" + GLOBAL._playerGuardianData[guardianDataIndex].l, 1);
                      mMonsters.addChild(attackingMonsterInfo);
                      xPos += 1;
                      if (xPos == 3)
@@ -335,7 +336,7 @@ package com.monsters.maproom_advanced
                         yPos += 1;
                      }
                   }
-                  else if (guardianData && guardianData.hp.Get() > 0 && guardianData.status == ChampionBase.k_CHAMPION_STATUS_NORMAL && isNormalChampion && guardianData.t != 5)
+                  else if (guardianData && guardianData.hp > 0 && guardianData.status == ChampionBase.k_CHAMPION_STATUS_NORMAL && isNormalChampion && guardianData.t != 5)
                   {
                      LOGGER.Log("log", "User has capacity to initialize combat with more than one normal champ.");
                   }

@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "init": "echo 'AX3_BRANCH=master' > .env",
+    "build": "source .env && docker build -t ax3:$AX3_BRANCH --build-arg GIT_BRANCH=$AX3_BRANCH .",
+    "transpile": "source .env && docker run --rm -v $PWD/config.json:/src/config.json -v $PWD/../client/scripts:/src/flash -v $PWD/../client-haxe/src:/src/haxe -v $PWD/../playerglobal.swc:/lib/playerglobal.swc ax3:$AX3_BRANCH"
+  },
+  "name": "transpiler",
+  "type": "module",
+  "private": true
+}

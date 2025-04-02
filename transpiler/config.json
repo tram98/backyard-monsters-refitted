@@ -1,0 +1,15 @@
+{
+    "src": "/src/flash",
+    "hxout": "/src/haxe",
+    "swc": [
+        "/lib/playerglobal.swc"
+    ],
+    "haxeTypes": {
+        "flash.display.DisplayObject.filters$get": "return:Array<flash.filters.BitmapFilter>",
+        "flash.display.DisplayObject.filters$set": "p1:Array<flash.filters.BitmapFilter>"
+    },
+    "settings": {
+        "checkNullIteratee": false,
+        "flashProperties": "none"
+    }
+}

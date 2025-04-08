@@ -51,6 +51,13 @@ export const BaseSaveSchema = z.object({
     .optional(),
 
   /**
+   * The building data, transformed from a JSON string to an object.
+   * This property is required.
+   * @type {object | undefined}
+   */
+  buildingdata: z.string().transform((data) => JSON.parse(data)),
+
+  /**
    * The building health data, transformed from a JSON string to an object.
    * This property is optional.
    * @type {object | undefined}
@@ -80,6 +87,21 @@ export const BaseSaveSchema = z.object({
     .string()
     .optional()
     .transform((data) => (data ? (JSON.parse(data) as Resources) : undefined)),
+
+  /**
+   * The attack creatures data, transformed from a JSON string to an object.
+   * This property is optional.
+   * @type {object | undefined}
+   */
+  attackcreatures: z
+    .string()
+    .optional()
+    .transform((data) => (data ? JSON.parse(data) : undefined)),
+
+    attackersiege: z
+    .string()
+    .optional()
+    .transform((data) => (data ? JSON.parse(data) : undefined)),
 
   /**
    * The 'over' property, which indicates a state.

@@ -38,6 +38,7 @@ package
    import flash.utils.*;
    import gs.TweenLite;
    import gs.easing.Cubic;
+   import com.bymrefitted.api.GameService;
 
    public class GLOBAL
    {
@@ -459,7 +460,17 @@ package
        */
       public static function init():void
       {
-         new URLLoaderApi().load(serverUrl + "init", [["apiVersion", apiVersionSuffix]], function(serverData:Object)
+         GameService.init(apiVersionSuffix, OnInitSuccess, OnInitFailure);
+      }
+
+      /**
+       * Handles successful initialization by processing server data.
+       * If an error is present in the server data, it sets the initialization error.
+       * If `debugMode` is enabled, it activates AI design mode and initializes the console.
+       * 
+       * @param serverData - The data returned from the server upon successful initialization.
+       */
+      private static function OnInitSuccess(serverData:Object):void
             {
                var stage:Stage = GAME._instance.stage;
 
@@ -476,12 +487,15 @@ package
                   _aiDesignMode = serverData.debugMode;
                   Console.initialize(stage);
                }
-            }, function(error:IOErrorEvent):void
+      }
+
+      /*
+       * Handles initialization failure by setting an error message and dispatching an event. 
+       */
+      private static function OnInitFailure(error:IOErrorEvent):void
             {
                GLOBAL.initError = "Failed to connect to the server.";
                GLOBAL.eventDispatcher.dispatchEvent(new Event("initError"));
-               return;
-            });
       }
 
       /*

@@ -14,7 +14,7 @@
 		},
 		"optimize": true,
 		"debug": false,
-		"strict": false,
+		"strict": true,
 		"warnings": false,
 		"use-network": true,
 		"advanced-telemetry": true,

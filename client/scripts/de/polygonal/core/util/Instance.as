@@ -74,6 +74,8 @@ package de.polygonal.core.util
             Boot.lastError = new Error();
             throw _loc4_;
          }
+         // Honestly this code is unreachable, but needed to satisfy the compiler
+         return null;
       }
    }
 }

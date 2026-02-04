@@ -88,7 +88,7 @@ package de.polygonal.core.fmt
          var _loc6_:* = 0;
          var _loc7_:int = 0;
          var _loc8_:* = null as String;
-         if(Math.isNaN(param1))
+         if(isNaN(param1))
          {
             return "NaN";
          }

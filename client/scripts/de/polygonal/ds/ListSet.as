@@ -180,8 +180,8 @@ package de.polygonal.ds
          var _loc5_:int;
          HashKey._counter = (_loc5_ = int(HashKey._counter)) + 1;
          var _loc4_:ListSet;
-         (_loc4_ = Instance.createEmpty(ListSet)).key = _loc5_;
-         _loc4_._a = _a.clone(param1,_loc3_);
+         (_loc4_ = Instance.createEmpty(ListSet) as ListSet).key = _loc5_;
+         _loc4_._a = _a.clone(param1,_loc3_) as DA;
          return _loc4_;
       }
       

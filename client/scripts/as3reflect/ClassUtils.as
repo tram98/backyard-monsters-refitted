@@ -57,7 +57,8 @@ package as3reflect
          var _loc3_:Array = [];
          var _loc5_:XMLList;
          var _loc4_:XML;
-         if(_loc5_ = (_loc4_ = MetadataUtils.getFromObject(param1)).factory.implementsInterface)
+         _loc5_ = (_loc4_ = MetadataUtils.getFromObject(param1)).factory.implementsInterface;
+         if(_loc5_)
          {
             _loc6_ = _loc5_.length();
             _loc7_ = 0;

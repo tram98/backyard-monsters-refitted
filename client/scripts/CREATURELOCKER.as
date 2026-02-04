@@ -1317,7 +1317,8 @@ package
          var _loc4_:Array = [];
          var _loc5_:Array = [];
          var _loc6_:*;
-         if(_loc6_ = !BASE.isInfernoMainYardOrOutpost)
+         _loc6_ = !BASE.isInfernoMainYardOrOutpost;
+         if(_loc6_)
          {
             _loc8_ = CREATURELOCKER.GetCreatures("above");
             for(_loc9_ in _loc8_)

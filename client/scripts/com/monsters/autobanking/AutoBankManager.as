@@ -340,7 +340,8 @@ package com.monsters.autobanking
          {
             _loc8_ = new Vector.<String>();
             _loc13_ = 0;
-            if(_loc14_ = BaseBuffHandler.instance.getBuffByName(AutoBankBaseBuff.k_NAME) as AutoBankBaseBuff)
+            _loc14_ = BaseBuffHandler.instance.getBuffByName(AutoBankBaseBuff.k_NAME) as AutoBankBaseBuff;
+            if(_loc14_)
             {
                fundAllResources(_loc14_.value * Math.max(0,param1),param2 || s_logCounter == 0);
             }

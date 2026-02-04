@@ -330,7 +330,8 @@ package
          var _loc3_:Array = [];
          var _loc4_:Object = CREATURELOCKER.GetCreatures("above");
          var _loc5_:*;
-         if(_loc5_ = !BASE.isInfernoMainYardOrOutpost)
+         _loc5_ = !BASE.isInfernoMainYardOrOutpost;
+         if(_loc5_)
          {
             for(_loc10_ in _loc4_)
             {
@@ -344,7 +345,8 @@ package
          }
          var _loc6_:Object = CREATURELOCKER.GetCreatures("inferno");
          var _loc7_:Boolean;
-         if(_loc7_ = MAPROOM_DESCENT.DescentPassed)
+         _loc7_ = MAPROOM_DESCENT.DescentPassed;
+         if(_loc7_)
          {
             for(_loc12_ in _loc6_)
             {

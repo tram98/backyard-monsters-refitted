@@ -49,21 +49,21 @@ package flash
          return String(param1.tag) + "(" + _loc2_.join(",") + ")";
       }
       
-      public static function __instanceof(param1:*, param2:*) : Boolean
-      {
-         var _loc4_:* = null;
-         try
-         {
-            if(param2 == Dynamic)
-            {
-               return true;
-            }
-            return param1 is param2;
-         }
-         catch(_loc_e_:*)
-         {
-         }
-      }
+      // public static function __instanceof(param1:*, param2:*) : Boolean
+      // {
+      //    var _loc4_:* = null;
+      //    try
+      //    {
+      //       if(param2 == Dynamic)
+      //       {
+      //          return true;
+      //       }
+      //       return param1 is param2;
+      //    }
+      //    catch(_loc_e_:*)
+      //    {
+      //    }
+      // }
       
       public static function __clear_trace() : void
       {

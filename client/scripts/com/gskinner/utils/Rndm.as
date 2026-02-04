@@ -31,26 +31,28 @@ package com.gskinner.utils
          }
          return _instance;
       }
+
+      // The following function are unused and produce compiler errors
       
-      public static function get seed() : uint
-      {
-         return instance.seed;
-      }
+      // public static function get seed() : uint
+      // {
+      //    return instance.seed;
+      // }
       
-      public static function set seed(param1:uint) : void
-      {
-         instance.seed = param1;
-      }
+      // public static function set seed(param1:uint) : void
+      // {
+      //    instance._seed = param1;
+      // }
       
-      public static function get pointer() : uint
-      {
-         return instance.pointer;
-      }
+      // public static function get pointer() : uint
+      // {
+      //    return instance.pointer;
+      // }
       
-      public static function set pointer(param1:uint) : void
-      {
-         instance.pointer = param1;
-      }
+      // public static function set pointer(param1:uint) : void
+      // {
+      //    instance._pointer = param1;
+      // }
       
       public static function random() : Number
       {

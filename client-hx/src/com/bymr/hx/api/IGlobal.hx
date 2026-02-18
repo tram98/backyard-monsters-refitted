@@ -13,5 +13,5 @@ interface IGlobal {
 	 */
 	function log(message:String):Void;
 
-    function ErrorMessage(message:String = "", errorType:Int = 0):Void;
+	function ErrorMessage(message:String = "", errorType:Int = 0):Void;
 }

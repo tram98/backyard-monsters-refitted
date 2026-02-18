@@ -4,14 +4,13 @@ import com.bymr.hx.api.ILogger;
 import com.bymr.hx.api.IGlobal;
 
 class HaxeLib {
-	
-    // Proxy to AS3 GLOBAL class
-    public static var GLOBAL:IGlobal;
-	
-    // Proxy to AS3 LOGGER class
-    public static var LOGGER:ILogger;
+	// Proxy to AS3 GLOBAL class
+	public static var GLOBAL:IGlobal;
 
-    // Specifies if the library has been bootstrapped/initialized
+	// Proxy to AS3 LOGGER class
+	public static var LOGGER:ILogger;
+
+	// Specifies if the library has been bootstrapped/initialized
 	private static var bootstrapped:Bool = false;
 
 	function new() {}
@@ -40,7 +39,7 @@ class HaxeLib {
 		GLOBAL = globalInstance;
 		LOGGER = loggerInstance;
 
-        // ...and directly use that logger :-)
+		// ...and directly use that logger :-)
 		LOGGER.Log("info", "HaxeLib bootstrapped successfully!");
 	}
 }
